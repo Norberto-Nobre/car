@@ -30,11 +30,6 @@ class Vehicle extends Model
     {
         return $this->hasMany(Booking::class);
     }
-    public function colors()
-{
-    return $this->belongsToMany(Color::class, 'color_vehicle_model')
-                ->withTimestamps();
-}
 
     protected static function boot()
     {

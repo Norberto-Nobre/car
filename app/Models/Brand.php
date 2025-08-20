@@ -10,7 +10,7 @@ class Brand extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $filable = [
+    protected $fillable = [
         'name',
         'logo',
         'is_active',
