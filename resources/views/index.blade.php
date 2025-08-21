@@ -153,7 +153,7 @@
             }
         }
     </style>
-    
+
 @extends('layouts.base')
 
 @section('content')
@@ -738,7 +738,7 @@
             </div>
 
             <div class="row row-gap-3">
-
+                @foreach ($vehicleModels as $vehicleModel)
                 <div class="col-xxl-3 col-lg-4 col-md-6">
                     <div class="vehicle-card">
                         <a href="">
@@ -784,8 +784,7 @@
                         </a>
                     </div>
                 </div>
-
-
+                @endforeach
             </div>
         </div>
     </section>
@@ -940,10 +939,10 @@
     <!-- brands-end -->
 
     <!--testimonials-area-start -->
-    <section class="testimonials pt-0 my-80">
+    <section class="testimonials pt-0 pb-0 border">
         <div class="container ">
             <div class="reviews mt-48">
-                <div class="txt">
+                <div class="txt border">
                     <div class="d-flex flex-md-row flex-column gap-24 align-items-md-center justify-content-between">
                         <div>
                             <h4 class="mb-12">Ouça nossos clientes</h4>
@@ -970,7 +969,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonials-slider">
+                <div class="testimonials-slider border pb-0 mb-0" style="padding-bottom: 0px;">
                     <div class="col-12">
                         <div class="review-card">
                             <div class="img-block">
