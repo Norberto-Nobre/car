@@ -73,14 +73,12 @@ class VehicleModelResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('brand_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('category_id')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('brand.name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('category.name')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('caussion')
                     ->numeric()
                     ->sortable(),

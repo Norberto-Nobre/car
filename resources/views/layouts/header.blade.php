@@ -9,13 +9,13 @@
                     <div class="main-menu__nav">
                         <ul class="main-menu__list">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="{{route('front.index')}}">Home</a>
                             </li>
                             <li>
-                                <a href="#">Sobre</a>
+                                <a href="{{route('front.sobre')}}">Sobre</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#">Carros</a>
+                                <a href="{{route('front.frotas')}}">Frota</a>
                             </li>
                              <li class="dropdown">
                                 <a href="javascript:void(0);">FAQ</a>
@@ -58,7 +58,7 @@
                 <a class="fs-6 bg-primary text-white px-3 py-2 rounded fw-bold" href="#">Log in</a>
 
                     <a class="fs-6 border px-3 py-2 rounded fw-bold" href="#">Register</a>
-                
+
             @endauth
                     </div>
                         <a href="#" class="d-xl-none d-flex main-menu__toggler mobile-nav__toggler">

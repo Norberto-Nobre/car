@@ -738,14 +738,15 @@
             </div>
 
             <div class="row row-gap-3">
-                @foreach ($vehicleModels as $vehicleModel)
+                @foreach ($vehicles as $vehicle)
                 <div class="col-xxl-3 col-lg-4 col-md-6">
                     <div class="vehicle-card">
                         <a href="">
-                            <img src="" class="w-100" alt="car">
-                            <h2 class="h3 title"></h2>
-                            <p class="mb-12"></p>
-                            <div class="icons mb-12">
+                            <img src="{{asset('storage/' . $vehicle->image)}}" class="w-100" alt="car">
+                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h2>
+                            <h6 class="fs-6">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>
+
+                            {{-- <div class="icons mb-12">
                                 <div class="d-flex align-items-center gap-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -764,11 +765,11 @@
                                     </svg>
                                     <h5 class="gap-8">4</h5>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="bottom-row mb">
                                 <div>
                                     {{-- <p>starts from</p> --}}
-                                    <h6>kz  /Dia</h6>
+                                     <h6 class="fs-6">Caução <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
                                 </div>
                                 <div class="cus-btn">
                                     <span class="btn-text">

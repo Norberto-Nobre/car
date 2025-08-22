@@ -24,7 +24,7 @@ class VehicleResource extends Resource
         return $form
             ->schema([
                Forms\Components\Select::make('vehicle_model_id')
-                    ->relationship('model', 'name')
+                    ->relationship('vehicleModel', 'name')
                     ->required(),
                 Forms\Components\TextInput::make('license_plate')
                     ->required()
@@ -48,15 +48,15 @@ class VehicleResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('vehicle_model_id')
-                    ->numeric()
+                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('vehicleModel.name')
+                    
                     ->sortable(),
                 Tables\Columns\TextColumn::make('license_plate')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('year')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\IconColumn::make('is_active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('slug')

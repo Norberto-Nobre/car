@@ -21,7 +21,7 @@ class Vehicle extends Model
         'notes',
     ];
 
-    public function model()
+    public function vehicleModel()
     {
         return $this->belongsTo(VehicleModel::class, 'vehicle_model_id');
     }

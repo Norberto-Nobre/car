@@ -19,11 +19,9 @@ class FrontController extends Controller
 
      public function index(){
 
-        $vehicleModels = $this->frontService->getFrontPageData();
+        $dados = $this->frontService->getFrontPageData();
         /*dd($data); */
-        return view('index', [
-            'vehicleModels' => $vehicleModels,
-        ]);
+        return view('index', $dados);
     }
 
 }

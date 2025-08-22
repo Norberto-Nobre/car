@@ -29,10 +29,10 @@ class FrontService{
     public function getFrontPageData(){
         $vehicleModels = $this->vehicleModelRepository->getActive();
         $vehicles = $this->vehicleRepository->getAll();
-        $brand = $this->brandRepository->getActive();
+        $brands = $this->brandRepository->getActive();
         // $vehicle = $this->vehicleRepository->find('id');
 
-        return compact('vehicleModels', 'vehicles', 'brand');
+        return compact('vehicleModels', 'vehicles', 'brands');
     }
 }
 

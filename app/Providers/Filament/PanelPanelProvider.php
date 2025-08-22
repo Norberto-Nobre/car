@@ -28,7 +28,7 @@ class PanelPanelProvider extends PanelProvider
             ->path('panel')
             ->login()
             ->colors([
-                'primary' => 'amber',
+                'primary' => '#1E40AF', // azul escuro (hexadecimal)
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
