@@ -2,7 +2,7 @@
     <header class="header">
         <div class="container">
             <nav class="navigation d-flex align-items-center justify-content-between">
-                <a href="#" class="d-flex align-items-center">
+                <a href="{{route('front.index')}}" class="d-flex align-items-center">
                     <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 40px;">
                 </a>
                 <div class="menu-button-right">
@@ -43,7 +43,7 @@
                                 </ul>
                             </li> -->
                             <li>
-                                <a href="#">Contacto</a>
+                                <a href="{{route('front.contacto')}}">Contacto</a>
                             </li>
                         </ul>
                     </div>

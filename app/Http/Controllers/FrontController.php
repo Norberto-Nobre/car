@@ -24,4 +24,12 @@ class FrontController extends Controller
         return view('index', $dados);
     }
 
+    public function sobre(){
+        return view('sobre');
+    }
+
+    public function contacto(){
+        return view('contacto');
+    }
+
 }

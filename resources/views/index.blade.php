@@ -1,5 +1,10 @@
- <style>
 
+
+@extends('layouts.base')
+
+@section('content')
+
+<style>
         .main-container {
             /* min-height: 100vh; */
             display: flex;
@@ -152,11 +157,9 @@
                 box-shadow: 0 0 0 0 rgba(45, 116, 186, 0);
             }
         }
-    </style>
+</style>
 
-@extends('layouts.base')
 
-@section('content')
     <div class="w-full min-h-screen">
        <!-- HERO BANNER START -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -178,7 +181,7 @@
             </h4>
             <div class="btn-block row-gap-3 mb-48">
                 <div class="cus-btn">
-                    <a href="#" class="btn-text">
+                    <a href="{{route('front.frotas')}}" class="btn-text">
                         <span class="btn-text">
                             Alugar Agora
                             <i class="bi bi-arrow-up-right"></i>
@@ -189,7 +192,7 @@
                         </span>
                     </a>
                 </div>
-                <a href="#" class="cus-btn-2">
+                <a href="{{route('front.contacto')}}" class="cus-btn-2">
                     <span class="btn-text text-white">
                         Contacta-nos
                         <i class="bi bi-telephone"></i>
@@ -216,7 +219,7 @@
             </h4>
             <div class="btn-block row-gap-3 mb-48">
                 <div class="cus-btn">
-                    <a href="#" class="btn-text">
+                    <a href="{{route('front.frotas')}}" class="btn-text">
                         <span class="btn-text">
                             Alugar Agora
                             <i class="bi bi-arrow-up-right"></i>
@@ -227,7 +230,7 @@
                         </span>
                     </a>
                 </div>
-                <a href="#" class="cus-btn-2">
+                <a href="{{route('front.contacto')}}" class="cus-btn-2">
                     <span class="btn-text text-white">
                         Contacta-nos
                         <i class="bi bi-telephone"></i>
@@ -254,7 +257,7 @@
             </h4>
             <div class="btn-block row-gap-3 mb-48">
                 <div class="cus-btn">
-                    <a href="#" class="btn-text">
+                    <a href="{{route('front.frotas')}}" class="btn-text">
                         <span class="btn-text">
                             Alugar Agora
                             <i class="bi bi-arrow-up-right"></i>
@@ -265,7 +268,7 @@
                         </span>
                     </a>
                 </div>
-                <a href="#" class="cus-btn-2">
+                <a href="{{route('front.contacto')}}" class="cus-btn-2">
                     <span class="btn-text text-white">
                         Contacta-nos
                         <i class="bi bi-telephone"></i>
@@ -393,7 +396,7 @@
                         <div class="card-content">
                             <h2 class="card-title">Dirija com confiança, viaje com tranquilidade!</h2>
                             <p class="card-text">Segurança, conforto e praticidade em cada quilômetro.</p>
-                            <button class="btn btn-solicitar pulse-animation">Solicitar</button>
+                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">Solicitar</a>
                         </div>
                     </div>
                 </div>
@@ -406,13 +409,68 @@
                         <div class="card-content">
                             <h2 class="card-title">Chegue onde quiser com estilo e conforto.</h2>
                             <p class="card-text">Carros modernos, prontos para acompanhar o seu ritmo.</p>
-                            <button class="btn btn-solicitar pulse-animation">Solicitar</button>
+                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">Solicitar</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- brands-start -->
+    <div class="brand-section my-40 py-48">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="brand-slider">
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/cars2.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Electric</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/cars3.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Sedan</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Electric</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/cars4.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Pickup</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/cars5.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Econômico</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/cars6.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Van</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Electric</h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brands-end -->
 
     <!-- Feature area start -->
     {{-- <section class="features my-80">
@@ -441,8 +499,152 @@
     </section> --}}
     <!--Feature area end-->
 
+    <!--Ride area start -->
+    <section class="vehicles my-80">
+        <div class="container">
+            <div class="txts mb-48">
+                <div class="descript">
+                    <h4 class="mb-12">Escolha o seu Carro</h4>
+                    <p>Encontre o veículo ideal para cada momento. De compactos econômicos <br> a SUVs confortáveis — temos a opção perfeita para sua necessidade.</p>
+                </div>
+                <a href="{{route('front.frotas')}}" class="cus-btn">
+                    <span class="btn-text">
+                        Nossa Frota
+                        <i class="bi bi-car-front-fill"></i>
+                    </span>
+                    <span>
+                        Nossa Frota
+                        <i class="bi bi-car-front-fill"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="row row-gap-3">
+                @foreach ($vehicles as $vehicle)
+                <div class="col-xxl-3 col-lg-4 col-md-6">
+                    <div class="vehicle-card">
+                        <a href="{{route('front.carro-detalhes', $vehicle->id)}}">
+                            <img src="{{asset('storage/' . $vehicle->image)}}" class="w-100" alt="car">
+                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h2>
+                            <h6 class="fs-6">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>
+
+                            {{-- <div class="icons mb-12">
+                                <div class="d-flex align-items-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M22.0005 9.67015C21.9373 9.48723 21.8224 9.32657 21.6698 9.20765C21.5171 9.08872 21.3333 9.01664 21.1405 9.00014L15.4505 8.17015L12.9005 3.00015C12.8186 2.83107 12.6907 2.68849 12.5316 2.58872C12.3724 2.48895 12.1883 2.43604 12.0005 2.43604C11.8126 2.43604 11.6286 2.48895 11.4694 2.58872C11.3102 2.68849 11.1824 2.83107 11.1005 3.00015L8.55047 8.16014L2.86047 9.00014C2.67539 9.02645 2.50139 9.10411 2.35822 9.2243C2.21504 9.3445 2.10843 9.50242 2.05047 9.68015C1.99741 9.85382 1.99265 10.0387 2.03669 10.2148C2.08074 10.391 2.17192 10.5519 2.30047 10.6801L6.43047 14.6801L5.43047 20.3601C5.39477 20.5476 5.41346 20.7414 5.48434 20.9186C5.55522 21.0958 5.67532 21.249 5.83047 21.3601C5.98168 21.4683 6.16004 21.5321 6.34551 21.5444C6.53099 21.5568 6.71624 21.5172 6.88047 21.4301L12.0005 18.7601L17.1005 21.4401C17.2408 21.5193 17.3993 21.5607 17.5605 21.5601C17.7723 21.5609 17.9789 21.4944 18.1505 21.3701C18.3056 21.259 18.4257 21.1058 18.4966 20.9286C18.5675 20.7514 18.5862 20.5576 18.5505 20.3701L17.5505 14.6901L21.6805 10.6901C21.8248 10.5678 21.9316 10.407 21.9882 10.2265C22.0448 10.0459 22.0491 9.85302 22.0005 9.67015ZM15.8505 13.6701C15.7332 13.7836 15.6454 13.924 15.5949 14.0791C15.5444 14.2343 15.5325 14.3994 15.5605 14.5601L16.2805 18.7501L12.5205 16.7501C12.3758 16.6731 12.2144 16.6328 12.0505 16.6328C11.8865 16.6328 11.7251 16.6731 11.5805 16.7501L7.82047 18.7501L8.54047 14.5601C8.5684 14.3994 8.55658 14.2343 8.50603 14.0791C8.45548 13.924 8.36774 13.7836 8.25047 13.6701L5.25047 10.6701L9.46047 10.0601C9.62246 10.0376 9.77646 9.97569 9.90896 9.8798C10.0415 9.78391 10.1484 9.65698 10.2205 9.51015L12.0005 5.70015L13.8805 9.52015C13.9525 9.66698 14.0595 9.79391 14.192 9.8898C14.3245 9.98569 14.4785 10.0476 14.6405 10.0701L18.8505 10.6801L15.8505 13.6701Z"
+                                            fill="#0F0F0F" />
+                                    </svg>
+                                    <h5 class="gap-8">4.8</h5>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M6.62 13.0798C6.4959 13.1247 6.3832 13.1964 6.28989 13.2897C6.19657 13.383 6.12491 13.4957 6.08 13.6198C6.00726 13.8016 5.98945 14.0006 6.02879 14.1924C6.06812 14.3841 6.16287 14.5601 6.30128 14.6985C6.43969 14.837 6.61569 14.9317 6.80744 14.971C6.99919 15.0104 7.19827 14.9926 7.38 14.9198C7.50119 14.8692 7.6128 14.7982 7.71 14.7098C7.79833 14.6126 7.86936 14.501 7.92 14.3798C7.97598 14.2611 8.00338 14.131 8 13.9998C7.99632 13.7351 7.89273 13.4815 7.71 13.2898C7.56938 13.1511 7.3908 13.0571 7.19681 13.0197C7.00282 12.9823 6.80211 13.0032 6.62 13.0798ZM19.76 9.07983L18.4 5.04983C18.1926 4.46306 17.8077 3.95533 17.2989 3.59699C16.7901 3.23865 16.1824 3.04743 15.56 3.04983H8.44C7.81764 3.04743 7.20995 3.23865 6.7011 3.59699C6.19225 3.95533 5.80745 4.46306 5.6 5.04983L4.24 9.10983C3.60033 9.27734 3.03392 9.65149 2.62883 10.1741C2.22374 10.6968 2.00268 11.3386 2 11.9998V15.9998C2.00174 16.6188 2.19488 17.222 2.55294 17.7269C2.911 18.2318 3.41645 18.6135 4 18.8198V19.9998C4 20.265 4.10536 20.5194 4.29289 20.7069C4.48043 20.8945 4.73478 20.9998 5 20.9998C5.26522 20.9998 5.51957 20.8945 5.70711 20.7069C5.89464 20.5194 6 20.265 6 19.9998V18.9998H18V19.9998C18 20.265 18.1054 20.5194 18.2929 20.7069C18.4804 20.8945 18.7348 20.9998 19 20.9998C19.2652 20.9998 19.5196 20.8945 19.7071 20.7069C19.8946 20.5194 20 20.265 20 19.9998V18.8198C20.5835 18.6135 21.089 18.2318 21.4471 17.7269C21.8051 17.222 21.9983 16.6188 22 15.9998V11.9998C21.9973 11.3386 21.7763 10.6968 21.3712 10.1741C20.9661 9.65149 20.3997 9.27734 19.76 9.10983V9.07983ZM7.49 5.67983C7.55709 5.48121 7.6849 5.30869 7.85537 5.18667C8.02584 5.06465 8.23036 4.99929 8.44 4.99983H15.56C15.7781 4.98845 15.9939 5.04875 16.1744 5.17154C16.355 5.29433 16.4904 5.47285 16.56 5.67983L17.61 8.99983H6.39L7.49 5.67983ZM20 15.9998C20 16.265 19.8946 16.5194 19.7071 16.7069C19.5196 16.8945 19.2652 16.9998 19 16.9998H5C4.73478 16.9998 4.48043 16.8945 4.29289 16.7069C4.10536 16.5194 4 16.265 4 15.9998V11.9998C4 11.7346 4.10536 11.4803 4.29289 11.2927C4.48043 11.1052 4.73478 10.9998 5 10.9998H19C19.2652 10.9998 19.5196 11.1052 19.7071 11.2927C19.8946 11.4803 20 11.7346 20 11.9998V15.9998ZM16.62 13.0798C16.4959 13.1247 16.3832 13.1964 16.2899 13.2897C16.1966 13.383 16.1249 13.4957 16.08 13.6198C16.0073 13.8016 15.9895 14.0006 16.0288 14.1924C16.0681 14.3841 16.1629 14.5601 16.3013 14.6985C16.4397 14.837 16.6157 14.9317 16.8074 14.971C16.9992 15.0104 17.1983 14.9926 17.38 14.9198C17.5041 14.8749 17.6168 14.8033 17.7101 14.7099C17.8034 14.6166 17.8751 14.5039 17.92 14.3798C17.976 14.2611 18.0034 14.131 18 13.9998C17.9963 13.7351 17.8927 13.4815 17.71 13.2898C17.5694 13.1511 17.3908 13.0571 17.1968 13.0197C17.0028 12.9823 16.8021 13.0032 16.62 13.0798ZM13 12.9998H11C10.7348 12.9998 10.4804 13.1052 10.2929 13.2927C10.1054 13.4803 10 13.7346 10 13.9998C10 14.265 10.1054 14.5194 10.2929 14.7069C10.4804 14.8945 10.7348 14.9998 11 14.9998H13C13.2652 14.9998 13.5196 14.8945 13.7071 14.7069C13.8946 14.5194 14 14.265 14 13.9998C14 13.7346 13.8946 13.4803 13.7071 13.2927C13.5196 13.1052 13.2652 12.9998 13 12.9998Z"
+                                            fill="#0F0F0F" />
+                                    </svg>
+                                    <h5 class="gap-8">4</h5>
+                                </div>
+                            </div> --}}
+                            <div class="bottom-row mb">
+                                <div>
+                                    {{-- <p>starts from</p> --}}
+                                     <h6 class="fs-6">Caução <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
+                                </div>
+                                <div class="cus-btn">
+                                    <span class="btn-text">
+                                        Alugar
+                                       <i class="bi bi-calendar2-check"></i>
+                                    </span>
+                                    <span>
+                                        Alugar
+                                       <i class="bi bi-calendar2-check"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!--Ride area end -->
+
+    <!-- About-area start -->
+    <section class="about my-80">
+        <div class="container ps-0">
+            <div class="design mt-48">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="assets/media/cars/pngwing-17.png" alt="car">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="txt-block">
+                            <h4 class="mb-12">Seu Portal para Aventuras Perfeitas<br class="d-xl-block  d-none"></h4>
+                            <p class="mb-32">Explore novos destinos com segurança, conforto e estilo. Nossa frota está pronta para transformar cada viagem em uma experiência inesquecível.</p>
+                            <p class="mb-32">
+                                Seja para uma viagem a trabalho, férias em família ou uma escapada de fim de semana, oferecemos opções que se adaptam a cada tipo de necessidade. Com atendimento de excelência e preços acessíveis, garantimos que sua aventura comece do jeito certo.</p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="pic">
+                                        <img src="assets/media/icons/vector.png" alt="plane">
+                                        <div class="text">
+                                            <h6>Recepção em Aeroportos</h6>
+                                            <p class="mb-24">Comece sua viagem com comodidade. Te buscamos no aeroporto com pontualidade e conforto.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="icon">
+                                        <img src="assets/media/icons/vector2.png" alt="earth">
+                                        <div class="text">
+                                            <h6>Presença em Diversas Regiões</h6>
+                                            <p class="mb-24">Conte com uma rede de atendimento preparada para te servir onde você estiver.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 mb-32">
+                                    <div class="pic">
+                                        <img src="assets/media/icons/Vector3.png" alt="people">
+                                        <div class="text">
+                                            <h6>Pagamento Seguro</h6>
+                                            <p>Transações protegidas com tecnologia de ponta. Sua segurança é prioridade.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="icon">
+                                        <img src="assets/media/icons/Vector4.png" alt="car">
+                                        <div class="text">
+                                            <h6> Carros Higienizados e Prontos</h6>
+                                            <p class="mb-8">Veículos limpos e desinfetados com rigor para garantir sua saúde e bem-estar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="cus-btn">
+                                <span class="btn-text">
+                                    Sobre nós
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </span>
+                                <span class="btn-text">
+                                    Sobre nós
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About-area start  end -->
+
     <!-- Top vehicle area start -->
-    <section class="vehicles pb-48">
+    {{-- <section class="vehicles pb-48">
         <div class="container animate__animated animate__fadeInUp animate__delay-2s">
             <div class="heading mb-48 mt-48">
                 <div class="description">
@@ -644,254 +846,113 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Top vehicle area start end-->
 
-    <!-- About-area start -->
-    <section class="about my-80">
-        <div class="container ps-0">
-            <div class="design mt-48">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="assets/media/cars/pngwing-17.png" alt="car">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="txt-block">
-                            <h4 class="mb-12">Seu Portal para Aventuras Perfeitas<br class="d-xl-block  d-none"></h4>
-                            <p class="mb-32">Explore novos destinos com segurança, conforto e estilo. Nossa frota está pronta para transformar cada viagem em uma experiência inesquecível.</p>
-                            <p class="mb-32">
-                                Seja para uma viagem a trabalho, férias em família ou uma escapada de fim de semana, oferecemos opções que se adaptam a cada tipo de necessidade. Com atendimento de excelência e preços acessíveis, garantimos que sua aventura comece do jeito certo.</p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="pic">
-                                        <img src="assets/media/icons/vector.png" alt="plane">
-                                        <div class="text">
-                                            <h6>Recepção em Aeroportos</h6>
-                                            <p class="mb-24">Comece sua viagem com comodidade. Te buscamos no aeroporto com pontualidade e conforto.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="icon">
-                                        <img src="assets/media/icons/vector2.png" alt="earth">
-                                        <div class="text">
-                                            <h6>Presença em Diversas Regiões</h6>
-                                            <p class="mb-24">Conte com uma rede de atendimento preparada para te servir onde você estiver.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 mb-32">
-                                    <div class="pic">
-                                        <img src="assets/media/icons/Vector3.png" alt="people">
-                                        <div class="text">
-                                            <h6>Pagamento Seguro</h6>
-                                            <p>Transações protegidas com tecnologia de ponta. Sua segurança é prioridade.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="icon">
-                                        <img src="assets/media/icons/Vector4.png" alt="car">
-                                        <div class="text">
-                                            <h6> Carros Higienizados e Prontos</h6>
-                                            <p class="mb-8">Veículos limpos e desinfetados com rigor para garantir sua saúde e bem-estar.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="cus-btn">
-                                <span class="btn-text">
-                                    Sobre nós
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </span>
-                                <span class="btn-text">
-                                    Sobre nós
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </span>
+    <!--Destinos-start -->
+    <section class="testimonials pt-0 pb-5">
+        <div class="container ">
+            <div class="reviews mt-48">
+                <div class="txt">
+                    <div class="d-flex flex-md-row flex-column gap-24 align-items-md-center justify-content-between">
+                        <div>
+                            <h4 class="mb-12">Principais destinos</h4>
+                            <p class="">Depoimentos reais que mostram por que somos a escolha certa para sua
+                                <br class="d-sm-block d-none">próxima viagem. fames bibendum ornare viverra.</p>
+                        </div>
+                        <div class="slider-arrows mt-sm-0 mt-48">
+                            <a href="javascript:;" class="arrow-btn btn-prev" data-slide="testimonials-slider">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.3048 1.40406L1.15797 13.5503C0.572344 14.1359 0.572344 15.0859 1.15797 15.6716L13.3042 27.8184C13.8898 28.4041 14.8398 28.4041 15.4255 27.8184C15.7458 27.4981 15.7458 26.9788 15.4255 26.6584L4.43922 15.6716C3.85359 15.086 3.85359 14.136 4.43922 13.5503L15.4261 2.56405C15.7464 2.24373 15.7464 1.72439 15.4261 1.40406C14.8405 0.818438 13.8905 0.818438 13.3048 1.40406Z"
+                                        fill="#2D74BA" />
+                                </svg>
+                            </a>
+                            <a href="javascript:;" class="arrow-btn btn-next" data-slide="testimonials-slider">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.07992 1.40406L15.2268 13.5503C15.8124 14.1359 15.8124 15.0859 15.2268 15.6716L3.08055 27.8184C2.49492 28.4041 1.54492 28.4041 0.959298 27.8184C0.63897 27.4981 0.638964 26.9788 0.959283 26.6584L11.9455 15.6716C12.5312 15.086 12.5312 14.136 11.9455 13.5503L0.958687 2.56405C0.638355 2.24373 0.63835 1.72439 0.958673 1.40406C1.5443 0.818438 2.4943 0.818438 3.07992 1.40406Z"
+                                        fill="#2D74BA" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- About-area start  end -->
-
-    <!--Ride area start -->
-    <section class="vehicles my-80">
-        <div class="container">
-            <div class="txts mb-48">
-                <div class="descript">
-                    <h4 class="mb-12">Escolha o seu Carro</h4>
-                    <p>Encontre o veículo ideal para cada momento. De compactos econômicos <br> a SUVs confortáveis — temos a opção perfeita para sua necessidade.</p>
-                </div>
-                <a href="#" class="cus-btn">
-                    <span class="btn-text">
-                        Todos Carros
-                        <i class="bi bi-car-front-fill"></i>
-                    </span>
-                    <span>
-                        Todos Carros
-                        <i class="bi bi-car-front-fill"></i>
-                    </span>
-                </a>
-            </div>
-
-            <div class="row row-gap-3">
-                @foreach ($vehicles as $vehicle)
-                <div class="col-xxl-3 col-lg-4 col-md-6">
-                    <div class="vehicle-card">
-                        <a href="">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" class="w-100" alt="car">
-                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h2>
-                            <h6 class="fs-6">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>
-
-                            {{-- <div class="icons mb-12">
-                                <div class="d-flex align-items-center gap-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path
-                                            d="M22.0005 9.67015C21.9373 9.48723 21.8224 9.32657 21.6698 9.20765C21.5171 9.08872 21.3333 9.01664 21.1405 9.00014L15.4505 8.17015L12.9005 3.00015C12.8186 2.83107 12.6907 2.68849 12.5316 2.58872C12.3724 2.48895 12.1883 2.43604 12.0005 2.43604C11.8126 2.43604 11.6286 2.48895 11.4694 2.58872C11.3102 2.68849 11.1824 2.83107 11.1005 3.00015L8.55047 8.16014L2.86047 9.00014C2.67539 9.02645 2.50139 9.10411 2.35822 9.2243C2.21504 9.3445 2.10843 9.50242 2.05047 9.68015C1.99741 9.85382 1.99265 10.0387 2.03669 10.2148C2.08074 10.391 2.17192 10.5519 2.30047 10.6801L6.43047 14.6801L5.43047 20.3601C5.39477 20.5476 5.41346 20.7414 5.48434 20.9186C5.55522 21.0958 5.67532 21.249 5.83047 21.3601C5.98168 21.4683 6.16004 21.5321 6.34551 21.5444C6.53099 21.5568 6.71624 21.5172 6.88047 21.4301L12.0005 18.7601L17.1005 21.4401C17.2408 21.5193 17.3993 21.5607 17.5605 21.5601C17.7723 21.5609 17.9789 21.4944 18.1505 21.3701C18.3056 21.259 18.4257 21.1058 18.4966 20.9286C18.5675 20.7514 18.5862 20.5576 18.5505 20.3701L17.5505 14.6901L21.6805 10.6901C21.8248 10.5678 21.9316 10.407 21.9882 10.2265C22.0448 10.0459 22.0491 9.85302 22.0005 9.67015ZM15.8505 13.6701C15.7332 13.7836 15.6454 13.924 15.5949 14.0791C15.5444 14.2343 15.5325 14.3994 15.5605 14.5601L16.2805 18.7501L12.5205 16.7501C12.3758 16.6731 12.2144 16.6328 12.0505 16.6328C11.8865 16.6328 11.7251 16.6731 11.5805 16.7501L7.82047 18.7501L8.54047 14.5601C8.5684 14.3994 8.55658 14.2343 8.50603 14.0791C8.45548 13.924 8.36774 13.7836 8.25047 13.6701L5.25047 10.6701L9.46047 10.0601C9.62246 10.0376 9.77646 9.97569 9.90896 9.8798C10.0415 9.78391 10.1484 9.65698 10.2205 9.51015L12.0005 5.70015L13.8805 9.52015C13.9525 9.66698 14.0595 9.79391 14.192 9.8898C14.3245 9.98569 14.4785 10.0476 14.6405 10.0701L18.8505 10.6801L15.8505 13.6701Z"
-                                            fill="#0F0F0F" />
-                                    </svg>
-                                    <h5 class="gap-8">4.8</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path
-                                            d="M6.62 13.0798C6.4959 13.1247 6.3832 13.1964 6.28989 13.2897C6.19657 13.383 6.12491 13.4957 6.08 13.6198C6.00726 13.8016 5.98945 14.0006 6.02879 14.1924C6.06812 14.3841 6.16287 14.5601 6.30128 14.6985C6.43969 14.837 6.61569 14.9317 6.80744 14.971C6.99919 15.0104 7.19827 14.9926 7.38 14.9198C7.50119 14.8692 7.6128 14.7982 7.71 14.7098C7.79833 14.6126 7.86936 14.501 7.92 14.3798C7.97598 14.2611 8.00338 14.131 8 13.9998C7.99632 13.7351 7.89273 13.4815 7.71 13.2898C7.56938 13.1511 7.3908 13.0571 7.19681 13.0197C7.00282 12.9823 6.80211 13.0032 6.62 13.0798ZM19.76 9.07983L18.4 5.04983C18.1926 4.46306 17.8077 3.95533 17.2989 3.59699C16.7901 3.23865 16.1824 3.04743 15.56 3.04983H8.44C7.81764 3.04743 7.20995 3.23865 6.7011 3.59699C6.19225 3.95533 5.80745 4.46306 5.6 5.04983L4.24 9.10983C3.60033 9.27734 3.03392 9.65149 2.62883 10.1741C2.22374 10.6968 2.00268 11.3386 2 11.9998V15.9998C2.00174 16.6188 2.19488 17.222 2.55294 17.7269C2.911 18.2318 3.41645 18.6135 4 18.8198V19.9998C4 20.265 4.10536 20.5194 4.29289 20.7069C4.48043 20.8945 4.73478 20.9998 5 20.9998C5.26522 20.9998 5.51957 20.8945 5.70711 20.7069C5.89464 20.5194 6 20.265 6 19.9998V18.9998H18V19.9998C18 20.265 18.1054 20.5194 18.2929 20.7069C18.4804 20.8945 18.7348 20.9998 19 20.9998C19.2652 20.9998 19.5196 20.8945 19.7071 20.7069C19.8946 20.5194 20 20.265 20 19.9998V18.8198C20.5835 18.6135 21.089 18.2318 21.4471 17.7269C21.8051 17.222 21.9983 16.6188 22 15.9998V11.9998C21.9973 11.3386 21.7763 10.6968 21.3712 10.1741C20.9661 9.65149 20.3997 9.27734 19.76 9.10983V9.07983ZM7.49 5.67983C7.55709 5.48121 7.6849 5.30869 7.85537 5.18667C8.02584 5.06465 8.23036 4.99929 8.44 4.99983H15.56C15.7781 4.98845 15.9939 5.04875 16.1744 5.17154C16.355 5.29433 16.4904 5.47285 16.56 5.67983L17.61 8.99983H6.39L7.49 5.67983ZM20 15.9998C20 16.265 19.8946 16.5194 19.7071 16.7069C19.5196 16.8945 19.2652 16.9998 19 16.9998H5C4.73478 16.9998 4.48043 16.8945 4.29289 16.7069C4.10536 16.5194 4 16.265 4 15.9998V11.9998C4 11.7346 4.10536 11.4803 4.29289 11.2927C4.48043 11.1052 4.73478 10.9998 5 10.9998H19C19.2652 10.9998 19.5196 11.1052 19.7071 11.2927C19.8946 11.4803 20 11.7346 20 11.9998V15.9998ZM16.62 13.0798C16.4959 13.1247 16.3832 13.1964 16.2899 13.2897C16.1966 13.383 16.1249 13.4957 16.08 13.6198C16.0073 13.8016 15.9895 14.0006 16.0288 14.1924C16.0681 14.3841 16.1629 14.5601 16.3013 14.6985C16.4397 14.837 16.6157 14.9317 16.8074 14.971C16.9992 15.0104 17.1983 14.9926 17.38 14.9198C17.5041 14.8749 17.6168 14.8033 17.7101 14.7099C17.8034 14.6166 17.8751 14.5039 17.92 14.3798C17.976 14.2611 18.0034 14.131 18 13.9998C17.9963 13.7351 17.8927 13.4815 17.71 13.2898C17.5694 13.1511 17.3908 13.0571 17.1968 13.0197C17.0028 12.9823 16.8021 13.0032 16.62 13.0798ZM13 12.9998H11C10.7348 12.9998 10.4804 13.1052 10.2929 13.2927C10.1054 13.4803 10 13.7346 10 13.9998C10 14.265 10.1054 14.5194 10.2929 14.7069C10.4804 14.8945 10.7348 14.9998 11 14.9998H13C13.2652 14.9998 13.5196 14.8945 13.7071 14.7069C13.8946 14.5194 14 14.265 14 13.9998C14 13.7346 13.8946 13.4803 13.7071 13.2927C13.5196 13.1052 13.2652 12.9998 13 12.9998Z"
-                                            fill="#0F0F0F" />
-                                    </svg>
-                                    <h5 class="gap-8">4</h5>
-                                </div>
-                            </div> --}}
-                            <div class="bottom-row mb">
-                                <div>
-                                    {{-- <p>starts from</p> --}}
-                                     <h6 class="fs-6">Caução <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
-                                </div>
-                                <div class="cus-btn">
-                                    <span class="btn-text">
-                                        Alugar
-                                       <i class="bi bi-calendar2-check"></i>
-                                    </span>
-                                    <span>
-                                        Alugar
-                                       <i class="bi bi-calendar2-check"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!--Ride area end -->
-
-    <!--Vicheles-area start -->
-    <section class="catagory my-80">
-        <div class="container ">
-            <div class="ranges mt-48">
-                <div class="txt">
-                    <h4 class="mb-12">Ampla gama de veículos</h4>
-                    <p>Oferecemos uma variedade completa de carros para todos os estilos e necessidades. <br> Desde modelos compactos ideais para o dia a dia até SUVs robustos para aventuras mais longas.</p>
-                </div>
-                <div class="row row-gap-4">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="testimonials-slider">
+                    <div class="col-12">
                         <a href="#" class="cards">
                             <div class="title">
-                                <h5>Electric</h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <path
-                                        d="M26.6701 12.005C26.4594 11.9121 26.2324 11.8618 26.0021 11.8569L13.6302 11.8646C13.3995 11.8647 13.1711 11.9103 12.9579 11.9987C12.7447 12.0871 12.5509 12.2167 12.3877 12.3799C12.058 12.7096 11.8726 13.1565 11.8723 13.6225C11.8722 13.8532 11.9175 14.0816 12.0057 14.2947C12.0938 14.5078 12.2231 14.7014 12.3861 14.8644C12.7154 15.1937 13.1621 15.3785 13.6281 15.3782L21.7811 15.3608L12.3851 24.7568C12.0567 25.0851 11.8721 25.5303 11.8718 25.9943C11.8715 26.4584 12.0556 26.9033 12.3835 27.2312C12.7114 27.5591 13.1564 27.7432 13.6204 27.7429C14.0844 27.7426 14.5296 27.558 14.8579 27.2297L24.2539 17.8336L24.2365 25.9867C24.2354 26.2176 24.2801 26.4465 24.3679 26.66C24.4557 26.8735 24.585 27.0675 24.7482 27.2307C24.9114 27.3939 25.1054 27.5232 25.3189 27.611C25.5324 27.6988 25.7613 27.7435 25.9922 27.7424C26.2232 27.7432 26.4521 27.6982 26.6657 27.6102C26.8794 27.5221 27.0735 27.3926 27.2369 27.2292C27.4003 27.0657 27.5298 26.8716 27.6179 26.658C27.706 26.4443 27.7509 26.2154 27.7501 25.9845L27.7578 13.6126C27.7529 13.3823 27.7026 13.1553 27.6097 12.9446C27.4325 12.5198 27.0949 12.1822 26.6701 12.005Z"
-                                        fill="#0F0F0F" />
-                                </svg>
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
                             </div>
-                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="col-12">
                         <a href="#" class="cards">
                             <div class="title">
-                                <h5>Sedan</h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <path
-                                        d="M26.6701 12.005C26.4594 11.9121 26.2324 11.8618 26.0021 11.8569L13.6302 11.8646C13.3995 11.8647 13.1711 11.9103 12.9579 11.9987C12.7447 12.0871 12.5509 12.2167 12.3877 12.3799C12.058 12.7096 11.8726 13.1565 11.8723 13.6225C11.8722 13.8532 11.9175 14.0816 12.0057 14.2947C12.0938 14.5078 12.2231 14.7014 12.3861 14.8644C12.7154 15.1937 13.1621 15.3785 13.6281 15.3782L21.7811 15.3608L12.3851 24.7568C12.0567 25.0851 11.8721 25.5303 11.8718 25.9943C11.8715 26.4584 12.0556 26.9033 12.3835 27.2312C12.7114 27.5591 13.1564 27.7432 13.6204 27.7429C14.0844 27.7426 14.5296 27.558 14.8579 27.2297L24.2539 17.8336L24.2365 25.9867C24.2354 26.2176 24.2801 26.4465 24.3679 26.66C24.4557 26.8735 24.585 27.0675 24.7482 27.2307C24.9114 27.3939 25.1054 27.5232 25.3189 27.611C25.5324 27.6988 25.7613 27.7435 25.9922 27.7424C26.2232 27.7432 26.4521 27.6982 26.6657 27.6102C26.8794 27.5221 27.0735 27.3926 27.2369 27.2292C27.4003 27.0657 27.5298 26.8716 27.6179 26.658C27.706 26.4443 27.7509 26.2154 27.7501 25.9845L27.7578 13.6126C27.7529 13.3823 27.7026 13.1553 27.6097 12.9446C27.4325 12.5198 27.0949 12.1822 26.6701 12.005Z"
-                                        fill="#0F0F0F" />
-                                </svg>
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
                             </div>
-                            <img src="assets/media/cars/cars2.png" alt="car">
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="col-12">
                         <a href="#" class="cards">
                             <div class="title">
-                                <h5>Suv</h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <path
-                                        d="M26.6701 12.005C26.4594 11.9121 26.2324 11.8618 26.0021 11.8569L13.6302 11.8646C13.3995 11.8647 13.1711 11.9103 12.9579 11.9987C12.7447 12.0871 12.5509 12.2167 12.3877 12.3799C12.058 12.7096 11.8726 13.1565 11.8723 13.6225C11.8722 13.8532 11.9175 14.0816 12.0057 14.2947C12.0938 14.5078 12.2231 14.7014 12.3861 14.8644C12.7154 15.1937 13.1621 15.3785 13.6281 15.3782L21.7811 15.3608L12.3851 24.7568C12.0567 25.0851 11.8721 25.5303 11.8718 25.9943C11.8715 26.4584 12.0556 26.9033 12.3835 27.2312C12.7114 27.5591 13.1564 27.7432 13.6204 27.7429C14.0844 27.7426 14.5296 27.558 14.8579 27.2297L24.2539 17.8336L24.2365 25.9867C24.2354 26.2176 24.2801 26.4465 24.3679 26.66C24.4557 26.8735 24.585 27.0675 24.7482 27.2307C24.9114 27.3939 25.1054 27.5232 25.3189 27.611C25.5324 27.6988 25.7613 27.7435 25.9922 27.7424C26.2232 27.7432 26.4521 27.6982 26.6657 27.6102C26.8794 27.5221 27.0735 27.3926 27.2369 27.2292C27.4003 27.0657 27.5298 26.8716 27.6179 26.658C27.706 26.4443 27.7509 26.2154 27.7501 25.9845L27.7578 13.6126C27.7529 13.3823 27.7026 13.1553 27.6097 12.9446C27.4325 12.5198 27.0949 12.1822 26.6701 12.005Z"
-                                        fill="#0F0F0F" />
-                                </svg>
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
                             </div>
-                            <img src="assets/media/cars/images3.png" alt="car">
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <a href="#" class="cards">
+                    <div class="col-12">
+                       <a href="#" class="cards">
                             <div class="title">
-                                <h5>Pick-Up</h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <path
-                                        d="M26.6701 12.005C26.4594 11.9121 26.2324 11.8618 26.0021 11.8569L13.6302 11.8646C13.3995 11.8647 13.1711 11.9103 12.9579 11.9987C12.7447 12.0871 12.5509 12.2167 12.3877 12.3799C12.058 12.7096 11.8726 13.1565 11.8723 13.6225C11.8722 13.8532 11.9175 14.0816 12.0057 14.2947C12.0938 14.5078 12.2231 14.7014 12.3861 14.8644C12.7154 15.1937 13.1621 15.3785 13.6281 15.3782L21.7811 15.3608L12.3851 24.7568C12.0567 25.0851 11.8721 25.5303 11.8718 25.9943C11.8715 26.4584 12.0556 26.9033 12.3835 27.2312C12.7114 27.5591 13.1564 27.7432 13.6204 27.7429C14.0844 27.7426 14.5296 27.558 14.8579 27.2297L24.2539 17.8336L24.2365 25.9867C24.2354 26.2176 24.2801 26.4465 24.3679 26.66C24.4557 26.8735 24.585 27.0675 24.7482 27.2307C24.9114 27.3939 25.1054 27.5232 25.3189 27.611C25.5324 27.6988 25.7613 27.7435 25.9922 27.7424C26.2232 27.7432 26.4521 27.6982 26.6657 27.6102C26.8794 27.5221 27.0735 27.3926 27.2369 27.2292C27.4003 27.0657 27.5298 26.8716 27.6179 26.658C27.706 26.4443 27.7509 26.2154 27.7501 25.9845L27.7578 13.6126C27.7529 13.3823 27.7026 13.1553 27.6097 12.9446C27.4325 12.5198 27.0949 12.1822 26.6701 12.005Z"
-                                        fill="#0F0F0F" />
-                                </svg>
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
                             </div>
-                            <img src="assets/media/cars/pngwing-8.png" alt="car">
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="col-12">
                         <a href="#" class="cards">
                             <div class="title">
-                                <h5>Hatch Back</h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <path
-                                        d="M26.6701 12.005C26.4594 11.9121 26.2324 11.8618 26.0021 11.8569L13.6302 11.8646C13.3995 11.8647 13.1711 11.9103 12.9579 11.9987C12.7447 12.0871 12.5509 12.2167 12.3877 12.3799C12.058 12.7096 11.8726 13.1565 11.8723 13.6225C11.8722 13.8532 11.9175 14.0816 12.0057 14.2947C12.0938 14.5078 12.2231 14.7014 12.3861 14.8644C12.7154 15.1937 13.1621 15.3785 13.6281 15.3782L21.7811 15.3608L12.3851 24.7568C12.0567 25.0851 11.8721 25.5303 11.8718 25.9943C11.8715 26.4584 12.0556 26.9033 12.3835 27.2312C12.7114 27.5591 13.1564 27.7432 13.6204 27.7429C14.0844 27.7426 14.5296 27.558 14.8579 27.2297L24.2539 17.8336L24.2365 25.9867C24.2354 26.2176 24.2801 26.4465 24.3679 26.66C24.4557 26.8735 24.585 27.0675 24.7482 27.2307C24.9114 27.3939 25.1054 27.5232 25.3189 27.611C25.5324 27.6988 25.7613 27.7435 25.9922 27.7424C26.2232 27.7432 26.4521 27.6982 26.6657 27.6102C26.8794 27.5221 27.0735 27.3926 27.2369 27.2292C27.4003 27.0657 27.5298 26.8716 27.6179 26.658C27.706 26.4443 27.7509 26.2154 27.7501 25.9845L27.7578 13.6126C27.7529 13.3823 27.7026 13.1553 27.6097 12.9446C27.4325 12.5198 27.0949 12.1822 26.6701 12.005Z"
-                                        fill="#0F0F0F" />
-                                </svg>
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
                             </div>
-                            <img src="assets/media/cars/cars5.png" alt="car">
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="col-12">
                         <a href="#" class="cards">
                             <div class="title">
-                                <h5>Van</h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                    fill="none">
-                                    <path
-                                        d="M26.6701 12.005C26.4594 11.9121 26.2324 11.8618 26.0021 11.8569L13.6302 11.8646C13.3995 11.8647 13.1711 11.9103 12.9579 11.9987C12.7447 12.0871 12.5509 12.2167 12.3877 12.3799C12.058 12.7096 11.8726 13.1565 11.8723 13.6225C11.8722 13.8532 11.9175 14.0816 12.0057 14.2947C12.0938 14.5078 12.2231 14.7014 12.3861 14.8644C12.7154 15.1937 13.1621 15.3785 13.6281 15.3782L21.7811 15.3608L12.3851 24.7568C12.0567 25.0851 11.8721 25.5303 11.8718 25.9943C11.8715 26.4584 12.0556 26.9033 12.3835 27.2312C12.7114 27.5591 13.1564 27.7432 13.6204 27.7429C14.0844 27.7426 14.5296 27.558 14.8579 27.2297L24.2539 17.8336L24.2365 25.9867C24.2354 26.2176 24.2801 26.4465 24.3679 26.66C24.4557 26.8735 24.585 27.0675 24.7482 27.2307C24.9114 27.3939 25.1054 27.5232 25.3189 27.611C25.5324 27.6988 25.7613 27.7435 25.9922 27.7424C26.2232 27.7432 26.4521 27.6982 26.6657 27.6102C26.8794 27.5221 27.0735 27.3926 27.2369 27.2292C27.4003 27.0657 27.5298 26.8716 27.6179 26.658C27.706 26.4443 27.7509 26.2154 27.7501 25.9845L27.7578 13.6126C27.7529 13.3823 27.7026 13.1553 27.6097 12.9446C27.4325 12.5198 27.0949 12.1822 26.6701 12.005Z"
-                                        fill="#0F0F0F" />
-                                </svg>
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
                             </div>
-                            <img src="assets/media/cars/cars6.png" alt="car">
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a href="#" class="cards">
+                            <div class="title">
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
+                            </div>
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a href="#" class="cards">
+                            <div class="title">
+                                <h6 class="fs-6">Quedas de Calandulas</h5>
+                            </div>
+                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Vicheles-area end -->
+    <!-- Destinos-end -->
 
     <!-- brands-start -->
-    <div class="brand-section my-40 py-48">
+    {{-- <div class="brand-section my-40 py-48">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -936,14 +997,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- brands-end -->
 
     <!--testimonials-area-start -->
-    <section class="testimonials pt-0 pb-0 border">
+    {{-- <section class="testimonials pt-0 pb-0">
         <div class="container ">
             <div class="reviews mt-48">
-                <div class="txt border">
+                <div class="txt">
                     <div class="d-flex flex-md-row flex-column gap-24 align-items-md-center justify-content-between">
                         <div>
                             <h4 class="mb-12">Ouça nossos clientes</h4>
@@ -970,7 +1031,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonials-slider border pb-0 mb-0" style="padding-bottom: 0px;">
+                <div class="testimonials-slider pb-0 mb-0" style="padding-bottom: 0px;">
                     <div class="col-12">
                         <div class="review-card">
                             <div class="img-block">
@@ -1078,7 +1139,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Customer-area-end -->
 
     <!-- Blogs-area-start -->
