@@ -3,12 +3,194 @@
 
 @section('content')
 
+ <style>
+       /* Estilos básicos para demonstração */
+
+        .mb-24 { margin-bottom: 24px; }
+        .mb-12 { margin-bottom: 12px; }
+        .mb-8 { margin-bottom: 8px; }
+        .fw-600 { font-weight: 600; }
+        .dark-gray { color: #555; }
+        .d-flex { display: flex; }
+        .gap-24 { gap: 24px; }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2d74ba;
+        }
+
+        .pickup-location-container {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .location-input-wrapper {
+            position: relative;
+        }
+
+        .add-location-btn {
+            position: absolute;
+            right: 8px;
+            top: 40%;
+            transform: translateY(-50%);
+            background: #2d74ba;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        
+        .add-location-btn:hover {
+            background: #2d74ba;
+        }
+
+        .custom-location-input {
+            margin-top: 8px;
+            display: none;
+            position: relative;
+        }
+
+        .custom-location-input.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .custom-location-input input {
+            border-color: #f39c12;
+            padding-right: 80px;
+        }
+
+       .remove-custom-btn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .remove-custom-btn:hover {
+            background: #c0392b;
+        }
+
+        .cus-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #2d74ba, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cus-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-text {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        select {
+            padding-right: 130px;
+            appearance: none;
+            
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        .province-check-container {
+            margin-bottom: 12px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .checkbox-text {
+            user-select: none;
+        }
+
+        .province-select-container {
+            animation: slideDown 0.3s ease-out;
+            overflow: hidden;
+        }
+
+        .province-select-container select {
+            border: 2px solid #e1e8ed;
+        }
+
+        .province-select-container select:focus {
+            border: 2px solid #e1e8ed;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                max-height: 200px;
+                transform: translateY(0);
+            }
+        }
+</style>
+
  <!-- About-area start -->
-    <section class="details py-80">
+    <section class="details py-80 p-5">
         <div class="container">
             <div class="row row-gap-4">
-                <div class="col-lg-8">
-                    <div class="slider-arrows smt-sm-0 mt-48 d-sm-flex">
+                <div class="col-lg-6">
+                    {{-- <div class="slider-arrows smt-sm-0 mt-48 d-sm-flex">
                         <a href="javascript:;" class="arrow-btn btn-prev" data-slide="rental-slider">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29"
                                 fill="none">
@@ -25,40 +207,13 @@
                                     fill="#2D74BA" />
                             </svg>
                         </a>
-                    </div>
+                    </div> --}}
                     <div class="rental-slider">
                         <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
-                        </div>
-                        <div class="rental-slide">
-                            <img src="{{asset('storage/' . $vehicle->image)}}" alt="banner">
+                            <img class="" src="{{asset('storage/' . $vehicle->image)}}" alt="banner" style="width: auto">
                         </div>
                     </div>
-                    <div class="as-nav-slider">
+                    {{-- <div class="as-nav-slider">
                         <div class="img-box">
                             <img src="{{asset('storage/' . $vehicle->image)}}" alt="car">
                         </div>
@@ -89,12 +244,12 @@
                         <div class="img-box">
                             <img src="{{asset('assets/media/cars/pngwing-16.png')}}" alt="car">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="sides-bar">
                         <div class="side-bar-1 mb-16">
-                            <div class="d-flex mb-16 align-items-center gap-4">
+                            {{-- <div class="d-flex mb-16 align-items-center gap-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none">
                                     <path
@@ -102,9 +257,10 @@
                                         fill="#0F0F0F" />
                                 </svg>
                                 <h5>4.8</h5>
-                            </div>
-                            <h4 class="mb-4">{{$vehicle->vehicleModel->name}}</h4>
-                            <h6 class="mb-16">kz {{number_format($vehicle->vehicleModel->price_per_day,'0',',','.')}} /Dia</h6>
+                            </div> --}}
+                            <h6 class="fs-6 mb-4">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h6>
+                            <h6 class="fs-6 mb-16">kz {{number_format($vehicle->vehicleModel->price_per_day,'0',',','.')}} /Dia</h6>
+                             <h6 class="fs-6">Caução: <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
                             <div class="d-flex gap-8">
                                 <div class="d-flex gap-8">
                                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -128,33 +284,154 @@
                         </div>
                     </div>
                     <div class="side-bar-2 mt-24">
-                        <form action="" method="GET" class="form">
-                            @csrf
-                            <h5 class="mb-24">Verificar disponibilidade</h5>
-                            <p class="mb-8 fw-600 dark-gray">Local de retirada</p>
-                            <input type="text" name="pickup_location" class="mb-12" placeholder="Aeroporto 4 de Fevereiro " required>
-                            <p class="mb-8 fw-600 dark-gray">Local de entrega</p>
-                            <input type="text" name="dropoff_location" class="mb-12" placeholder="Lar do Patriota, Luanda " required>
-                            <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
-                            <div class="d-flex gap-24">
-                                <input type="date" name="pickup_date" class="mb-12" required>
-                                <input type="time" name="pickup_time" class="mb-12" required>
+                    <form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form">
+                         @csrf
+                        <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
+
+                        <p class="mb-8 fw-600 dark-gray">Local de retirada</p>
+                        <div class="pickup-location-container">
+                            <div class="location-input-wrapper">
+                                <select id="pickup_location_select" class="mb-12">
+                                    <option value="">Selecione um escritório</option>
+                                    <option value="Aeroporto 4 de Fevereiro">Aeroporto 4 de Fevereiro</option>
+                                    <option value="Centro de Luanda">Centro de Luanda</option>
+                                    <option value="Ilha de Luanda">Ilha de Luanda</option>
+                                    <option value="Miramar">Miramar</option>
+                                    <option value="Maianga">Maianga</option>
+                                    <option value="Ingombotas">Ingombotas</option>
+                                    <option value="Samba">Samba</option>
+                                    <option value="Viana">Viana</option>
+                                    <option value="Talatona">Talatona</option>
+                                    <option value="Benfica">Benfica</option>
+                                </select>
+                                <button type="button" class="add-location-btn" id="addLocationBtn">
+                                    + Adicionar local
+                                </button>
                             </div>
-                            <p class="fw-600 mb-8 dark-gray">Data de entrega</p>
-                            <div class="d-flex gap-24">
-                                <input type="date" name="dropoff_date" class="mb-12" required>
-                                <input type="time" name="dropoff_time" class="mb-12" required>
+
+                            <div class="custom-location-input" id="customLocationDiv">
+                                <input type="text" id="custom_pickup_location" placeholder="Digite sua localização personalizada...">
+                                <button type="button" class="remove-custom-btn" id="removeCustomBtn">
+                                    ✕ Remover
+                                </button>
                             </div>
-                            <input type="hidden" name="vehicle_id" id="vehicle_id" value="{{$vehicle->id}}">
-                            <button type="submit" class="cus-btn">
-                                <span class="btn-text">
-                                    Continuar
-                                </span>
-                                <span>
-                                    continuar
-                                </span>
-                            </button>
-                        </form>
+
+                            <!-- Input hidden que será enviado no formulário -->
+                            <input type="hidden" name="pickup_location" id="pickup_location_final" required>
+                        </div>
+
+                        <p class="mb-8 fw-600 dark-gray">Local de entrega</p>
+                        <input type="text" name="dropoff_location" class="mb-12" placeholder="Lar do Patriota, Luanda" required>
+
+                        <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
+                        <div class="d-flex gap-24">
+                            <input type="date" name="pickup_date" class="mb-12" id="pickup_date" required>
+                            <input type="time" name="pickup_time" class="mb-12" value="09:00" required>
+                        </div>
+
+                        <p class="fw-600 mb-8 dark-gray">Data de entrega</p>
+                        <div class="d-flex gap-24">
+                            <input type="date" name="dropoff_date" class="mb-12" id="dropoff_date" required>
+                            <input type="time" name="dropoff_time" class="mb-12" value="18:00" required>
+                        </div>
+
+                        <div class="province-check-container mb-12">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="province_check" name="out_of_province" onchange="toggleProvinceSelect()">
+                                <span class="checkbox-text">Vou sair da província</span>
+                            </label>
+                        </div>
+
+                        <div class="province-select-container" id="provinceSelectContainer" style="display: none;">
+                            <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
+                            <select name="destination_province" id="destination_province" class="mb-12">
+                                <option value="">Selecione uma província</option>
+                                <option value="Benguela">Benguela</option>
+                                <option value="Bengo">Bengo</option>
+                                <option value="Bié">Bié</option>
+                                <option value="Cabinda">Cabinda</option>
+                                <option value="Cuando Cubango">Cuando Cubango</option>
+                                <option value="Cuanza Norte">Cuanza Norte</option>
+                                <option value="Cuanza Sul">Cuanza Sul</option>
+                                <option value="Cunene">Cunene</option>
+                                <option value="Huambo">Huambo</option>
+                                <option value="Huíla">Huíla</option>
+                                <option value="Lunda Norte">Lunda Norte</option>
+                                <option value="Lunda Sul">Lunda Sul</option>
+                                <option value="Malanje">Malanje</option>
+                                <option value="Moxico">Moxico</option>
+                                <option value="Namibe">Namibe</option>
+                                <option value="Uíge">Uíge</option>
+                                <option value="Zaire">Zaire</option>
+                            </select>
+                        </div>
+
+                        <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">
+
+                        <button type="submit" class="cus-btn">
+                            <span class="btn-text">
+                                Continuar
+                            </span>
+                            <span>
+                                continuar
+                            </span>
+                        </button>
+                    </form>
+                    </div>
+                    <div class="side-bar mt-32">
+                        <div class="vehicle-details bg-quant">
+                            <h6 class="fs-6">Resumo de preços</h6>
+                        </div>
+                        <div class="vehicle-details-2 bg-ter">
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Preço</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">kz 2222 /Dia</h6>
+                            </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Quantidade de dias</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">10</h6>
+                            </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Caução</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">000.00</h6>
+                            </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Taxa de Entrega</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">000.00</h6>
+                            </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Taxa provincial</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">kz 000.00</h6>
+                            </div>
+                            <hr class="color-primary mb-12">
+                            {{-- <div class="justify-content-between d-flex mb-32">
+                                <div>
+                                    <h6>Deal / Discount</h6>
+                                </div>
+                                <h6>$ 40</h6>
+                            </div> --}}
+                            <div class="justify-content-between d-flex">
+                                <div>
+                                    <h6>Total</h6>
+                                </div>
+                                <h6>kz 3333</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,7 +448,7 @@
                         <p class="mt-24">Snow Chains - $ 150</p>
                     </div> -->
                     <div class="banner-2">
-                        <h6>Specifications</h6>
+                        <h6 class="fs-6">Especificação</h6>
                         <hr class="my-24">
                         <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-between ">
                             <div class=" d-flex flex-column gap-24 ">
@@ -191,7 +468,7 @@
                                             d="M18.5737 13.9982C18.5737 15.1399 19.5025 16.0687 20.6442 16.0687H22.0852C22.2967 16.0687 22.4682 15.8972 22.4682 15.6857C22.4682 15.4742 22.2967 15.3027 22.0852 15.3027H20.6442C19.9249 15.3027 19.3397 14.7176 19.3397 13.9982C19.3397 13.2789 19.9249 12.6937 20.6442 12.6937H21.8024C22.014 12.6937 22.1854 12.5222 22.1854 12.3107C22.1854 12.0992 22.014 11.9277 21.8024 11.9277H20.6442C19.5025 11.9277 18.5737 12.8565 18.5737 13.9982Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Categoria : vvvvv </p>
+                                    <p>Categoria : {{$vehicle->vehicleModel->category->name}} </p>
                                 </div>
                                 <!-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -232,7 +509,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <p>Assentos : {{$vehicle->vehicleModel->seets}} </p>
+                                    <p>Assentos : {{$vehicle->vehicleModel->seats}} </p>
                                 </div>
                                 <!-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -343,7 +620,7 @@
                                 </div> -->
                             </div>
                             <div class=" d-flex flex-column gap-24 ">
-                                <div class="flex-shrink-0 d-flex gap-12">
+                                {{-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
                                         <path
@@ -354,7 +631,7 @@
                                             fill="#2D74BA" />
                                     </svg>
                                     <p>Kilometragem : {{$vehicle->mileage}} Km</p>
-                                </div>
+                                </div> --}}
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -375,7 +652,7 @@
                         </div>
                     </div>
                     <div class="banner-3 my-24">
-                        <h6>Recursos do carro</h6>
+                        <h6 class="fs-6">Benefícios do aluguel</h6>
                         <hr class="my-24">
                         <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap  justify-content-between ">
                             <div class=" d-flex flex-column gap-24 ">
@@ -470,17 +747,17 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="sid-bar">
-                        <h6 class="mb-24">Comentários</h6>
+                        <h6 class="fs-6 mb-24">Comentários</h6>
                         <div class="d-flex align-items-center gap-12">
                             <img src="{{asset('assets/media/teams/user2.jpeg')}}" class="flex-shrink-0" alt="car" style="width: 50px;">
                             <div class=" d-flex align-items-center justify-content-between w-100">
                                 <div class="d-flex flex-column gap-24 ">
-                                    <h6>Gefferson Daciano</h6>
+                                    <h6 class="fs-6">Gefferson Daciano</h6>
                                     <p>12 de Maio, 2025</p>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
-                                    <i class="fa-light fa-star"></i>
-                                    <h6>4.8</h6>
+                                    <i class="fs-6 fa-light fa-star"></i>
+                                    <h6 class="fs-6">4.8</h6>
                                 </div>
                             </div>
                         </div>
@@ -490,12 +767,12 @@
                             <img src="{{asset('assets/media/teams/user1.png')}}" class="flex-shrink-0" alt="car" style="width: 50px;">
                             <div class=" d-flex align-items-center justify-content-between w-100">
                                 <div class="d-flex flex-column gap-24 ">
-                                    <h6>Benilda avelino</h6>
+                                    <h6 class="fs-6">Benilda avelino</h6>
                                     <p>13 de Junho, 2025</p>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
-                                    <i class="fa-light fa-star"></i>
-                                    <h6>4.8</h6>
+                                    <i class="fs-6 fa-light fa-star"></i>
+                                    <h6 class="fs-6">4.8</h6>
                                 </div>
                             </div>
                         </div>
@@ -508,5 +785,128 @@
         </div>
     </section>
     <!-- end -->
+
+     <script>
+       let customLocationActive = false;
+
+        // Função global para toggle do select de província
+        function toggleProvinceSelect() {
+            const provinceCheck = document.getElementById('province_check');
+            const provinceSelectContainer = document.getElementById('provinceSelectContainer');
+            const destinationProvinceSelect = document.getElementById('destination_province');
+
+            console.log('Checkbox alterado:', provinceCheck.checked); // Debug
+
+            if (provinceCheck.checked) {
+                provinceSelectContainer.style.display = 'block';
+                destinationProvinceSelect.required = true;
+                console.log('Mostrando select de província'); // Debug
+            } else {
+                provinceSelectContainer.style.display = 'none';
+                destinationProvinceSelect.required = false;
+                destinationProvinceSelect.value = '';
+                console.log('Ocultando select de província'); // Debug
+            }
+        }
+
+        
+        const addLocationBtn = document.getElementById('addLocationBtn');
+        const customLocationDiv = document.getElementById('customLocationDiv');
+        const customLocationInput = document.getElementById('custom_pickup_location');
+        const removeCustomBtn = document.getElementById('removeCustomBtn');
+        const pickupLocationSelect = document.getElementById('pickup_location_select');
+        const pickupLocationFinal = document.getElementById('pickup_location_final');
+        
+        // Definir data mínima como hoje
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('pickup_date').min = today;
+        document.getElementById('dropoff_date').min = today;
+
+        // Função para atualizar o input hidden
+        function updateFinalLocation() {
+            if (customLocationActive && customLocationInput.value.trim()) {
+                pickupLocationFinal.value = customLocationInput.value.trim();
+            } else if (!customLocationActive && pickupLocationSelect.value) {
+                pickupLocationFinal.value = pickupLocationSelect.value;
+            } else {
+                pickupLocationFinal.value = '';
+            }
+        }
+
+        // Botão adicionar localização personalizada
+        addLocationBtn.addEventListener('click', function() {
+            if (!customLocationActive) {
+                customLocationDiv.classList.add('show');
+                addLocationBtn.style.display = 'none';
+                pickupLocationSelect.style.paddingRight = '12px';
+                customLocationInput.focus();
+                customLocationActive = true;
+                pickupLocationSelect.value = '';
+                updateFinalLocation();
+            }
+        });
+
+        // Botão remover localização personalizada
+        removeCustomBtn.addEventListener('click', function() {
+            customLocationDiv.classList.remove('show');
+            addLocationBtn.style.display = 'block';
+            pickupLocationSelect.style.paddingRight = '130px';
+            customLocationInput.value = '';
+            customLocationActive = false;
+            updateFinalLocation();
+        });
+
+        // Atualizar quando selecionar no dropdown
+        pickupLocationSelect.addEventListener('change', function() {
+            if (!customLocationActive) {
+                updateFinalLocation();
+            } else {
+                this.value = '';
+            }
+        });
+
+        // Atualizar quando digitar localização personalizada
+        customLocationInput.addEventListener('input', function() {
+            updateFinalLocation();
+        });
+
+        // Atualizar data de entrega quando data de retirada mudar
+        document.getElementById('pickup_date').addEventListener('change', function() {
+            const pickupDate = new Date(this.value);
+            const dropoffDateInput = document.getElementById('dropoff_date');
+            
+            // Data de entrega deve ser no mínimo igual à data de retirada
+            dropoffDateInput.min = this.value;
+            
+            // Se a data de entrega for anterior à de retirada, ajustar
+            if (dropoffDateInput.value && new Date(dropoffDateInput.value) < pickupDate) {
+                dropoffDateInput.value = this.value;
+            }
+        });
+
+        // Validação antes do envio
+        document.querySelector('.form').addEventListener('submit', function(e) {
+            updateFinalLocation();
+            
+            if (!pickupLocationFinal.value) {
+                e.preventDefault();
+                alert('Por favor, selecione ou digite um local de retirada.');
+                return false;
+            }
+            
+            // Validar datas
+            const pickupDate = new Date(document.getElementById('pickup_date').value);
+            const dropoffDate = new Date(document.getElementById('dropoff_date').value);
+            
+            if (dropoffDate < pickupDate) {
+                e.preventDefault();
+                alert('A data de entrega não pode ser anterior à data de retirada.');
+                return false;
+            }
+        });
+
+        // Inicializar
+        pickupLocationSelect.style.paddingRight = '130px';
+    </script>
 
 @endsection

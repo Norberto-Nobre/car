@@ -4,6 +4,7 @@ use App\Http\Controllers\CarroDetalhes;
 use App\Http\Controllers\CarroDetalhesController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FrotaController;
+use App\Http\Controllers\ReservaDetalhesController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -15,4 +16,5 @@ Route::get('/sobre', [FrontController::class, 'sobre'])->name('front.sobre');
 // Route::get('sobre', function () { return view('sobre');})->name('front.sobre');
 Route::get('frotas', [FrotaController::class, 'index'])->name('front.frotas');
 Route::get('contacto', [FrontController::class, 'contacto'])->name('front.contacto');
-Route::get('/carro-detalhes/{vehicle:id}', [CarroDetalhesController::class, 'detalhes'])->name('front.carro-detalhes');
+Route::get('/carro-detalhes/{vehicle:slug}', [CarroDetalhesController::class, 'detalhes'])->name('front.carro-detalhes');
+Route::get('/reserva-detalhes/{vehicle:slug}', [ReservaDetalhesController::class, 'reserva'])->name('front.reserva-detalhes');
