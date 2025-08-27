@@ -284,7 +284,7 @@
                        @foreach ($vehicles as $vehicle)
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6">
                     <div class="vehicle-card">
-                        <a href="">
+                        <a href="{{route('front.carro-detalhes', $vehicle->slug)}}">
                             <img src="{{asset('storage/' . $vehicle->image)}}" class="w-100" alt="car">
                             <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h2>
                             <h6 class="fs-6">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>

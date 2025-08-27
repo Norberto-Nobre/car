@@ -1721,6 +1721,230 @@ Elements
 }
 
 /*-------------------------
+  Estilo Principais destinos
+-------------------------*/
+
+.testimonials-slider .cards {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.testimonials-slider .cards img {
+    width: 100%;
+    height: 250px; /* ou a altura desejada */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.testimonials-slider .cards .title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.testimonials-slider .cards .title h6 {
+    color: white !important;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+/* Overlay transparente que aparece no hover */
+.testimonials-slider .cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(4,26,113,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Efeitos no hover */
+.testimonials-slider .cards:hover::before {
+    opacity: 1;
+}
+
+.testimonials-slider .cards:hover img {
+    transform: scale(1.1);
+}
+
+.testimonials-slider .cards:hover .title h6 {
+    transform: translateY(-10px);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------------
+  Os dois Banner do index
+-------------------------*/
+
+ .main-container {
+            /* min-height: 100vh; */
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .card-section {
+            position: relative;
+            margin-left: 20px;
+            /* height: 100vh; */
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .card-section:hover {
+            box-shadow: none;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .card-section:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(45, 116, 186, 0.1));
+            transition: all 0.4s ease;
+        }
+
+        .card-section:hover .card-overlay {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(45, 116, 186, 0.4));
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            color: white;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .card-section:hover .card-content {
+            transform: translateY(0);
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d74ba;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .card-text {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .btn-solicitar {
+            background: linear-gradient(135deg, #2d74ba 0%, #1e5a99 100%);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(45, 116, 186, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-solicitar:hover {
+            background: linear-gradient(135deg, #1e5a99 0%, #2d74ba 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 116, 186, 0.4);
+            color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .main-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2d74ba;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-subtitle {
+            font-size: 20px;
+            color: #666;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .card-title {
+                font-size: 22px;
+            }
+
+            .card-text {
+                font-size: 14px;
+            }
+
+            .card-content {
+                padding: 25px;
+            }
+
+            .card-section {
+                /* height: 50vh; */
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(45, 116, 186, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(45, 116, 186, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(45, 116, 186, 0);
+            }
+        }
+
+/*-------------------------
   Form Styling
 -------------------------*/
 textarea.form-control {
@@ -3109,6 +3333,24 @@ label.error {
 }
 .blog-detail-banner-2 .sides-bar h1 {
   color: #040408;
+}
+
+/*-------------------------
+  Footer
+-------------------------*/
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cobre todo o footer */
+  background: linear-gradient(to left, rgba(4, 26, 113, 0.7), rgb(0, 0, 0)); 
+  /* degrade indo da direita (#041A71 80%) até a esquerda transparente */
+  z-index: 0;
+}
+
+.site-footer > * {
+  position: relative;
+  z-index: 1; /* garante que o texto e links fiquem acima da camada */
 }
 
 footer {

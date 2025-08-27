@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
 Route::get('/sobre', [FrontController::class, 'sobre'])->name('front.sobre');
+Route::get('/faqs', [FrontController::class, 'faqs'])->name('front.faqs');
 // Route::get('sobre', function () { return view('sobre');})->name('front.sobre');
 Route::get('frotas', [FrotaController::class, 'index'])->name('front.frotas');
 Route::get('contacto', [FrontController::class, 'contacto'])->name('front.contacto');

@@ -32,4 +32,8 @@ class FrontController extends Controller
         return view('contacto');
     }
 
+    public function faqs(){
+        return view('faqs');
+    }
+
 }

@@ -1,71 +1,129 @@
 <!-- HEADER MENU START -->
-    <header class="header">
-        <div class="container">
-            <nav class="navigation d-flex align-items-center justify-content-between">
-                <a href="{{route('front.index')}}" class="d-flex align-items-center">
-                    <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 40px;">
-                </a>
-                <div class="menu-button-right">
-                    <div class="main-menu__nav">
-                        <ul class="main-menu__list">
+
+<style>
+    .language-selector .dropdown-toggle {
+    color: inherit;
+    text-decoration: none;
+}
+
+.language-selector .dropdown-toggle:hover {
+    color: var(--bs-primary);
+}
+
+.language-selector .dropdown-menu {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.language-selector .dropdown-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 768px) {
+    .language-selector {
+        order: -1;
+        margin-right: 1rem;
+    }
+}
+</style>
+  <header class="header">
+    <div class="container">
+        <nav class="navigation d-flex align-items-center justify-content-between">
+            <a href="{{route('front.index')}}" class="d-flex align-items-center">
+                <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 40px;">
+            </a>
+            <div class="menu-button-right">
+                <div class="main-menu__nav">
+                    <ul class="main-menu__list">
+                        <li>
+                            <a href="{{route('front.index')}}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{route('front.sobre')}}">Sobre</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{route('front.frotas')}}">Frota</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{route('front.faqs')}}">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="{{route('front.contacto')}}">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-menu__right">
+                <div class="search-heart-icon d-md-flex d-none align-items-center gap-24">
+                    <div class="hidden sm:flex sm:items-center sm:ms-6"></div>
+                    <a class="fs-6 bg-primary text-white px-3 py-2 rounded fw-bold" href="#">Log in</a>
+                    {{-- <a class="fs-6 border px-3 py-2 rounded fw-bold" href="#">Register</a> --}}
+
+                    <!-- Language Selector -->
+                    <div class="language-selector dropdown">
+                        <button class="btn dropdown-toggle d-flex align-items-center gap-2" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border: none; background: none; padding: 0.5rem;">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='240' height='400' fill='%23046A38'/%3E%3Crect x='240' width='360' height='400' fill='%23DA020E'/%3E%3Ccircle cx='240' cy='200' r='67.5' fill='none' stroke='%23FFD700' stroke-width='7'/%3E%3Ccircle cx='240' cy='200' r='45' fill='none' stroke='%23FFD700' stroke-width='7'/%3E%3Cpath d='m240 110 15 45h45l-37.5 30 15 45-37.5-30-37.5 30 15-45-37.5-30h45z' fill='%23FFD700'/%3E%3Cpath d='m225 200-15 20h30z' fill='%23FFD700'/%3E%3Cpath d='m255 200 15 20h-30z' fill='%23FFD700'/%3E%3Cpath d='m240 220 0 25m-15-12.5h30' stroke='%23FFD700' stroke-width='3'/%3E%3C/svg%3E" alt="Portugal" width="20" height="15" style="border-radius: 2px;">
+                            <span class="fs-6">PT</span>
+                            <i class="fa-light fa-chevron-down" style="font-size: 0.8rem;"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown" style="min-width: 120px;">
                             <li>
-                                <a href="{{route('front.index')}}">Home</a>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="changeLanguage('pt')">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='240' height='400' fill='%23046A38'/%3E%3Crect x='240' width='360' height='400' fill='%23DA020E'/%3E%3Ccircle cx='240' cy='200' r='67.5' fill='none' stroke='%23FFD700' stroke-width='7'/%3E%3Ccircle cx='240' cy='200' r='45' fill='none' stroke='%23FFD700' stroke-width='7'/%3E%3Cpath d='m240 110 15 45h45l-37.5 30 15 45-37.5-30-37.5 30 15-45-37.5-30h45z' fill='%23FFD700'/%3E%3Cpath d='m225 200-15 20h30z' fill='%23FFD700'/%3E%3Cpath d='m255 200 15 20h-30z' fill='%23FFD700'/%3E%3Cpath d='m240 220 0 25m-15-12.5h30' stroke='%23FFD700' stroke-width='3'/%3E%3C/svg%3E" alt="Portugal" width="20" height="15" style="border-radius: 2px;">
+                                    Português
+                                </a>
                             </li>
                             <li>
-                                <a href="{{route('front.sobre')}}">Sobre</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="{{route('front.frotas')}}">Frota</a>
-                            </li>
-                             <li class="dropdown">
-                                <a href="javascript:void(0);">FAQ</a>
-                            </li>
-                            <!-- <li class="dropdown">
-                                <a href="javascript:void(0);">Rental</a>
-                                <ul>
-                                    <li><a href="rental.html">Rental</a></li>
-                                    <li><a href="rental-sidebar.html">Rental sidebar</a></li>
-                                    <li><a href="vehicle-details.html">Vehicle details</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="dropdown">
-                                <a href="javascript:void(0);">Booking</a>
-                                <ul>
-                                    <li><a href="booking.html">Booking</a></li>
-                                    <li><a href="book-now.html">Book-now</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="dropdown">
-                                <a href="javascript:void(0);">Blogs</a>
-                                <ul>
-                                    <li><a href="blogs.html">Blogs</a></li>
-                                    <li><a href="blogs-details.html">Blogs details</a></li>
-                                </ul>
-                            </li> -->
-                            <li>
-                                <a href="{{route('front.contacto')}}">Contacto</a>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="changeLanguage('en')">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23012169' d='M0 0h640v480H0z'/%3E%3Cpath fill='%23FFF' d='m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z'/%3E%3Cpath fill='%23C8102E' d='m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l246-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z'/%3E%3Cpath fill='%23FFF' d='M241 0v480h160V0H241zM0 160v160h640V160H0z'/%3E%3Cpath fill='%23C8102E' d='M0 193v96h640v-96H0zM273 0v480h96V0h-96z'/%3E%3C/svg%3E" alt="United Kingdom" width="20" height="15" style="border-radius: 2px;">
+                                    English
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="main-menu__right">
-                    <div class="search-heart-icon d-md-flex d-none align-items-center gap-24">
-                       @auth
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <a href="#" class="d-xl-none d-flex main-menu__toggler mobile-nav__toggler">
+                    <i class="fa-light fa-bars"></i>
+                </a>
+            </div>
+        </nav>
     </div>
-            @else
-                <a class="fs-6 bg-primary text-white px-3 py-2 rounded fw-bold" href="#">Log in</a>
-
-                    <a class="fs-6 border px-3 py-2 rounded fw-bold" href="#">Register</a>
-
-            @endauth
-                    </div>
-                        <a href="#" class="d-xl-none d-flex main-menu__toggler mobile-nav__toggler">
-                            <i class="fa-light fa-bars">rrrr</i>
-                        </a>
-                </div>
-            </nav>
-        </div>
-    </header>
+</header>
     <!-- HEADER MENU END -->
+
+    <script>
+        function changeLanguage(lang) {
+    // Aqui você pode implementar a lógica para trocar o idioma
+    console.log('Changing language to: ' + lang);
+    
+    // Exemplo de como você poderia implementar:
+    // window.location.href = window.location.pathname + '?lang=' + lang;
+    
+    // Ou se estiver usando Laravel com localização:
+    // window.location.href = '/' + lang + window.location.pathname;
+    
+    // Por enquanto, apenas atualiza o botão para mostrar o idioma selecionado
+    const languageButton = document.querySelector('#languageDropdown');
+    const flagImg = languageButton.querySelector('img');
+    const langText = languageButton.querySelector('span');
+    
+    if (lang === 'en') {
+        flagImg.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23012169' d='M0 0h640v480H0z'/%3E%3Cpath fill='%23FFF' d='m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z'/%3E%3Cpath fill='%23C8102E' d='m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l246-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z'/%3E%3Cpath fill='%23FFF' d='M241 0v480h160V0H241zM0 160v160h640V160H0z'/%3E%3Cpath fill='%23C8102E' d='M0 193v96h640v-96H0zM273 0v480h96V0h-96z'/%3E%3C/svg%3E";
+        flagImg.alt = "United Kingdom";
+        langText.textContent = "EN";
+    } else {
+        flagImg.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='240' height='400' fill='%23046A38'/%3E%3Crect x='240' width='360' height='400' fill='%23DA020E'/%3E%3Ccircle cx='240' cy='200' r='67.5' fill='none' stroke='%23FFD700' stroke-width='7'/%3E%3Ccircle cx='240' cy='200' r='45' fill='none' stroke='%23FFD700' stroke-width='7'/%3E%3Cpath d='m240 110 15 45h45l-37.5 30 15 45-37.5-30-37.5 30 15-45-37.5-30h45z' fill='%23FFD700'/%3E%3Cpath d='m225 200-15 20h30z' fill='%23FFD700'/%3E%3Cpath d='m255 200 15 20h-30z' fill='%23FFD700'/%3E%3Cpath d='m240 220 0 25m-15-12.5h30' stroke='%23FFD700' stroke-width='3'/%3E%3C/svg%3E";
+        flagImg.alt = "Portugal";
+        langText.textContent = "PT";
+    }
+}
+    </script>

@@ -5,156 +5,186 @@
 @section('content')
 
 <style>
-        .main-container {
-            /* min-height: 100vh; */
+    .banner {
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9;
+}
+
+.banner .container {
+    position: relative;
+    z-index: 99;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    top: -200px;
+    left: 0;
+    background: var(--bs-primary);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    bottom: -200px;
+    right: 0;
+    background: var(--bs-primary);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.banner .banner-design-1 {
+    position: absolute;
+    width: 30px;
+    height: 500px;
+    top: -165px;
+    left: 0;
+    background: var(--bs-white);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.banner .banner-design-2 {
+    position: absolute;
+    width: 30px;
+    height: 500px;
+    bottom: -165px;
+    right: 0;
+    background: var(--bs-white);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+/*  */
+
+.trust-section {
+            max-width: 1272px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8f2f7 100%);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .trust-content {
             display: flex;
             align-items: center;
-            padding: 0;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
-        .card-section {
-            position: relative;
-            margin-left: 20px;
-            /* height: 100vh; */
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+        .trust-info {
+            flex: 1;
+            min-width: 300px;
         }
 
-        .card-section:hover {
-            box-shadow: none;
+        .shield-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #041A71, #041A71);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(4,26,113,0.7);
         }
 
-        .card-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
+        .shield-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
         }
 
-        .card-section:hover .card-image {
-            transform: scale(1.1);
-        }
-
-        .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(45, 116, 186, 0.1));
-            transition: all 0.4s ease;
-        }
-
-        .card-section:hover .card-overlay {
-            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(45, 116, 186, 0.4));
-        }
-
-        .card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px;
-            color: white;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            transform: translateY(20px);
-            transition: all 0.4s ease;
-        }
-
-        .card-section:hover .card-content {
-            transform: translateY(0);
-        }
-
-        .card-title {
-            font-size: 28px;
+        .trust-title {
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: #2d74ba;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            line-height: 1.3;
         }
 
-        .card-text {
-            font-size: 16px;
-            margin-bottom: 25px;
-            color: #ffffff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-            line-height: 1.4;
-            opacity: 0.9;
-        }
-
-        .btn-solicitar {
-            background: linear-gradient(135deg, #2d74ba 0%, #1e5a99 100%);
-            border: none;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(45, 116, 186, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn-solicitar:hover {
-            background: linear-gradient(135deg, #1e5a99 0%, #2d74ba 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(45, 116, 186, 0.4);
-            color: white;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .main-title {
-            font-size: 48px;
-            font-weight: 800;
-            color: #2d74ba;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-subtitle {
-            font-size: 20px;
+        .trust-subtitle {
+            font-size: 1.1rem;
             color: #666;
-            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .rating-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            min-width: 250px;
+        }
+
+        .rating-score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .stars-container {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 12px;
+        }
+
+        .star {
+            width: 24px;
+            height: 24px;
+            background: #041A71;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .rating-details {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .rating-count {
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
         @media (max-width: 768px) {
-            .card-title {
-                font-size: 22px;
+            .trust-section {
+                padding: 30px 20px;
             }
-
-            .card-text {
-                font-size: 14px;
+            
+            .trust-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
             }
-
-            .card-content {
-                padding: 25px;
+            
+            .rating-container {
+                align-items: center;
+                text-align: center;
             }
-
-            .card-section {
-                /* height: 50vh; */
+            
+            .trust-title {
+                font-size: 1.8rem;
             }
-        }
-
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(45, 116, 186, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(45, 116, 186, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(45, 116, 186, 0);
+            
+            .rating-score {
+                font-size: 2.5rem;
             }
         }
 </style>
@@ -426,19 +456,19 @@
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars2.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Electric</h6>
+                                <h6 class="fs-6 text-center">Compacto</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars3.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Sedan</h6>
+                                <h6 class="fs-6 text-center">Suv</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/tesla.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Electric</h6>
+                                <h6 class="fs-6 text-center">Electrico</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
@@ -462,7 +492,7 @@
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/tesla.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Electric</h6>
+                                <h6 class="fs-6 text-center">Electrico</h6>
                             </div>
                         </a>
                     </div>
@@ -572,6 +602,23 @@
         </div>
     </section>
     <!--Ride area end -->
+
+    <section class="banner dark-background" style="background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.6)), url('assets/media/banners/banner9.jpg') center/cover fixed no-repeat; padding:70px 0;">
+        <div class="banner-design-1"></div>
+        <div class="banner-design-2"></div>
+        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <!-- <h4 class="text-primary">Our Services</h4> -->
+            <h1 class="display-6 mb-4 text-white">Por Que Escolher Nossa Empresa?</h1>
+            <p class="mb-0 text-white">Nosso diferêncial
+            </p>
+        </div>
+        <!-- Section Title -->
+        <div id="contact" class="contact">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                
+            </div>
+        </div>
+    </section>
 
     <!-- About-area start -->
     <section class="about my-80">
@@ -851,105 +898,138 @@
 
     <!--Destinos-start -->
     <section class="testimonials pt-0 pb-5">
-        <div class="container ">
-            <div class="reviews mt-48">
-                <div class="txt">
-                    <div class="d-flex flex-md-row flex-column gap-24 align-items-md-center justify-content-between">
-                        <div>
-                            <h4 class="mb-12">Principais destinos</h4>
-                            <p class="">Depoimentos reais que mostram por que somos a escolha certa para sua
-                                <br class="d-sm-block d-none">próxima viagem. fames bibendum ornare viverra.</p>
-                        </div>
-                        <div class="slider-arrows mt-sm-0 mt-48">
-                            <a href="javascript:;" class="arrow-btn btn-prev" data-slide="testimonials-slider">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M13.3048 1.40406L1.15797 13.5503C0.572344 14.1359 0.572344 15.0859 1.15797 15.6716L13.3042 27.8184C13.8898 28.4041 14.8398 28.4041 15.4255 27.8184C15.7458 27.4981 15.7458 26.9788 15.4255 26.6584L4.43922 15.6716C3.85359 15.086 3.85359 14.136 4.43922 13.5503L15.4261 2.56405C15.7464 2.24373 15.7464 1.72439 15.4261 1.40406C14.8405 0.818438 13.8905 0.818438 13.3048 1.40406Z"
-                                        fill="#2D74BA" />
-                                </svg>
-                            </a>
-                            <a href="javascript:;" class="arrow-btn btn-next" data-slide="testimonials-slider">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M3.07992 1.40406L15.2268 13.5503C15.8124 14.1359 15.8124 15.0859 15.2268 15.6716L3.08055 27.8184C2.49492 28.4041 1.54492 28.4041 0.959298 27.8184C0.63897 27.4981 0.638964 26.9788 0.959283 26.6584L11.9455 15.6716C12.5312 15.086 12.5312 14.136 11.9455 13.5503L0.958687 2.56405C0.638355 2.24373 0.63835 1.72439 0.958673 1.40406C1.5443 0.818438 2.4943 0.818438 3.07992 1.40406Z"
-                                        fill="#2D74BA" />
-                                </svg>
-                            </a>
-                        </div>
+    <div class="container">
+        <div class="reviews mt-48">
+            <div class="txt">
+                <div class="d-flex flex-md-row flex-column gap-24 align-items-md-center justify-content-between">
+                    <div>
+                        <h4 class="mb-12">Principais destinos</h4>
+                        <p class="">Conheça os principais destinos com a praticidade e o conforto 
+                            <br class="d-sm-block d-none">que só a nossa frota pode oferecer.</p>
                     </div>
-                </div>
-                <div class="testimonials-slider">
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
+                    <div class="slider-arrows mt-sm-0 mt-48">
+                        <a href="javascript:;" class="arrow-btn btn-prev" data-slide="testimonials-slider">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.3048 1.40406L1.15797 13.5503C0.572344 14.1359 0.572344 15.0859 1.15797 15.6716L13.3042 27.8184C13.8898 28.4041 14.8398 28.4041 15.4255 27.8184C15.7458 27.4981 15.7458 26.9788 15.4255 26.6584L4.43922 15.6716C3.85359 15.086 3.85359 14.136 4.43922 13.5503L15.4261 2.56405C15.7464 2.24373 15.7464 1.72439 15.4261 1.40406C14.8405 0.818438 13.8905 0.818438 13.3048 1.40406Z"
+                                    fill="#2D74BA" />
+                            </svg>
                         </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                       <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#" class="cards">
-                            <div class="title">
-                                <h6 class="fs-6">Quedas de Calandulas</h5>
-                            </div>
-                            <img src="assets/media/paisagem/paisagem1.jpg" alt="car">
+                        <a href="javascript:;" class="arrow-btn btn-next" data-slide="testimonials-slider">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.07992 1.40406L15.2268 13.5503C15.8124 14.1359 15.8124 15.0859 15.2268 15.6716L3.08055 27.8184C2.49492 28.4041 1.54492 28.4041 0.959298 27.8184C0.63897 27.4981 0.638964 26.9788 0.959283 26.6584L11.9455 15.6716C12.5312 15.086 12.5312 14.136 11.9455 13.5503L0.958687 2.56405C0.638355 2.24373 0.63835 1.72439 0.958673 1.40406C1.5443 0.818438 2.4943 0.818438 3.07992 1.40406Z"
+                                    fill="#2D74BA" />
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="testimonials-slider">
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Luanda</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem09.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Cristo Rei - Lubango</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem010.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Benguela</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem011.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Quedas de Kalandulas - Malanje</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem01.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Ilha do Mussulo</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem02.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Museu da Escravatura</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem03.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Tundavala</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem05.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Avenida 4 de Fevereiro</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem06.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="cards">
+                        <div class="title">
+                            <h6 class="fs-6">Miradouro da Lua</h6>
+                        </div>
+                        <img src="assets/media/paisagem/paisagem08.jpg" alt="Quedas de Calandulas">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Destinos-end -->
+
+    <section class="trust-section mb-5">
+        <div class="trust-content">
+            <div class="trust-info d-flex">
+                <div class="fs-6 shield-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                    </svg>
+                </div>
+                <div class="info ms-3">
+                    <h6 class="fs-4 trust-title">Confiança para explorar Angola à sua maneira</h6>
+                <p class="trust-subtitle">Milhares de pessoas confiam na CHANA RENT-A-CAR para viajar pelo mundo.</p>
+                </div>
+            </div>
+            <div class="rating-container">
+                <div class="fs-4 rating-score">4.5</div>
+                <div class="stars-container">
+                    <div class="fs-4 star"></div>
+                    <div class="fs-4 star"></div>
+                    <div class="fs-4 star"></div>
+                    <div class="fs-4 star"></div>
+                    <div class="fs-4 star"></div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- Destinos-end -->
 
     <!-- brands-start -->
     {{-- <div class="brand-section my-40 py-48">
