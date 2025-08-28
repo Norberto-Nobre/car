@@ -1,5 +1,5 @@
  <!--Footer-start -->
-    <footer class="site-footer pt-40" style="position: relative;   background: url('assets/media/banners/banner10.jpg') center/cover no-repeat;  color: white; overflow: hidden;">
+    <footer class="site-footer pt-40" style="position: relative;   background: url('{{asset('assets/media/banners/banner10.jpg')}}') center/cover no-repeat;  color: white; overflow: hidden;">
         <div class="container">
             <div class="row mb-16 row-gap-4">
                 <div class="col-lg-3">

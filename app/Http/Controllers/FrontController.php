@@ -36,4 +36,13 @@ class FrontController extends Controller
         return view('faqs');
     }
 
+    public function historia(){
+        return view('historia');
+    }
+
+    public function equipa(){
+        return view('equipa');
+
+
+    }
 }

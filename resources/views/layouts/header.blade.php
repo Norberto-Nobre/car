@@ -57,6 +57,14 @@
                         <li>
                             <a href="{{route('front.contacto')}}">Contacto</a>
                         </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);">Empresa</a>
+                            <ul>
+                                <li><a href="{{route('front.equipa')}}">Nossa Equipa</a></li>
+                                <li><a href="{{route('front.historia')}}">Nossa História</a></li>
+                                {{-- <li><a href="vehicle-details.html">Vehicle details</a></li> --}}
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +72,31 @@
             <div class="main-menu__right">
                 <div class="search-heart-icon d-md-flex d-none align-items-center gap-24">
                     <div class="hidden sm:flex sm:items-center sm:ms-6"></div>
-                    <a class="fs-6 bg-primary text-white px-3 py-2 rounded fw-bold" href="#">Log in</a>
+                    <div class="social-icons mb-12">
+                            <ul class="d-flex unstyled gap-12">
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('assets/media/footer/Instagram.png')}}" alt="logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('assets/media/footer/Twitter.png')}}" alt="logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('assets/media/footer/Dribbble.png')}}" alt="logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('assets/media/footer/Linkedin.png')}}" alt="logo">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    {{-- <a class="fs-6 bg-primary text-white px-3 py-2 rounded fw-bold" href="#">Log in</a> --}}
                     {{-- <a class="fs-6 border px-3 py-2 rounded fw-bold" href="#">Register</a> --}}
 
                     <!-- Language Selector -->
@@ -104,18 +136,18 @@
         function changeLanguage(lang) {
     // Aqui você pode implementar a lógica para trocar o idioma
     console.log('Changing language to: ' + lang);
-    
+
     // Exemplo de como você poderia implementar:
     // window.location.href = window.location.pathname + '?lang=' + lang;
-    
+
     // Ou se estiver usando Laravel com localização:
     // window.location.href = '/' + lang + window.location.pathname;
-    
+
     // Por enquanto, apenas atualiza o botão para mostrar o idioma selecionado
     const languageButton = document.querySelector('#languageDropdown');
     const flagImg = languageButton.querySelector('img');
     const langText = languageButton.querySelector('span');
-    
+
     if (lang === 'en') {
         flagImg.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23012169' d='M0 0h640v480H0z'/%3E%3Cpath fill='%23FFF' d='m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z'/%3E%3Cpath fill='%23C8102E' d='m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l246-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z'/%3E%3Cpath fill='%23FFF' d='M241 0v480h160V0H241zM0 160v160h640V160H0z'/%3E%3Cpath fill='%23C8102E' d='M0 193v96h640v-96H0zM273 0v480h96V0h-96z'/%3E%3C/svg%3E";
         flagImg.alt = "United Kingdom";

@@ -130,6 +130,76 @@
     </section>
     <!-- catagory end -->
 
+    <!-- About-area start -->
+    <section class="about my-80">
+        <div class="container ps-0">
+            <div class="design mt-48">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="assets/media/cars/pngwing-17.png" alt="car">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="txt-block">
+                            <h4 class="mb-12">Seu Portal para Aventuras Perfeitas<br class="d-xl-block  d-none"></h4>
+                            <p class="mb-32">Explore novos destinos com segurança, conforto e estilo. Nossa frota está pronta para transformar cada viagem em uma experiência inesquecível.</p>
+                            <p class="mb-32">
+                                Seja para uma viagem a trabalho, férias em família ou uma escapada de fim de semana, oferecemos opções que se adaptam a cada tipo de necessidade. Com atendimento de excelência e preços acessíveis, garantimos que sua aventura comece do jeito certo.</p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="pic">
+                                        <img src="assets/media/icons/vector.png" alt="plane">
+                                        <div class="text">
+                                            <h6>Recepção em Aeroportos</h6>
+                                            <p class="mb-24">Comece sua viagem com comodidade. Te buscamos no aeroporto com pontualidade e conforto.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="icon">
+                                        <img src="assets/media/icons/vector2.png" alt="earth">
+                                        <div class="text">
+                                            <h6>Presença em Diversas Regiões</h6>
+                                            <p class="mb-24">Conte com uma rede de atendimento preparada para te servir onde você estiver.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 mb-32">
+                                    <div class="pic">
+                                        <img src="assets/media/icons/Vector3.png" alt="people">
+                                        <div class="text">
+                                            <h6>Pagamento Seguro</h6>
+                                            <p>Transações protegidas com tecnologia de ponta. Sua segurança é prioridade.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="icon">
+                                        <img src="assets/media/icons/Vector4.png" alt="car">
+                                        <div class="text">
+                                            <h6> Carros Higienizados e Prontos</h6>
+                                            <p class="mb-8">Veículos limpos e desinfetados com rigor para garantir sua saúde e bem-estar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="cus-btn">
+                                <span class="btn-text">
+                                    Sobre nós
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </span>
+                                <span class="btn-text">
+                                    Sobre nós
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About-area start  end -->
+
     <!-- brands-start -->
     <div class="brand-section my-40 py-48">
         <div class="container">
