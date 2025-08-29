@@ -27,6 +27,7 @@ class PanelPanelProvider extends PanelProvider
             ->id('panel')
             ->path('panel')
             ->login()
+            ->registration()
             ->colors([
                 'primary' => '#1E40AF', // azul escuro (hexadecimal)
             ])

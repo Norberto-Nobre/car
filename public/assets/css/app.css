@@ -1790,6 +1790,80 @@ Elements
 }
 
 /*-------------------------
+Banners das páginas
+-------------------------*/
+ /*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0 90px 0;
+    transition: 0.5s;
+}
+.bg-breadcrumb-1{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/cars/frota.jpg') fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0 90px 0;
+    transition: 0.5s;
+}
+.bg-breadcrumb-2{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0 90px 0;
+    transition: 0.5s;
+}
+.bg-breadcrumb-3{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0 90px 0;
+    transition: 0.5s;
+}
+.bg-breadcrumb-4{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0 90px 0;
+    transition: 0.5s;
+}
+.bg-breadcrumb-5{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0 90px 0;
+    transition: 0.5s;
+}
+
+.bg-breadcrumb, .bg-breadcrumb-1, .bg-breadcrumb-2, .bg-breadcrumb-3, .bg-breadcrumb-4, .bg-breadcrumb-5, .breadcrumb {
+    position: relative;
+}
+
+.bg-breadcrumb, .bg-breadcrumb-1,.bg-breadcrumb-2, .bg-breadcrumb-3, .bg-breadcrumb-4, .bg-breadcrumb-5, .breadcrumb .breadcrumb-item a {
+    color: #fff;
+}
+/*** Single Page Hero Header End ***/
+
+/*-------------------------
   Confiança para explorar Angola à sua maneira
 -------------------------*/
 
@@ -3924,7 +3998,7 @@ footer .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggl
 }
 
 .files {
-  margin-top: -100px;
+  margin-top: 60px;
 }
 .files form .topic {
   padding: clamp(32px, 2.5vw, 33px);
@@ -3933,6 +4007,7 @@ footer .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggl
   background: white;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
 }
+
 .files form .topic h6 {
   color: #040408;
 }

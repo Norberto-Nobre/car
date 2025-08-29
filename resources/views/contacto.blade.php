@@ -3,13 +3,13 @@
 
 @section('content')
     <!-- About-area start -->
-    <section class="title-banner-5">
-        <div class="txt">
-            <h2 class="white text-center">Contacto</h2>
+    <section class="container-fluid bg-breadcrumb-3">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contacto</h4>
             <div class="txt-block text-center white">
-                <a href="index.html">Home</a>
-                <i class="fa-solid fa-greater-than"></i>
-                <a href="about.html">Contacto</a>
+                <a href="{{route('front.index')}}">Home </a>
+                <i class="fa-solid fs-6 fa-greater-than"></i>
+                <a href="{{route('front.contacto')}}"> Contacto</a>
             </div>
         </div>
     </section>

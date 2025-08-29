@@ -105,13 +105,13 @@
         }
 </style>
     <!-- About-area start -->
-    <section class="title-banner-5">
-        <div class="txt">
-            <h2 class="white text-center">FAQ</h2>
+    <section class="container-fluid bg-breadcrumb-2">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">FAQ</h4>
             <div class="txt-block text-center white">
-                <a href="index.html">Home</a>
-                <i class="fa-solid fa-greater-than"></i>
-                <a href="about.html">faq</a>
+                <a href="{{route('front.index')}}">Home </a>
+                <i class="fa-solid fs-6 fa-greater-than"></i>
+                <a href="{{route('front.faqs')}}"> Faq</a>
             </div>
         </div>
     </section>
@@ -131,14 +131,14 @@
                         <!-- FAQ Item 1 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <span>Como começar a alugar um carro?</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
                                 </button>
                             </h3>
-                            <div id="collapseOne" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div id="collapseOne" class="accordion-collapse show collapse faq-collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
                                     Para começar com o aluguel de carros, você precisa ter pelo menos 21 anos, uma carteira de motorista válida e um cartão de crédito. Visite nosso site, escolha suas datas e local, selecione o veículo desejado e complete a reserva online. É simples e rápido!
                                 </div>

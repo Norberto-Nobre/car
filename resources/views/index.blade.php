@@ -76,7 +76,7 @@
 }
 
 .feature .feature-item .feature-icon span {
-    width: 70px; 
+    width: 70px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -93,14 +93,14 @@
 }
 
 .feature .smartcar a{
-    width: 10%; 
+    width: 10%;
     margin-left: 600px
 }
 
 
 @media (max-width: 768px) {
     .feature .smartcar a{
-        width: 30%; 
+        width: 30%;
         margin-left: 100px !important;
     }
 }
@@ -127,7 +127,7 @@
       <div class="carousel-caption d-none d-md-block edit-1">
        <div class="container animate__animated animate__fadeInUp animate__delay-2s">
             <h4 class="mb-16">
-                <span class="h2 text-white">Chana RENT-A-CAR </span><br>
+                <span class="h2 text-white">{{ __('index.slide.slide1.title') }} </span><br>
                 <p class="fs-5 text-white mt-3 mb-2">Carros modernos, revisados e confortáveis, prontos para levar você ao seu destino com segurança e estilo. <strong>Reserve agora e comece sua aventura hoje!</strong></p>
             </h4>
             <div class="btn-block row-gap-3 mb-48">
@@ -562,7 +562,7 @@
                             <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="feature-item">
                                     <div class="feature-icon">
-                                    
+
                                         <span class="fs-3"><i class="bi bi-cash-stack"></i></span>
                                     </div>
                                     <div class="ms-4">
@@ -609,7 +609,7 @@
         </section>
         <!-- Features End -->
 
-    
+
 
     <!-- Top vehicle area start -->
     {{-- <section class="vehicles pb-48">
