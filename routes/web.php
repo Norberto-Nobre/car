@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CarroDetalhes;
 use App\Http\Controllers\CarroDetalhesController;
+use App\Http\Controllers\CustumerController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FrotaController;
 use App\Http\Controllers\ReservaDetalhesController;
@@ -19,3 +21,5 @@ Route::get('frotas', [FrotaController::class, 'index'])->name('front.frotas');
 Route::get('contacto', [FrontController::class, 'contacto'])->name('front.contacto');
 Route::get('/carro-detalhes/{vehicle:slug}', [CarroDetalhesController::class, 'detalhes'])->name('front.carro-detalhes');
 Route::get('/reserva-detalhes/{vehicle:slug}', [ReservaDetalhesController::class, 'reserva'])->name('front.reserva-detalhes');
+Route::post('/custumer', [CustumerController::class,'store'])->name('custumer.store');
+Route::post('/booking_dados', [BookingController::class,'reserveData'])->name('bookingdata');

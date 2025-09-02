@@ -284,28 +284,21 @@
                         </div>
                     </div>
                     <div class="side-bar-2 mt-24">
-                    <form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form">
+                    <!--<form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form"> -->
+                    <form action="{{ route('bookingdata') }}" method="post" class="form">
                          @csrf
                         <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
-
-                        <p class="mb-8 fw-600 dark-gray">Local de retirada</p>
+                        <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>
                         <div class="pickup-location-container">
                             <div class="location-input-wrapper">
                                 <select id="pickup_location_select" class="mb-12">
                                     <option value="">Selecione um escritório</option>
-                                    <option value="Aeroporto 4 de Fevereiro">Aeroporto 4 de Fevereiro</option>
-                                    <option value="Centro de Luanda">Centro de Luanda</option>
-                                    <option value="Ilha de Luanda">Ilha de Luanda</option>
-                                    <option value="Miramar">Miramar</option>
-                                    <option value="Maianga">Maianga</option>
-                                    <option value="Ingombotas">Ingombotas</option>
-                                    <option value="Samba">Samba</option>
-                                    <option value="Viana">Viana</option>
-                                    <option value="Talatona">Talatona</option>
-                                    <option value="Benfica">Benfica</option>
+                                    @foreach($offices as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
                                 </select>
                                 <button type="button" class="add-location-btn" id="addLocationBtn">
-                                    + Adicionar local
+                                    + Adicionar Endereço de entrega
                                 </button>
                             </div>
 
@@ -320,8 +313,17 @@
                             <input type="hidden" name="pickup_location" id="pickup_location_final" required>
                         </div>
 
-                        <p class="mb-8 fw-600 dark-gray">Local de entrega</p>
-                        <input type="text" name="dropoff_location" class="mb-12" placeholder="Lar do Patriota, Luanda" required>
+                        <p class="mb-8 fw-600 dark-gray">Local de devolução da viatura</p>
+                        <div class="pickup-location-container">
+                            <div class="location-input-wrapper">
+                                <select id="" name="dropoff_location" required class="mb-12">
+                                    <option value="">Selecione um escritório</option>
+                                    @foreach($offices as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
 
                         <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
                         <div class="d-flex gap-24">
@@ -346,23 +348,9 @@
                             <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
                             <select name="destination_province" id="destination_province" class="mb-12">
                                 <option value="">Selecione uma província</option>
-                                <option value="Benguela">Benguela</option>
-                                <option value="Bengo">Bengo</option>
-                                <option value="Bié">Bié</option>
-                                <option value="Cabinda">Cabinda</option>
-                                <option value="Cuando Cubango">Cuando Cubango</option>
-                                <option value="Cuanza Norte">Cuanza Norte</option>
-                                <option value="Cuanza Sul">Cuanza Sul</option>
-                                <option value="Cunene">Cunene</option>
-                                <option value="Huambo">Huambo</option>
-                                <option value="Huíla">Huíla</option>
-                                <option value="Lunda Norte">Lunda Norte</option>
-                                <option value="Lunda Sul">Lunda Sul</option>
-                                <option value="Malanje">Malanje</option>
-                                <option value="Moxico">Moxico</option>
-                                <option value="Namibe">Namibe</option>
-                                <option value="Uíge">Uíge</option>
-                                <option value="Zaire">Zaire</option>
+                                @foreach($provinces as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                @endforeach
                             </select>
                         </div>
 
@@ -378,6 +366,7 @@
                         </button>
                     </form>
                     </div>
+                    <!--
                     <div class="side-bar mt-32">
                         <div class="vehicle-details bg-quant">
                             <h6 class="fs-6">Resumo de preços</h6>
@@ -433,6 +422,7 @@
                             </div>
                         </div>
                     </div>
+                            -->
                 </div>
             </div>
         </div>
