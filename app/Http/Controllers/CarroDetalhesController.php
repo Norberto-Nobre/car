@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
 use App\Services\FrontService;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class CarroDetalhesController extends Controller
@@ -16,6 +17,8 @@ class CarroDetalhesController extends Controller
         $this->frontService = $frontService;
     }
     public function detalhes(Vehicle $vehicle){
-        return view('carro-detalhes', compact('vehicle'));
+        $offices = DB::table('offices')->select('*')->get();
+        $provinces = DB::table('provinces')->select('*')->get();
+        return view('carro-detalhes', compact('vehicle','offices','provinces'));
     }
 }

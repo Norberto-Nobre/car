@@ -52,7 +52,7 @@
             transition: all 0.3s ease;
             z-index: 2;
         }
-        
+
         .add-location-btn:hover {
             background: #2d74ba;
         }
@@ -123,7 +123,7 @@
         select {
             padding-right: 130px;
             appearance: none;
-            
+
             background-repeat: no-repeat;
             background-position: right 12px center;
             background-size: 16px;
@@ -284,28 +284,21 @@
                         </div>
                     </div>
                     <div class="side-bar-2 mt-24">
-                    <form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form">
+                    <!--<form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form"> -->
+                    <form action="{{ route('bookingdata') }}" method="post" class="form">
                          @csrf
                         <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
-
-                        <p class="mb-8 fw-600 dark-gray">Local de retirada</p>
+                        <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>
                         <div class="pickup-location-container">
                             <div class="location-input-wrapper">
                                 <select id="pickup_location_select" class="mb-12">
                                     <option value="">Selecione um escritório</option>
-                                    <option value="Aeroporto 4 de Fevereiro">Aeroporto 4 de Fevereiro</option>
-                                    <option value="Centro de Luanda">Centro de Luanda</option>
-                                    <option value="Ilha de Luanda">Ilha de Luanda</option>
-                                    <option value="Miramar">Miramar</option>
-                                    <option value="Maianga">Maianga</option>
-                                    <option value="Ingombotas">Ingombotas</option>
-                                    <option value="Samba">Samba</option>
-                                    <option value="Viana">Viana</option>
-                                    <option value="Talatona">Talatona</option>
-                                    <option value="Benfica">Benfica</option>
+                                    @foreach($offices as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
                                 </select>
                                 <button type="button" class="add-location-btn" id="addLocationBtn">
-                                    + Adicionar local
+                                    + Adicionar Endereço de entrega
                                 </button>
                             </div>
 
@@ -320,8 +313,17 @@
                             <input type="hidden" name="pickup_location" id="pickup_location_final" required>
                         </div>
 
-                        <p class="mb-8 fw-600 dark-gray">Local de entrega</p>
-                        <input type="text" name="dropoff_location" class="mb-12" placeholder="Lar do Patriota, Luanda" required>
+                        <p class="mb-8 fw-600 dark-gray">Local de devolução da viatura</p>
+                        <div class="pickup-location-container">
+                            <div class="location-input-wrapper">
+                                <select id="" name="dropoff_location" required class="mb-12">
+                                    <option value="">Selecione um escritório</option>
+                                    @foreach($offices as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
 
                         <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
                         <div class="d-flex gap-24">
@@ -346,23 +348,9 @@
                             <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
                             <select name="destination_province" id="destination_province" class="mb-12">
                                 <option value="">Selecione uma província</option>
-                                <option value="Benguela">Benguela</option>
-                                <option value="Bengo">Bengo</option>
-                                <option value="Bié">Bié</option>
-                                <option value="Cabinda">Cabinda</option>
-                                <option value="Cuando Cubango">Cuando Cubango</option>
-                                <option value="Cuanza Norte">Cuanza Norte</option>
-                                <option value="Cuanza Sul">Cuanza Sul</option>
-                                <option value="Cunene">Cunene</option>
-                                <option value="Huambo">Huambo</option>
-                                <option value="Huíla">Huíla</option>
-                                <option value="Lunda Norte">Lunda Norte</option>
-                                <option value="Lunda Sul">Lunda Sul</option>
-                                <option value="Malanje">Malanje</option>
-                                <option value="Moxico">Moxico</option>
-                                <option value="Namibe">Namibe</option>
-                                <option value="Uíge">Uíge</option>
-                                <option value="Zaire">Zaire</option>
+                                @foreach($provinces as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                @endforeach
                             </select>
                         </div>
 
@@ -378,6 +366,7 @@
                         </button>
                     </form>
                     </div>
+                    <!--
                     <div class="side-bar mt-32">
                         <div class="vehicle-details bg-quant">
                             <h6 class="fs-6">Resumo de preços</h6>
@@ -433,6 +422,7 @@
                             </div>
                         </div>
                     </div>
+                            -->
                 </div>
             </div>
         </div>
@@ -809,14 +799,14 @@
             }
         }
 
-        
+
         const addLocationBtn = document.getElementById('addLocationBtn');
         const customLocationDiv = document.getElementById('customLocationDiv');
         const customLocationInput = document.getElementById('custom_pickup_location');
         const removeCustomBtn = document.getElementById('removeCustomBtn');
         const pickupLocationSelect = document.getElementById('pickup_location_select');
         const pickupLocationFinal = document.getElementById('pickup_location_final');
-        
+
         // Definir data mínima como hoje
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('pickup_date').min = today;
@@ -874,10 +864,10 @@
         document.getElementById('pickup_date').addEventListener('change', function() {
             const pickupDate = new Date(this.value);
             const dropoffDateInput = document.getElementById('dropoff_date');
-            
+
             // Data de entrega deve ser no mínimo igual à data de retirada
             dropoffDateInput.min = this.value;
-            
+
             // Se a data de entrega for anterior à de retirada, ajustar
             if (dropoffDateInput.value && new Date(dropoffDateInput.value) < pickupDate) {
                 dropoffDateInput.value = this.value;
@@ -887,17 +877,17 @@
         // Validação antes do envio
         document.querySelector('.form').addEventListener('submit', function(e) {
             updateFinalLocation();
-            
+
             if (!pickupLocationFinal.value) {
                 e.preventDefault();
                 alert('Por favor, selecione ou digite um local de retirada.');
                 return false;
             }
-            
+
             // Validar datas
             const pickupDate = new Date(document.getElementById('pickup_date').value);
             const dropoffDate = new Date(document.getElementById('dropoff_date').value);
-            
+
             if (dropoffDate < pickupDate) {
                 e.preventDefault();
                 alert('A data de entrega não pode ser anterior à data de retirada.');

@@ -22,11 +22,12 @@
                         <div class="booking-card-2">
                             <h6 class="fs-6 mb-32">Insira seus dados</h6>
                             <div class="form">
-                                <form action="" method="POST">
+                                <form action="{{ route('custumer.store') }}" method="POST">
                                     @csrf
-                                    <input type="hidden" name="vehicle_id" value="">
+                                    <input type="hidden" name="vehicle_id" value="{{$vehicle->vehicle_id}}">
                                     <div class="row row-gap-4">
                                         <div class="col-lg-2">
+                                            <!--
                                             <div class="drop-container">
                                                 <div class="wrapper-dropdown white" id="dropdown-1">
                                                     <span class="selected-display" id="destination-1">Genero</span>
@@ -42,6 +43,15 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            -->
+                                            <div class="pickup-location-container">
+                                                <div class="location-input-wrapper">
+                                                    <select name="gender" class="mb-12">
+                                                        <option value="femenino">Mulher</option>
+                                                        <option value="masculino">Homem</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-lg-5">
                                             <input type="text" id="name" placeholder="Nome Completo" name="name">
@@ -50,27 +60,55 @@
                                             <input type="email" id="email" placeholder="Email" name="email">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="contacto" placeholder="Contacto" name="contacto">
+                                            <input type="text" id="contacto" placeholder="Contacto" name="phone">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="endereco" placeholder="Endereço" name="endereco">
+                                            <input type="text" id="endereco" placeholder="Endereço" name="address">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="date" id="data_nascimento" placeholder="Data de Nascimento" name="data_nascimento">
+                                            <input type="date" id="data_nascimento" placeholder="Data de Nascimento" name="date_of_birth">
                                         </div>
-                                        
+
 
                                     </div>
                                     <div class="text-end mb-12">
-                            <button type="submit" class="cus-btn mt-24 bookingProcced">
-                                <span class="btn-text">
-                                    Alugar
-                                </span>
-                                <span>
-                                    Alugar
-                                </span>
-                            </button>
-                        </div>
+                                        <button type="submit" class="cus-btn mt-24 bookingProcced">
+                                            <span class="btn-text">
+                                                Alugar
+                                            </span>
+                                            <span>
+                                                Alugar
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                @php
+                                    if(isset($province->price)){
+                                        $taxa_provincial = $province->price;
+                                    }else{
+                                        $taxa_provincial = 0;
+                                    }
+
+                                    if($local == 0){
+                                        $taxa_entrega = 10000;
+                                    }
+                                    $dias = $days;
+                                    $caussao = $vehicle->caussion;
+                                @endphp
+
+                                @php
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + $taxa_provincial + $caussao;
+                                @endphp
+
+                                <input type="number" hidden name="vehicle_id" value="{{$vehicle->vehicle_id}}">
+                                <input type="text" hidden name="pickup_office_id" value="{{$data['pickup_location']}}">
+                                <input type="number" hidden name="return_office_id" value="{{$data['dropoff_location']}}">
+                                <input type="number" hidden name="province_id" value="{{$data['destination_province']}}">
+                                <input type="text" hidden name="start_date" value="{{$data['pickup_date'].' '.$data['pickup_time']}}">
+                                <input type="text" hidden name="end_date" value="{{$data['dropoff_date'].' '.$data['dropoff_time']}}">
+                                <input type="number" hidden name="daily_rate" value="{{$vehicle->price_per_day}}">
+                                <input type="number" hidden name="days" value="{{$days}}">
+                                <input type="number" hidden name="total_amount" value="{{$total}}">
                                 </form>
                             </div>
                         </div>
@@ -126,7 +164,7 @@
                                             </svg>
                                         </div>
                                         <div class="block">
-                                            <p class="mb-32">Aug 20 (Sun) - Aug 22 (Tue)</p>
+                                            <p class="mb-32">{{$data['pickup_date']}} - {{$data['dropoff_date']}}</p>
                                         </div>
                                     </div>
                                     <div class="d-flex gap-8">
@@ -142,8 +180,8 @@
                                             </svg>
                                         </div>
                                         <div class="block">
-                                            <p>Pick-Up Location:</p>
-                                            <p class="light-gray mb-32">Meet & Greet</p>
+                                            <p>Local de entrega da viatura:</p>
+                                            <p class="light-gray mb-32">Talatona</p>
                                         </div>
                                     </div>
                                     <div class="d-flex gap-8">
@@ -191,9 +229,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                        
+
                     </div>
                         <!-- <div class="booking-card-3 mt-32 py-40">
                             <h5 class="mb-8">Save your details!</h5>
@@ -209,7 +247,7 @@
                             <p>By signing in or creating an account, you agree with our <span> Terms & conditions</span>
                             </p>
                         </div> -->
-                        
+
                     </div>
                     {{-- <div class="steptwo">
 
@@ -331,8 +369,8 @@
                             <h6 class="fs-6">Informações do carro</h6>
                         </div>
                         <div class="vehicle-details-2 bg-ter">
-                            <h6 class="fs-6">fff</h6>
-                            <p class="mb-24">fff</p>
+                            <h6 class="fs-6">{{$vehicle->brand_name}}</h6>
+                            <p class="mb-24">{{$vehicle->model_name}}</p>
                             <div class="d-flex justify-content-between flex-xl-row flex-column flex-end mb-24">
                                 <img src="assets/media/cars/Car-image.png" alt="Car">
                                 <div class="icons gap-8 d-flex align-items-end">
@@ -363,7 +401,7 @@
                                         d="M15.8197 0.359434C15.5795 0.119121 15.1898 0.119121 14.9495 0.359434L4.97412 10.3348L1.05052 6.41116C0.810236 6.17082 0.420579 6.17082 0.180235 6.41116C-0.0600783 6.65148 -0.0600783 7.0411 0.180235 7.28145L4.53902 11.6402C4.77924 11.8805 5.16903 11.8805 5.40931 11.6402L15.8197 1.22972C16.06 0.989373 16.06 0.599747 15.8197 0.359434Z"
                                         fill="#0F0F0F" />
                                 </svg>
-                                <p>Transmissão ffff</p>
+                                <p>Transmissão {{$vehicle->transmission}}</p>
                             </div>
                             <div class="d-flex gap-8 align-items-center mb-12">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"
@@ -372,7 +410,7 @@
                                         d="M15.8197 0.359434C15.5795 0.119121 15.1898 0.119121 14.9495 0.359434L4.97412 10.3348L1.05052 6.41116C0.810236 6.17082 0.420579 6.17082 0.180235 6.41116C-0.0600783 6.65148 -0.0600783 7.0411 0.180235 7.28145L4.53902 11.6402C4.77924 11.8805 5.16903 11.8805 5.40931 11.6402L15.8197 1.22972C16.06 0.989373 16.06 0.599747 15.8197 0.359434Z"
                                         fill="#0F0F0F" />
                                 </svg>
-                                <p>Tipo de combustivel fff</p>
+                                <p>Tipo de combustivel {{$vehicle->fuel_type}}</p>
                             </div>
                             {{-- <div class="faq-block mb-24">
                                 <a href="#" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1"
@@ -502,35 +540,48 @@
                                     <h6 class="fs-6">Preço</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">kz 2222 /Dia</h6>
+                                <h6 class="fs-6">{{number_format($vehicle->price_per_day, '0', ',', '.')}} kz /Dia</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
                                     <h6 class="fs-6">Quantidade de dias</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">10</h6>
+                                @php
+                                    if(isset($province->price)){
+                                        $taxa_provincial = $province->price;
+                                    }else{
+                                        $taxa_provincial = 0;
+                                    }
+
+                                    if($local == 0){
+                                        $taxa_entrega = 10000;
+                                    }
+                                    $dias = $days;
+                                    $caussao = $vehicle->caussion;
+                                @endphp
+                                <h6 class="fs-6">{{$dias}}</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
                                     <h6 class="fs-6">Caução</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">000.00</h6>
+                                <h6 class="fs-6">{{number_format($caussao, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
                                     <h6 class="fs-6">Taxa de Entrega</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">000.00</h6>
+                                <h6 class="fs-6">{{number_format($taxa_entrega, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
                                     <h6 class="fs-6">Taxa provincial</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">kz 000.00</h6>
+                                <h6 class="fs-6">{{number_format($taxa_provincial, '0', ',', '.')}} kz</h6>
                             </div>
                             <hr class="color-primary mb-12">
                             {{-- <div class="justify-content-between d-flex mb-32">
@@ -543,7 +594,10 @@
                                 <div>
                                     <h6>Total</h6>
                                 </div>
-                                <h6>kz 3333</h6>
+                                @php
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + $taxa_provincial + $caussao;
+                                @endphp
+                                <h6>{{number_format($total, '0', ',', '.')}} kz</h6>
                             </div>
                         </div>
                     </div>
