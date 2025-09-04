@@ -58,10 +58,10 @@
                             <a href="{{route('front.contacto')}}">{{ __('navigation.contact') }}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="javascript:void(0);">Empresa</a>
+                            <a href="javascript:void(0);">{{ __('navigation.company') }}</a>
                             <ul>
-                                <li><a href="{{route('front.equipa')}}">Nossa Equipa</a></li>
-                                <li><a href="{{route('front.historia')}}">Nossa História</a></li>
+                                <li><a href="{{route('front.equipa')}}">{{ __('navigation.team') }}</a></li>
+                                <li><a href="{{route('front.historia')}}">{{ __('navigation.history') }}</a></li>
                                 {{-- <li><a href="vehicle-details.html">Vehicle details</a></li> --}}
                             </ul>
                         </li>

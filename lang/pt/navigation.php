@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
 
@@ -20,4 +20,7 @@ return [
     'contact' => 'Contacto',
     'login' => 'Entrar',
     'register' => 'Registrar',
+    'company' => 'Empresa',
+    'team' => 'Nossa Equipa',
+    'history' => 'Nossa História',
 ];

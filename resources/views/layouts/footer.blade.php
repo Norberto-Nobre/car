@@ -9,8 +9,8 @@
                             {{-- <img src="assets/media/footer/Frame-173.png" alt="Frame"> --}}
                         </a>
                     </div>
-                    <p class="mb-32">Chana Car é uma empresa especializada em aluguel de veículos, oferecendo conforto, segurança e flexibilidade para suas viagens.</p>
-                    <h6 class="white mb-16">Assine nossa newsletter</h6>
+                    <p class="mb-32">{{ __('footer.footer.p') }}</p>
+                    <h6 class="white mb-16">{{ __('footer.footer.h6') }}</h6>
                     <form action="index.html" class="newsletter-form">
                         <input type="email" name="email" id="eMail" class="form-input"
                             placeholder="Seu E-mail">
@@ -30,35 +30,38 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="links-block">
-                                <h6 class="mb-32">Quick Links</h6>
+                                <h6 class="mb-32">{{ __('footer.footer.col-1.h6') }}</h6>
                                 <ul class="unstyled">
                                     <li class="mb-12">
-                                        <a href="#">Home </a>
+                                        <a href="#">{{ __('navigation.home') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="#">Sobre</a>
+                                        <a href="#">{{ __('navigation.about') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="#">Carros</a>
+                                        <a href="#">{{ __('navigation.fleet') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="#">Contactos</a>
+                                        <a href="#">{{ __('navigation.contact') }}</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="links-block">
-                                <h6 class="mb-32">Acesso</h6>
+                                <h6 class="mb-32">{{ __('footer.footer.col-2.h6') }}</h6>
                                 <ul class="unstyled">
                                     <li class="mb-12">
-                                        <a href="javascript:void(0);">Login</a>
+                                        <a href="{{route('front.equipa')}}">{{ __('navigation.team') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="javascript:void(0);">Register</a>
+                                        <a href="{{route('front.historia')}}">{{ __('navigation.history') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="javascript:void(0);">Termos & Políticas</a>
+                                        <a href="{{route('front.faqs')}}">{{ __('navigation.faq') }}</a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="javascript:void(0);">{{ __('footer.footer.col-2.a') }}</a>
                                     </li>
                                     {{-- <li class="mb-12">
                                         <a href="index.html">Brands</a>
@@ -71,7 +74,7 @@
                 <div class="col-lg-3 col-md-4">
                     <div class="links-block">
                         <div class="mb-24">
-                            <h6 class="mb-32">Informações de Contacto</h6>
+                            <h6 class="mb-32">{{ __('footer.footer.col-3.h6') }}</h6>
                         </div>
                         <ul class="unstyled">
                             <li class="mb-16">
@@ -83,7 +86,7 @@
                             <li class="mb-16">
                                 <div class="contact">
                                     <img src="{{asset('assets/media/footer/uil-map-marker.png')}}" alt="logo">
-                                    <p>Estrada principal do Lar do Patriota - Luanda</p>
+                                    <p>{{ __('footer.footer.col-3.p') }} Lar do Patriota - Luanda</p>
                                 </div>
                             </li>
                             <li class="mb-24">
@@ -93,7 +96,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <h5>Siga-nos!</h5>
+                        <h5>{{ __('footer.footer.col-3.h5') }}</h5>
                         <div class="social-icons mb-12">
                             <ul class="d-flex unstyled gap-12">
                                 <li>

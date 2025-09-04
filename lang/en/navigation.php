@@ -20,5 +20,8 @@ return [
     'contact' => 'Contact',
     'login' => 'Login',
     'register' => 'Register',
+    'company' => 'company',
+    'team' => 'Our Team',
+    'history' => 'Our History',
 
 ];

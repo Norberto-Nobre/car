@@ -127,29 +127,29 @@
       <div class="carousel-caption d-none d-md-block edit-1">
        <div class="container animate__animated animate__fadeInUp animate__delay-2s">
             <h4 class="mb-16">
-                <span class="h2 text-white">{{ __('index.slide.slide1.title') }} </span><br>
-                <p class="fs-5 text-white mt-3 mb-2">Carros modernos, revisados e confortáveis, prontos para levar você ao seu destino com segurança e estilo. <strong>Reserve agora e comece sua aventura hoje!</strong></p>
+                <span class="h2 text-white">{{ __('index.slide.slide1.span') }} </span><br>
+                <p class="fs-5 text-white mt-3 mb-2">{{ __('index.slide.slide1.p') }} <strong> {{ __('index.slide.slide1.strong') }}</strong></p>
             </h4>
             <div class="btn-block row-gap-3 mb-48">
                 <div class="cus-btn">
                     <a href="{{route('front.frotas')}}" class="btn-text">
                         <span class="btn-text">
-                            Alugar Agora
+                            {{ __('index.slide.slide1.button1') }}
                             <i class="bi bi-arrow-up-right"></i>
                         </span>
                         <span class="btn-text">
-                            Alugar Agora
+                             {{ __('index.slide.slide1.button1') }}
                             <i class="bi bi-arrow-up-right"></i>
                         </span>
                     </a>
                 </div>
                 <a href="{{route('front.contacto')}}" class="cus-btn-2">
                     <span class="btn-text text-white">
-                        Contacta-nos
+                         {{ __('index.slide.slide1.button2') }}
                         <i class="bi bi-telephone"></i>
                     </span>
                     <span class="btn-text">
-                        Contacta-nos
+                         {{ __('index.slide.slide1.button2') }}
                         <i class="bi bi-telephone"></i>
                     </span>
                 </a>
@@ -164,30 +164,30 @@
       <div class="carousel-caption d-none d-md-block edit-2">
         <div class="container animate__animated animate__fadeInDown animate__delay-1s">
             <h4 class="mb-16">
-                <span class="h2 text-white">Aluguel com preço justo </span><br>
-                <p class="fs-5 text-white">Planos flexíveis e preços competitivos para aproveitar cada viagem sem pesar no orçamento.<strong>Escolha seu carro e garanta a melhor oferta!</strong></p>
+                <span class="h2 text-white">{{ __('index.slide.slide2.span') }}</span><br>
+                <p class="fs-5 text-white">{{ __('index.slide.slide2.p') }} <strong> {{ __('index.slide.slide2.strong') }}</strong></p>
 
             </h4>
             <div class="btn-block row-gap-3 mb-48">
                 <div class="cus-btn">
                     <a href="{{route('front.frotas')}}" class="btn-text">
                         <span class="btn-text">
-                            Alugar Agora
+                             {{ __('index.slide.slide2.button1') }}
                             <i class="bi bi-arrow-up-right"></i>
                         </span>
                         <span class="btn-text">
-                            Alugar Agora
+                             {{ __('index.slide.slide2.button1') }}
                             <i class="bi bi-arrow-up-right"></i>
                         </span>
                     </a>
                 </div>
                 <a href="{{route('front.contacto')}}" class="cus-btn-2">
                     <span class="btn-text text-white">
-                        Contacta-nos
+                       {{ __('index.slide.slide2.button2') }}
                         <i class="bi bi-telephone"></i>
                     </span>
                     <span class="btn-text">
-                        Contacta-nos
+                        {{ __('index.slide.slide2.button2') }}
                         <i class="bi bi-telephone"></i>
                     </span>
                 </a>
@@ -202,30 +202,30 @@
     <div class="carousel-caption d-none d-md-block edit-2">
         <div class="container animate__animated animate__fadeInLeft animate__delay-1s">
             <h4 class="mb-16">
-                <span class="h2 text-white">Seu destino, nossa missão </span><br>
-                <p class="fs-5 text-white">Da cidade ao interior, da curta à longa distância — estamos com você em cada quilômetro da sua jornada.<strong>Dirija com liberdade e tranquilidade!</strong></p>
+                <span class="h2 text-white">{{ __('index.slide.slide3.span') }} </span><br>
+                <p class="fs-5 text-white">{{ __('index.slide.slide3.p') }} <strong> {{ __('index.slide.slide3.strong') }}</strong></p>
 
             </h4>
             <div class="btn-block row-gap-3 mb-48">
                 <div class="cus-btn">
                     <a href="{{route('front.frotas')}}" class="btn-text">
                         <span class="btn-text">
-                            Alugar Agora
+                           {{ __('index.slide.slide3.button1') }}
                             <i class="bi bi-arrow-up-right"></i>
                         </span>
                         <span class="btn-text">
-                            Alugar Agora
+                            {{ __('index.slide.slide3.button1') }}
                             <i class="bi bi-arrow-up-rightl"></i>
                         </span>
                     </a>
                 </div>
                 <a href="{{route('front.contacto')}}" class="cus-btn-2">
                     <span class="btn-text text-white">
-                        Contacta-nos
+                        {{ __('index.slide.slide3.button2') }}
                         <i class="bi bi-telephone"></i>
                     </span>
                     <span class="btn-text">
-                        Contacta-nos
+                        {{ __('index.slide.slide3.button2') }}
                         <i class="bi bi-telephone"></i>
                     </span>
                 </a>
@@ -345,9 +345,9 @@
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">Dirija com confiança, viaje com tranquilidade!</h2>
-                            <p class="card-text">Segurança, conforto e praticidade em cada quilômetro.</p>
-                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">Solicitar</a>
+                            <h2 class="card-title">{{ __('index.banner.banner1.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner1.hp') }}</p>
+                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
                 </div>
@@ -358,9 +358,9 @@
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">Chegue onde quiser com estilo e conforto.</h2>
-                            <p class="card-text">Carros modernos, prontos para acompanhar o seu ritmo.</p>
-                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">Solicitar</a>
+                            <h2 class="card-title">{{ __('index.banner.banner2.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner2.p') }}</p>
+                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
                 </div>
@@ -389,7 +389,7 @@
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/tesla.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Electrico</h6>
+                                <h6 class="fs-6 text-center">Electric</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
@@ -401,7 +401,7 @@
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars5.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Econômico</h6>
+                                <h6 class="fs-6 text-center">Economic</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
@@ -413,7 +413,7 @@
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/tesla.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Electrico</h6>
+                                <h6 class="fs-6 text-center">Electric</h6>
                             </div>
                         </a>
                     </div>
@@ -455,16 +455,16 @@
         <div class="container">
             <div class="txts mb-48">
                 <div class="descript">
-                    <h4 class="mb-12">Escolha o seu Carro</h4>
-                    <p>Encontre o veículo ideal para cada momento. De compactos econômicos <br> a SUVs confortáveis — temos a opção perfeita para sua necessidade.</p>
+                    <h4 class="mb-12">{{ __('index.vehicles.h4') }}</h4>
+                    <p>{{ __('index.vehicles.p') }} <br> {{ __('index.vehicles.br') }}</p>
                 </div>
                 <a href="{{route('front.frotas')}}" class="cus-btn">
                     <span class="btn-text">
-                        Nossa Frota
+                       {{ __('index.vehicles.a') }}
                         <i class="bi bi-car-front-fill"></i>
                     </span>
                     <span>
-                        Nossa Frota
+                        {{ __('index.vehicles.a') }}
                         <i class="bi bi-car-front-fill"></i>
                     </span>
                 </a>
@@ -476,7 +476,7 @@
                     <div class="vehicle-card">
                         <a href="{{route('front.carro-detalhes', $vehicle->slug)}}">
                             <img src="{{asset('storage/' . $vehicle->image)}}" class="w-100" alt="car">
-                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h2>
+                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">{{ __('index.vehicles.similar') }}</small></h2>
                             <div class="icons mb-12">
                                 <div class="d-flex align-items-center gap-4">
                                     <i class="bi bi-person-fill fs-6"></i>
@@ -495,19 +495,19 @@
                                     <h6 class="fw-light gap-8" style="font-size: 14px">{{$vehicle->vehicleModel->category->name}}</h6>
                                 </div>
                             </div>
-                             <h6 class="fs-5">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>
+                             <h6 class="fs-5">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/{{ __('index.vehicles.day') }}</small></h6>
                             <div class="bottom-row mb">
                                 <div>
                                     {{-- <p>starts from</p> --}}
-                                     <h6 class="fs-6">Caução: <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
+                                     <h6 class="fs-6">{{ __('index.vehicles.h6') }}: <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
                                 </div>
                                 <div class="cus-btn">
                                     <span class="btn-text">
-                                        Alugar
+                                        {{ __('index.vehicles.button') }}
                                        <i class="bi bi-calendar2-check"></i>
                                     </span>
                                     <span>
-                                        Alugar
+                                        {{ __('index.vehicles.button') }}
                                        <i class="bi bi-calendar2-check"></i>
                                     </span>
                                 </div>
@@ -526,9 +526,8 @@
         <div class="banner-design-2"></div>
         <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
             <!-- <h4 class="text-primary">Our Services</h4> -->
-            <h1 class="display-6 mb-4 text-white">Por Que Escolher Nossa Empresa?</h1>
-            <p class="mb-0 text-white">Nosso diferêncial
-            </p>
+            <h1 class="display-6 mb-4 text-white">{{ __('index.bg-img.h1') }}</h1>
+            <p class="mb-0 text-white">{{ __('index.bg-img.p') }}</p>
         </div>
         <!-- Section Title -->
         <div id="contact" class="contact">
@@ -542,8 +541,8 @@
          <section class="container-fluid feature py-4">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h1 class="display-6 mb-3">Benefícios do aluguel<span class="text-primary"></span></h1>
-                    <p class="mb-0">Descubra as vantagens exclusivas do nosso serviço de aluguel.</p>
+                    <h1 class="display-6 mb-3">{{ __('index.benefits.title') }}<span class="text-primary"></span></h1>
+                    <p class="mb-0">{{ __('index.benefits.subtitle') }}</p>
                 </div>
                 <div class="row g-4 align-items-center smartcar">
                     <div class="col-xl-4">
@@ -554,8 +553,8 @@
                                         <span class="fs-3"><i class="fa fa-car"></i></span>
                                     </div>
                                     <div class="ms-4">
-                                        <h5 class="mb-3 fs-6">Variedade de Veículos</h5>
-                                        <p class="mb-0">Escolha entre diferentes modelos para cada necessidade.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-1.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-1.p') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -566,8 +565,8 @@
                                         <span class="fs-3"><i class="bi bi-cash-stack"></i></span>
                                     </div>
                                     <div class="ms-4">
-                                        <h5 class="mb-3 fs-6">Economia Garantida</h5>
-                                        <p class="mb-0">Preços acessíveis e opções flexíveis de pagamento.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-2.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-2.p') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -581,8 +580,8 @@
                             <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="feature-item justify-content-end">
                                     <div class="text-end me-4">
-                                        <h5 class="mb-3 fs-6">Flexibilidade de Tempo</h5>
-                                        <p class="mb-0">Alugue pelo tempo que precisar, sem complicações.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-3.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-3.p') }}</p>
                                     </div>
                                     <div class="feature-icon">
                                         <span class="fs-3"><i class="bi bi-clock-history"></i></span>
@@ -592,8 +591,8 @@
                             <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="feature-item justify-content-end">
                                     <div class="text-end me-4">
-                                        <h5 class="mb-3 fs-6">Segurança e Conforto</h5>
-                                        <p class="mb-0">Carros revisados e bem cuidados para sua tranquilidade.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-4.p') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-4.p') }}</p>
                                     </div>
                                     <div class="feature-icon">
                                     <span class="bi bi-shield-check fs-3"></span>
@@ -824,9 +823,9 @@
             <div class="txt">
                 <div class="d-flex flex-md-row flex-column gap-24 align-items-md-center justify-content-between">
                     <div>
-                        <h4 class="mb-12">Principais destinos</h4>
-                        <p class="">Conheça os principais destinos com a praticidade e o conforto
-                            <br class="d-sm-block d-none">que só a nossa frota pode oferecer.</p>
+                        <h4 class="mb-12">{{ __('index.destination.title') }}</h4>
+                        <p class="">{{ __('index.destination.subtitle') }}
+                            <br class="d-sm-block d-none">{{ __('index.destination.br') }}</p>
                     </div>
                     <div class="slider-arrows mt-sm-0 mt-48">
                         <a href="javascript:;" class="arrow-btn btn-prev" data-slide="testimonials-slider">
