@@ -186,10 +186,10 @@
 </style>
 
  <!-- About-area start -->
-    <section class="details py-80 p-5">
+    <section class="details bg-details py-80 p-5">
         <div class="container">
             <div class="row row-gap-4">
-                <div class="col-lg-6">
+                <div class="col-lg-5 rounded-3" style="background-color: #ecf3f9">
                     {{-- <div class="slider-arrows smt-sm-0 mt-48 d-sm-flex">
                         <a href="javascript:;" class="arrow-btn btn-prev" data-slide="rental-slider">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" viewBox="0 0 16 29"
@@ -246,7 +246,7 @@
                         </div>
                     </div> --}}
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="sides-bar">
                         <div class="side-bar-1 mb-16">
                             {{-- <div class="d-flex mb-16 align-items-center gap-4">

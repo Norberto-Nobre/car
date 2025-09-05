@@ -46,6 +46,7 @@
                                             -->
                                             <div class="pickup-location-container">
                                                 <div class="location-input-wrapper">
+                                                    <label for="">Genero</label>
                                                     <select name="gender" class="mb-12">
                                                         <option value="femenino">Mulher</option>
                                                         <option value="masculino">Homem</option>
@@ -54,19 +55,24 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
-                                            <input type="text" id="name" placeholder="Nome Completo" name="name">
+                                            <label for="">Nome completo</label>
+                                            <input type="text" id="name" placeholder="Digite o seu nome" name="name">
                                         </div>
                                         <div class="col-lg-5">
-                                            <input type="email" id="email" placeholder="Email" name="email">
+                                            <label for="">E-mail</label>
+                                            <input type="email" id="email" placeholder="Digite o seu email" name="email">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="contacto" placeholder="Contacto" name="phone">
+                                            <label for="">Contacto</label>
+                                            <input type="text" id="contacto" placeholder="Digite o seu contacto" name="phone">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" id="endereco" placeholder="Endereço" name="address">
+                                            <label for="">Endereço</label>
+                                            <input type="text" id="endereco" placeholder="Digite o seu endereço" name="address">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="date" id="data_nascimento" placeholder="Data de Nascimento" name="date_of_birth">
+                                            <label for="">Data de Nascimento</label>
+                                            <input type="date" id="data_nascimento" placeholder="" name="date_of_birth">
                                         </div>
 
 
@@ -369,8 +375,8 @@
                             <h6 class="fs-6">Informações do carro</h6>
                         </div>
                         <div class="vehicle-details-2 bg-ter">
-                            <h6 class="fs-6">{{$vehicle->brand_name}}</h6>
-                            <p class="mb-24">{{$vehicle->model_name}}</p>
+                            <h6 class="fs-6">{{$vehicle->brand_name}} {{$vehicle->model_name}}<small class="fw-light" style="font-size: 14px">{{ __('index.vehicles.similar') }}</small></h6>
+                            {{-- <p class="mb-24">{{$vehicle->model_name}}</p> --}}
                             <div class="d-flex justify-content-between flex-xl-row flex-column flex-end mb-24">
                                 <img src="assets/media/cars/Car-image.png" alt="Car">
                                 <div class="icons gap-8 d-flex align-items-end">

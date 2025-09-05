@@ -1,4 +1,8 @@
- <!--Footer-start -->
+ <a href="https://wa.me/244923482877/?text=Obrigado por nos contactar! Estamos a sua disposição. Como podemos ajudar? Chana RENT-A-CAR" target="_blank">
+  <img class="animate__animated animate__headShake animate__delay-4s animate__infinite whatsapp" src="{{asset('assets/media/icons/whatsapp.png')}}" width="80" alt="Entre em contacto conosco pelo whatsapp" title="Entre em contacto conosco pelo whatsapp">
+  </a>
+
+<!--Footer-start -->
     <footer class="site-footer pt-40" style="position: relative;   background: url('{{asset('assets/media/banners/banner10.jpg')}}') center/cover no-repeat;  color: white; overflow: hidden;">
         <div class="container">
             <div class="row mb-16 row-gap-4">
