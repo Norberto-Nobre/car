@@ -12,7 +12,7 @@ class BookingController extends Controller
 {
 
     public function index(){
-        
+
     }
 
     public function reserveData(Request $request)
@@ -32,6 +32,22 @@ class BookingController extends Controller
         if(!is_int($values['pickup_location'])){
             $local = 0;
         }
+        // Pegando o nome do escritorio de retirada
+        if (is_numeric($values['pickup_location'])) {
+            $office = DB::table('offices')->where('id', $values['pickup_location'])->first();
+            $pickupLocation = $office ? $office->name : 'Escritório não encontrado';
+        } else {
+            $pickupLocation = $values['pickup_location'];
+        }
+
+        // Pegando o nome do escritorio de entrega
+        if (is_numeric($values['dropoff_location'])) {
+            $office = DB::table('offices')->where('id', $values['dropoff_location'])->first();
+            $dropoffLocation = $office ? $office->name : 'Escritório não encontrado';
+        } else {
+            $dropoffLocation = $values['dropoff_location'];
+        }
+
         //Validação se selecionou a provincia ou não
         if(!empty($values['out_of_province']) && !empty($values['destination_province'])){
             $province = DB::table('provinces')->select('*')->where('id',$values['destination_province'])->get();
@@ -44,17 +60,17 @@ class BookingController extends Controller
         $dataDevolucao = new DateTime($values['dropoff_date']);
         $days = $dataEntrega->diff($dataDevolucao);
         $days = $days->days;
-        
+
 
         $result= DB::table('vehicles')
             ->join('vehicle_models','vehicles.vehicle_model_id','=','vehicle_models.id')
             ->join('categories','vehicle_models.category_id','=','categories.id')
             ->join('brands','vehicle_models.brand_id','=','brands.id')
-            ->select('*','vehicles.id As vehicle_id','categories.id As category_id','vehicle_models.id As vehicle_model_id','brands.id As brand_id','brands.name As brand_name','vehicle_models.name As model_name')
+            ->select('*','vehicles.id As vehicle_id','vehicles.image As vehicle_image','categories.id As category_id','categories.name As category_name','vehicle_models.id As vehicle_model_id','brands.id As brand_id','brands.name As brand_name','vehicle_models.name As model_name')
             ->where('vehicles.slug','like',"%{$vehicle}%")->get();
         $vehicle = $result[0];
 
-        return view('reserva-detalhes',compact('data','vehicle','province','local','days'));
+        return view('reserva-detalhes',compact('data','vehicle','province','local', 'pickupLocation','dropoffLocation','days'));
     }
 }
 
