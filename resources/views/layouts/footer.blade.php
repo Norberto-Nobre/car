@@ -8,7 +8,7 @@
             <div class="row mb-16 row-gap-4">
                 <div class="col-lg-3">
                     <div class="txt-block">
-                        <a href="index.html">
+                        <a href="{{route('front.index')}}">
                             <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 40px;">
                             {{-- <img src="assets/media/footer/Frame-173.png" alt="Frame"> --}}
                         </a>
@@ -37,16 +37,16 @@
                                 <h6 class="mb-32">{{ __('footer.footer.col-1.h6') }}</h6>
                                 <ul class="unstyled">
                                     <li class="mb-12">
-                                        <a href="#">{{ __('navigation.home') }}</a>
+                                        <a href="{{route('front.index')}}">{{ __('navigation.home') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="#">{{ __('navigation.about') }}</a>
+                                        <a href="{{route('front.sobre')}}">{{ __('navigation.about') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="#">{{ __('navigation.fleet') }}</a>
+                                        <a href="{{route('front.frotas')}}">{{ __('navigation.fleet') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="#">{{ __('navigation.contact') }}</a>
+                                        <a href="{{route('front.contacto')}}">{{ __('navigation.contact') }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -145,17 +145,19 @@
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/media/user/logo.png" alt=""></a>
+                <a href="{{route('front.index')}}" aria-label="logo image">
+                    <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 40px;">
+                </a>
             </div>
             <div class="mobile-nav__container"></div>
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:example@company.com">example@company.com</a>
+                    <a href="mailto:example@company.com">rent@orgchana.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:+12345678">+123 (4567) -890</a>
+                    <a href="tel:+12345678">923482877 / 946320021</a>
                 </li>
             </ul>
             <div class="mobile-nav__social">

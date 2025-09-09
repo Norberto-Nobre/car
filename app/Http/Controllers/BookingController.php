@@ -29,9 +29,8 @@ class BookingController extends Controller
         $values['destination_province'] = $request->destination_province;
         $data = $values;
         // Validação se a entrega é no escritorio ou não
-        if(!is_int($values['pickup_location'])){
-            $local = 0;
-        }
+       $local = is_numeric($values['pickup_location']) ? (int) $values['pickup_location'] : 0;
+       
         // Pegando o nome do escritorio de retirada
         if (is_numeric($values['pickup_location'])) {
             $office = DB::table('offices')->where('id', $values['pickup_location'])->first();

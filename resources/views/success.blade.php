@@ -122,6 +122,9 @@
                                     </svg>
                                     <p>Data de devolução : {{$booking->end_date}} </p>
                                 </div>
+                                @if ($booking->province())
+
+
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -134,6 +137,7 @@
                                     </svg>
                                     <P>Provincia : {{$booking->province['name']}}</P>
                                 </div>
+                                @endif
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
