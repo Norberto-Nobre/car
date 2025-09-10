@@ -28,6 +28,7 @@ class CustumerController extends Controller
 
         $customer = Customer::create($values);
         $custumer_id = $customer->id;
+        
 
         $data['customer_id'] = $custumer_id;
         $data['vehicle_id'] = $request->vehicle_id;
@@ -44,7 +45,8 @@ class CustumerController extends Controller
 
         $booking = Booking::create($data);
 
-        return redirect()->route('success', $booking->booking_code)->with('success', 'Reserva realizada com sucesso! Verifique a sua conta de email: '.$values['email'].'');
+        return redirect()->route('success', $booking->booking_code)
+        ->with('success', 'Reserva realizada com sucesso! Verifique a sua conta de email: '.$values['email'].'');
     }
 }
 
