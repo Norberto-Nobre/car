@@ -285,7 +285,7 @@
                     </div>
                     <div class="side-bar-2 mt-24">
                     <!--<form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form"> -->
-                    <form action="{{ route('bookingdata') }}" method="post" class="form">
+                    <form action="{{ route('front.bookingdata') }}" method="post" class="form">
                          @csrf
                         <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
                         <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>

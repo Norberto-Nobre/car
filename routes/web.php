@@ -25,7 +25,7 @@ Route::get('contacto', [FrontController::class, 'contacto'])->name('front.contac
 Route::get('/carro-detalhes/{vehicle:slug}', [CarroDetalhesController::class, 'detalhes'])->name('front.carro-detalhes');
 Route::get('/reserva-detalhes/{vehicle:slug}', [ReservaDetalhesController::class, 'reserva'])->name('front.reserva-detalhes');
 Route::post('/custumer', [CustumerController::class,'store'])->name('custumer.store');
-Route::post('/booking_dados', [BookingController::class,'reserveData'])->name('bookingdata');
+Route::post('/booking_dados', [BookingController::class,'reserveData'])->name('front.bookingdata');
 
 // routes/web.php
 Route::get('/success/{booking_code}', function ($booking_code) {
