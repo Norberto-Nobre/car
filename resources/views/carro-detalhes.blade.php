@@ -328,13 +328,13 @@
                         <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
                         <div class="d-flex gap-24">
                             <input type="date" name="pickup_date" class="mb-12" id="pickup_date" required>
-                            <input type="time" name="pickup_time" class="mb-12" value="09:00" required>
+                            <input type="time" name="pickup_time" class="mb-12" id="pickup_time" value="08:00" required>
                         </div>
 
                         <p class="fw-600 mb-8 dark-gray">Data de entrega</p>
                         <div class="d-flex gap-24">
                             <input type="date" name="dropoff_date" class="mb-12" id="dropoff_date" required>
-                            <input type="time" name="dropoff_time" class="mb-12" value="18:00" required>
+                            <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
                         </div>
 
                         <div class="province-check-container mb-12">
@@ -777,6 +777,7 @@
     <!-- end -->
 
      <script>
+
        let customLocationActive = false;
 
         // Função global para toggle do select de província
@@ -894,6 +895,51 @@
                 return false;
             }
         });
+
+        //
+            const pickupDate = document.getElementById("pickup_date");
+    const pickupTime = document.getElementById("pickup_time");
+    const dropoffDate = document.getElementById("dropoff_date");
+    const dropoffTime = document.getElementById("dropoff_time");
+
+    // Atualiza data mínima de devolução
+    pickupDate.addEventListener("change", function () {
+        if (this.value) {
+            let retirada = new Date(this.value);
+            retirada.setDate(retirada.getDate() + 1); // +1 dia obrigatório
+            let minDate = retirada.toISOString().split("T")[0];
+            dropoffDate.min = minDate;
+
+            // Limpa entrega se inválida
+            if (dropoffDate.value < minDate) {
+                dropoffDate.value = "";
+            }
+        }
+    });
+
+    // Validação da hora de devolução
+    dropoffTime.addEventListener("change", function () {
+        if (pickupDate.value && dropoffDate.value) {
+            let retirada = new Date(pickupDate.value + "T" + pickupTime.value);
+            let devolucao = new Date(dropoffDate.value + "T" + dropoffTime.value);
+
+            // Se o horário de devolução for menor que o de retirada (mesmo no dia seguinte)
+            if (devolucao.getHours() > retirada.getHours() ||
+                (devolucao.getHours() === retirada.getHours() && devolucao.getMinutes() > retirada.getMinutes())) {
+
+                alert("⚠️ O horário de devolução deve ser o mesmo ou posterior ao horário da retirada.");
+                this.value = pickupTime.value; // Ajusta para o mesmo horário da retirada
+            }
+        }
+    });
+
+    // Garante que ao escolher a data de devolução, a hora mínima seja a da retirada
+    dropoffDate.addEventListener("change", function () {
+        if (pickupTime.value) {
+            dropoffTime.value = pickupTime.value;
+        }
+    });
+        //
 
         // Inicializar
         pickupLocationSelect.style.paddingRight = '130px';

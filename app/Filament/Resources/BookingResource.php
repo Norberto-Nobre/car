@@ -4,9 +4,11 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BookingResource\Pages;
 use App\Filament\Resources\BookingResource\RelationManagers;
+use App\Http\Controllers\CustumerController;
 use App\Models\Booking;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -91,12 +93,6 @@ class BookingResource extends Resource
                 Tables\Columns\TextColumn::make('end_date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('subtotal_amount')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('discount_amount')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('total_amount')
                     ->numeric()
                     ->sortable(),
@@ -106,7 +102,21 @@ class BookingResource extends Resource
                 Tables\Columns\TextColumn::make('days')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\IconColumn::make('status')
+                    ->icon(fn (string $state): string => match ($state) {
+                        'pendente'  => 'heroicon-o-clock',        // ícone de relógio
+                        'aprovado'  => 'heroicon-o-check-circle', // ícone de aprovado
+                        'cancelado' => 'heroicon-o-x-circle',     // ícone de cancelado
+                        'expirado'  => 'heroicon-o-exclamation-circle', // ícone de aviso
+                        default     => 'heroicon-o-question-mark-circle', // fallback
+                    })
+                    ->color(fn (string $state): string => match ($state) {
+                        'pendente'  => 'warning',
+                        'aprovado'  => 'success',
+                        'cancelado' => 'danger',
+                        'expirado'  => 'gray',
+                        default     => 'secondary',
+                    }),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -125,6 +135,47 @@ class BookingResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+
+                //
+                Tables\Actions\Action::make('status')
+                    ->label ('Aprovar')
+
+                    ->form([
+                    Forms\Components\Select::make('status')
+                        ->label('Selecione o status do pagamento')
+                        ->options([
+                            'pendente' => 'pendente',
+                            'aprovado' => 'aprovado',
+                            'cancelado' => 'cancelado',
+                            'expirado' => 'expirado',
+                        ])
+                        ->required(),
+                ])
+
+                    ->action(function (Booking $record, array $data) {
+                        // Atualiza conforme seleção
+                        $record->status = $data['status']; // se tiver coluna status no banco
+                        $record->save();
+
+                        // Envia WhatsApp só se aprovado
+                        if ($data['status'] === 'aprovado' && $record->customer?->phone) {
+                            app(CustumerController::class)
+                                ->sendWhatsAppMessage(
+                                    $record->customer->phone, // pega telefone do cliente
+                                    "Sua reserva #{$record->booking_code} foi *APROVADA* ✅. Obrigado por reservar conosco!"
+                                );
+                        }
+
+                       Notification::make()
+                        ->title('Status da reserva: ' . ucfirst($data['status']))
+                        ->success()
+                        ->send();
+                    })
+
+                    ->color('success')
+                    ->modalHeading('Aprovar Reserva')
+                    ->modalButton('Confirmar')
+                    ->visible(fn (Booking $record) => $record->status === 'pendente'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

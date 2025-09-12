@@ -709,4 +709,26 @@
         </div>
     </section>
     <!--title start  -->
+
+    <script>
+         // Calcula limites dinâmicos
+    const today = new Date();
+
+    // Máximo permitido: hoje - 23 anos
+    const maxDate = new Date(today.getFullYear() - 23, today.getMonth(), today.getDate());
+
+    // Mínimo permitido: hoje - 100 anos (ex: não deixar alguém com mais de 100 anos)
+    const minDate = new Date(today.getFullYear() - 100, today.getMonth(), today.getDate());
+
+    // Formatar em yyyy-mm-dd
+    const formatDate = (date) => {
+        let month = String(date.getMonth() + 1).padStart(2, '0');
+        let day = String(date.getDate()).padStart(2, '0');
+        return `${date.getFullYear()}-${month}-${day}`;
+    };
+
+    document.getElementById("data_nascimento").setAttribute("min", formatDate(minDate));
+    document.getElementById("data_nascimento").setAttribute("max", formatDate(maxDate));
+</script>
+
 @endsection

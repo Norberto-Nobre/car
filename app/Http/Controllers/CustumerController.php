@@ -8,6 +8,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Http;
+
 
 class CustumerController extends Controller
 {
@@ -28,7 +30,7 @@ class CustumerController extends Controller
 
         $customer = Customer::create($values);
         $custumer_id = $customer->id;
-        
+
 
         $data['customer_id'] = $custumer_id;
         $data['vehicle_id'] = $request->vehicle_id;
@@ -45,9 +47,38 @@ class CustumerController extends Controller
 
         $booking = Booking::create($data);
 
+        // 🔹 Enviar WhatsApp ao cliente
+        $msg = "Olá {$customer->name}, a sua reserva foi recebida com sucesso! ✅\n".
+               "Código da reserva: {$booking->booking_code}\n".
+               "Data de início: {$booking->start_date}\n".
+               "Data de término: {$booking->end_date}\n".
+               "Valor total: {$booking->total_amount} KZ\n".
+               "Obrigado por escolher os nossos serviços.";
+
+        $this->sendWhatsAppMessage($customer->phone, $msg);
+
+
         return redirect()->route('success', $booking->booking_code)
-        ->with('success', 'Reserva realizada com sucesso! Verifique a sua conta de email: '.$values['email'].'');
+        ->with('success', 'Reserva realizada com sucesso! Verifique o seu Whatsapp: '.$values['phone'].'');
     }
+
+     public function sendWhatsAppMessage($to, $message)
+    {
+        $token = env('WHATSAPP_TOKEN');
+        $phoneId = env('WHATSAPP_PHONE_ID');
+
+        $response = Http::withToken($token)->post("https://graph.facebook.com/v19.0/{$phoneId}/messages", [
+            'messaging_product' => 'whatsapp',
+            'to' => $to, // Ex: 244923456789
+            'type' => 'text',
+            'text' => [
+                'body' => $message,
+            ],
+        ]);
+
+        return $response->json(); // Para debug/log
+    }
+
 }
 
 
