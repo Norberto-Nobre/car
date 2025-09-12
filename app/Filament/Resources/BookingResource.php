@@ -72,28 +72,24 @@ class BookingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('customer_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('customer.name')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('vehicle_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('vehicle.vehicleModel.name')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('pickup_office_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('pickupOffice.name')
+                    ->sortable()
+                    ->getStateUsing(fn ($record) => optional($record->pickupOffice)->name . ' (' . $record->pickup_office_id . ')'),
+                Tables\Columns\TextColumn::make('returnOffice.name')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('return_office_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('province_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('province.name')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('booking_code')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('start_date')
-                    ->dateTime()
+                    ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('end_date')
-                    ->dateTime()
+                    ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('subtotal_amount')
                     ->numeric()
