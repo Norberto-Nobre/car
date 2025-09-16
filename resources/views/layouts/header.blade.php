@@ -32,12 +32,67 @@
         margin-right: 1rem;
     }
 }
+/* ASSIDE */
+.asside{
+  max-width: 100% !important;
+  /* width: 100% !important; */
+  position: relative;
+  /* top: -20px; */
+  padding: 8px;
+  /* background: linear-gradient(to left, rgb(45, 116, 186, 0.4), rgba(4, 26, 113, 0.7)); */
+  background: #041A71;
+  z-index: 9999999;
+  /* border: solid 1px black; */
+}
+.inaside{
+  /* border: solid 1px blue; */
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+}
+.contato{
+  width: auto;
+  position: relative;
+  top: 6px;
+ /*  border: solid 1px black; */
+}
+.soccial{
+  width: auto;
+  justify-content: space-between;
+  position: relative;
+  top: 4px;
+}
 </style>
+<aside class="container asside">
+          <div class="row inaside">
+          <div class="d-flex contato">
+            <div class="contact">
+                <img src="{{asset('assets/media/footer/uil-outgoing-call.png')}}" alt="call-logo">
+                <a class="text-white" href="tel:+244923482877">923482877 / 946320021</a>
+            </div>
+            <div class="contact ms-2">
+                <img src="{{asset('assets/media/footer/uil-envelope.png')}}" alt="logo">
+                <a class="text-white" href="mailto:rent@orgchana.com">rent@orgchana.com</a>
+            </div>
+          </div>
+
+          <div class="d-flex soccial">
+            <div class="">
+                <div class="d-flex contact">
+                    <img src="{{asset('assets/media/footer/uil-map-marker.png')}}" alt="logo">
+                    <p class="text-white">{{ __('footer.footer.col-3.p') }} Lar do Patriota - Luanda</p>
+                </div>
+            </div>
+
+          </div>
+          </div>
+  </aside>
   <header class="header">
     <div class="container">
         <nav class="navigation d-flex align-items-center justify-content-between">
             <a href="{{route('front.index')}}" class="d-flex align-items-center">
-                <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 40px;">
+                <img src="{{asset('assets/media/brands/chanalogo.png')}}" alt="/logo" class="header-logo" style="width: auto; height: 43px;">
             </a>
             <div class="menu-button-right">
                 <div class="main-menu__nav">
@@ -45,9 +100,16 @@
                         <li>
                             <a href="{{route('front.index')}}">{{ __('navigation.home') }}</a>
                         </li>
-                        <li>
-                            <a href="{{route('front.sobre')}}">{{ __('navigation.about') }}</a>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);">{{ __('navigation.company') }}</a>
+                            <ul>
+                                <li><a href="{{route('front.sobre')}}">Quem somos</a></li>
+                                <li><a href="{{route('front.equipa')}}">{{ __('navigation.team') }}</a></li>
+                                <li><a href="{{route('front.historia')}}">{{ __('navigation.history') }}</a></li>
+                                {{-- <li><a href="vehicle-details.html">Vehicle details</a></li> --}}
+                            </ul>
                         </li>
+
                         <li class="dropdown">
                             <a href="{{route('front.frotas')}}">{{ __('navigation.fleet') }}</a>
                         </li>
@@ -57,13 +119,8 @@
                         <li>
                             <a href="{{route('front.contacto')}}">{{ __('navigation.contact') }}</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="javascript:void(0);">{{ __('navigation.company') }}</a>
-                            <ul>
-                                <li><a href="{{route('front.equipa')}}">{{ __('navigation.team') }}</a></li>
-                                <li><a href="{{route('front.historia')}}">{{ __('navigation.history') }}</a></li>
-                                {{-- <li><a href="vehicle-details.html">Vehicle details</a></li> --}}
-                            </ul>
+                        <li>
+                            <a href="javascript:void(0);">{{ __('navigation.about') }}</a>
                         </li>
                     </ul>
                 </div>
@@ -76,22 +133,22 @@
                             <ul class="d-flex unstyled gap-12">
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Instagram.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/icons/Instagram.png')}}" alt="logo" style="width: 19px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Twitter.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/icons/Twitter.png')}}" alt="logo" style="width: 19px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Dribbble.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/icons/Dribbble.png')}}" alt="logo" style="width: 19px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Linkedin.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/icons/Linkedin.png')}}" alt="logo" style="width: 19px">
                                     </a>
                                 </li>
                             </ul>

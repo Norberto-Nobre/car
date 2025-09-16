@@ -14,13 +14,13 @@ return [
     */
 
     'home' => 'Início',
-    'about' => 'Sobre',
-    'fleet' => 'Frota',
+    'about' => 'Noticias',
+    'fleet' => 'Nossa Frota',
     'faq' => 'FAQ',
-    'contact' => 'Contacto',
+    'contact' => 'Contactos',
     'login' => 'Entrar',
     'register' => 'Registrar',
-    'company' => 'Empresa',
+    'company' => 'Institucional',
     'team' => 'Nossa Equipa',
     'history' => 'Nossa História',
 ];

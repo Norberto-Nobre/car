@@ -107,6 +107,12 @@
 
 /*** Features End ***/
 
+.video {
+  width: 100%;
+  height: 100vh; /* ou 500px */
+  object-fit: cover; /* preenche cortando um pouco se necessário */
+}
+
 
 </style>
 
@@ -121,7 +127,12 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active position-relative">
-      <img src="assets/media/cars/slide3.jpeg" alt="map-image" class="w-100">
+      {{-- <img src="assets/media/cars/slide3.jpeg" alt="map-image" class="w-100"> --}}
+      <video src="assets/media/video/video-3.mp4"
+       class="video"
+       loop muted autoplay playsinline
+       style="width: 100%; height: 625px; object-fit: cover;">
+</video>
        <!-- Camada azul com transparência -->
     <div class="overlay-blue"></div>
       <div class="carousel-caption d-none d-md-block edit-1">
@@ -346,7 +357,7 @@
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h2 class="card-title">{{ __('index.banner.banner1.h2') }}</h2>
-                            <p class="card-text">{{ __('index.banner.banner1.hp') }}</p>
+                            <p class="card-text">{{ __('index.banner.banner1.p') }}</p>
                             <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
