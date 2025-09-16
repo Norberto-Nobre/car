@@ -131,7 +131,7 @@
       <video src="assets/media/video/video-3.mp4"
        class="video"
        loop muted autoplay playsinline
-       style="width: 100%; height: 625px; object-fit: cover;">
+       style="width: 100%; height: 622px; object-fit: cover;">
 </video>
        <!-- Camada azul com transparência -->
     <div class="overlay-blue"></div>

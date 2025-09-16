@@ -117,10 +117,10 @@
                             <a href="{{route('front.faqs')}}">{{ __('navigation.faq') }}</a>
                         </li>
                         <li>
-                            <a href="{{route('front.contacto')}}">{{ __('navigation.contact') }}</a>
+                            <a href="javascript:void(0);">{{ __('navigation.about') }}</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);">{{ __('navigation.about') }}</a>
+                            <a href="{{route('front.contacto')}}">{{ __('navigation.contact') }}</a>
                         </li>
                     </ul>
                 </div>
@@ -133,22 +133,22 @@
                             <ul class="d-flex unstyled gap-12">
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Instagram.png')}}" alt="logo" style="width: 19px">
+                                        <img src="{{asset('assets/media/icons/Instagram.png')}}" alt="logo" style="width: 16px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Twitter.png')}}" alt="logo" style="width: 19px">
+                                        <img src="{{asset('assets/media/icons/Twitter.png')}}" alt="logo" style="width: 16px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Dribbble.png')}}" alt="logo" style="width: 19px">
+                                        <img src="{{asset('assets/media/icons/Dribbble.png')}}" alt="logo" style="width: 16px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/icons/Linkedin.png')}}" alt="logo" style="width: 19px">
+                                        <img src="{{asset('assets/media/icons/Linkedin.png')}}" alt="logo" style="width: 16px">
                                     </a>
                                 </li>
                             </ul>
