@@ -347,7 +347,39 @@
     </div> --}}
     <!--Booking-form area end -->
 
-    <section class="main-container py-5">
+    <section class="main-container pt-5 pb-1">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card-section" onclick="handleSolicitar('confianca')">
+                        <img class="" src="assets/media/banners/banner2.jpg" alt="car">
+
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h2 class="card-title">{{ __('index.banner.banner1.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner1.p') }}</p>
+                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card-section" onclick="handleSolicitar('estilo')">
+                        <img src="assets/media/banners/banner3.jpg" alt="car">
+
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h2 class="card-title">{{ __('index.banner.banner2.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner2.p') }}</p>
+                            <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-container">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6 col-md-6 col-12">
