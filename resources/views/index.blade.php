@@ -173,7 +173,7 @@
        <!-- Camada azul com transparência -->
     <div class="overlay-blue"></div>
       <div class="carousel-caption d-none d-md-block edit-2">
-        <div class="container animate__animated animate__fadeInDown animate__delay-1s">
+        <div class="container pe-5 animate__animated animate__fadeInDown animate__delay-1s">
             <h4 class="mb-16">
                 <span class="h2 text-white">{{ __('index.slide.slide2.span') }}</span><br>
                 <p class="fs-5 text-white">{{ __('index.slide.slide2.p') }} <strong> {{ __('index.slide.slide2.strong') }}</strong></p>
@@ -211,10 +211,10 @@
     <!-- Camada azul com transparência -->
     <div class="overlay-blue"></div>
     <div class="carousel-caption d-none d-md-block edit-2">
-        <div class="container animate__animated animate__fadeInLeft animate__delay-1s">
+        <div class="container pe-5 animate__animated animate__fadeInLeft animate__delay-1s">
             <h4 class="mb-16">
                 <span class="h2 text-white">{{ __('index.slide.slide3.span') }} </span><br>
-                <p class="fs-5 text-white">{{ __('index.slide.slide3.p') }} <strong> {{ __('index.slide.slide3.strong') }}</strong></p>
+                <p class="fs-5 text-white">{{ __('index.slide.slide3.p') }} <br>{{ __('index.slide.slide3.br') }} <strong> {{ __('index.slide.slide3.strong') }}</strong></p>
 
             </h4>
             <div class="btn-block row-gap-3 mb-48">

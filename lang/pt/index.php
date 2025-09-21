@@ -30,8 +30,8 @@ return [
         ],
         'slide3' => [
             'span' => 'Seu destino, nossa missão',
-            'p' => 'Da cidade ao interior, da curta à longa distância — estamos com você em cada quilômetro da
-                sua jornada.',
+            'p' => 'Da cidade ao interior, da curta à longa distância — estamos com',
+                'br' => 'você em cada quilômetro da sua jornada.',
                 'strong' => 'Dirija com liberdade e tranquilidade!',
             'button1' => 'Alugar Agora',
             'button2' => 'contacta-nos',

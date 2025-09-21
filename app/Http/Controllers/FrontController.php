@@ -42,7 +42,9 @@ class FrontController extends Controller
 
     public function equipa(){
         return view('equipa');
+    }
 
-
+    public function termos(){
+        return view('termos');
     }
 }

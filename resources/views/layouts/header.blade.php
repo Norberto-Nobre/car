@@ -67,7 +67,7 @@
 <aside class="container asside">
           <div class="row inaside">
           <div class="d-flex contato">
-            <div class="contact">
+            <div class="contact mb-1">
                 <img src="{{asset('assets/media/footer/uil-outgoing-call.png')}}" alt="call-logo">
                 <a class="text-white" href="tel:+244923482877">923482877 / 946320021</a>
             </div>
@@ -80,8 +80,8 @@
           <div class="d-flex soccial">
             <div class="">
                 <div class="d-flex contact">
-                    <img src="{{asset('assets/media/footer/uil-map-marker.png')}}" alt="logo">
-                    <p class="text-white">{{ __('footer.footer.col-3.p') }} Lar do Patriota - Luanda</p>
+                    <img class="mb-1" src="{{asset('assets/media/footer/uil-map-marker.png')}}" alt="logo">
+                    <p class="text-white mt-1">{{ __('footer.footer.col-3.p') }} Lar do Patriota - Luanda</p>
                 </div>
             </div>
 
@@ -129,7 +129,7 @@
             <div class="main-menu__right">
                 <div class="search-heart-icon d-md-flex d-none align-items-center gap-24">
                     <div class="hidden sm:flex sm:items-center sm:ms-6"></div>
-                    <div class="social-icons mb-12">
+                    <div class="social-icons">
                             <ul class="d-flex unstyled gap-12">
                                 <li>
                                     <a href="">

@@ -27,57 +27,23 @@
     </section> --}}
     <!-- About-area start  end -->
 
-    <!--title start  -->
-    <section class="about my-80">
-        <div class="container">
-            <div class="txt">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8">
-                        <h4 class=" text-center black-2 mb-48">Confiança - Segurança <br><span> consigo, sempre</span></h4>
-                        <h6 class="mb-24">O que oferecemos</h6>
-                        <ul class="offers">
-                            <li>
-                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Viagens confortáveis</p>
-                            </li>
-                            <li>
-                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Carros de primeira linha</p>
-                            </li>
-                            <li>
-                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Opções de pagamento seguras</p>
-                            </li>
-                            <li>
-                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Variedade de opções para escolher</p>
-                            </li>
-                            <li>
-                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Variedade de opções para escolher</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- title end -->
-
-    <!-- vichles-section -->
+     <!-- vichles-section -->
     <section class="vehicles-2 py-80">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 text-center">
-                    <img src="assets/media/blogs/car.png" alt="car">
+                    <img src="assets/media/hero/img.jpg" alt="car">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="txt">
-                        <h4 class="mb-24">Nossa jornada <br> até agora</h2>
-                        <p class="mb-24">Ao longo dos anos, a Chana Car construiu uma história marcada por confiança, crescimento e dedicação ao cliente. Começamos com uma pequena frota e, hoje, somos referência no aluguel de veículos, atendendo centenas de clientes com qualidade e compromisso.</p>
-                            <p class="mb-24">Cada quilômetro percorrido representa nosso esforço em oferecer soluções práticas, seguras e acessíveis para quem valoriza uma boa experiência na estrada.</p>
+                        <h4 class="mb-24">Chana RENT-A-CAR</h2>
+                        <p class="mb-24">Somos uma empresa do grupo Organizações Chana que, desde 2014 prestamos serviço de aluguer de viaturas multimarcas, a longo e curto prazo.</p>
+                        <p class="mb-24">Ao longo destes anos, procuramos apresentar ao mercado os melhores preços e serviço de qualidade, ajustando-se às reais necessidades dos nossos clientes.</p>
+                        <p class="mb-24">Os nossos alugueres feitos para particulares, empresariais, provinciais e para eventos são atendidas pelas 172 viaturas que temos em frota.</p>
+                        <p class="mb-24">Contamos consigo como parceiro, porque acreditamos em si e na qualidade do  serviço que queremos lhe oferecer.</p>
+                        <p class="mb-24">Qualidade aos melhores preços. Temos para si uma frota Multimarca, com Assistência técnica e Qualidade na Entrega</p>
                     </div>
-                    <a href="rental.html" class="cus-btn">
+                    {{-- <a href="rental.html" class="cus-btn">
                         <span class="btn-text">
                             Ver nossos carros
                             <i class="bi bi-car-front-fill"></i>
@@ -86,53 +52,63 @@
                             Ver nossos carros
                             <i class="bi bi-car-front-fill"></i>
                         </span>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>
     </section>
     <!-- vicheles-end -->
 
-    <!-- catagory -->
-    <section class="catagory py-80">
+     <section class="vehicles-2 py-80">
         <div class="container">
-            <div class="row row-gap-3">
-                <div class="col-lg-3 col-md-4 me-4 ms-4 pt-4 shadow">
-                    <div class="block">
-                        <img src="assets/media/user/uil-book-open.png" alt="book">
-                        <h5>MISSÃO</h5>
-                    </div>
-                    <div class="txt">
-                        <p>Oferecemos uma mobilidade de qualidade e de eficiência e um atendimento diferenciado e inovador</p>
-                    </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <img src="assets/media/hero/missao.jpg" alt="car">
                 </div>
-                <div class="col-lg-4 col-md-4 me-4 pt-4 shadow">
-                    <div class="block">
-                        <img src="assets/media/user/uil-eye.png" alt="eye">
-                        <h5>VISÃO</h5>
-                    </div>
-                    <div class="txt">
-                        <p>Ser reconhecida a nível Nacional pela qualidade de oferecer a melhor mobilidade e as melhores propostas, que tragam benefício recíprocos.</p>
-                    </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <img src="assets/media/hero/visao.jpg" alt="car">
                 </div>
-                <div class="col-lg-4 col-md-4 pt-4 shadow">
-                    <div class="block">
-                        <img src="assets/media/user/uil-heart.png" alt="heart">
-                        <h5>VALORES</h5>
-                    </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <img src="assets/media/hero/valor.jpg" alt="car">
+                </div>
+                {{-- <div class="col-lg-6 col-md-6">
                     <div class="txt">
+                        <h4 class="mb-24">Chana RENT-A-CAR</h2>
+
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </section>
+
+    <!--title start  -->
+    <section class="about my-80 py-5" style="background: #041A71">
+        <div class="container">
+            <div class="txt">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <h4 class="text-center black-2 mb-48 text-white">Confiança - Segurança <br><span> consigo, sempre</span></h4>
+                        <h6 class="mb-24 text-white">O que oferecemos</h6>
                         <ul class="offers">
-                            <li class="d-flex">
+                            <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Transparência; </p>
+                                <p class="text-white">Viagens confortáveis</p>
                             </li>
-                            <li class="d-flex">
+                            <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Rigor; </p>
+                                <p class="text-white">Carros de primeira linha</p>
                             </li>
-                            <li class="d-flex">
+                            <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p>Respeito e Resiliência.</p>
+                                <p class="text-white">Opções de pagamento seguras</p>
+                            </li>
+                            <li>
+                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
+                                <p class="text-white">Variedade de opções para escolher</p>
+                            </li>
+                            <li>
+                                <img src="assets/media/icons/uil-check-circle.png" alt="circle">
+                                <p class="text-white">Variedade de opções para escolher</p>
                             </li>
                         </ul>
                     </div>
@@ -140,7 +116,7 @@
             </div>
         </div>
     </section>
-    <!-- catagory end -->
+    <!-- title end -->
 
     <!-- About-area start -->
     <section class="about my-80">
@@ -194,7 +170,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="cus-btn">
+                            {{-- <a href="#" class="cus-btn">
                                 <span class="btn-text">
                                     Sobre nós
                                     <i class="bi bi-arrow-right-short"></i>
@@ -203,7 +179,7 @@
                                     Sobre nós
                                     <i class="bi bi-arrow-right-short"></i>
                                 </span>
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
@@ -262,7 +238,7 @@
     <!-- brands-end -->
 
     <!-- choose us -->
-    <section class="choose my-80">
+    {{-- <section class="choose my-80">
         <div class="container">
             <div class="heading">
                 <div class="row justify-content-center">
@@ -327,5 +303,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

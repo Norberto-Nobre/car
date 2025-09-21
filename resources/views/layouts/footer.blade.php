@@ -65,7 +65,7 @@
                                         <a href="{{route('front.faqs')}}">{{ __('navigation.faq') }}</a>
                                     </li>
                                     <li class="mb-12">
-                                        <a href="javascript:void(0);">{{ __('footer.footer.col-2.a') }}</a>
+                                        <a href="{{route('front.termos')}}">{{ __('footer.footer.col-2.a') }}</a>
                                     </li>
                                     {{-- <li class="mb-12">
                                         <a href="index.html">Brands</a>
@@ -105,22 +105,22 @@
                             <ul class="d-flex unstyled gap-12">
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/footer/Instagram.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/footer/Instagram.png')}}" alt="logo" style="width: 20px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/footer/Twitter.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/footer/Twitter.png')}}" alt="logo" style="width: 20px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/footer/Dribbble.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/footer/Dribbble.png')}}" alt="logo" style="width: 20px">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{asset('assets/media/footer/Linkedin.png')}}" alt="logo">
+                                        <img src="{{asset('assets/media/footer/Linkedin.png')}}" alt="logo" style="width: 20px">
                                     </a>
                                 </li>
                             </ul>

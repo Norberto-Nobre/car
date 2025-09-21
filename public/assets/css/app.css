@@ -1511,12 +1511,14 @@ Elements
         .edit-2{
             width: 50%;
             position: absolute !important;
-            top: 55% !important;
+            top: 50% !important;
             left: 50% !important;
             transform: translate(-70%, -50%) !important;
             text-align: start !important;
             color: white !important;
-            padding: 0 !important;
+            /* padding: 0 !important; */
+            padding-right: 200px;
+            /* border: solid 1px white; */
         }
         .edit-3{
             width: 50%;

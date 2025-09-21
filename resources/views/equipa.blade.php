@@ -148,13 +148,43 @@
     <!-- vichles-section -->
     <!-- vicheles-end -->
 
-    <section class="section my-5 pt-5 pb-5">
+    <section class="section pt-5 pb-0">
                 <div class="container">
-                     <div class="descript">
-                        <h4 class="mb-12">Nossa Equipa</h4>
-                        <p class="mb-12">Contamos com uma equipa dedicada e experiente, sempre <br> pronta para oferecer o melhor atendimento.</p>
+                     <div class="descript mb-5">
+                        <h4 class="mb-12 text-center">Nossa Equipa</h4>
+                        <p class="mb-12 text-center">Contamos com uma equipa dedicada e experiente, sempre pronta para oferecer o melhor atendimento.</p>
                     </div>
-                    <div class="row">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-2 ftco-animate">
+						    <div class="staff">
+							    <div class="img-wrap d-flex align-items-stretch">
+								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
+							    </div>
+							    <div class="text pt-3 px-3 pb-4 text-center">
+								    <h3>Lloyd Wilson</h3>
+								    <span class="position mb-2">Life Coach</span>
+								    <div class="faded">
+									    <p></p>
+									    <ul class="ftco-social text-center">
+                    		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
+                    		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
+                    		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
+                    		              </ul>
+	                                </div>
+							     </div>
+						    </div>
+					    </div>
+
+
+
+                    </div>
+                </div>
+    </section>
+
+     <section class="section mt-0 pt-0">
+                <div class="container">
+
+                    <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-2 ftco-animate">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
@@ -217,10 +247,17 @@
 						    </div>
 					    </div>
 
-					    <div class="col-md-6 col-lg-2 ftco-animate">
+                    </div>
+                </div>
+    </section>
+
+     <section class="section mt-0 pt-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-2 ftco-animate">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
-								    <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
+								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
 								    <h3>Lloyd Wilson</h3>
@@ -228,7 +265,6 @@
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
-
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
@@ -259,28 +295,9 @@
 						    </div>
 					    </div>
 
-					    <div class="col-md-6 col-lg-2 ftco-animate">
-						    <div class="staff">
-							    <div class="img-wrap d-flex align-items-stretch">
-								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
-							    </div>
-							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
-								    <div class="faded">
-									    <p></p>
-									    <ul class="ftco-social text-center">
 
-                    		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
-                    		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
-                    		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
-	                                </div>
-							     </div>
-						    </div>
-					    </div>
 
                     </div>
                 </div>
-            </section>
+    </section>
 @endsection
