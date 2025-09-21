@@ -44,8 +44,8 @@ return [
             'a' => 'Request',
         ],
         'banner2' => [
-            'h2' => 'Get wherever you want in style and comfort.',
-            'p' => 'Modern cars, ready to keep up with your pace.',
+            'h2' => 'Confidence - Security with you, always',
+            'p' => 'We prioritize your peace of mind on every trip.',
         ],
     ],
 

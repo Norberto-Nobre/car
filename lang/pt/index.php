@@ -22,7 +22,7 @@ return [
             'button2' => 'contacta-nos',
         ],
         'slide2' => [
-            'span' => 'Aluguel com preço justo',
+            'span' => 'Aluguer com preço justo',
             'p' => 'Planos flexíveis e preços competitivos para aproveitar cada viagem sem pesar no orçamento.',
             'strong' => 'Escolha seu carro e garanta a melhor oferta!',
             'button1' => 'Alugar Agora',
@@ -48,6 +48,14 @@ return [
             'h2' => 'Chegue onde quiser com estilo e conforto.',
             'p' => 'Carros modernos, prontos para acompanhar o seu ritmo.',
         ],
+        'banner3' => [
+            'h2' => 'Confiança - Segurança consigo, sempre',
+            'p' => 'Priorizamos a sua tranquilidade a Cada viagem.',
+        ],
+        'banner4' => [
+            'h2' => 'Confiança - Segurança consigo, sempre',
+            'p' => 'Priorizamos a sua tranquilidade a Cada viagem.',
+        ],
     ],
 
     'vehicles' => [
@@ -67,8 +75,8 @@ return [
     ],
 
     'benefits' => [
-        'title' => 'Benefícios do aluguel',
-        'subtitle' => 'Descubra as vantagens exclusivas do nosso serviço de aluguel.',
+        'title' => 'Benefícios do aluguer',
+        'subtitle' => 'Descubra as vantagens exclusivas do nosso serviço de aluguer.',
         'col-1' => [
             'h5' => 'Variedade de Veículos',
             'p' => 'Escolha entre diferentes modelos para cada necessidade.',

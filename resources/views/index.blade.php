@@ -128,15 +128,15 @@
   <div class="carousel-inner">
     <div class="carousel-item active position-relative">
       {{-- <img src="assets/media/cars/slide3.jpeg" alt="map-image" class="w-100"> --}}
-      <video src="assets/media/video/video-3.mp4"
+        <video src="assets/media/video/video.mp4"
        class="video"
        loop muted autoplay playsinline
-       style="width: 100%; height: 622px; object-fit: cover;">
-</video>
+       style="width: 100%; height: 570px; object-fit: cover;">
+        </video>
        <!-- Camada azul com transparência -->
-    <div class="overlay-blue"></div>
-      <div class="carousel-caption d-none d-md-block edit-1">
-       <div class="container animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="overlay-blue2"></div>
+        <div class="carousel-caption d-none d-md-block edit-1">
+            <div class="container animate__animated animate__fadeInUp animate__delay-2s">
             <h4 class="mb-16">
                 <span class="h2 text-white">{{ __('index.slide.slide1.span') }} </span><br>
                 <p class="fs-5 text-white mt-3 mb-2">{{ __('index.slide.slide1.p') }} <strong> {{ __('index.slide.slide1.strong') }}</strong></p>
@@ -347,12 +347,12 @@
     </div> --}}
     <!--Booking-form area end -->
 
-    <section class="main-container pt-5 pb-1">
+    <section class="main-container pt-5 pb-3">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
-                        <img class="" src="assets/media/banners/banner2.jpg" alt="car">
+                        <img class="" src="assets/media/banners/banner13.webp" alt="car">
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -365,12 +365,12 @@
 
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
-                        <img src="assets/media/banners/banner3.jpg" alt="car">
+                        <img src="assets/media/banners/banner2.webp" alt="car">
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">{{ __('index.banner.banner2.h2') }}</h2>
-                            <p class="card-text">{{ __('index.banner.banner2.p') }}</p>
+                            <h2 class="card-title">{{ __('index.banner.banner3.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner3.p') }}</p>
                             <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
             <div class="row g-0">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
-                        <img class="" src="assets/media/banners/banner2.jpg" alt="car">
+                        <img class="" src="assets/media/banners/banner3.webp" alt="car">
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -397,7 +397,7 @@
 
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
-                        <img src="assets/media/banners/banner3.jpg" alt="car">
+                        <img src="assets/media/banners/banner15.webp" alt="car">
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
