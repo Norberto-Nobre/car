@@ -372,7 +372,7 @@
     <section class="main-container pt-5 pb-3">
         <div class="container">
             <div class="row g-0">
-                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
                         <img class="" src="assets/media/banners/banner13.webp" alt="car">
 
@@ -385,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
                         <img src="assets/media/banners/banner2.webp" alt="car">
 
@@ -404,7 +404,7 @@
     <section class="main-container">
         <div class="container">
             <div class="row g-0">
-                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
                         <img class="" src="assets/media/banners/banner3.webp" alt="car">
 
@@ -417,7 +417,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
                         <img src="assets/media/banners/banner15.webp" alt="car">
 
@@ -445,7 +445,7 @@
                 <div class="row g-4 smartcar">
                     <div class="col-xl-12">
                         <div class="row gy-4 gx-0">
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-cash-coin custom"></i></span>
@@ -456,7 +456,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-droplet custom"></i></span>
@@ -467,7 +467,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-car-front-fill custom"></i></span>
@@ -478,7 +478,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-shield-check custom"></i></span>
@@ -489,7 +489,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-briefcase-fill custom"></i></span>
@@ -500,7 +500,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-lightning-charge-fill custom"></i></span>
@@ -548,7 +548,7 @@
         <!-- Features End -->
 
     <!-- brands-start -->
-    <div class="brand-section my-40 py-48" data-aos="fade-up" data-aos-delay="200">
+    <div class="brand-section my-40 py-48" data-aos="fade-up">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -630,7 +630,7 @@
     <!--Feature area end-->
 
     <!--Ride area start -->
-    <section class="vehicles my-80" data-aos="fade-up" data-aos-delay="200">
+    <section class="vehicles my-80" data-aos="fade-up">
         <div class="container">
             <div class="txts mb-48">
                 <div class="descript">
@@ -909,7 +909,7 @@
     <!-- Top vehicle area start end-->
 
     <!--Destinos-start -->
-    <section class="testimonials pt-4 pb-5" data-aos="fade-up" data-aos-delay="200">
+    <section class="testimonials pt-4 pb-5" data-aos="fade-up">
     <div class="container">
         <div class="reviews mt-48">
             <div class="txt">
