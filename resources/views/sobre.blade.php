@@ -271,7 +271,7 @@
                         </div>
                         <div class="block">
                             <h5 class="mb-8">Confiabilidade</h5>
-                            <p>Conte conosco para uma experiência de aluguel tranquila em todas as ocasiões.</p>
+                            <p>Conte conosco para uma experiência de Aluguer tranquila em todas as ocasiões.</p>
                         </div>
                     </div>
                 </div>

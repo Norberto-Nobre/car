@@ -10,7 +10,7 @@
             color: white;
             font-family: Arial, sans-serif;
         }
-        
+
         .faq-title {
             font-size: 3.5rem;
             font-weight: bold;
@@ -18,14 +18,14 @@
             margin-bottom: 60px;
             color: white;
         }
-        
+
         .faq-item {
             background-color: transparent;
             border: none;
             border-bottom: 1px solid #ccc;
             margin-bottom: 0;
         }
-        
+
         .faq-button {
             background: transparent;
             border: none;
@@ -40,16 +40,16 @@
             align-items: center;
             transition: all 0.3s ease;
         }
-        
+
         .faq-button:hover {
             color: #041A71;
         }
-        
+
         .faq-button:focus {
             box-shadow: none;
             color: #041A71;
         }
-        
+
         .faq-icon {
             background-color: #041A71;
             color: white;
@@ -63,42 +63,42 @@
             transition: all 0.3s ease;
             flex-shrink: 0;
         }
-        
+
         .faq-button[aria-expanded="true"] .faq-icon {
             transform: rotate(45deg);
         }
-        
+
         .faq-collapse {
             border: none;
             background: transparent;
         }
-        
+
         .faq-body {
             padding: 0 20px 25px 20px;
             color: #777;
             font-size: 1rem;
             line-height: 1.6;
         }
-        
+
         .accordion-button::after {
             display: none;
         }
-        
+
         .accordion-button:not(.collapsed) {
             background-color: transparent;
             color: #041A71;
         }
-        
+
         @media (max-width: 768px) {
             .faq-title {
                 font-size: 2.5rem;
             }
-            
+
             .faq-button {
                 font-size: 1rem;
                 padding: 20px 15px;
             }
-            
+
             .faq-body {
                 padding: 0 15px 20px 15px;
             }
@@ -121,13 +121,13 @@
         <div class="container">
              <div class="descript">
                     <h4 class="mb-12">Perguntas Frequantes</h4>
-                    <p class="" style="color:#777">Reunimos aqui as principais dúvidas dos nossos clientes para tornar <br>sua experiência de aluguel ainda mais simples e transparente. </p>
+                    <p class="" style="color:#777">Reunimos aqui as principais dúvidas dos nossos clientes para tornar <br>sua experiência de Aluguer ainda mais simples e transparente. </p>
                 </div>
-            
+
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="accordion" id="faqAccordion">
-                        
+
                         <!-- FAQ Item 1 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingOne">
@@ -140,16 +140,16 @@
                             </h3>
                             <div id="collapseOne" class="accordion-collapse show collapse faq-collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    Para começar com o aluguel de carros, você precisa ter pelo menos 21 anos, uma carteira de motorista válida e um cartão de crédito. Visite nosso site, escolha suas datas e local, selecione o veículo desejado e complete a reserva online. É simples e rápido!
+                                    Para começar com o Aluguer de carros, você precisa ter pelo menos 21 anos, uma carteira de motorista válida e um cartão de crédito. Visite nosso site, escolha suas datas e local, selecione o veículo desejado e complete a reserva online. É simples e rápido!
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- FAQ Item 2 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <span>O que é um depósito de segurança para aluguel de carros?</span>
+                                    <span>O que é um depósito de segurança para Aluguer de carros?</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- FAQ Item 3 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingThree">
@@ -178,7 +178,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- FAQ Item 4 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingFour">
@@ -195,12 +195,12 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- FAQ Item 5 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <span>Que tipo de aluguel de carro eu preciso?</span>
+                                    <span>Que tipo de Aluguer de carro eu preciso?</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -212,12 +212,12 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- FAQ Item 6 -->
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    <span>É possível estender meu período de aluguel?</span>
+                                    <span>É possível estender meu período de Aluguer?</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -225,11 +225,11 @@
                             </h3>
                             <div id="collapseSix" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    Sim, é possível estender seu período de aluguel, sujeito à disponibilidade do veículo. Recomendamos entrar em contato conosco com pelo menos 24 horas de antecedência. A extensão será cobrada conforme as tarifas vigentes e você precisará autorizar os custos adicionais no mesmo cartão de crédito.
+                                    Sim, é possível estender seu período de Aluguer, sujeito à disponibilidade do veículo. Recomendamos entrar em contato conosco com pelo menos 24 horas de antecedência. A extensão será cobrada conforme as tarifas vigentes e você precisará autorizar os custos adicionais no mesmo cartão de crédito.
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

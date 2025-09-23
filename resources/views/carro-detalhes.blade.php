@@ -642,7 +642,7 @@
                         </div>
                     </div>
                     <div class="banner-3 my-24">
-                        <h6 class="fs-6">Benefícios do aluguel</h6>
+                        <h6 class="fs-6">Benefícios do Aluguer</h6>
                         <hr class="my-24">
                         <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap  justify-content-between ">
                             <div class=" d-flex flex-column gap-24 ">
