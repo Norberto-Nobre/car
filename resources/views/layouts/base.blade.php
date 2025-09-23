@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
     <!-- All CSS files -->
     <link rel="stylesheet" href="{{asset('assets/css/vendor/font-awesome.css')}}">
@@ -66,6 +67,8 @@
     <script src="{{asset('assets/js/date.js')}}"></script>
     <script src="{{asset('assets/js/app.js')}}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 
     <script>
         // TIMELINE
@@ -75,6 +78,11 @@
 			verticalStartPosition: 'left',
 			visibleItems: 4
 		});
+
+         AOS.init({
+    duration: 1000, // duração da animação em ms
+    once: false      // anima apenas uma vez
+  });
 
     </script>
 

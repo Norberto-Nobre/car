@@ -73,17 +73,39 @@
 .feature .feature-item {
     display: flex;
     border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-right: 20px    
+
+}
+.feature .feature-item .custom{
+    font-size: 24px;
+    color: #fff;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: icon-animat;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
 }
 
 .feature .feature-item .feature-icon span {
-    width: 70px;
-    height: 70px;
-    display: flex;
+    width: 50px;
+    height: 50px;
+    
     align-items: center;
     justify-content: center;
     color: #fff;
     background: var(--bs-primary);
-    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;;
+    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
     animation-name: icon-animat;
     animation-duration: 5s;
     animation-delay: 1s;
@@ -350,7 +372,7 @@
     <section class="main-container pt-5 pb-3">
         <div class="container">
             <div class="row g-0">
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
                         <img class="" src="assets/media/banners/banner13.webp" alt="car">
 
@@ -363,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
                         <img src="assets/media/banners/banner2.webp" alt="car">
 
@@ -382,7 +404,7 @@
     <section class="main-container">
         <div class="container">
             <div class="row g-0">
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
                         <img class="" src="assets/media/banners/banner3.webp" alt="car">
 
@@ -395,7 +417,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
                         <img src="assets/media/banners/banner15.webp" alt="car">
 
@@ -411,8 +433,122 @@
         </div>
     </section>
 
+    <!-- Features Start -->
+         <section class="container-fluid mt-5 feature banner dark-background" style="background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.6)), url('assets/media/hero/bg-chana.jpg') center/cover fixed no-repeat;">
+            <div class="banner-design-1"></div>
+            <div class="banner-design-2"></div>
+            <div class="container pt-3 pb-5">
+                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h1 class="display-6 text-white">{{ __('index.bg-img.h1') }}<span class="text-primary"></span></h1>
+                    <p class="mb-0 text-white">{{ __('index.benefits.subtitle') }}</p>
+                </div>
+                <div class="row g-4 smartcar">
+                    <div class="col-xl-12">
+                        <div class="row gy-4 gx-0">
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-cash-coin custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">Transparência nos preços</h5>
+                                        <p class="mb-0">Excelentes preços. Explicação de Facturas. Poupança em todas as Marcas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-droplet custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">Certificado de limpeza</h5>
+                                        <p class="mb-0">Viaturas certificadamente limpas, seguindo pontos de controlo de limpeza e segurança.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-car-front-fill custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-1.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-1.p') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-shield-check custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">Viaturas Seguras</h5>
+                                        <p class="mb-0">Condução segura. Alugue com confiança.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-briefcase-fill custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">Soluções de negócios</h5>
+                                        <p class="mb-0">Toda a flexibilidade para o seu negócio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-lightning-charge-fill custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">Rapidez e facilidade</h5>
+                                        <p class="mb-0">Sem esperas. Opções de compra de serviços extra. Tecnologia que o mantém em movimento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {{-- <div class="col-xl-4">
+                        <div class="row gy-4 gx-0">
+                            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="feature-item justify-content-end">
+                                    <div class="text-end me-4">
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-3.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-3.p') }}</p>
+                                    </div>
+                                    <div class="feature-icon">
+                                        <span class="fs-3"><i class="bi bi-clock-history"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="feature-item justify-content-end">
+                                    <div class="text-end me-4">
+                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-4.p') }}</h5>
+                                        <p class="mb-0">{{ __('index.benefits.col-4.p') }}</p>
+                                    </div>
+                                    <div class="feature-icon">
+                                    <span class="bi bi-shield-check fs-3"></span>
+                                        <!-- <span class="fa fa-map-pin fs-3"></span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
+                   <!--  <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Solicitar</a> -->
+                </div>
+            </div>
+        </section>
+        <!-- Features End -->
+
     <!-- brands-start -->
-    <div class="brand-section my-40 py-48">
+    <div class="brand-section my-40 py-48" data-aos="fade-up">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -494,7 +630,7 @@
     <!--Feature area end-->
 
     <!--Ride area start -->
-    <section class="vehicles my-80">
+    <section class="vehicles my-80" data-aos="fade-up">
         <div class="container">
             <div class="txts mb-48">
                 <div class="descript">
@@ -563,93 +699,6 @@
         </div>
     </section>
     <!--Ride area end -->
-
-    <section class="banner dark-background" style="background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.6)), url('assets/media/banners/banner9.jpg') center/cover fixed no-repeat; padding:70px 0;">
-        <div class="banner-design-1"></div>
-        <div class="banner-design-2"></div>
-        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <!-- <h4 class="text-primary">Our Services</h4> -->
-            <h1 class="display-6 mb-4 text-white">{{ __('index.bg-img.h1') }}</h1>
-            <p class="mb-0 text-white">{{ __('index.bg-img.p') }}</p>
-        </div>
-        <!-- Section Title -->
-        <div id="contact" class="contact">
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            </div>
-        </div>
-    </section>
-
-     <!-- Features Start -->
-         <section class="container-fluid feature py-4">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h1 class="display-6 mb-3">{{ __('index.benefits.title') }}<span class="text-primary"></span></h1>
-                    <p class="mb-0">{{ __('index.benefits.subtitle') }}</p>
-                </div>
-                <div class="row g-4 align-items-center smartcar">
-                    <div class="col-xl-4">
-                        <div class="row gy-4 gx-0">
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <span class="fs-3"><i class="fa fa-car"></i></span>
-                                    </div>
-                                    <div class="ms-4">
-                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-1.h5') }}</h5>
-                                        <p class="mb-0">{{ __('index.benefits.col-1.p') }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-
-                                        <span class="fs-3"><i class="bi bi-cash-stack"></i></span>
-                                    </div>
-                                    <div class="ms-4">
-                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-2.h5') }}</h5>
-                                        <p class="mb-0">{{ __('index.benefits.col-2.p') }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="assets/media/cars/tesla.png" class="img-fluid w-100" style="object-fit: cover;" alt="Img">
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="row gy-4 gx-0">
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="feature-item justify-content-end">
-                                    <div class="text-end me-4">
-                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-3.h5') }}</h5>
-                                        <p class="mb-0">{{ __('index.benefits.col-3.p') }}</p>
-                                    </div>
-                                    <div class="feature-icon">
-                                        <span class="fs-3"><i class="bi bi-clock-history"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="feature-item justify-content-end">
-                                    <div class="text-end me-4">
-                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-4.p') }}</h5>
-                                        <p class="mb-0">{{ __('index.benefits.col-4.p') }}</p>
-                                    </div>
-                                    <div class="feature-icon">
-                                    <span class="bi bi-shield-check fs-3"></span>
-                                        <!-- <span class="fa fa-map-pin fs-3"></span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   <!--  <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Solicitar</a> -->
-                </div>
-            </div>
-        </section>
-        <!-- Features End -->
 
 
 
@@ -860,7 +909,7 @@
     <!-- Top vehicle area start end-->
 
     <!--Destinos-start -->
-    <section class="testimonials pt-4 pb-5">
+    <section class="testimonials pt-4 pb-5" data-aos="fade-up">
     <div class="container">
         <div class="reviews mt-48">
             <div class="txt">
