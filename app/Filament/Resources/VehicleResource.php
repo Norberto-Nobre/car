@@ -17,7 +17,12 @@ class VehicleResource extends Resource
 {
     protected static ?string $model = Vehicle::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-truck';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return Vehicle::count() > 0 ? (string) Vehicle::count() : null;
+    }
 
     public static function form(Form $form): Form
     {
@@ -50,7 +55,7 @@ class VehicleResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('vehicleModel.name')
-                    
+
                     ->sortable(),
                 Tables\Columns\TextColumn::make('license_plate')
                     ->searchable(),

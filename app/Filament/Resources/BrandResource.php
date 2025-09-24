@@ -19,6 +19,11 @@ class BrandResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getNavigationBadge(): ?string
+    {
+        return Brand::count() > 0 ? (string) Brand::count() : null;
+    }
+
     public static function form(Form $form): Form
     {
         return $form

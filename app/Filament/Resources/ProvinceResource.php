@@ -17,7 +17,12 @@ class ProvinceResource extends Resource
 {
     protected static ?string $model = Province::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-map';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return Province::count() > 0 ? (string) Province::count() : null;
+    }
 
     public static function form(Form $form): Form
     {

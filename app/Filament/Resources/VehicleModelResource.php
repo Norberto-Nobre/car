@@ -17,7 +17,12 @@ class VehicleModelResource extends Resource
 {
     protected static ?string $model = VehicleModel::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-squares-2x2';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return VehicleModel::count() > 0 ? (string) VehicleModel::count() : null;
+    }
 
     public static function form(Form $form): Form
     {

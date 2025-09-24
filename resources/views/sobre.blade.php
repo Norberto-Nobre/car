@@ -170,16 +170,8 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <a href="#" class="cus-btn">
-                                <span class="btn-text">
-                                    Sobre nós
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </span>
-                                <span class="btn-text">
-                                    Sobre nós
-                                    <i class="bi bi-arrow-right-short"></i>
-                                </span>
-                            </a> --}}
+                            {{--
+                             --}}
                         </div>
                     </div>
                 </div>
