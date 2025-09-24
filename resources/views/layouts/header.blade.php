@@ -63,6 +63,23 @@
   position: relative;
   top: 4px;
 }
+
+@media (max-width: 765px) {
+    .inaside{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+    .contato{
+        justify-content: center;
+        gap: 20px;
+        display: block !important;
+    }
+    .soccial{
+        display: none !important;
+    }
+    }
 </style>
 <aside class="container asside">
           <div class="row inaside">
@@ -84,7 +101,6 @@
                     <p class="text-white mt-1">{{ __('footer.footer.col-3.p') }} Lar do Patriota - Luanda</p>
                 </div>
             </div>
-
           </div>
           </div>
   </aside>

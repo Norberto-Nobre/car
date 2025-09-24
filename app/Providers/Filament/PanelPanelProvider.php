@@ -2,10 +2,15 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Widgets\BookingsChart;
+use App\Filament\Widgets\CustomersChart;
+use App\Filament\Widgets\DashboardStats;
+use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -26,8 +31,11 @@ class PanelPanelProvider extends PanelProvider
             ->default()
             ->id('panel')
             ->path('panel')
+            ->favicon(asset('favicon.png'))
+            ->brandLogo(asset('favicon.png'))
+             ->brandLogoHeight('40px')
             ->login()
-            ->registration()
+            // ->registration()
             ->colors([
                 'primary' => '#1E40AF', // azul escuro (hexadecimal)
             ])
@@ -38,8 +46,11 @@ class PanelPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Widgets\AccountWidget::class,
+                // Widgets\FilamentInfoWidget::class,
+                DashboardStats::class,
+                CustomersChart::class, 
+                BookingsChart::class,
             ])
             ->middleware([
                 EncryptCookies::class,

@@ -5,6 +5,28 @@
 @section('content')
 
 <style>
+/* imagens flutuantes */
+    .shape20 {
+	position: absolute;
+	left: 200px;
+	bottom: 4%;
+	z-index: -1;
+}
+.shape20 img {
+    width: 80px;
+    height: auto;
+	animation: rotateme 20s linear infinite;
+}
+@media screen and (max-width: 1199px) {
+
+	.shape20,
+	.shape21 {
+		display: none;
+	}
+}
+
+/* End imagens flutuantes */
+
     .banner {
     position: relative;
     overflow: hidden;
@@ -434,7 +456,7 @@
     </section>
 
     <!-- Features Start -->
-         <section class="container-fluid mt-5 feature banner dark-background" style="background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.6)), url('assets/media/hero/bg-chana.jpg') center/cover fixed no-repeat;">
+         <section class="container-fluid mt-5 feature banner dark-background" style="background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.6)), url('assets/media/hero/bg-chana1.jpg') center/cover fixed no-repeat;">
             <div class="banner-design-1"></div>
             <div class="banner-design-2"></div>
             <div class="container pt-3 pb-5">
@@ -445,7 +467,7 @@
                 <div class="row g-4 smartcar">
                     <div class="col-xl-12">
                         <div class="row gy-4 gx-0">
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-cash-coin custom"></i></span>
@@ -456,7 +478,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-droplet custom"></i></span>
@@ -467,7 +489,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-car-front-fill custom"></i></span>
@@ -478,7 +500,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-shield-check custom"></i></span>
@@ -489,7 +511,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-briefcase-fill custom"></i></span>
@@ -500,7 +522,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-lightning-charge-fill custom"></i></span>
@@ -598,6 +620,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+            
         </div>
     </div>
     <!-- brands-end -->
