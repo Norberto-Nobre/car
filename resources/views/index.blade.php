@@ -1090,6 +1090,23 @@
     </div>
     <!-- brands-end -->
 
+                <!-- Modal -->
+            <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Fechar" style="background-color: #fff; color: #041A71;"></button>
+                    </div>
+                    <img src="assets/media/banners/modal1.jpg" alt="">
+                    {{-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <a href="/ofertas" class="btn btn-primary">Ver ofertas</a>
+                    </div> --}}
+                    </div>
+                </div>
+            </div>
+
     <!--testimonials-area-start -->
     {{-- <section class="testimonials pt-0 pb-0">
         <div class="container ">
@@ -1516,4 +1533,23 @@
     </section> --}}
     <!-- Booking-form-end -->
     </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            myModal.show();
+        });
+    
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     if (!sessionStorage.getItem("welcomeModalShown")) {
+        //     var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        //     myModal.show();
+
+        //     sessionStorage.setItem("welcomeModalShown", "true"); 
+        //     }
+        // });
+
+    </script>
+    
 @endsection
