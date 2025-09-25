@@ -98,7 +98,7 @@
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin-right: 20px    
+    margin-right: 20px
 
 }
 .feature .feature-item .custom{
@@ -122,7 +122,7 @@
 .feature .feature-item .feature-icon span {
     width: 50px;
     height: 50px;
-    
+
     align-items: center;
     justify-content: center;
     color: #fff;
@@ -535,7 +535,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     {{-- <div class="col-xl-4">
                         <div class="row gy-4 gx-0">
                             <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
@@ -621,7 +621,7 @@
                 </div>
             </div>
         </div>
-            
+
         </div>
     </div>
     <!-- brands-end -->
@@ -674,7 +674,7 @@
             </div>
 
             <div class="row row-gap-3">
-                @foreach ($vehicles as $vehicle)
+                @foreach ($popularVehicles as $vehicle)
                 <div class="col-xxl-3 col-lg-4 col-md-6 ps-3">
                     <div class="vehicle-card">
                         <a href="{{route('front.carro-detalhes', $vehicle->slug)}}">

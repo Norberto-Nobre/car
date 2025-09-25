@@ -93,16 +93,16 @@ class BookingResource extends Resource
                 Tables\Columns\TextColumn::make('booking_code')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('start_date')
-                    ->date()
+                    ->date('j \d\e M, Y')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('end_date')
-                    ->date()
+                    ->date('j \d\e M, Y')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('total_amount')
-                    ->numeric()
+                    ->money('AOA', true)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('daily_rate')
-                    ->numeric()
+                    ->money('AOA', true)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('days')
                     ->numeric()

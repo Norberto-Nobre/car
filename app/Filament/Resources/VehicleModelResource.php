@@ -85,7 +85,7 @@ class VehicleModelResource extends Resource
                 Tables\Columns\TextColumn::make('category.name')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('caussion')
-                    ->numeric()
+                    ->money('AOA', true)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('fuel_type'),
                 Tables\Columns\TextColumn::make('transmission'),
@@ -96,10 +96,9 @@ class VehicleModelResource extends Resource
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('price_per_day')
-                    ->numeric()
+                    ->money('AOA', true)
                     ->sortable(),
-                Tables\Columns\IconColumn::make('is_active')
-                    ->boolean(),
+                Tables\Columns\ToggleColumn::make('is_active'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

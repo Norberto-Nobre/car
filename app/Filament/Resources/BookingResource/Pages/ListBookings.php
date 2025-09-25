@@ -29,7 +29,7 @@ class ListBookings extends ListRecords
              ->badge(Booking::count()),
         'Pendente' => Tab::make()
             ->icon('heroicon-o-check-circle')
-            ->badgeColor('gray')
+            ->badgeColor('warning')
             ->badge(Booking::query()->wherestatus('pendente', true)->count())
             ->modifyQueryUsing(fn (Builder $query) => $query->wherestatus('pendente', true)),
         'Aprovado' => Tab::make()
@@ -44,7 +44,7 @@ class ListBookings extends ListRecords
             ->modifyQueryUsing(fn (Builder $query) => $query->wherestatus('cancelado', false)),
         'Expirado' => Tab::make()
             ->icon('heroicon-o-archive-box')
-            ->badgeColor('warning')
+            ->badgeColor('gray')
             ->badge(Booking::query()->wherestatus('expirado', true)->count())
             ->modifyQueryUsing(fn (Builder $query) => $query->wherestatus('expirado', false)),
     ];

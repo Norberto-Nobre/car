@@ -66,7 +66,7 @@ class CustomerResource extends Resource
                 Tables\Columns\TextColumn::make('phone')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('date_of_birth')
-                    ->date()
+                    ->date('j \d\e M, Y')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

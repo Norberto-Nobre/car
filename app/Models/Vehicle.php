@@ -19,6 +19,7 @@ class Vehicle extends Model
         'is_active',
         'slug',
         'notes',
+        'is_popular',
     ];
 
     public function vehicleModel()
