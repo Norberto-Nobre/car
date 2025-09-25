@@ -41,9 +41,11 @@ class VehicleResource extends Resource
                     ->image(),
                 Forms\Components\Toggle::make('is_active')
                     ->required(),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
+                 Forms\Components\Toggle::make('is_popular')
+                    ->required(),
+                // Forms\Components\TextInput::make('slug')
+                //     ->required()
+                //     ->maxLength(255),
                 Forms\Components\Textarea::make('notes')
                     ->columnSpanFull(),
             ]);
@@ -60,12 +62,11 @@ class VehicleResource extends Resource
                 Tables\Columns\TextColumn::make('license_plate')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('year')
-                    ->numeric()
                     ->sortable(),
-                Tables\Columns\IconColumn::make('is_active')
-                    ->boolean(),
+                Tables\Columns\ToggleColumn::make('is_active'),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
+                Tables\Columns\ToggleColumn::make('is_popular'),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
