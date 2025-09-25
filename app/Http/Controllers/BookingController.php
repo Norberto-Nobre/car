@@ -27,6 +27,7 @@ class BookingController extends Controller
         $values['dropoff_time'] = $request->dropoff_time;
         $values['out_of_province'] = $request->out_of_province;
         $values['destination_province'] = $request->destination_province;
+        $values['dias_province'] = $request->dias_province;
         $data = $values;
         // Validação se a entrega é no escritorio ou não
        $local = is_numeric($values['pickup_location']) ? (int) $values['pickup_location'] : 0;

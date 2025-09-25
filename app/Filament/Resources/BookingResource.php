@@ -90,6 +90,9 @@ class BookingResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('province.name')
                     ->sortable(),
+                Tables\Columns\TextColumn::make('dias_province')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('booking_code')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('start_date')

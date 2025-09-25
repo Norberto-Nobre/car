@@ -17,6 +17,7 @@ class Booking extends Model
         'pickup_office_id',
         'return_office_id',
         'province_id',
+        'dias_province',
         'booking_code',
         'start_date',
         'end_date',
@@ -37,6 +38,7 @@ class Booking extends Model
         'total_amount' => 'decimal:2',
         'daily_rate' => 'decimal:2',
         'days' => 'integer',
+        'dias_province' => 'integer',
     ];
 
      const STATUS_PENDING = 'pendente';

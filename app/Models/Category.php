@@ -14,6 +14,7 @@ class Category extends Model
         'name',
         'description',
         'is_active',
+        'provincial',
      ];
     protected $casts = [
         'is_active' => 'boolean',

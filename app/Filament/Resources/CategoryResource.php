@@ -35,6 +35,8 @@ class CategoryResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Toggle::make('is_active')
                     ->required(),
+                    Forms\Components\Toggle::make('provincial')
+                    ->required(),
             ]);
     }
 
@@ -45,6 +47,7 @@ class CategoryResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\ToggleColumn::make('is_active'),
+                Tables\Columns\ToggleColumn::make('provincial'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

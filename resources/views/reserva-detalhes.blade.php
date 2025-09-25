@@ -62,9 +62,15 @@
                                             <label for="">E-mail</label>
                                             <input type="email" id="email" placeholder="Digite o seu email" name="email">
                                         </div>
+                                        <div class="col-lg-2">
+                                            <label for="country_code">País</label>
+                                            <select id="country_code" name="country_code" class="wrapper-dropdown mb-12 border-0">
+                                                <option class="fs-5" value="">País</option>
+                                            </select>
+                                        </div>
                                         <div class="col-lg-6">
                                             <label for="">Contacto</label>
-                                            <input type="text" id="contacto" placeholder="Digite o seu contacto" name="phone">
+                                            <input type="tel" id="contacto" placeholder="Digite o seu contacto" name="phone">
                                         </div>
                                         <div class="col-lg-6">
                                             <label for="">Endereço</label>
@@ -102,10 +108,11 @@
                                     }
                                     $dias = $days;
                                     $caussao = $vehicle->caussion;
+                                    $dias_provincia = $data['dias_province'] ?? 0;
                                 @endphp
 
                                 @php
-                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + $taxa_provincial + $caussao;
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao;
                                 @endphp
 
                                 <input type="number" hidden name="vehicle_id" value="{{$vehicle->vehicle_id}}">
@@ -117,6 +124,7 @@
                                 <input type="number" hidden name="daily_rate" value="{{$vehicle->price_per_day}}">
                                 <input type="number" hidden name="days" value="{{$days}}">
                                 <input type="number" hidden name="total_amount" value="{{$total}}">
+                                <input type="number" hidden name="dias_province" value="{{$data['dias_province'] ?? 0}}">
                                 </form>
                             </div>
                         </div>
@@ -653,8 +661,10 @@
                                 @php
                                     if(isset($province->price)){
                                         $taxa_provincial = $province->price;
+                                        $dias_provincia = $data['dias_province'];
                                     }else{
                                         $taxa_provincial = 0;
+                                        $dias_provincia = 0;
                                     }
 
                                     if($local == 0){
@@ -681,10 +691,10 @@
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa provincial</h6>
+                                    <h6 class="fs-6">Taxa provincial/{{$data['dias_province'] ?? 0}} dias</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">{{number_format($taxa_provincial, '0', ',', '.')}} kz</h6>
+                                <h6 class="fs-6">{{number_format($taxa_provincial * $dias_provincia, '0', ',', '.')}} kz</h6>
                             </div>
                             <hr class="color-primary mb-12">
                             {{-- <div class="justify-content-between d-flex mb-32">
@@ -698,7 +708,7 @@
                                     <h6>Total</h6>
                                 </div>
                                 @php
-                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + $taxa_provincial + $caussao;
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao;
                                 @endphp
                                 <h6>{{number_format($total, '0', ',', '.')}} kz</h6>
                             </div>
@@ -711,6 +721,20 @@
     <!--title start  -->
 
     <script>
+            // Preenche o select com os países e seus códigos   
+        document.addEventListener("DOMContentLoaded", function () {
+                fetch("/assets/json/countries.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        let select = document.getElementById("country_code");
+                        data.forEach(country => {
+                            let option = document.createElement("option");
+                            option.value = country.dial_code.replace("+", ""); // só o número
+                            option.textContent = `${country.name} (${country.dial_code})`;
+                            select.appendChild(option);
+                        });
+                    });
+            });
          // Calcula limites dinâmicos
     const today = new Date();
 

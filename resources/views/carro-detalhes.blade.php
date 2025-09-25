@@ -337,12 +337,15 @@
                             <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
                         </div>
 
+                        @if ($vehicle->vehicleModel->category->provincial == 1)
+                        
                         <div class="province-check-container mb-12">
                             <label class="checkbox-container">
                                 <input type="checkbox" id="province_check" name="out_of_province" onchange="toggleProvinceSelect()">
-                                <span class="checkbox-text">Vou sair da província</span>
+                                <span class="checkbox-text">Vou sair da província </span>
                             </label>
                         </div>
+                        @endif
 
                         <div class="province-select-container" id="provinceSelectContainer" style="display: none;">
                             <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
@@ -352,6 +355,10 @@
                                         <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
                             </select>
+                            <p class="mb-8 fw-600 dark-gray">Número de dias fora da província</p>
+                            <div class="province-check-container mb-12">
+                                <input type="number" name="dias_province" id="dias_province" min="1" value="1">
+                            </div>
                         </div>
 
                         <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">
