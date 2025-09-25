@@ -1536,19 +1536,19 @@
 
     <script>
 
-        document.addEventListener("DOMContentLoaded", function() {
-            var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-            myModal.show();
-        });
-    
         // document.addEventListener("DOMContentLoaded", function() {
-        //     if (!sessionStorage.getItem("welcomeModalShown")) {
         //     var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
         //     myModal.show();
-
-        //     sessionStorage.setItem("welcomeModalShown", "true"); 
-        //     }
         // });
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!sessionStorage.getItem("welcomeModalShown")) {
+            var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            myModal.show();
+
+            sessionStorage.setItem("welcomeModalShown", "true"); 
+            }
+        });
 
     </script>
     
