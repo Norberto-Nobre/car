@@ -42,6 +42,20 @@ class VehicleModelRepository implements VehicleModelRepositoryInterface
         return $this->model->with(['brand', 'category', 'colors'])->get();
     }
 
+    public function search(string $term): Collection
+    {
+        return $this->model->with(['brand', 'category'])
+            ->where('name', 'LIKE', "%{$term}%")
+            ->orWhereHas('brand', function ($q) use ($term) {
+                $q->where('name', 'LIKE', "%{$term}%");
+            })
+            ->orWhereHas('category', function ($q) use ($term) {
+                $q->where('name', 'LIKE', "%{$term}%");
+            })
+            ->where('is_active', true)
+            ->get();
+    }
+
     public function getByPriceRange(float $minPrice, float $maxPrice): Collection
     {
         return $this->model->with(['brand', 'category'])

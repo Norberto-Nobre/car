@@ -12,6 +12,7 @@ interface VehicleModelRepositoryInterface
     public function findByCategoryId(int $categoryId): Collection;
     public function getActive(): Collection;
     public function getAll(): Collection;
+    public function search(string $term): Collection;
     public function getByPriceRange(float $minPrice, float $maxPrice): Collection;
     public function create(array $data): VehicleModel;
     public function update(int $id, array $data): bool;

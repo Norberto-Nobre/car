@@ -25,10 +25,21 @@
                     <p class="dark-gray">Navegue por nossa frota e encontre o veículo ideal para sua viagem. <br> Temos opções para todos os estilos, ocasiões e orçamentos.</p>
                 </div>
                 <div class="Search-field">
-                    <input type="text" class="search-bar" placeholder="O que está procurando?">
+                    <form action="{{ route('front.frotas.search') }}" method="GET">
+                        <input type="text" class="search-bar" placeholder="O que está procurando?" name="term">
+                    </form>
                 </div>
             </div>
         </div>
+
+        @if(session('error'))
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-danger text-center col-6" role="alert">
+                    {{ session('error') }}
+                </div>
+            </div>
+        @endif
+
         <div class="container">
             <div class="row row-gap-4">
                 <div class="col-xl-3">
@@ -126,157 +137,85 @@
                             </div>
                        </form> --}}
                         <div class="bg-quant sidebar-block-2 mt-24">
-                            <h6 class="mb-12 text-center">Filtrar por</h5>
-                            {{-- <div class="sidebar-widget">
-                                <div class="widget-title-row mb-24">
+                            <h6 class="mb-12 text-center">Filtrar por</h6>
+                            <div class="checkbox">
+
+                                <div class="widget-content-block">
+                                    <form method="GET" action="{{ route('front.frotas') }}">
+                                    {{-- Categorias --}}
                                     <div class="checkbox">
-                                        <h6>Preço</h6>
-                                    </div>
+                                         <div class="widget-title-row mb-16">
+                                    <h6 class="fs-6"><i class="bi bi-arrow-left"></i> <a class="underlined" href="{{ route('front.frotas') }}"> Todos os Veículos</a></h6>
                                 </div>
-                                <div class="widget-content-block">
-                                    <div class="wrapper">
-                                        <div class="price-input">
-                                            <div class="field">
-                                                <span class="color-primary">Kz</span>
-                                                <input type="number" class="input-min" value="2500">
-                                            </div>
+                                        <div class="widget-title-row mb-16">
+                                            <h6 class="fs-6">Categoria</h6>
                                         </div>
-                                        <div class="slider-parent">
-                                            <div class="slider">
-                                                <div class="progress"></div>
-                                            </div>
-                                            <div class="range-input">
-                                                <input type="range" class="range-min" min="0" max="10000" value="2500"
-                                                    step="100">
-                                                <input type="range" class="range-max" min="0" max="10000" value="7500"
-                                                    step="100">
-                                            </div>
-                                        </div>
-                                        <div class="price-input">
-                                            <div class="field">
-                                                <span class="color-primary">Kz</span>
-                                                <input type="number" class="input-max" value="7500">
-                                            </div>
+                                        <div class="widget-content-block">
+                                            <ul class="filter-list unstyled">
+                                                @foreach ($categories as $category)
+                                                <li class="d-flex mb-12 justify-content-between">
+                                                    <label class="material-checkbox">
+                                                        <input type="checkbox" name="categories[]" value="{{ $category->id }}"
+                                                            {{ in_array($category->id, request()->get('categories', [])) ? 'checked' : '' }}>
+                                                        <span class="checkmark"></span>
+                                                        {{ $category->name }}
+                                                    </label>
+                                                </li>
+                                                @endforeach
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-                            </div> --}}
-                            {{-- <div class="checkbox">
-                                <div class="widget-title-row mb-16">
-                                    <h6 class="fs-6">Modelo</h6>
-                                </div>
-                                <div class="widget-content-block">
-                                    <ul class="filter-list unstyled">
-                                        <li class="d-flex mb-12 justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                LIMITED
-                                            </label>
-                                            <p class="light-gray">(02)</p>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                UNLIMITED
-                                            </label>
-                                            <p class="light-gray">(02)</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> --}}
-                            <div class="checkbox">
-                                <div class="widget-title-row mb-16">
-                                    <h6 class="fs-6">Capacidade de Passageiros</h6>
-                                </div>
-                                <div class="widget-content-block">
-                                    <ul class="filter-list unstyled">
-                                        <li class="d-flex mb-12 justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                2 PESSOAS
-                                            </label>
-                                            <p class="light-gray">(02)</p>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                9 PESSOAS
-                                            </label>
-                                            <p class="light-gray">(09)</p>
-                                        </li>
-                                    </ul>
+
+                                    {{-- Tipo de Combustível --}}
+                                    <div class="checkbox">
+                                        <div class="widget-title-row mb-16">
+                                            <h6 class="fs-6">Tipo de Combustível</h6>
+                                        </div>
+                                        <div class="widget-content-block">
+                                            <ul class="filter-list unstyled">
+                                                @foreach (['Gasolina', 'Diesel', 'Eléctrico'] as $fuel)
+                                                <li class="d-flex justify-content-between">
+                                                    <label class="material-checkbox">
+                                                        <input type="checkbox" name="fuel_types[]" value="{{ $fuel }}"
+                                                            {{ in_array($fuel, request()->get('fuel_types', [])) ? 'checked' : '' }}>
+                                                        <span class="checkmark"></span>
+                                                        {{ $fuel }}
+                                                    </label>
+                                                </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    {{-- Transmissão --}}
+                                    <div class="checkbox">
+                                        <div class="widget-title-row mb-16">
+                                            <h6 class="fs-6">Transmissão</h6>
+                                        </div>
+                                        <div class="widget-content-block">
+                                            <ul class="filter-list unstyled">
+                                                @foreach (['Automático', 'Manual'] as $transmission)
+                                                <li class="d-flex justify-content-between">
+                                                    <label class="material-checkbox">
+                                                        <input type="checkbox" name="transmissions[]" value="{{ $transmission }}"
+                                                            {{ in_array($transmission, request()->get('transmissions', [])) ? 'checked' : '' }}>
+                                                        <span class="checkmark"></span>
+                                                        {{ $transmission }}
+                                                    </label>
+                                                </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+                                </form>
+
+                                {{--  --}}
+
                                 </div>
                             </div>
-                            <div class="checkbox">
-                                <div class="widget-title-row mb-16">
-                                    <h6 class="fs-6">Tipo de Combustível</h6>
-                                </div>
-                                <div class="widget-content-block">
-                                    <ul class="filter-list unstyled">
-                                        {{-- <li class="d-flex mb-12 justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                Turbo
-                                            </label>
-                                            <p class="light-gray">(06)</p>
-                                        </li> --}}
-                                        <li class="d-flex justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                Gasolina
-                                            </label>
-                                            <p class="light-gray">(05)</p>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                Diesel
-                                            </label>
-                                            <p class="light-gray">(05)</p>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                Eléctrico
-                                            </label>
-                                            <p class="light-gray">(05)</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="checkbox">
-                                <div class="widget-title-row mb-16">
-                                    <h6 class="fs-6">Transmissão</h6>
-                                </div>
-                                <div class="widget-content-block">
-                                    <ul class="filter-list unstyled">
-                                        <li class="d-flex mb-12 justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                Automático
-                                            </label>
-                                            <p class="light-gray">(05)</p>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <label class="material-checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                Manual
-                                            </label>
-                                            <p class="light-gray">(06)</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -307,7 +246,7 @@
                                     <h6 class="fs-6 fw-light gap-8">{{$vehicle->vehicleModel->category->name}}</h6>
                                 </div>
                             </div>
-                            
+
                             <h6 class="fs-6">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>
                             <div class="bottom-row mb">
                                 <div>

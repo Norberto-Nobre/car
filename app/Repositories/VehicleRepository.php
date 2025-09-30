@@ -69,6 +69,25 @@ class VehicleRepository implements VehicleRepositoryInterface
         return Vehicle::where('is_popular', true)->take($limit)->get();
     }
 
+   public function search(string $term): Collection
+{
+    return $this->model
+        ->with(['vehicleModel.brand', 'vehicleModel.category'])
+        ->where(function ($query) use ($term) {
+            $query->whereHas('vehicleModel', function ($q) use ($term) {
+                $q->where('name', 'LIKE', "%{$term}%")
+                  ->orWhereHas('brand', function ($q2) use ($term) {
+                      $q2->where('name', 'LIKE', "%{$term}%");
+                  })
+                  ->orWhereHas('category', function ($q3) use ($term) {
+                      $q3->where('name', 'LIKE', "%{$term}%");
+                  });
+            })
+            ->orWhere('notes', 'LIKE', "%{$term}%");
+        })
+        ->get();
+}
+
     public function create(array $data): Vehicle
     {
         return $this->model->create($data);

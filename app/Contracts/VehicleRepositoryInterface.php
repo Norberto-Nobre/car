@@ -11,6 +11,7 @@ interface VehicleRepositoryInterface
     public function findByLicensePlate(string $licensePlate): ?Vehicle;
     public function findByModelId(int $modelId): Collection;
     public function getAvailableVehicles(string $startDate, string $endDate, ?int $categoryId = null): Collection;
+    public function search(string $term): Collection;
     public function getAll($limit): Collection;
     public function getPopularVehicles($limit);
     public function create(array $data): Vehicle;

@@ -22,6 +22,7 @@ Route::get('/equipa', [FrontController::class, 'equipa'])->name('front.equipa');
 Route::get('/termos', [FrontController::class, 'termos'])->name('front.termos');
 // Route::get('sobre', function () { return view('sobre');})->name('front.sobre');
 Route::get('frotas', [FrotaController::class, 'index'])->name('front.frotas');
+Route::get('frotas/search', [FrotaController::class, 'search'])->name('front.frotas.search');
 Route::get('contacto', [FrontController::class, 'contacto'])->name('front.contacto');
 Route::get('/carro-detalhes/{vehicle:slug}', [CarroDetalhesController::class, 'detalhes'])->name('front.carro-detalhes');
 Route::get('/reserva-detalhes/{vehicle:slug}', [ReservaDetalhesController::class, 'reserva'])->name('front.reserva-detalhes');
