@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Car Rental || E-Learning HTML Template">
 
-    <title>CHANA RENT-A-CAR</title>
+    <title>Chana RENT-A-CAR | Aluguer de Carros em Angola</title>
+  <meta name="description" content="A Chana RENT-A-CAR oferece aluguer de carros em Angola com segurança, conforto e os melhores preços. Reserve já o seu veículo!, Conheça nossa frota de veículos — compactos, SUVs, vans e 4x4 disponíveis para aluguer em Angola com a CHANA RENT-A-CAR, Entre em contacto com a CHANA RENT-A-CAR para reservar o seu carro, tirar dúvidas ou obter assistência em Angola.">
+  <meta name="keywords" content="rent a car Angola, aluguer de carros, carros para alugar Luanda, Chana rent a car, alugar viatura Angola">
+  <meta name="author" content="Chana RENT-A-CAR">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://www.teudominio.com/" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/media/user/icone.png">
@@ -29,6 +33,8 @@
     <link rel="stylesheet" href="{{asset('assets/css/animate-on-scroll.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
+    
+    
 </head>
 
 
