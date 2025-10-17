@@ -201,9 +201,9 @@
                         <div class="brand-block">
                             <img src="assets/media/brands/brand-5.png" alt="brand-4">
                         </div>
-                        <div class="brand-block">
+                        {{-- <div class="brand-block">
                             <img src="assets/media/brands/brand-6.png" alt="brand-5">
-                        </div>
+                        </div> --}}
                         <div class="brand-block">
                             <img src="assets/media/brands/brand-1.png" alt="brand-1">
                         </div>

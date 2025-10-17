@@ -11,7 +11,7 @@
   <meta name="author" content="Chana RENT-A-CAR">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://www.teudominio.com/" />
+  <link rel="canonical" href="https://chanarentacar.ao/" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/media/user/icone.png">
@@ -33,8 +33,8 @@
     <link rel="stylesheet" href="{{asset('assets/css/animate-on-scroll.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
-    
-    
+
+
 </head>
 
 
