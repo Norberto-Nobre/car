@@ -234,7 +234,7 @@ var MyScroll = "";
       });
     },
 
-    
+
     // Slick Slider
     slick: function () {
       if ($(".blog-slider").length) {

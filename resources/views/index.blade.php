@@ -1095,7 +1095,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                     <div class="modal-header">
-                        
+
                         <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Fechar" style="background-color: #fff; color: #041A71;"></button>
                     </div>
                     <img src="assets/media/banners/modal1.jpg" alt="">
@@ -1540,16 +1540,16 @@
         //     var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
         //     myModal.show();
         // });
-    
+
         document.addEventListener("DOMContentLoaded", function() {
             if (!sessionStorage.getItem("welcomeModalShown")) {
             var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
             myModal.show();
 
-            sessionStorage.setItem("welcomeModalShown", "true"); 
+            sessionStorage.setItem("welcomeModalShown", "true");
             }
         });
 
     </script>
-    
+
 @endsection
