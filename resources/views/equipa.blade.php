@@ -161,8 +161,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
+								    <h3>João Miguel </h3>
+								    <span class="position mb-2">Director Geral</span>
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
@@ -191,8 +191,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
+								    <h3>Manuel Pacheco</h3>
+								    <span class="position mb-2">Gestor Comercial</span>
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
@@ -211,8 +211,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
+								    <h3>Regina Ernestro</h3>
+								    <span class="position mb-2">Gestora Adm/Finanças</span>
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
@@ -232,8 +232,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
+								    <h3>Josemar Francisco</h3>
+								    <span class="position mb-2">Gestor Operacional</span>
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
@@ -260,8 +260,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
+								    <h3>Elisandra Mercedes</h3>
+								    <span class="position mb-2">Gestora de C.Corporativos</span>
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
@@ -280,8 +280,9 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Lloyd Wilson</h3>
-								    <span class="position mb-2">Life Coach</span>
+								    <h3>Eduarda Alves
+                                    </h3>
+								    <span class="position mb-2">Gestora de Sinistros</span>
 								    <div class="faded">
 									    <p></p>
 									    <ul class="ftco-social text-center">
