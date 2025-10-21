@@ -64,13 +64,17 @@ class CustumerController extends Controller
     {
         $token = env('WHATSAPP_TOKEN');
         $phoneId = env('WHATSAPP_PHONE_ID');
+        
+        
 
-        $response = Http::withToken($token)->post("https://graph.facebook.com/v19.0/{$phoneId}/messages", [
+        $response = Http::withToken($token)->post("https://graph.facebook.com/v22.0/{$phoneId}/messages", [
             'messaging_product' => 'whatsapp',
             'to'   => $to,
             'type' => 'text',
             'text' => ['body' => $message],
         ]);
+        
+        dd($response->json());
 
         return $response->json();
     }

@@ -35,7 +35,7 @@ class PanelPanelProvider extends PanelProvider
             ->brandLogo(asset('favicon.png'))
              ->brandLogoHeight('40px')
             ->login()
-            // ->registration()
+            ->registration()
             ->colors([
                 'primary' => '#1E40AF', // azul escuro (hexadecimal)
             ])
