@@ -74,7 +74,7 @@ class CustumerController extends Controller
             'text' => ['body' => $message],
         ]);
         
-        dd($response->json());
+        // dd($response->json());
 
         return $response->json();
     }
