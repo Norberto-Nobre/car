@@ -3,6 +3,62 @@
 
 @section('content')
 
+<style>
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #f1f3f5;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+
+    .video-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      max-width: 900px; /* 🔹 limita a largura */
+      margin: 0 auto;   /* centraliza na tela */
+    }
+
+    .video-container img,
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(29, 34, 71, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .video-overlay:hover {
+      background: rgba(0,0,0,0.5);
+    }
+
+    .play-btn {
+      font-size: 3.5rem;
+      color: white;
+      transition: transform 0.2s ease;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
    <!-- About-area start -->
 
     <section class="container-fluid bg-breadcrumb">
@@ -31,8 +87,11 @@
     <section class="vehicles-2 py-80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 text-center">
-                    <img src="assets/media/hero/img.jpg" alt="car">
+                <div class="col-lg-6 col-md-6 text-center video-container">
+                    <img id="previewImage" src="assets/media/hero/img.jpg" class="img-fluid rounded-4" alt="Office">
+                        <div class="video-overlay" id="videoOverlay">
+                            <i class="bi bi-play-circle-fill play-btn" id="playButton"></i>
+                        </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="txt">
@@ -124,7 +183,7 @@
             <div class="design mt-48">
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="assets/media/cars/pngwing-17.png" alt="car">
+                        <img src="assets/media/cars/corporate.jpeg" alt="car">
                     </div>
                     <div class="col-lg-6">
                         <div class="txt-block">
@@ -296,4 +355,30 @@
             </div>
         </div>
     </section> --}}
+
+     <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      const container = document.querySelector('.video-container');
+      const overlay = document.getElementById('videoOverlay');
+      const image = document.getElementById('previewImage');
+
+      // Remove a imagem e o botão
+      image.remove();
+      overlay.remove();
+
+      // Cria o elemento <video>
+      const video = document.createElement('video');
+      video.src = "assets/media/video/video1.mp4"; // 🔹 Substitui pelo caminho do teu vídeo local
+      video.controls = true;
+      video.autoplay = true;
+      video.muted = false;
+      video.playsInline = true;
+      video.classList.add("rounded-4");
+      video.style.width = "100%";
+      video.style.height = "auto";
+
+      container.appendChild(video);
+    });
+  </script>
+
 @endsection

@@ -68,7 +68,11 @@
                                     passageiros possam ter esquecido dentro do Veículo. Da mesma forma, a CHANA não é responsável por quaisquer lucros cessantes
                                     ou prejuízos de exploração ocorridos na vigência do aluguer.
                                 </p>
-                                <p class="lh-base mb-2"><strong>5- QUAIS SÃO AS OBRIGAÇÕES DO CLIENTE OU CONDUTOR AUTORIZADO PARA COM O VEÍCULO?</strong>
+                                <p>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="card-body">
+                                            {{-- --}}
+                                            <p class="lh-base mb-2"><strong>5- QUAIS SÃO AS OBRIGAÇÕES DO CLIENTE OU CONDUTOR AUTORIZADO PARA COM O VEÍCULO?</strong>
                                     Quando aluga um Veículo na CHANA, o Cliente e/ou o Condutor Autorizado devem cumprir as seguintes obrigações, sem prejuízo
                                     das indicadas noutras cláusulas dos T&Cs:
                                 </p>
@@ -116,132 +120,139 @@
                                     descritos no Anexo I; possibilidade de contratar, nas horas de funcionamento dos serviços da CHANA ou fora delas, um serviço
                                     com motorista, sujeito ao pagamento de uma taxa diária, conforme tarifa em vigor à data do aluguer do Veículo.</p>
                                 <p class="lh-base mb-2"><strong>8- O QUE ESTÁ INCLUÍDO NO PREÇO QUE O CLIENTE PAGA? </strong> O preço que o Cliente vai pagar inclui o seguinte:</p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> O valor do aluguer diário do Veículo pelos dias de calendário 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> O valor do aluguer diário do Veículo pelos dias de calendário
                                     contratados calculados por períodos de 24 horas (que inclui os serviços padrão de mobilidade acima referidos);</p>
                                 <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> O valor de quaisquer outros produtos ou serviços de mobilidade
                                     adicionais que o Cliente pretenda contratar; </p>
                                 <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Os impostos aplicáveis (IC);</p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Outros custos que estejam relacionados à pessoa do Cliente (ex: a 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Outros custos que estejam relacionados à pessoa do Cliente (ex: a
                                     idade, se for um condutor entre os 18 e os 25 anos). </p>
-                                <p class="lh-base mb-2"><strong></strong>O Cliente autoriza expressamente a CHANA a debitar nas cauções ou 
+                                <p class="lh-base mb-2"><strong></strong>O Cliente autoriza expressamente a CHANA a debitar nas cauções ou
                                     franquias por si efectuadas qualquer montante não pago decorrente do contrato de aluguer.</p>
                                 <p class="lh-base mb-2"><strong>9-QUE OUTROS VALORES PODE O CLIENTE TER QUE PAGAR?</strong> O Depósito-Caução. Adicionalmente ao preço do
                                     aluguer que pagou previamente no momento da reserva ou que irá pagar no momento do levantamento, a CHANA requer que lhe deixe uma caução que visa cobrir os custos de aluguer adicionais ou
                                     multas. O montante da caução depende da categoria do Veículo de aluguer. A caução será reembolsada ao Cliente no acto de devolução do
                                     Veículo, se não forem identificados pela CHANA custos de aluguer adicionais ou multas. <br>
-                                    A caução será efetuada pelo Cliente ou pelo Condutor Autorizado no momento da reserva ou do levantamento do Veículo. 
-                                    A CHANA cobrará ao Cliente e ao Condutor Autorizado os custos causados por incidentes que possam ter ocorrido durante o Período 
+                                    A caução será efetuada pelo Cliente ou pelo Condutor Autorizado no momento da reserva ou do levantamento do Veículo.
+                                    A CHANA cobrará ao Cliente e ao Condutor Autorizado os custos causados por incidentes que possam ter ocorrido durante o Período
                                     de Aluguer e/ou pela forma como o Cliente ou o Condutor Autorizado utilizaram o Veículo. Tais custos incluem, sem limitar:
                                 </p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Custos administrativos pela gestão dos processos por 
-                                    contravenções, pedido de documentos extraviados pelo Cliente, etc., até ao montante de Akz 40.000,00 por processo. O Cliente 
-                                    fica ciente que tais custos administrativos são pagos para além das multas a que haja lugar e pelas quais o Cliente é total e 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Custos administrativos pela gestão dos processos por
+                                    contravenções, pedido de documentos extraviados pelo Cliente, etc., até ao montante de Akz 40.000,00 por processo. O Cliente
+                                    fica ciente que tais custos administrativos são pagos para além das multas a que haja lugar e pelas quais o Cliente é total e
                                     exclusivamente responsável; Custos administrativos pela gestão do processo, em caso de danos, até ao montante de Akz 50.000,00;
                                 </p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i> </strong> Custo da limpeza, no caso de o Veículo ser devolvido num estado 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i> </strong> Custo da limpeza, no caso de o Veículo ser devolvido num estado
                                     inaceitável (para além do uso normal) e, ou de sujidade, até ao montante de Akz 60.000,00;</p>
                                 <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Custo das chaves perdidas ou roubadas;</p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> “Danos” causados ao Veículo (qualquer dano material ou acto de 
-                                    vandalismo causado no Veículo) e/ou “Roubo do Veículo” (dano causado com a perda do Veículo em consequência de roubo ou 
-                                    tentativa de roubo ou furto do mesmo ou das suas componentes). A responsabilidade do Cliente pode ser limitada, nos termos e em 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> “Danos” causados ao Veículo (qualquer dano material ou acto de
+                                    vandalismo causado no Veículo) e/ou “Roubo do Veículo” (dano causado com a perda do Veículo em consequência de roubo ou
+                                    tentativa de roubo ou furto do mesmo ou das suas componentes). A responsabilidade do Cliente pode ser limitada, nos termos e em
                                     conformidade com o tipo de protecção que tiver escolhido, conforme Anexo I;
                                 </p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Os seguintes custos específicos adicionais: (i) nos levantamentos 
-                                    ou devoluções nas estações situadas no aeroporto ou nas estações de comboio, se aplicável (ii) do retorno do Veículo para uma 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Os seguintes custos específicos adicionais: (i) nos levantamentos
+                                    ou devoluções nas estações situadas no aeroporto ou nas estações de comboio, se aplicável (ii) do retorno do Veículo para uma
                                     estação CHANA que não aquela em que procedeu ao levantamento) (iii) o prolongamento do aluguer do Cliente. </p>
-                                <p class="lh-base mb-2"><strong>10- O QUE FAZER QUANDO LEVANTAR O VEÍCULO?</strong> 
-                                    Quando levantar o Veículo junto da CHANA, vai ser solicitado ao Cliente que assine, para além de outras, uma secção no Contrato de 
-                                    Aluguer que descreve o estado do Veículo naquele momento. Se o Cliente verificar qualquer defeito aparente ou dano que não 
-                                    esteja descrito no Contrato de Aluguer, deve assegurar-se que é feita essa menção no documento e que ambos, o Cliente e o representante 
-                                    da CHANA, assinam tal alteração. No caso de nada estar mencionado, considera-se que o Veículo foi entregue ao Cliente no 
-                                    estado referido no Contrato de Aluguer e serão cobrados por quaisquer novos danos que sejam verificados pelo Cliente e pelo 
+                                <p class="lh-base mb-2"><strong>10- O QUE FAZER QUANDO LEVANTAR O VEÍCULO?</strong>
+                                    Quando levantar o Veículo junto da CHANA, vai ser solicitado ao Cliente que assine, para além de outras, uma secção no Contrato de
+                                    Aluguer que descreve o estado do Veículo naquele momento. Se o Cliente verificar qualquer defeito aparente ou dano que não
+                                    esteja descrito no Contrato de Aluguer, deve assegurar-se que é feita essa menção no documento e que ambos, o Cliente e o representante
+                                    da CHANA, assinam tal alteração. No caso de nada estar mencionado, considera-se que o Veículo foi entregue ao Cliente no
+                                    estado referido no Contrato de Aluguer e serão cobrados por quaisquer novos danos que sejam verificados pelo Cliente e pelo
                                     representante da CHANA quando o Veículo for inspecionado por ambos no momento da sua devolução. </p>
                                 <p class="lh-base mb-2"><strong>11- O QUE FAZER QUANDO DEVOLVER O VEÍCULO?</strong></p>
-                                <p class="lh-base mb-2"><strong>a)</strong> Devolução durante o horário de funcionamento das 
-                                    estações CHANA e na presença do Cliente. O Cliente deve devolver o Veículo na estação CHANA na data e na hora indicadas 
-                                    no Contrato de Aluguer. O Período de Aluguer termina quando devolver o Veículo na estação CHANA e entregar a respetiva chave 
-                                    e documentos. No caso de devolver o Veículo antes da data mencionada no Contrato de Aluguer, não terá direito a qualquer reembolso. 
-                                    Quando devolver o Veículo à CHANA o Cliente deve inspeccioná-lo juntamente com o representante da CHANA e assinar o relatório de 
-                                    danos pós aluguer, entregando-lhe a CHANA um documento assinado no qual declara que o Veículo foi devolvido e aceite pela 
-                                    CHANA (“Declaração de devolução do Veículo”). 
+                                <p class="lh-base mb-2"><strong>a)</strong> Devolução durante o horário de funcionamento das
+                                    estações CHANA e na presença do Cliente. O Cliente deve devolver o Veículo na estação CHANA na data e na hora indicadas
+                                    no Contrato de Aluguer. O Período de Aluguer termina quando devolver o Veículo na estação CHANA e entregar a respetiva chave
+                                    e documentos. No caso de devolver o Veículo antes da data mencionada no Contrato de Aluguer, não terá direito a qualquer reembolso.
+                                    Quando devolver o Veículo à CHANA o Cliente deve inspeccioná-lo juntamente com o representante da CHANA e assinar o relatório de
+                                    danos pós aluguer, entregando-lhe a CHANA um documento assinado no qual declara que o Veículo foi devolvido e aceite pela
+                                    CHANA (“Declaração de devolução do Veículo”).
                                 </p>
-                                <p class="lh-base mb-2"><strong>b)</strong> Devolução Sem a sua presença e durante o horário de funcionamento das estações. 
-                                    No caso de não ser possível e/ou, o Cliente se recusar a inspeccionar o Veículo juntamente com o representante da CHANA, esta fica 
-                                    autorizada a inspecionar o Veículo sem a presença do Cliente e a registar a sua recusa ao contraditório, aceitando o Cliente que o 
-                                    relatório que atesta o estado do Veículo seja elaborado pelo representante da CHANA sem a sua presença. Após a inspecção ter 
-                                    sido efectuada e na ausência de qualquer Dano, a CHANA envia ao Cliente a Declaração de Devolução do Veículo. Em caso de Danos 
+                                <p class="lh-base mb-2"><strong>b)</strong> Devolução Sem a sua presença e durante o horário de funcionamento das estações.
+                                    No caso de não ser possível e/ou, o Cliente se recusar a inspeccionar o Veículo juntamente com o representante da CHANA, esta fica
+                                    autorizada a inspecionar o Veículo sem a presença do Cliente e a registar a sua recusa ao contraditório, aceitando o Cliente que o
+                                    relatório que atesta o estado do Veículo seja elaborado pelo representante da CHANA sem a sua presença. Após a inspecção ter
+                                    sido efectuada e na ausência de qualquer Dano, a CHANA envia ao Cliente a Declaração de Devolução do Veículo. Em caso de Danos
                                     ver (cláusula 12).</p>
-                                <p class="lh-base mb-2"><strong>c)</strong> Atraso na devolução do Veículo No caso de o Veículo não ser devolvido na data mencionada no 
-                                    Contrato de Aluguer e se no período de 24 horas não houver qualquer informação justificativa do atraso, para além do procedimento 
-                                    previsto na cláusula 20, a CHANA reserva-se no direito de considerar que o Cliente se apropriou ilegalmente do Veículo e reportará tal 
-                                    facto às autoridades locais competentes, podendo retirar ao Cliente o Veículo alugado no termo do contrato. Pode ainda iniciar 
-                                    imediatamente os procedimentos judiciais necessários para rescindir o contrato nos termos da lei, com fundamento em incumprimento das 
-                                    cláusulas contratuais e para reclamar a imediata restituição do Veículo. Em tais casos, a CHANA cobra ao Cliente o valor do aluguer por cada 
-                                    dia em que ficar com o Veículo para além da data do termo do aluguer, salvo se o Cliente demonstrar que a não restituição do 
-                                    Veículo não lhe é imputável, para além de reclamar do Cliente todos os danos e perdas sofridas, bem como as multas ou demais sanções 
+                                <p class="lh-base mb-2"><strong>c)</strong> Atraso na devolução do Veículo No caso de o Veículo não ser devolvido na data mencionada no
+                                    Contrato de Aluguer e se no período de 24 horas não houver qualquer informação justificativa do atraso, para além do procedimento
+                                    previsto na cláusula 20, a CHANA reserva-se no direito de considerar que o Cliente se apropriou ilegalmente do Veículo e reportará tal
+                                    facto às autoridades locais competentes, podendo retirar ao Cliente o Veículo alugado no termo do contrato. Pode ainda iniciar
+                                    imediatamente os procedimentos judiciais necessários para rescindir o contrato nos termos da lei, com fundamento em incumprimento das
+                                    cláusulas contratuais e para reclamar a imediata restituição do Veículo. Em tais casos, a CHANA cobra ao Cliente o valor do aluguer por cada
+                                    dia em que ficar com o Veículo para além da data do termo do aluguer, salvo se o Cliente demonstrar que a não restituição do
+                                    Veículo não lhe é imputável, para além de reclamar do Cliente todos os danos e perdas sofridas, bem como as multas ou demais sanções
                                     que recaiam sobre o Veículo. O Cliente nestes casos deixa de beneficiar de quaisquer seguros facultativos ou produtos de proteção complementares que tenha contratado.</p>
-                                <p class="lh-base mb-2"><strong>12- DANOS NO VEÍCULO</strong> No caso do Veículo não ser devolvido no estado em que foi entregue, 
-                                    o Cliente perde a caução e terá de pagar as quantias referente os danos. Caso os danos tenham sido causado por terceiro, e o mesmo 
-                                    tenha o processo de seguro acautelado , apôs o pagamento do sinistro o valor da caução é ressarciddo a favor do cliente. O Cliente, 
-                                    dependendo do tipo de dano e do tipo de protecção que tenha subscrito (cfr. Anexo I) pode ser ou não cobrado pelo custo da 
-                                    reparação. Em caso de abertura de um novo contrato o cliente é obrigado a pagar uma nova caução. Se haver conflito entre o cliente e o terceiro , 
-                                    o cliente continua a ser o unico responsavel pelos danos. É cobrado uma taxa de entrada até 1.000.000,00 depedendo dos danos. 
+                                <p class="lh-base mb-2"><strong>12- DANOS NO VEÍCULO</strong> No caso do Veículo não ser devolvido no estado em que foi entregue,
+                                    o Cliente perde a caução e terá de pagar as quantias referente os danos. Caso os danos tenham sido causado por terceiro, e o mesmo
+                                    tenha o processo de seguro acautelado , apôs o pagamento do sinistro o valor da caução é ressarciddo a favor do cliente. O Cliente,
+                                    dependendo do tipo de dano e do tipo de protecção que tenha subscrito (cfr. Anexo I) pode ser ou não cobrado pelo custo da
+                                    reparação. Em caso de abertura de um novo contrato o cliente é obrigado a pagar uma nova caução. Se haver conflito entre o cliente e o terceiro ,
+                                    o cliente continua a ser o unico responsavel pelos danos. É cobrado uma taxa de entrada até 1.000.000,00 depedendo dos danos.
                                 </p>
-                                <p class="lh-base mb-2"><strong>a)</strong> Danos identificados no momento da devolução e na presença do Cliente; 
-                                    No caso de serem identificados Danos no âmbito da inspecção realizada na presença do Cliente e na do representante da CHANA 
-                                    aquando da devolução do Veículo e dos quais tomou conhecimento quando assinou a Declaração de Devolução do Veículo, a CHANA 
-                                    entregar-lhe-á uma avaliação com os custos da reparação que lhe poderão ser cobrados, cujo valor depende da natureza e da extensão 
-                                    dos Danos: “Pequenos Danos” (danos menores e não substanciais causados ao Veículo, sem afectar a sua devolução e a sua mobilidade 
-                                    nos termos do Código da Estrada, tais como e sem limitar: pequenos riscos ou mossas no para-brisas) serão avaliados por um perito e 
-                                    cobrados de acordo com o relatório do mesmo ou pelo custo orçamentado de uma oficina de reparações, a enviar ao Cliente num 
+                                <p class="lh-base mb-2"><strong>a)</strong> Danos identificados no momento da devolução e na presença do Cliente;
+                                    No caso de serem identificados Danos no âmbito da inspecção realizada na presença do Cliente e na do representante da CHANA
+                                    aquando da devolução do Veículo e dos quais tomou conhecimento quando assinou a Declaração de Devolução do Veículo, a CHANA
+                                    entregar-lhe-á uma avaliação com os custos da reparação que lhe poderão ser cobrados, cujo valor depende da natureza e da extensão
+                                    dos Danos: “Pequenos Danos” (danos menores e não substanciais causados ao Veículo, sem afectar a sua devolução e a sua mobilidade
+                                    nos termos do Código da Estrada, tais como e sem limitar: pequenos riscos ou mossas no para-brisas) serão avaliados por um perito e
+                                    cobrados de acordo com o relatório do mesmo ou pelo custo orçamentado de uma oficina de reparações, a enviar ao Cliente num
                                     prazo de 15 dias a contar da recepção do Veículo pela CHANA nas suas instalações, juntamente com os custos administrativos de gestão de danos.
-                                    Quaisquer outros danos não incluídos na lista acima referida e/ou 
-                                    outros danos mais graves (danos substanciais que impedem a devolução do Veículo e exigem a sua temporária imobilização para 
-                                    reparação, tais como e sem limitar: danos na carroçaria), também serão avaliados por um perito e cobrados de acordo com o relatório 
-                                    do mesmo ou pelo custo orçamentado de uma oficina de reparações, a enviar ao Cliente num prazo de 30 dias a contar da recepção do 
-                                    Veículo pela CHANA nas suas instalações juntamente com os custos administrativos de gestão de danos. 
-                                    O Cliente será responsável pelo custo diário do aluguer do Veículo, até (15) quinze dias após a devolução do Veículo, quando entregue o 
-                                    Veículo com danos que obriguem à sua imobilização, a pagar no momento da sua devolução. No caso de contestar os Danos e, ou a respectiva faturação, através da 
-                                    recusa em assinar a Declaração de Devolução do Veículo, a CHANA irá aplicar o procedimento a seguir descrito (12b).  
+                                    Quaisquer outros danos não incluídos na lista acima referida e/ou
+                                    outros danos mais graves (danos substanciais que impedem a devolução do Veículo e exigem a sua temporária imobilização para
+                                    reparação, tais como e sem limitar: danos na carroçaria), também serão avaliados por um perito e cobrados de acordo com o relatório
+                                    do mesmo ou pelo custo orçamentado de uma oficina de reparações, a enviar ao Cliente num prazo de 30 dias a contar da recepção do
+                                    Veículo pela CHANA nas suas instalações juntamente com os custos administrativos de gestão de danos.
+                                    O Cliente será responsável pelo custo diário do aluguer do Veículo, até (15) quinze dias após a devolução do Veículo, quando entregue o
+                                    Veículo com danos que obriguem à sua imobilização, a pagar no momento da sua devolução. No caso de contestar os Danos e, ou a respectiva faturação, através da
+                                    recusa em assinar a Declaração de Devolução do Veículo, a CHANA irá aplicar o procedimento a seguir descrito (12b).
                                 </p>
-                                <p class="lh-base mb-2"><strong>b)</strong> Danos identificados em caso de devolução sem a presença do Cliente; 
-                                    No caso de os Danos serem identificados no âmbito da inspeção ao Veículo feita pelo representante da CHANA sem a presença do 
+                                <p class="lh-base mb-2"><strong>b)</strong> Danos identificados em caso de devolução sem a presença do Cliente;
+                                    No caso de os Danos serem identificados no âmbito da inspeção ao Veículo feita pelo representante da CHANA sem a presença do
                                     Cliente, a CHANA enviar-Lhe-á os seguintes documentos:
                                 </p>
                                 <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Fotografias dos Danos;</p>
-                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Uma estimativa (orçamento) dos custos de reparação, que 
-                                    dependerão da natureza e da extensão dos Danos (v. supra 12 a) §2 e §3), dos custos de imobilização do Veículo (v. supra 12 a) §4) e dos 
-                                    custos administrativos pela gestão do processo de Danos. O Cliente pode contestar os Danos identificados e respetiva faturação no prazo 
-                                    de (3) Três dias úteis após o envio dos documentos, por email para <a class="text-primary" href="mailto:info@orgchana.com">info@orgchana.com</a> ou <a class="text-primary" href="mailto:rentacar@orgchana.com">rentacar@orgchana.com</a> ou por carta para 
-                                    Estrada Principal do Lar do Patriota, Município de Belas, Luanda. No caso de não contestar no referido prazo de (3) Três dias úteis, a 
+                                <p class="lh-base mb-2"><strong><i class="bi bi-check2-all" style="color: #041A71"></i></strong> Uma estimativa (orçamento) dos custos de reparação, que
+                                    dependerão da natureza e da extensão dos Danos (v. supra 12 a) §2 e §3), dos custos de imobilização do Veículo (v. supra 12 a) §4) e dos
+                                    custos administrativos pela gestão do processo de Danos. O Cliente pode contestar os Danos identificados e respetiva faturação no prazo
+                                    de (3) Três dias úteis após o envio dos documentos, por email para <a class="text-primary" href="mailto:info@orgchana.com">info@orgchana.com</a> ou <a class="text-primary" href="mailto:rentacar@orgchana.com">rentacar@orgchana.com</a> ou por carta para
+                                    Estrada Principal do Lar do Patriota, Município de Belas, Luanda. No caso de não contestar no referido prazo de (3) Três dias úteis, a
                                     CHANA reserva-se o direito de cobrar ao Cliente os referidos custos.
                                 </p>
-                                <p class="lh-base mb-2"><strong>13- O QUE DEVO FAZER QUANTO À MANUTENÇÃO DO VEÍCULO?</strong> Durante o aluguer o Cliente ou o Condutor Autorizado 
-                                    deve tomar todas as medidas de protecção necessárias para manter o Veículo nas mesmas condições em que lhe foi entregue e estar atento 
-                                    a qualquer sinal de aviso das luzes do painel do Veículo e tomar as medidas de protecção necessárias. 
-                                    O Veículo é fornecido ao Cliente com os pneus, em número e nas condições que cumprem os requisitos das leis de trânsito. No caso de 
-                                    algum deles sofrer danos, para além do uso e desgaste normal, de defeito latente ou de força maior, o Cliente deve substitui-lo, a 
-                                    expensas Suas, por um pneu do mesmo tamanho, tipo e marca. É proibida qualquer modificação ou intervenção mecânica ao Veículo 
-                                    sem a prévia autorização escrita da CHANA. No caso de violar esta norma, o Cliente ou o Condutor Autorizado terão de suportar os 
-                                    custos de repor o Veículo nas mesmas condições em que lhe foi entregue e será responsável perante a CHANA por quaisquer 
-                                    prejuízos que decorram da violação de qualquer das acima mencionadas obrigações de manutenção. 
-                                    A reparação dos danos devem ser feitas em oficinas em convenio com a CHANA. É expressamente proibido o cliente fazer a reparação do veiculo por 
+                                <p class="lh-base mb-2"><strong>13- O QUE DEVO FAZER QUANTO À MANUTENÇÃO DO VEÍCULO?</strong> Durante o aluguer o Cliente ou o Condutor Autorizado
+                                    deve tomar todas as medidas de protecção necessárias para manter o Veículo nas mesmas condições em que lhe foi entregue e estar atento
+                                    a qualquer sinal de aviso das luzes do painel do Veículo e tomar as medidas de protecção necessárias.
+                                    O Veículo é fornecido ao Cliente com os pneus, em número e nas condições que cumprem os requisitos das leis de trânsito. No caso de
+                                    algum deles sofrer danos, para além do uso e desgaste normal, de defeito latente ou de força maior, o Cliente deve substitui-lo, a
+                                    expensas Suas, por um pneu do mesmo tamanho, tipo e marca. É proibida qualquer modificação ou intervenção mecânica ao Veículo
+                                    sem a prévia autorização escrita da CHANA. No caso de violar esta norma, o Cliente ou o Condutor Autorizado terão de suportar os
+                                    custos de repor o Veículo nas mesmas condições em que lhe foi entregue e será responsável perante a CHANA por quaisquer
+                                    prejuízos que decorram da violação de qualquer das acima mencionadas obrigações de manutenção.
+                                    A reparação dos danos devem ser feitas em oficinas em convenio com a CHANA. É expressamente proibido o cliente fazer a reparação do veiculo por
                                     conta propria, o encaminhamento do processo a oficina é de inteira responsabilidade da CHANA. </p>
                                 <p class="lh-base mb-2"><strong>14- O QUE DEVO FAZER EM CASO DE ACIDENTE, AVARIA MECÂNICA OU ROUBO DO VEÍCULO?</strong>
-                                    Em caso de avaria mecânica ou acidente, que o impeça de continuar a conduzir e/ou que o obrigue a parar para evitar o agravamento do 
-                                    dano, o Cliente obriga-se a ligar para o Call Center da CHANA nº <a class="text-primary" href="tel:+244991001400">991001400</a>; <a class="text-primary" href="tel:+244946320021">946320021</a> para que este disponibilize um serviço de assistência . 
-                                    Em caso de acidente o contrato é automaticamente fechado, o Cliente obriga-se a fazer intervir sempre as autoridades policiais, devendo 
-                                    comunicar tal facto à CHANA através do supra referido Call Center, imediatamente após o acidente . 
-                                    Em caso de avariao cliente deve contactar a CHANA num prazo nunca superior a (3) três horas, sob pena de poder ser 
-                                    responsabilizado pelo agravamento dos danos do Veículo. Em caso de roubo do Veículo, o Cliente obriga-se a ligar 
-                                    imediatamente para o Call Center da CHANA nº <a class="text-primary" href="tel:+244991001400">991001400</a>; <a class="text-primary" href="tel:+244946320021">946320021</a> e deve enviar à CHANA uma cópia da participação do 
-                                    mesmo às autoridades policiais no mais curto prazo possível nunca superior a (12 h) doze horas, juntamente com as chaves e os 
-                                    documentos do Veículo, no caso destes não terem sido roubados, para que a CHANA possa promover todas as diligências ao seu alcance 
+                                    Em caso de avaria mecânica ou acidente, que o impeça de continuar a conduzir e/ou que o obrigue a parar para evitar o agravamento do
+                                    dano, o Cliente obriga-se a ligar para o Call Center da CHANA nº <a class="text-primary" href="tel:+244991001400">991001400</a>; <a class="text-primary" href="tel:+244946320021">946320021</a> para que este disponibilize um serviço de assistência .
+                                    Em caso de acidente o contrato é automaticamente fechado, o Cliente obriga-se a fazer intervir sempre as autoridades policiais, devendo
+                                    comunicar tal facto à CHANA através do supra referido Call Center, imediatamente após o acidente .
+                                    Em caso de avariao cliente deve contactar a CHANA num prazo nunca superior a (3) três horas, sob pena de poder ser
+                                    responsabilizado pelo agravamento dos danos do Veículo. Em caso de roubo do Veículo, o Cliente obriga-se a ligar
+                                    imediatamente para o Call Center da CHANA nº <a class="text-primary" href="tel:+244991001400">991001400</a>; <a class="text-primary" href="tel:+244946320021">946320021</a> e deve enviar à CHANA uma cópia da participação do
+                                    mesmo às autoridades policiais no mais curto prazo possível nunca superior a (12 h) doze horas, juntamente com as chaves e os
+                                    documentos do Veículo, no caso destes não terem sido roubados, para que a CHANA possa promover todas as diligências ao seu alcance
                                     conducentes a descoberta do Veículo e, se possível, dos autores do crime.</p>
                                 <p class="lh-base mb-2"><strong></strong></p>
                                 <p class="lh-base mb-2"><strong></strong></p>
                                 <p class="lh-base mb-2"><strong></strong></p>
                                 <p class="lh-base mb-2"><strong></strong></p>
+                                        </div>
+                                    </div>
+                                <a class="text-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Ler mais
+                                </a>
+                            </p>
+
                         </div>
                     </form>
                 </div>
