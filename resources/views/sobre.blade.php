@@ -21,8 +21,8 @@
       position: relative;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-      max-width: 900px; /* 🔹 limita a largura */
+      /* box-shadow: 0 4px 25px rgba(0,0,0,0.1); */
+      max-width: 450px; /* 🔹 limita a largura */
       margin: 0 auto;   /* centraliza na tela */
     }
 
@@ -88,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 text-center video-container">
-                    <img id="previewImage" src="assets/media/hero/img.jpg" class="img-fluid rounded-4" alt="Office">
+                    <img id="previewImage" src="assets/media/corporate/img19.webp" class="img-fluid rounded-4" alt="Office">
                         <div class="video-overlay" id="videoOverlay">
                             <i class="bi bi-play-circle-fill play-btn" id="playButton"></i>
                         </div>

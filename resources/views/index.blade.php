@@ -396,7 +396,7 @@
             <div class="row g-0">
                 <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('confianca')">
-                        <img class="" src="assets/media/banners/banner13.webp" alt="car">
+                        <img class="" src="assets/media/banners/banner19.webp" alt="car">
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -409,7 +409,7 @@
 
                 <div class="col-lg-6 col-md-6 col-12" data-aos="fade-up">
                     <div class="card-section" onclick="handleSolicitar('estilo')">
-                        <img src="assets/media/banners/banner2.webp" alt="car">
+                        <img src="assets/media/banners/banner18.webp" alt="car">
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -478,17 +478,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
-                                <div class="feature-item d-block align-items-center justify-content-center text-center">
-                                    <div class="feature-icon">
-                                        <span class="fs-4"><i class="bi bi-droplet custom"></i></span>
-                                    </div>
-                                    <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Certificado de limpeza</h5>
-                                        <p class="mb-0">Viaturas certificadamente limpas, seguindo pontos de controlo de limpeza e segurança.</p>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
@@ -507,18 +497,19 @@
                                     </div>
                                     <div class="ms-4 mt-2">
                                         <h5 class="mb-3 fs-6">Viaturas Seguras</h5>
-                                        <p class="mb-0">Condução segura. Alugue com confiança.</p>
+                                        <p class="mb-0">A sua segurança começa com um aluguer de confiança.</p>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
-                                        <span class="fs-4"><i class="bi bi-briefcase-fill custom"></i></span>
+                                        <span class="fs-4"><i class="bi bi-droplet custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Soluções de negócios</h5>
-                                        <p class="mb-0">Toda a flexibilidade para o seu negócio.</p>
+                                        <h5 class="mb-3 fs-6">Certificado de limpeza</h5>
+                                        <p class="mb-0">Viaturas certificadamente limpas, seguindo um rigoroso protocolo de limpeza e segurança.</p>
                                     </div>
                                 </div>
                             </div>
@@ -530,6 +521,17 @@
                                     <div class="ms-4 mt-2">
                                         <h5 class="mb-3 fs-6">Rapidez e facilidade</h5>
                                         <p class="mb-0">Sem esperas. Opções de compra de serviços extra. Tecnologia que o mantém em movimento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-briefcase-fill custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6">Soluções de negócios</h5>
+                                        <p class="mb-0">Toda a flexibilidade para o seu negócio, oferecendo melhores soluções de mobilidade.</p>
                                     </div>
                                 </div>
                             </div>
@@ -575,24 +577,24 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="brand-slider">
-                        <a href="#" class="cards border me-3">
+                        {{-- <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars2.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Compacto</h6>
                             </div>
-                        </a>
+                        </a> --}}
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars3.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Suv</h6>
                             </div>
                         </a>
-                        <a href="#" class="cards border me-3">
+                        {{-- <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/tesla.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Electric</h6>
                             </div>
-                        </a>
+                        </a> --}}
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars4.png" alt="car">
                             <div class="title mt-5">
@@ -602,7 +604,7 @@
                         <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/cars5.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Economic</h6>
+                                <h6 class="fs-6 text-center">Intermédio Premium</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
@@ -612,9 +614,33 @@
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/cars6.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Mini Van</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
                             <img src="assets/media/cars/tesla.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Electric</h6>
+                                <h6 class="fs-6 text-center">Suv Básico</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Suv Intermédio</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Suv Premium</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Suv Esecutivo</h6>
                             </div>
                         </a>
                     </div>

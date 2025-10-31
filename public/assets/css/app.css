@@ -1809,7 +1809,7 @@ Banners das páginas
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/corporate/img6.webp') fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1839,7 +1839,7 @@ Banners das páginas
 .bg-breadcrumb-3{
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs    /blog-2.png') fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

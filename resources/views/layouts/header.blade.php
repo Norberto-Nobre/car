@@ -83,10 +83,10 @@
 </style>
 <aside class="container asside">
           <div class="row inaside">
-          <div class="d-flex contato">  
+          <div class="d-flex contato">
             <div class="contact mb-1">
                 <img src="{{asset('assets/media/footer/uil-outgoing-call.png')}}" alt="call-logo">
-                <a class="text-white" href="tel:+244923482877">923482877 / 946320021</a>
+                <a class="text-white" href="tel:+244923482877">946320021 / 923482877</a>
             </div>
             <div class="contact ms-2">
                 <img src="{{asset('assets/media/footer/uil-envelope.png')}}" alt="logo">
