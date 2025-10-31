@@ -73,8 +73,9 @@
                     </form>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="assets/media/blogs/pngwing-19.png" alt="car">
+                    <img src="assets/media/corporate/img7.webp" alt="car">
                 </div>
+
             </div>
         </div>
     </section>

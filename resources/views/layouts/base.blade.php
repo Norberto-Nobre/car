@@ -67,6 +67,8 @@
     <script src="{{asset('assets/js/vendor/picker.js')}}"></script>
     <script src="{{asset('assets/js/vendor/picker.date.js')}}"></script>
 
+
+
     <script src="{{asset('assets/js/timeline.min.js')}}"></script>
      <script src="{{asset('assets/js/conteudo-extensivel.js')}}"></script>
 

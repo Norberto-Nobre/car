@@ -2616,68 +2616,68 @@ label.error {
   -webkit-transition-delay: 0.7s;
 }
 
-.modal.show {
+.modale.show {
   display: grid !important;
   align-items: center;
   height: 100vh;
 }
-.modal .modal-dialog {
+.modale .modale-dialog {
   max-width: 70%;
 }
 @media (max-width: 575px) {
-  .modal .modal-dialog {
+  .modale .modale-dialog {
     width: auto;
   }
 }
 @media (max-width: 490px) {
-  .modal .modal-dialog {
+  .modale .modale-dialog {
     max-width: 100%;
   }
 }
 @media (max-width: 1024px) {
-  .modal .modal-dialog.compare-dialog {
+  .modale .modale-dialog.compare-dialog {
     overflow: hidden;
     max-width: 100% !important;
   }
 }
-.modal .modal-dialog .modal-content {
+.modale .modale-dialog .modale-content {
   background: transparent;
   border: 0;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .quick-image-box {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .quick-image-box {
   border-radius: clamp(5px, 0.521vw, 20px);
   background-color: #ffffff;
   display: grid;
   align-items: center;
   justify-content: center;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container {
   position: relative;
   border-radius: clamp(5px, 0.521vw, 20px);
   padding: clamp(28px, 2.083vw, 64px) clamp(16px, 1.25vw, 40px);
 }
 @media (max-width: 1599px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container {
     padding: 24px 0;
   }
 }
 @media (max-width: 1024px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container {
     padding: 24px;
   }
 }
 @media (max-width: 490px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container {
     margin-top: 8px;
   }
 }
 @media (max-width: 490px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .quantity {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .quantity {
     display: none;
   }
 }
 @media (max-width: 490px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .product-text {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .product-text {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -2685,90 +2685,90 @@ label.error {
     -webkit-box-orient: vertical;
   }
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .close-content {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .close-content {
   position: absolute;
   right: 32px;
   top: 8px;
 }
 @media (max-width: 1599px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .close-content {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .close-content {
     top: 32px;
   }
 }
 @media (max-width: 490px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .close-content {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .close-content {
     top: 16px;
     right: 24px;
   }
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .label {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .label {
   padding: 4px 12px;
   border-radius: 2px;
   background-color: #2d74ba;
   display: inline-flex;
   color: #ffffff;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .label.label-2 {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .label.label-2 {
   background-color: #006937;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color ul {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color ul {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio] {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio] {
   width: 28px;
   height: 28px;
   -webkit-appearance: none;
   border-radius: 5px;
 }
 @media (max-width: 992px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio] {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio] {
     width: 20px;
     height: 20px;
   }
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio].radio-1 {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio].radio-1 {
   background-color: #eaeaec;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio].radio-2 {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio].radio-2 {
   background-color: #1e1f20;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio].radio-6 {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio].radio-6 {
   background-color: #2d74ba;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio]:checked {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio]:checked {
   border: 3px solid #ffffff;
   border-radius: 3px;
   outline: 1px solid #cecefc;
   cursor: pointer;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio]:hover {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio]:hover {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   border: 3px solid #ffffff;
   border-radius: 3px;
   outline: 1px solid #cecefc;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio]:focus {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .content-block .product-color input[type=radio]:focus {
   outline-color: transparent;
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .function-bar {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .function-bar {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 @media (max-width: 490px) {
-  .modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .function-bar {
+  .modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .function-bar {
     flex-wrap: wrap;
   }
 }
-.modal .modal-dialog .modal-content .modal-body .detail-wrapper .product-text-container .function-bar .cart-btn .cus-btn-2 {
+.modale .modale-dialog .modale-content .modale-body .detail-wrapper .product-text-container .function-bar .cart-btn .cus-btn-2 {
   padding: 13.5px 32px;
 }
 

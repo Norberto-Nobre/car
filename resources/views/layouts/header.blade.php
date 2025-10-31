@@ -103,7 +103,8 @@
             </div>
           </div>
           </div>
-  </aside>
+</aside>
+
   <header class="header">
     <div class="container">
         <nav class="navigation d-flex align-items-center justify-content-between">
