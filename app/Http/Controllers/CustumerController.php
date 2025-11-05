@@ -65,12 +65,6 @@ class CustumerController extends Controller
         $token = env('WHATSAPP_TOKEN');
         $phoneId = env('WHATSAPP_PHONE_ID');
         
-        
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c0d639e2b3564b1ea7d456441852b969d6de45c
         $response = Http::withToken($token)->post("https://graph.facebook.com/v22.0/{$phoneId}/messages", [
             'messaging_product' => 'whatsapp',
             'to'   => $to,
