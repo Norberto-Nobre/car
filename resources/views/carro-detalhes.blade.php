@@ -285,93 +285,88 @@
                     </div>
                     <div class="side-bar-2 mt-24">
                     <!--<form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form"> -->
-                    <form action="{{ route('front.bookingdata') }}" method="post" class="form">
-                         @csrf
-                        <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
-                        <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>
-                        <div class="pickup-location-container">
-                            <div class="location-input-wrapper">
-                                <select id="pickup_location_select" class="mb-12">
-                                    <option value="">Selecione um escritório</option>
-                                    @foreach($offices as $item)
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endforeach
-                                </select>
-                                <button type="button" class="add-location-btn" id="addLocationBtn">
-                                    + Adicionar Endereço de entrega
-                                </button>
-                            </div>
-
-                            <div class="custom-location-input" id="customLocationDiv">
-                                <input type="text" id="custom_pickup_location" placeholder="Digite sua localização personalizada...">
-                                <button type="button" class="remove-custom-btn" id="removeCustomBtn">
-                                    ✕ Remover
-                                </button>
-                            </div>
-
-                            <!-- Input hidden que será enviado no formulário -->
-                            <input type="hidden" name="pickup_location" id="pickup_location_final" required>
-                        </div>
-
-                        <p class="mb-8 fw-600 dark-gray">Local de devolução da viatura</p>
-                        <div class="pickup-location-container">
-                            <div class="location-input-wrapper">
-                                <select id="" name="dropoff_location" required class="mb-12">
-                                    <option value="">Selecione um escritório</option>
-                                    @foreach($offices as $item)
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-
-                        <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
-                        <div class="d-flex gap-24">
-                            <input type="date" name="pickup_date" class="mb-12" id="pickup_date" required>
-                            <input type="time" name="pickup_time" class="mb-12" id="pickup_time" value="08:00" required>
-                        </div>
-
-                        <p class="fw-600 mb-8 dark-gray">Data de entrega</p>
-                        <div class="d-flex gap-24">
-                            <input type="date" name="dropoff_date" class="mb-12" id="dropoff_date" required>
-                            <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
-                        </div>
-
-                        @if ($vehicle->vehicleModel->category->provincial == 1)
-                        
-                        <div class="province-check-container mb-12">
-                            <label class="checkbox-container">
-                                <input type="checkbox" id="province_check" name="out_of_province" onchange="toggleProvinceSelect()">
-                                <span class="checkbox-text">Vou sair da província </span>
-                            </label>
-                        </div>
-                        @endif
-
-                        <div class="province-select-container" id="provinceSelectContainer" style="display: none;">
-                            <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
-                            <select name="destination_province" id="destination_province" class="mb-12">
-                                <option value="">Selecione uma província</option>
-                                @foreach($provinces as $item)
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                <form action="{{ route('front.bookingdata') }}" method="post" class="form" onsubmit="return validarDiasProvincia()">
+                    @csrf
+                    <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
+                    <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>
+                    <div class="pickup-location-container">
+                        <div class="location-input-wrapper">
+                            <select id="pickup_location_select" class="mb-12">
+                                <option value="">Selecione um escritório</option>
+                                @foreach($offices as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
                             </select>
-                            <p class="mb-8 fw-600 dark-gray">Número de dias fora da província</p>
-                            <div class="province-check-container mb-12">
-                                <input type="number" name="dias_province" id="dias_province" min="1" value="1">
-                            </div>
+                            <button type="button" class="add-location-btn" id="addLocationBtn">
+                                + Adicionar Endereço de entrega
+                            </button>
                         </div>
 
-                        <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">
+                        <div class="custom-location-input" id="customLocationDiv">
+                            <input type="text" id="custom_pickup_location" placeholder="Digite sua localização personalizada...">
+                            <button type="button" class="remove-custom-btn" id="removeCustomBtn">
+                                ✕ Remover
+                            </button>
+                        </div>
 
-                        <button type="submit" class="cus-btn">
-                            <span class="btn-text">
-                                Continuar
-                            </span>
-                            <span>
-                                continuar
-                            </span>
-                        </button>
-                    </form>
+                        <input type="hidden" name="pickup_location" id="pickup_location_final" required>
+                    </div>
+
+                    <p class="mb-8 fw-600 dark-gray">Local de devolução da viatura</p>
+                    <div class="pickup-location-container">
+                        <div class="location-input-wrapper">
+                            <select id="" name="dropoff_location" required class="mb-12">
+                                <option value="">Selecione um escritório</option>
+                                @foreach($offices as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
+                    <div class="d-flex gap-24">
+                        <input type="date" name="pickup_date" class="mb-12" id="pickup_date" required>
+                        <input type="time" name="pickup_time" class="mb-12" id="pickup_time" value="08:00" required>
+                    </div>
+
+                    <p class="fw-600 mb-8 dark-gray">Data de entrega</p>
+                    <div class="d-flex gap-24">
+                        <input type="date" name="dropoff_date" class="mb-12" id="dropoff_date" required>
+                        <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
+                    </div>
+
+                    @if ($vehicle->vehicleModel->category->provincial == 1)
+                    <div class="province-check-container mb-12">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="province_check" name="out_of_province" onchange="toggleProvinceSelect()">
+                            <span class="checkbox-text">Vou sair da província</span>
+                        </label>
+                    </div>
+                    @endif
+
+                    <div class="province-select-container" id="provinceSelectContainer" style="display: none;">
+                        <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
+                        <select name="destination_province" id="destination_province" class="mb-12">
+                            <option value="">Selecione uma província</option>
+                            @foreach($provinces as $item)
+                                <option value="{{$item->id}}">{{$item->name}}</option>
+                            @endforeach
+                        </select>
+
+                        <p class="mb-8 fw-600 dark-gray">Número de dias fora da província</p>
+                        <div class="province-check-container mb-12">
+                            <input type="number" name="dias_province" id="dias_province" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">
+
+                    <button type="submit" class="cus-btn">
+                        <span class="btn-text">Continuar</span>
+                        <span>continuar</span>
+                    </button>
+                </form>
                     </div>
                     <!--
                     <div class="side-bar mt-32">
@@ -950,6 +945,59 @@
 
         // Inicializar
         pickupLocationSelect.style.paddingRight = '130px';
+
+        //FAZ COM QUE O NUMERO DE DIAS NA PROVINCIA SEJA MENOR QUE A QUANTIDADE DE DIAS DE ALUGUER
+        function toggleProvinceSelect() {
+    const check = document.getElementById('province_check');
+    const container = document.getElementById('provinceSelectContainer');
+    container.style.display = check.checked ? 'block' : 'none';
+}
+
+function atualizarMaxDiasProvincia() {
+    const pickupDate = new Date(document.getElementById('pickup_date').value);
+    const dropoffDate = new Date(document.getElementById('dropoff_date').value);
+    const diasProvinceInput = document.getElementById('dias_province');
+
+    if (!pickupDate || !dropoffDate || isNaN(pickupDate) || isNaN(dropoffDate)) {
+        diasProvinceInput.removeAttribute('max');
+        return;
+    }
+
+    const diffTime = dropoffDate - pickupDate;
+    const diffDias = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDias > 0) {
+        diasProvinceInput.setAttribute('max', diffDias);
+    }
+}
+
+function validarDiasProvincia() {
+    const pickupDate = new Date(document.getElementById('pickup_date').value);
+    const dropoffDate = new Date(document.getElementById('dropoff_date').value);
+    const diasProvinceInput = document.getElementById('dias_province');
+    const provinceCheck = document.getElementById('province_check');
+
+    if (!pickupDate || !dropoffDate) return true;
+
+    const diffTime = (dropoffDate - pickupDate);
+    const diffDias = diffTime / (1000 * 60 * 60 * 24);
+    const maxDias = Math.floor(diffDias) + 1;
+
+    if (provinceCheck && provinceCheck.checked) {
+        const diasProvincia = parseInt(diasProvinceInput.value || 0);
+
+        if (diasProvincia > maxDias) {
+            alert(`O número de dias fora da província (${diasProvincia}) não pode ser maior que os dias do aluguer (${maxDias}).`);
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// Atualiza o limite máximo automaticamente quando as datas mudam
+document.getElementById('pickup_date').addEventListener('change', atualizarMaxDiasProvincia);
+document.getElementById('dropoff_date').addEventListener('change', atualizarMaxDiasProvincia);
     </script>
 
 @endsection

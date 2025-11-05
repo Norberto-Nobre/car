@@ -167,7 +167,7 @@
                                     </div>
 
                                     {{-- Tipo de Combustível --}}
-                                    <div class="checkbox">
+                                    {{--<div class="checkbox">
                                         <div class="widget-title-row mb-16">
                                             <h6 class="fs-6">Tipo de Combustível</h6>
                                         </div>
@@ -185,10 +185,10 @@
                                                 @endforeach
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div>--}}
 
                                     {{-- Transmissão --}}
-                                    <div class="checkbox">
+                                   {{-- <div class="checkbox">
                                         <div class="widget-title-row mb-16">
                                             <h6 class="fs-6">Transmissão</h6>
                                         </div>
@@ -206,7 +206,7 @@
                                                 @endforeach
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div>--}}
 
                                     <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
                                 </form>
@@ -221,45 +221,43 @@
                 </div>
                 <div class="col-xl-9">
                     <div class="row row-gap-3">
-                       @foreach ($vehicles as $vehicle)
-                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6">
+                @foreach ($vehicles as $vehicle)
+                <div class="col-xxl-4 col-lg-4 col-md-6 ps-3">
                     <div class="vehicle-card">
                         <a href="{{route('front.carro-detalhes', $vehicle->slug)}}">
                             <img src="{{asset('storage/' . $vehicle->image)}}" class="w-100 rounded mb-3" alt="car">
-                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h2>
-
+                            <h2 class="h3 title">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">{{ __('index.vehicles.similar') }}</small></h2>
                             <div class="icons mb-12">
                                 <div class="d-flex align-items-center gap-4">
-                                    <i class="bi bi-person-fill"></i>
-                                    <h6 class="fs-6 fw-light gap-8">{{$vehicle->vehicleModel->seats}}</h6>
+                                    <i class="bi bi-person-fill fs-6"></i>
+                                    <h6 class="fw-light gap-8" style="font-size: 14px">{{$vehicle->vehicleModel->seats}}</h6>
                                 </div>
-                                 <div class="d-flex align-items-center gap-4 ms-2">
-                                    <i class="fas fa-door-closed"></i>
-                                    <h6 class="fs-6 fw-light gap-8">x{{$vehicle->vehicleModel->doors}}</h6>
+                                 <div class="d-flex align-items-center gap-4 ms-1">
+                                    <i class="fas fa-door-closed fs-6"></i>
+                                    <h6 class="fw-light gap-8" style="font-size: 14px">x{{$vehicle->vehicleModel->doors}}</h6>
                                 </div>
-                                <div class="d-flex align-items-center gap-4 ms-2">
-                                    <i class="bi bi-fuel-pump-fill"></i>
-                                    <h6 class="fs-6 fw-light gap-8">{{$vehicle->vehicleModel->fuel_type}}</h6>
+                                <div class="d-flex align-items-center gap-4 ms-1">
+                                    <i class="bi bi-fuel-pump-fill fs-6"></i>
+                                    <h6 class="fw-light gap-8" style="font-size: 14px">{{$vehicle->vehicleModel->fuel_type}}</h6>
                                 </div>
-                                 <div class="d-flex align-items-center gap-4 ms-2">
-                                    <i class="bi bi-car-front"></i>
-                                    <h6 class="fs-6 fw-light gap-8">{{$vehicle->vehicleModel->category->name}}</h6>
+                                 <div class="d-flex align-items-center gap-4 ms-1">
+                                    <i class="bi bi-car-front fs-6"></i>
+                                    <h6 class="fw-light gap-8" style="font-size: 14px">{{$vehicle->vehicleModel->category->name}}</h6>
                                 </div>
                             </div>
-
-                            <h6 class="fs-6">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/Dia</small></h6>
+                             <h6 class="fs-5">kz {{number_format($vehicle->vehicleModel->price_per_day, '0', ',', '.')}} <small class="fw-light" style="font-size: 14px">/{{ __('index.vehicles.day') }}</small></h6>
                             <div class="bottom-row mb">
                                 <div>
                                     {{-- <p>starts from</p> --}}
-                                     <h6 class="fs-6">Caução <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
+                                     <h6 class="fs-6">{{ __('index.vehicles.h6') }}: <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
                                 </div>
                                 <div class="cus-btn">
                                     <span class="btn-text">
-                                        Alugar
+                                        {{ __('index.vehicles.button') }}
                                        <i class="bi bi-calendar2-check"></i>
                                     </span>
                                     <span>
-                                        Alugar
+                                        {{ __('index.vehicles.button') }}
                                        <i class="bi bi-calendar2-check"></i>
                                     </span>
                                 </div>
@@ -268,6 +266,8 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+                </div>
 
                         <div class="pagination mt-48">
                             <ul id="border-pagination">

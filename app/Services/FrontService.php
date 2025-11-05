@@ -44,7 +44,7 @@ class FrontService{
     public function getFrontPageData(){
         $vehicleModels = $this->vehicleModelRepository->getActive();
         $vehicles = $this->vehicleRepository->getAll(6);
-        $popularVehicles = $this->vehicleRepository->getPopularVehicles(4);
+        $popularVehicles = $this->vehicleRepository->getPopularVehicles(16);
         $brands = $this->brandRepository->getActive();
         $categories = $this->categoryRepository->getActive();
 

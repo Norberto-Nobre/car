@@ -159,6 +159,65 @@
 
 
 </style>
+<style>
+/* Responsive: unify carousel media (images/videos) heights across breakpoints */
+#carouselExampleCaptions { --hero-h: 60vh; }
+.media-fit, .overlay-blue2 { width: 100%; height: var(--hero-h) !important; object-fit: cover; }
+
+@media (max-width: 575.98px) {
+  #carouselExampleCaptions { --hero-h: 48vh; }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #carouselExampleCaptions { --hero-h: 54vh; }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #carouselExampleCaptions { --hero-h: 58vh; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #carouselExampleCaptions { --hero-h: 62vh; }
+}
+@media (min-width: 1200px) {
+  #carouselExampleCaptions { --hero-h: 66vh; }
+}
+
+/* Ensure captions are visible and readable on all sizes */
+.carousel-caption { bottom: 10%; }
+@media (max-width: 575.98px) {
+  .carousel-caption { bottom: 6%; padding-left: 4rem; padding-right: 1rem; }
+  .carousel-caption .h2 { font-size: 1.5rem; }
+  .carousel-caption p { font-size: 0.95rem; }
+}
+@media (max-width: 768px) {
+  /* Center caption vertically to keep all content visible */
+  .carousel-caption {
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    padding-left: 4rem; padding-right: 1.25rem; /* leve margem à direita para centralizar visualmente */
+    text-align: center;
+  }
+  .carousel-caption .container { max-width: 100%; margin: 0 auto; padding-left: 0; padding-right: 0; }
+  /* Remove right padding utilities on mobile */
+  .carousel-caption .pe-5 { padding-right: 0 !important; }
+  .carousel-caption h4 { font-size: 1.15rem; line-height: 1.25; }
+  .carousel-caption .fs-5 { font-size: 0.95rem; line-height: 1.35; }
+  .carousel-caption .btn-block { gap: 0.5rem; justify-content: center; }
+}
+
+/* Ensure carousel arrows stay clickable above overlays */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 11;
+}
+
+/* Prevent overlay layers from intercepting clicks */
+.overlay-blue,
+.overlay-blue2 { pointer-events: none; }
+
+</style>
 
 
     <div class="w-full min-h-screen">
@@ -173,13 +232,13 @@
     <div class="carousel-item active position-relative">
       {{-- <img src="assets/media/cars/slide3.jpeg" alt="map-image" class="w-100"> --}}
         <video src="assets/media/video/video.mp4"
-       class="video"
+       class="video media-fit"
        loop muted autoplay playsinline
        style="width: 100%; height: 570px; object-fit: cover;">
         </video>
        <!-- Camada azul com transparência -->
         <div class="overlay-blue2"></div>
-        <div class="carousel-caption d-none d-md-block edit-1">
+        <div class="carousel-caption d-block edit-1">
             <div class="container animate__animated animate__fadeInUp animate__delay-2s">
             <h4 class="mb-16">
                 <span class="h2 text-white">{{ __('index.slide.slide1.span') }} </span><br>
@@ -213,10 +272,10 @@
       </div>
     </div>
     <div class="carousel-item position-relative">
-      <img src="assets/media/cars/slide1.jpeg" alt="map-image" class="w-100">
+      <img src="assets/media/cars/slide1.jpeg" alt="map-image" class="w-100 media-fit">
        <!-- Camada azul com transparência -->
     <div class="overlay-blue"></div>
-      <div class="carousel-caption d-none d-md-block edit-2">
+      <div class="carousel-caption d-block edit-2">
         <div class="container pe-5 animate__animated animate__fadeInDown animate__delay-1s">
             <h4 class="mb-16">
                 <span class="h2 text-white">{{ __('index.slide.slide2.span') }}</span><br>
@@ -251,10 +310,10 @@
       </div>
     </div>
     <div class="carousel-item position-relative">
-    <img src="assets/media/cars/slide2.jpeg" alt="map-image" class="w-100">
+    <img src="assets/media/cars/slide2.jpeg" alt="map-image" class="w-100 media-fit">
     <!-- Camada azul com transparência -->
     <div class="overlay-blue"></div>
-    <div class="carousel-caption d-none d-md-block edit-2">
+    <div class="carousel-caption d-block edit-2">
         <div class="container pe-5 animate__animated animate__fadeInLeft animate__delay-1s">
             <h4 class="mb-16">
                 <span class="h2 text-white">{{ __('index.slide.slide3.span') }} </span><br>
@@ -432,8 +491,8 @@
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">{{ __('index.banner.banner1.h2') }}</h2>
-                            <p class="card-text">{{ __('index.banner.banner1.p') }}</p>
+                            <h2 class="card-title">Viaje com conforto e chegue sempre a tempo!</h2>
+                            <p class="card-text">Pontualidade, segurança e conveniência em cada percurso.</p>
                             <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
@@ -584,7 +643,7 @@
                             </div>
                         </a> --}}
                         <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/cars3.png" alt="car">
+                            <img src="assets/media/cars/IMAGEM1.webp" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Suv</h6>
                             </div>
@@ -689,11 +748,11 @@
                 </div>
                 <a href="{{route('front.frotas')}}" class="cus-btn">
                     <span class="btn-text">
-                       {{ __('index.vehicles.a') }}
+                       Nossa Frota
                         <i class="bi bi-car-front-fill"></i>
                     </span>
                     <span>
-                        {{ __('index.vehicles.a') }}
+                        Nossa Frota
                         <i class="bi bi-car-front-fill"></i>
                     </span>
                 </a>
@@ -1074,40 +1133,37 @@
                 <div class="col-lg-8">
                     <div class="brand-slider">
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-1.png" alt="brand-1">
+                            <img src="assets/media/brands/editadas/bmw.png" alt="brand-1">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-2.png" alt="brand-2">
+                            <img src="assets/media/brands/editadas/baic.png" alt="brand-2">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-3.png" alt="brand-3">
+                            <img src="assets/media/brands/editadas/changan.png" alt="brand-3">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-4.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/foday.png" alt="brand-4">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-5.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/geely.png" alt="brand-5">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-6.png" alt="brand-5">
+                            <img src="assets/media/brands/editadas/hyundai.png" alt="brand-6">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-1.png" alt="brand-1">
+                            <img src="assets/media/brands/editadas/jetour.png" alt="brand-1">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-2.png" alt="brand-2">
+                            <img src="assets/media/brands/editadas/mazda.png" alt="brand-2">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-3.png" alt="brand-3">
+                            <img src="assets/media/brands/editadas/nissan.png" alt="brand-3">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-4.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/suzuki.png" alt="brand-4">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-5.png" alt="brand-5">
-                        </div>
-                        <div class="brand-block">
-                            <img src="assets/media/brands/brand-6.png" alt="brand-6">
+                            <img src="assets/media/brands/editadas/toyota.png" alt="brand-5">
                         </div>
                     </div>
                 </div>

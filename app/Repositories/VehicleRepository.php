@@ -64,7 +64,7 @@ class VehicleRepository implements VehicleRepositoryInterface
         return $this->model->with(['vehicleModel.brand', 'vehicleModel.category'])->get();
     }
 
-    public function getPopularVehicles($limit = 4){
+    public function getPopularVehicles($limit = 16){
 
         return Vehicle::where('is_popular', true)->take($limit)->get();
     }

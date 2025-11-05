@@ -187,48 +187,48 @@
                             <p class="mb-24">Uma explicação simples em passos:</p>
                         </div>
                         <div class="row gy-4 gx-0">
-                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow bg-primary me-4" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow me-4" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-1-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Escolha a viatura</h5>
+                                        <h5 class="mb-3 fs-6 text-white">Escolha a viatura</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow bg-primary" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow " data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-2-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Envie os seus dados</h5>
+                                        <h5 class="mb-3 fs-6 text-white">Envie os seus dados</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow bg-primary me-4" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow me-4" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-3-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Receba a confirmação</h5>
+                                        <h5 class="mb-3 fs-6 text-white">Receba a confirmação</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow bg-primary" data-wow-delay="0.1s" data-aos="fade-up">
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
                                 <div class="feature-item d-block align-items-center justify-content-center text-center">
                                     <div class="feature-icon">
                                         <span class="fs-4"><i class="bi bi-4-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Retire o carro ou solicite entrega</h5>
+                                        <h5 class="mb-3 fs-6 text-white">Retire o carro ou solicite entrega</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
@@ -395,46 +395,43 @@
     <!-- About-area start  end -->
 
     <!-- brands-start -->
-    <div class="brand-section my-40 py-48">
-        <div class="container">
+    <div class="brand-section py-5">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="brand-slider">
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-1.png" alt="brand-1">
+                            <img src="assets/media/brands/editadas/bmw.png" alt="brand-1">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-2.png" alt="brand-2">
+                            <img src="assets/media/brands/editadas/baic.png" alt="brand-2">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-3.png" alt="brand-3">
+                            <img src="assets/media/brands/editadas/changan.png" alt="brand-3">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-4.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/foday.png" alt="brand-4">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-5.png" alt="brand-4">
-                        </div>
-                        {{-- <div class="brand-block">
-                            <img src="assets/media/brands/brand-6.png" alt="brand-5">
-                        </div> --}}
-                        <div class="brand-block">
-                            <img src="assets/media/brands/brand-1.png" alt="brand-1">
+                            <img src="assets/media/brands/editadas/geely.png" alt="brand-5">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-2.png" alt="brand-2">
+                            <img src="assets/media/brands/editadas/hyundai.png" alt="brand-6">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-3.png" alt="brand-3">
+                            <img src="assets/media/brands/editadas/jetour.png" alt="brand-1">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-4.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/mazda.png" alt="brand-2">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-5.png" alt="brand-5">
+                            <img src="assets/media/brands/editadas/nissan.png" alt="brand-3">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-6.png" alt="brand-6">
+                            <img src="assets/media/brands/editadas/suzuki.png" alt="brand-4">
+                        </div>
+                        <div class="brand-block">
+                            <img src="assets/media/brands/editadas/toyota.png" alt="brand-5">
                         </div>
                     </div>
                 </div>
