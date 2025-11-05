@@ -712,6 +712,12 @@
                                 @endphp
                                 <h6>{{number_format($total, '0', ',', '.')}} kz</h6>
                             </div>
+                            <div class="justify-content-between d-flex mt-4">
+                                <div>
+                                    <p class="text-danger"><i class="bi bi-info-circle"></i>  O valor total é com Iva incluido</p>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -721,7 +727,7 @@
     <!--title start  -->
 
     <script>
-            // Preenche o select com os países e seus códigos   
+            // Preenche o select com os países e seus códigos
         document.addEventListener("DOMContentLoaded", function () {
                 fetch("/assets/json/countries.json")
                     .then(response => response.json())

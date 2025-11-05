@@ -643,7 +643,25 @@
                             </div>
                         </a> --}}
                         <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/IMAGEM1.webp" alt="car">
+                            <img src="assets/media/categorias/suv-intermedio.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Suv Intermédio</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/categorias/suv-premium.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Suv Premium</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/categorias/suv-executivo.png" alt="car">
+                            <div class="title mt-5">
+                                <h6 class="fs-6 text-center">Suv Executivo</h6>
+                            </div>
+                        </a>
+                        <a href="#" class="cards border me-3">
+                            <img src="assets/media/categorias/suv.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Suv</h6>
                             </div>
@@ -655,7 +673,7 @@
                             </div>
                         </a> --}}
                         <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/cars4.png" alt="car">
+                            <img src="assets/media/categorias/pickup.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Pickup</h6>
                             </div>
@@ -667,39 +685,21 @@
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/cars6.png" alt="car">
+                            <img src="assets/media/categorias/van.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Van</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/cars6.png" alt="car">
+                            <img src="assets/media/categorias/minivan.png" alt="car">
                             <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Mini Van</h6>
+                                <h6 class="fs-6 text-center">Minivan</h6>
                             </div>
                         </a>
                         <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/tesla.png" alt="car">
+                            <img src="assets/media/categorias/suv-basico.png" alt="car">
                             <div class="title mt-5">
                                 <h6 class="fs-6 text-center">Suv Básico</h6>
-                            </div>
-                        </a>
-                        <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/tesla.png" alt="car">
-                            <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Suv Intermédio</h6>
-                            </div>
-                        </a>
-                        <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/tesla.png" alt="car">
-                            <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Suv Premium</h6>
-                            </div>
-                        </a>
-                        <a href="#" class="cards border me-3">
-                            <img src="assets/media/cars/tesla.png" alt="car">
-                            <div class="title mt-5">
-                                <h6 class="fs-6 text-center">Suv Esecutivo</h6>
                             </div>
                         </a>
                     </div>
