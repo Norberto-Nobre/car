@@ -1,61 +1,128 @@
 
 @extends('layouts.base')
 
+
+
+
 @section('content')
 
 <style>
+
+
+    /* ~~~~ */
+/* Play button */
+   :root {
+      --icon-bg: #f1f3f5;
+      --icon-color: #0d6efd;
+      --title-color: #111827;
+      --text-color: #6b7280;
+      --play-bg: rgba(255, 255, 255, 0.92);
+      --play-color: #111827;
+    }
+
+    body {
+      background: #ffffff;
+      color: var(--text-color);
+    }
+
+    .feature {
+      max-width: 34rem;
+    }
+
     .feature-icon {
-      width: 60px;
-      height: 60px;
-      background-color: #f1f3f5;
-      border-radius: 15px;
-      display: flex;
+      height: 56px;
+      width: 56px;
+      border-radius: 14px;
+      background: var(--icon-bg);
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      color: #0d6efd;
-      margin-bottom: 1rem;
+      color: var(--icon-color);
+      font-size: 1.25rem;
     }
 
-    .video-container {
+    .feature h5 {
+      color: var(--title-color);
+      font-weight: 700;
+    }
+
+    /* Media wrapper */
+    .hero-media {
       position: relative;
-      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-      max-width: 900px; /* 🔹 limita a largura */
-      margin: 0 auto;   /* centraliza na tela */
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.12);
     }
 
-    .video-container img,
-    .video-container video {
+    .hero-media img,
+    .hero-media video {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
 
-    .video-overlay {
+    /* Play button */
+    .play-btn {
       position: absolute;
-      inset: 0;
-      background: rgba(29, 34, 71, 0.3);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 74px;
+      width: 74px;
+      border-radius: 50%;
+      background: var(--play-bg);
+      color: var(--play-color);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background 0.3s ease;
       cursor: pointer;
+      border: 0;
+      outline: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      z-index: 2;
     }
 
-    .video-overlay:hover {
-      background: rgba(0,0,0,0.5);
-    }
-
-    .play-btn {
-      font-size: 3.5rem;
-      color: white;
-      transition: transform 0.2s ease;
+    .play-btn i {
+      font-size: 1.8rem;
+      margin-left: 2px; /* optical balance */
     }
 
     .play-btn:hover {
-      transform: scale(1.1);
+      transform: translate(-50%, -50%) scale(1.06);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Pulsing ripple effect */
+    .play-btn::before,
+    .play-btn::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0));
+      animation: pulse 2.1s ease-out infinite;
+      z-index: -1;
+    }
+
+    .play-btn::after {
+      animation-delay: 1.05s;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      70% { transform: scale(1.9); opacity: 0; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+
+    /* Constrain content width like the screenshot */
+    .page-wrap {
+      max-width: 1080px;
+    }
+
+    @media (max-width: 575.98px) {
+      .feature { max-width: 100%; }
+      .play-btn { height: 64px; width: 64px; }
     }
   </style>
 
@@ -83,40 +150,128 @@
     </section> --}}
     <!-- About-area start  end -->
 
-     <!-- vichles-section -->
-    <section class="vehicles-2 py-80">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 text-center video-container">
-                    <img id="previewImage" src="assets/media/hero/img.jpg" class="img-fluid rounded-4" alt="Office">
-                        <div class="video-overlay" id="videoOverlay">
-                            <i class="bi bi-play-circle-fill play-btn" id="playButton"></i>
-                        </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="txt">
-                        <h4 class="mb-24">Chana RENT-A-CAR</h2>
-                        <p class="mb-24">Somos uma empresa do grupo Organizações Chana que, desde 2014 prestamos serviço de aluguer de viaturas multimarcas, a longo e curto prazo.</p>
-                        <p class="mb-24">Ao longo destes anos, procuramos apresentar ao mercado os melhores preços e serviço de qualidade, ajustando-se às reais necessidades dos nossos clientes.</p>
-                        <p class="mb-24">Os nossos alugueres feitos para particulares, empresariais, provinciais e para eventos são atendidas pelas 172 viaturas que temos em frota.</p>
-                        <p class="mb-24">Contamos consigo como parceiro, porque acreditamos em si e na qualidade do  serviço que queremos lhe oferecer.</p>
-                        <p class="mb-24">Qualidade aos melhores preços. Temos para si uma frota Multimarca, com Assistência técnica e Qualidade na Entrega</p>
+     <!-- About-area start -->
+    <section class="about my-80">
+        <div class="container ps-0">
+            <div class="design mt-48">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="assets/media/corporate/img16.jpeg" alt="car" style="height: 500px">
                     </div>
-                    {{-- <a href="rental.html" class="cus-btn">
-                        <span class="btn-text">
-                            Ver nossos carros
-                            <i class="bi bi-car-front-fill"></i>
-                        </span>
-                        <span>
-                            Ver nossos carros
-                            <i class="bi bi-car-front-fill"></i>
-                        </span>
-                    </a> --}}
+                    <div class="col-lg-7">
+                        <div class="txt-block">
+                            <h4 class="mb-24">Chana RENT-A-CAR</h4>
+                            <p class="mb-24">Somos uma empresa do grupo Organizações Chana que, desde 2014 prestamos serviço de aluguer de viaturas multimarcas, a longo e curto prazo.</p>
+                            <p class="mb-24">Ao longo destes anos, procuramos apresentar ao mercado os melhores preços e serviço de qualidade, ajustando-se às reais necessidades dos nossos clientes.</p>
+                            <p class="mb-24">Os nossos alugueres feitos para particulares, empresariais, provinciais e para eventos são atendidas pelas 172 viaturas que temos em frota.</p>
+                            <p class="mb-24">Contamos consigo como parceiro, porque acreditamos em si e na qualidade do  serviço que queremos lhe oferecer.</p>
+                            <p class="mb-24">Qualidade aos melhores preços. Temos para si uma frota Multimarca, com Assistência técnica e Qualidade na Entrega</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- vicheles-end -->
+    <!-- About-area start  end -->
+
+    <!-- About-area start -->
+    <section class="about my-80">
+        <div class="container ps-0">
+            <div class="design mt-48">
+                <div class="row">
+
+                    <div class="col-xl-7">
+                        <div class="txt-block">
+                            <h4 class="mb-24">Como Funciona o Processo de Aluguer</h4>
+                            <p class="mb-24">Descubra como é simples e rápido alugar a sua viatura com a Chana RENT-A-CAR — em poucos passos, você tem o carro certo pronto para o seu percurso.</p>
+                            <p class="mb-24">Uma explicação simples em passos:</p>
+                        </div>
+                        <div class="row gy-4 gx-0">
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow me-4" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-1-square custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6 text-white">Escolha a viatura</h5>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow " data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-2-square custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6 text-white">Envie os seus dados</h5>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow me-4" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-3-square custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6 text-white">Receba a confirmação</h5>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
+                                <div class="feature-item d-block align-items-center justify-content-center text-center">
+                                    <div class="feature-icon">
+                                        <span class="fs-4"><i class="bi bi-4-square custom"></i></span>
+                                    </div>
+                                    <div class="ms-4 mt-2">
+                                        <h5 class="mb-3 fs-6 text-white">Retire o carro ou solicite entrega</h5>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="assets/media/corporate/img17.jpeg" alt="car"style="height: 550px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About-area start  end -->
+
+
+
+    <main class="container page-wrap py-5 py-md-2">
+
+    <!-- Big hero image with play button overlay -->
+    <div class="hero-media mb-3">
+      <img src="assets/media/hero/bg-chana.jpg" alt="Escritório moderno" />
+      <button class="play-btn" type="button" data-bs-toggle="modal" data-bs-target="#videoModal" aria-label="Reproduzir vídeo">
+        <i class="bi bi-play-fill"></i>
+      </button>
+    </div>
+  </main>
+
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black">
+        <div class="ratio ratio-16x9">
+          <!-- Player HTML5 elimina restrições de autoplay de iframes -->
+          <video id="modalVideo" preload="metadata" muted playsinline controls poster="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1280&auto=format&fit=crop">
+            <source src="assets/media/video/video1.mp4" type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
 
      <section class="vehicles-2 py-80">
         <div class="container">
@@ -240,46 +395,43 @@
     <!-- About-area start  end -->
 
     <!-- brands-start -->
-    <div class="brand-section my-40 py-48">
-        <div class="container">
+    <div class="brand-section py-5">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="brand-slider">
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-1.png" alt="brand-1">
+                            <img src="assets/media/brands/editadas/bmw.png" alt="brand-1">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-2.png" alt="brand-2">
+                            <img src="assets/media/brands/editadas/baic.png" alt="brand-2">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-3.png" alt="brand-3">
+                            <img src="assets/media/brands/editadas/changan.png" alt="brand-3">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-4.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/foday.png" alt="brand-4">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-5.png" alt="brand-4">
-                        </div>
-                        {{-- <div class="brand-block">
-                            <img src="assets/media/brands/brand-6.png" alt="brand-5">
-                        </div> --}}
-                        <div class="brand-block">
-                            <img src="assets/media/brands/brand-1.png" alt="brand-1">
+                            <img src="assets/media/brands/editadas/geely.png" alt="brand-5">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-2.png" alt="brand-2">
+                            <img src="assets/media/brands/editadas/hyundai.png" alt="brand-6">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-3.png" alt="brand-3">
+                            <img src="assets/media/brands/editadas/jetour.png" alt="brand-1">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-4.png" alt="brand-4">
+                            <img src="assets/media/brands/editadas/mazda.png" alt="brand-2">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-5.png" alt="brand-5">
+                            <img src="assets/media/brands/editadas/nissan.png" alt="brand-3">
                         </div>
                         <div class="brand-block">
-                            <img src="assets/media/brands/brand-6.png" alt="brand-6">
+                            <img src="assets/media/brands/editadas/suzuki.png" alt="brand-4">
+                        </div>
+                        <div class="brand-block">
+                            <img src="assets/media/brands/editadas/toyota.png" alt="brand-5">
                         </div>
                     </div>
                 </div>
@@ -356,29 +508,32 @@
         </div>
     </section> --}}
 
-     <script>
-    document.getElementById('playButton').addEventListener('click', function() {
-      const container = document.querySelector('.video-container');
-      const overlay = document.getElementById('videoOverlay');
-      const image = document.getElementById('previewImage');
 
-      // Remove a imagem e o botão
-      image.remove();
-      overlay.remove();
+ <script>
+    // Configure video autoplay on open and stop on close
+    (function () {
+      const modalEl = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
 
-      // Cria o elemento <video>
-      const video = document.createElement('video');
-      video.src = "assets/media/video/video1.mp4"; // 🔹 Substitui pelo caminho do teu vídeo local
-      video.controls = true;
-      video.autoplay = true;
-      video.muted = false;
-      video.playsInline = true;
-      video.classList.add("rounded-4");
-      video.style.width = "100%";
-      video.style.height = "auto";
+      // Garantir play ao abrir (com clique do usuário funciona mesmo sem som; mantemos muted para consistência)
+      modalEl.addEventListener('shown.bs.modal', function () {
+        try {
+          video.currentTime = 0;
+          const playPromise = video.play();
+          if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.catch(function () {
+              // tentativa secundária caso o navegador recuse a primeira
+              setTimeout(function(){ video.play(); }, 50);
+            });
+          }
+        } catch (_) {}
+      });
 
-      container.appendChild(video);
-    });
+      // Pausar e resetar ao fechar
+      modalEl.addEventListener('hide.bs.modal', function () {
+        try { video.pause(); video.currentTime = 0; } catch (_) {}
+      });
+    })();
   </script>
 
 @endsection
