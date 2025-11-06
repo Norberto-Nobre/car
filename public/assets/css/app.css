@@ -1839,7 +1839,7 @@ Banners das páginas
 .bg-breadcrumb-3{
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs    /blog-2.png') fixed;
+    background: linear-gradient(rgba(4,26,113,0.7), rgba(4,26,113,0.9)), url('../media/blogs/blog-2.png') fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4050,7 +4050,7 @@ footer .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggl
 .files form .topic h2 {
   color: #040408;
 }
-.files form .topic input {
+.files form .topic input, textarea {
   padding: clamp(12px, 0.833vw, 24px);
   width: 100%;
   border-radius: 8px;
@@ -4058,6 +4058,9 @@ footer .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggl
   background: white;
 }
 .files form .topic input:focus-visible {
+  outline: none;
+}
+.files form .topic textarea:focus-visible {
   outline: none;
 }
 

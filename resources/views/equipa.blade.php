@@ -4,6 +4,10 @@
 @section('content')
 
 <style>
+
+    .pointer{
+        cursor: pointer;
+    }
     /*########## NOSSA EQUIPE CSS ###########*/
 
     .staff {
@@ -155,28 +159,27 @@
                         <p class="mb-12 text-center">Contamos com uma equipa dedicada e experiente, sempre pronta para oferecer o melhor atendimento.</p>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-2 ftco-animate">
+                        <div class="col-md-6 col-lg-2 ftco-animate pointer">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
-								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
+								     <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></a>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>João Miguel </h3>
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="">
+                                        <h3>João Miguel </h3>
 								    <span class="position mb-2">Director Geral</span>
 								    <div class="faded">
 									    <p></p>
-									    <ul class="ftco-social text-center">
+									    {{-- <ul class="ftco-social text-center">
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
+                    		              </ul> --}}
 	                                </div>
+                                    </a>
 							     </div>
 						    </div>
 					    </div>
-
-
-
                     </div>
                 </div>
     </section>
@@ -185,7 +188,7 @@
                 <div class="container">
 
                     <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-2 ftco-animate">
+                        <div class="col-md-6 col-lg-2 ftco-animate pointer">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
@@ -195,17 +198,17 @@
 								    <span class="position mb-2">Gestor Comercial</span>
 								    <div class="faded">
 									    <p></p>
-									    <ul class="ftco-social text-center">
+									    {{-- <ul class="ftco-social text-center">
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
+                    		              </ul> --}}
 	                                </div>
 							     </div>
 						    </div>
 					    </div>
 
-					    <div class="col-md-6 col-lg-2 ftco-animate">
+					    <div class="col-md-6 col-lg-2 ftco-animate pointer">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
@@ -215,35 +218,33 @@
 								    <span class="position mb-2">Gestora Adm/Finanças</span>
 								    <div class="faded">
 									    <p></p>
-									    <ul class="ftco-social text-center">
-
+									    {{-- <ul class="ftco-social text-center">
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
+                    		            </ul> --}}
 	                                </div>
-							     </div>
+							    </div>
 						    </div>
 					    </div>
 
-					    <div class="col-md-6 col-lg-2 ftco-animate">
+					    <div class="col-md-6 col-lg-2 ftco-animate pointer">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
-								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
+								    <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
 								    <h3>Josemar Francisco</h3>
 								    <span class="position mb-2">Gestor Operacional</span>
 								    <div class="faded">
 									    <p></p>
-									    <ul class="ftco-social text-center">
-
+									    {{-- <ul class="ftco-social text-center">
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
+                    		            </ul> --}}
 	                                </div>
-							     </div>
+							    </div>
 						    </div>
 					    </div>
 
@@ -254,7 +255,7 @@
      <section class="section mt-0 pt-0">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-2 ftco-animate">
+                        <div class="col-md-6 col-lg-2 ftco-animate pointer">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
@@ -264,17 +265,17 @@
 								    <span class="position mb-2">Gestora de C.Corporativos</span>
 								    <div class="faded">
 									    <p></p>
-									    <ul class="ftco-social text-center">
+									    {{-- <ul class="ftco-social text-center">
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
+                    		              </ul> --}}
 	                                </div>
 							     </div>
 						    </div>
 					    </div>
 
-					    <div class="col-md-6 col-lg-2 ftco-animate">
+					    <div class="col-md-6 col-lg-2 ftco-animate pointer">
 						    <div class="staff">
 							    <div class="img-wrap d-flex align-items-stretch">
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
@@ -285,19 +286,38 @@
 								    <span class="position mb-2">Gestora de Sinistros</span>
 								    <div class="faded">
 									    <p></p>
-									    <ul class="ftco-social text-center">
-
+									    {{-- <ul class="ftco-social text-center">
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-facebook fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-linkedin fs-7"></span></a></li>
                     		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center text-primary"><span class="bi bi-instagram fs-7"></span></a></li>
-                    		              </ul>
+                    		            </ul> --}}
 	                                </div>
-							     </div>
+							    </div>
 						    </div>
 					    </div>
 
 
-
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <div>
+                                    <h5 class="modal-title" id="exampleModalLabel">João Miguel</h5>
+                                    <span class="position mb-2">Director Geral</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Biografia do diretor Geral aqui
+                            </div>
+                            {{-- <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div> --}}
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
     </section>

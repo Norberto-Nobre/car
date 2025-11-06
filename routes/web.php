@@ -9,6 +9,8 @@ use App\Http\Controllers\FrotaController;
 use App\Http\Controllers\ReservaDetalhesController;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmailController;
+use App\Http\Controllers\ContactController;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -28,6 +30,13 @@ Route::get('/carro-detalhes/{vehicle:slug}', [CarroDetalhesController::class, 'd
 Route::get('/reserva-detalhes/{vehicle:slug}', [ReservaDetalhesController::class, 'reserva'])->name('front.reserva-detalhes');
 Route::post('/custumer', [CustumerController::class,'store'])->name('custumer.store');
 Route::post('/booking_dados', [BookingController::class,'reserveData'])->name('front.bookingdata');
+
+// Rotas de email
+// Route::get('/email', [EmailController::class, 'index'])->name('email.index');
+// Route::post('/send-email', [EmailController::class, 'sendEmail'])->name('email.send');
+
+Route::get('/enviar-email', [EmailController::class, 'enviar'])->name('enviar.email');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('front.contact.send');
 
 // routes/web.php
 Route::get('/success/{booking_code}', function ($booking_code) {

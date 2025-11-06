@@ -14,7 +14,7 @@ return [
     */
 
     'home' => 'Início',
-    'about' => 'Noticias',
+    'about' => 'Quem Somos',
     'fleet' => 'Nossa Frota',
     'faq' => 'FAQ',
     'contact' => 'Contactos',

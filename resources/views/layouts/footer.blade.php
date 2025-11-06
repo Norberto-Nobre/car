@@ -14,8 +14,8 @@
                         </a>
                     </div>
                     <p class="mb-32">{{ __('footer.footer.p') }}</p>
-                    <h6 class="white mb-16">{{ __('footer.footer.h6') }}</h6>
-                    <form action="javascript:void(0);" class="newsletter-form">
+                    {{-- <h6 class="white mb-16">{{ __('footer.footer.h6') }}</h6> --}}
+                    {{-- <form action="javascript:void(0);" class="newsletter-form">
                         <input type="email" name="email" id="eMail" class="form-input"
                             placeholder="Seu E-mail">
                         <button type="submit">
@@ -28,7 +28,7 @@
                                 </g>
                             </svg>
                         </button>
-                    </form>
+                    </form> --}}
                 </div>
                 <div class="col-lg-5 col-md-8 offset-lg-1">
                     <div class="row">

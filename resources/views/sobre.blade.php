@@ -156,7 +156,7 @@
             <div class="design mt-48">
                 <div class="row">
                     <div class="col-lg-5">
-                        <img src="assets/media/corporate/img16.jpeg" alt="car" style="height: 500px">
+                        <img src="assets/media/corporate/img20.webp" alt="car" style="height: 500px">
                     </div>
                     <div class="col-lg-7">
                         <div class="txt-block">
