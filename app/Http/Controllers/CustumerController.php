@@ -23,7 +23,7 @@ class CustumerController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'gender' => $request->gender,
-            'phone' => "+244929372512",
+            'phone' => $fullPhone,
             'address' => $request->address,
             'password' => "default", // ⚠️ depois podes mudar para bcrypt
             'date_of_birth' => $request->date_of_birth,
@@ -64,14 +64,14 @@ class CustumerController extends Controller
     {
         $token = env('WHATSAPP_TOKEN');
         $phoneId = env('WHATSAPP_PHONE_ID');
-        
+
         $response = Http::withToken($token)->post("https://graph.facebook.com/v22.0/{$phoneId}/messages", [
             'messaging_product' => 'whatsapp',
             'to'   => $to,
             'type' => 'text',
             'text' => ['body' => $message],
         ]);
-        
+
         // dd($response->json());
 
         return $response->json();
