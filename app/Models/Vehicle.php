@@ -20,6 +20,10 @@ class Vehicle extends Model
         'slug',
         'notes',
         'is_popular',
+        'damage_tax',
+    ];
+    protected $casts = [
+        'damage_tax' => 'decimal:2',
     ];
 
     public function vehicleModel()

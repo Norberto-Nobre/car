@@ -112,7 +112,7 @@
                                 @endphp
 
                                 @php
-                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao;
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $taxaAbastecimento + $taxaMotorista + $damageTax;
                                 @endphp
 
                                 <input type="number" hidden name="vehicle_id" value="{{$vehicle->vehicle_id}}">
@@ -680,7 +680,15 @@
                                     <h6 class="fs-6">Caução</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
+
                                 <h6 class="fs-6">{{number_format($caussao, '0', ',', '.')}} kz</h6>
+                            </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Taxa de Danos Próprios</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">{{number_format($damageTax, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
@@ -696,6 +704,20 @@
                                 </div>
                                 <h6 class="fs-6">{{number_format($taxa_provincial * $dias_provincia, '0', ',', '.')}} kz</h6>
                             </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Taxa de Abastecimento</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">{{ number_format($taxaAbastecimento, 0, ',', '.') }} kz</h6>
+                            </div>
+                            <div class="justify-content-between d-flex mb-24">
+                                <div>
+                                    <h6 class="fs-6">Taxa de Motorista</h6>
+                                    {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                </div>
+                                <h6 class="fs-6">{{number_format($taxaMotorista, '0', ',', '.')}} kz</h6>
+                            </div>
                             <hr class="color-primary mb-12">
                             {{-- <div class="justify-content-between d-flex mb-32">
                                 <div>
@@ -708,13 +730,13 @@
                                     <h6>Total</h6>
                                 </div>
                                 @php
-                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao;
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $taxaAbastecimento + $taxaMotorista + $damageTax;
                                 @endphp
                                 <h6>{{number_format($total, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mt-4">
                                 <div>
-                                    <p class="text-danger"><i class="bi bi-info-circle"></i>  O valor total é com Iva incluido</p>
+                                    <p class="text-danger"><i class="bi bi-info-circle"></i>  O valor total é com IVA incluido</p>
                                 </div>
 
                             </div>

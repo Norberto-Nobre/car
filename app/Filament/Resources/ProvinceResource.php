@@ -35,6 +35,16 @@ class ProvinceResource extends Resource
                     ->required()
                     ->numeric()
                     ->prefix('Kz'),
+                Forms\Components\TextInput::make('refueling_tax')
+                    ->required()
+                    ->numeric()
+                    ->label('Taxa de Abastecimento')
+                    ->prefix('Kz'),
+                Forms\Components\TextInput::make('driver_tax')
+                    ->required()
+                    ->label('Taxa de Motorista')
+                    ->numeric()
+                    ->prefix('Kz'),
             ]);
     }
 
@@ -46,6 +56,14 @@ class ProvinceResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->money('AOA', true)
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('refueling_tax')
+                    ->money('AOA', true)
+                    ->label('Taxa de Abastecimento')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('driver_tax')
+                    ->money('AOA', true)
+                    ->label('Taxa de Motorista')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

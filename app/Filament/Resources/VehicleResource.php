@@ -43,6 +43,11 @@ class VehicleResource extends Resource
                     ->required(),
                  Forms\Components\Toggle::make('is_popular')
                     ->required(),
+                Forms\Components\TextInput::make('damage_tax')
+                    ->required()
+                    ->numeric()
+                    ->label('Danos próprios')
+                    ->prefix('Kz'),
                 // Forms\Components\TextInput::make('slug')
                 //     ->required()
                 //     ->maxLength(255),
@@ -67,6 +72,10 @@ class VehicleResource extends Resource
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
                 Tables\Columns\ToggleColumn::make('is_popular'),
+                Tables\Columns\TextColumn::make('damage_tax')
+                    ->money('AOA', true)
+                    ->label('Danos próprios')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()

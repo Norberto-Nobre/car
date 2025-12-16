@@ -31,7 +31,7 @@ class BookingController extends Controller
         $data = $values;
         // Validação se a entrega é no escritorio ou não
        $local = is_numeric($values['pickup_location']) ? (int) $values['pickup_location'] : 0;
-       
+
         // Pegando o nome do escritorio de retirada
         if (is_numeric($values['pickup_location'])) {
             $office = DB::table('offices')->where('id', $values['pickup_location'])->first();
@@ -49,11 +49,33 @@ class BookingController extends Controller
         }
 
         //Validação se selecionou a provincia ou não
+        $taxaAbastecimento = 0;
+        $taxaMotorista = 0;
         if(!empty($values['out_of_province']) && !empty($values['destination_province'])){
-            $province = DB::table('provinces')->select('*')->where('id',$values['destination_province'])->get();
-            $province = $province[0];
+            $province = DB::table('provinces')
+            ->where('id', $values['destination_province'])
+            ->first();
+        if ($province) {
+        if ($request->has('refueling_tax')) {
+            $taxaAbastecimento = $province->refueling_tax;
+        }
+
+        if ($request->has('driver_tax')) {
+            $taxaMotorista = $province->driver_tax;
+        }
+    }
         }else{
-            $province = 0;
+            $province = [0];
+        }
+
+        //Pegando a taxa da danos próprios
+        if ($request->has('danos_proprio')) {
+            $damageTax = DB::table('vehicles')
+                ->where('slug', $values['vehicle_slug'])
+                ->first();
+            $damageTax = $damageTax ? $damageTax->damage_tax : 0;
+        } else {
+            $damageTax = 0;
         }
         // Contagem dos dias
         $dataEntrega = new DateTime($values['pickup_date']);
@@ -70,7 +92,7 @@ class BookingController extends Controller
             ->where('vehicles.slug','like',"%{$vehicle}%")->get();
         $vehicle = $result[0];
 
-        return view('reserva-detalhes',compact('data','vehicle','province','local', 'pickupLocation','dropoffLocation','days'));
+        return view('reserva-detalhes',compact('data','vehicle','province','local', 'pickupLocation','dropoffLocation','days','taxaAbastecimento','taxaMotorista', 'damageTax'));
     }
 }
 

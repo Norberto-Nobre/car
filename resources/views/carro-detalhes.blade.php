@@ -287,7 +287,7 @@
                     <!--<form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form"> -->
                 <form action="{{ route('front.bookingdata') }}" method="post" class="form" onsubmit="return validarDiasProvincia()">
                     @csrf
-                    <h6 class="fs-6 mb-24">Verificar disponibilidade</h6>
+                    <h6 class="fs-6 mb-24">Preecha o formulário</h6>
                     <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>
                     <div class="pickup-location-container">
                         <div class="location-input-wrapper">
@@ -336,6 +336,13 @@
                         <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
                     </div>
 
+                    <div class="province-check-container mb-12">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="danos_proprio" name="danos_proprio">
+                            <span class="checkbox-text">Taxa de Danos Próprio <strong>(kz {{number_format($vehicle->damage_tax,'0',',','.')}})</strong></span>
+                        </label>
+                    </div>
+
                     @if ($vehicle->vehicleModel->category->provincial == 1)
                     <div class="province-check-container mb-12">
                         <label class="checkbox-container">
@@ -358,6 +365,23 @@
                         <div class="province-check-container mb-12">
                             <input type="number" name="dias_province" id="dias_province" min="1" value="1">
                         </div>
+
+                        <p class="mb-8 fw-600 dark-gray">Outras taxas</p>
+                        <div class="province-check-container ms-2 mb-12">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="refueling_tax" name="refueling_tax" value="1" checked required>
+                            <span class="checkbox-text">
+                                Taxa de abastecimento <strong id="taxa_abastecimento">(kz 0)</strong>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="driver_tax" name="driver_tax" value="1" checked required>
+                            <span class="checkbox-text">
+                                Taxa de Motorista <strong id="taxa_motorista">(kz 0)</strong>
+                            </span>
+                        </label>
+                    </div>
                     </div>
 
                     <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">
@@ -999,5 +1023,28 @@ function validarDiasProvincia() {
 document.getElementById('pickup_date').addEventListener('change', atualizarMaxDiasProvincia);
 document.getElementById('dropoff_date').addEventListener('change', atualizarMaxDiasProvincia);
     </script>
+
+    <script>
+document.getElementById('destination_province').addEventListener('change', function () {
+    let provinceId = this.value;
+
+    if (!provinceId) {
+        document.getElementById('taxa_abastecimento').innerText = '(0 kz)';
+        document.getElementById('taxa_motorista').innerText = '(0 kz)';
+        return;
+    }
+
+    fetch(`/province/${provinceId}/taxas`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('taxa_abastecimento').innerText =
+                `(kz ${Number(data.taxa_abastecimento).toLocaleString('pt-PT')})`;
+
+            document.getElementById('taxa_motorista').innerText =
+                `(kz ${Number(data.taxa_motorista).toLocaleString('pt-PT')})`;
+        })
+        .catch(err => console.error(err));
+});
+</script>
 
 @endsection

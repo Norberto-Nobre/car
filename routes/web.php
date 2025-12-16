@@ -11,6 +11,7 @@ use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProvinceController;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -30,6 +31,8 @@ Route::get('/carro-detalhes/{vehicle:slug}', [CarroDetalhesController::class, 'd
 Route::get('/reserva-detalhes/{vehicle:slug}', [ReservaDetalhesController::class, 'reserva'])->name('front.reserva-detalhes');
 Route::post('/custumer', [CustumerController::class,'store'])->name('custumer.store');
 Route::post('/booking_dados', [BookingController::class,'reserveData'])->name('front.bookingdata');
+
+Route::get('/province/{id}/taxas', [ProvinceController::class, 'taxas']);
 
 // Rotas de email
 // Route::get('/email', [EmailController::class, 'index'])->name('email.index');
