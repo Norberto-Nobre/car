@@ -134,7 +134,7 @@
                             <a href="{{route('front.faqs')}}">{{ __('navigation.faq') }}</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);">{{ __('navigation.about') }}</a>
+                            <a href="{{route('front.pesquisar-reserva')}}">{{ __('navigation.search_booking') }}</a>
                         </li>
                         <li>
                             <a href="{{route('front.contacto')}}">{{ __('navigation.contact') }}</a>

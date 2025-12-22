@@ -57,7 +57,8 @@ class CustumerController extends Controller
         $this->sendWhatsAppMessage($customer->phone, $msg);
 
         return redirect()->route('success', $booking->booking_code)
-            ->with('success', 'Reserva realizada com sucesso! Verifique o seu Whatsapp: '.$customer->phone);
+            ->with('success', 'Reserva realizada com sucesso, a nossa equipa entrará em contacto consigo. Obrigado!');
+            // ->with('success', 'Reserva realizada com sucesso! Verifique o seu Whatsapp: '.$customer->phone);
     }
 
     public function sendWhatsAppMessage($to, $message)

@@ -47,4 +47,8 @@ class FrontController extends Controller
     public function termos(){
         return view('termos');
     }
+
+    public function searchBooking(){
+        return view('search-booking');
+    }
 }

@@ -22,5 +22,6 @@ return [
     'register' => 'Registrar',
     'company' => 'Institucional',
     'team' => 'Nossa Equipa',
+    'search_booking' => 'Pesquisar Reserva',
     'history' => 'Nossa História',
 ];

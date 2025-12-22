@@ -22,6 +22,7 @@ return [
     'register' => 'Register',
     'company' => 'Institutional',
     'team' => 'Our Team',
+    'search_booking' => 'Search Booking',
     'history' => 'Our History',
 
 ];

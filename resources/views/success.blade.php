@@ -31,7 +31,7 @@
                     <div class="banner-2">
                         <h6 class="fs-6">Detalhes do Pedido</h6>
                         <hr class="my-24">
-                        <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-between ">
+                        <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-between">
                             <div class=" d-flex flex-column gap-24 ">
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <i class="bi bi-hash text-info"></i>
