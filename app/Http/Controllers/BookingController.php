@@ -55,15 +55,15 @@ class BookingController extends Controller
             $province = DB::table('provinces')
             ->where('id', $values['destination_province'])
             ->first();
-        if ($province) {
-        if ($request->has('refueling_tax')) {
-            $taxaAbastecimento = $province->refueling_tax;
-        }
+    //     if ($province) {
+    //     if ($request->has('refueling_tax')) {
+    //         $taxaAbastecimento = $province->refueling_tax;
+    //     }
 
-        if ($request->has('driver_tax')) {
-            $taxaMotorista = $province->driver_tax;
-        }
-    }
+    //     if ($request->has('driver_tax')) {
+    //         $taxaMotorista = $province->driver_tax;
+    //     }
+    // }
         }else{
             $province = [0];
         }
