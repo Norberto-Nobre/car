@@ -51,4 +51,14 @@ class FrontController extends Controller
     public function searchBooking(){
         return view('search-booking');
     }
+
+    public function searchByCode(Request $request){
+        $booking = $this->frontService->findByCode($request->input('term'));
+
+        if(!$booking){
+            return redirect()->back()->with('error', 'Código de reserva não encontrado. Por favor, verifique e tente novamente.');
+        }
+
+        return view('booking-result', compact('booking'));
+    }
 }

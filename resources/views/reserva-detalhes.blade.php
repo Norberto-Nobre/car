@@ -95,24 +95,41 @@
                                     </div>
 
                                 @php
+                                    // Calcular taxas provincial
                                     if(isset($province->price)){
                                         $taxa_provincial = $province->price;
                                     }else{
                                         $taxa_provincial = 0;
                                     }
 
+                                    // Calcular taxa de entrega
                                     if($local == 0){
-                                        $taxa_entrega = 10000;
+                                        $taxa_entrega = 11400;
                                     }else{
                                         $taxa_entrega = 0;
                                     }
+                                    // Calcular taxa de abastecimento
+                                    if (isset($_POST['refueling_tax'])) {
+                                        $refueling_tax = 25650;
+                                    } else {
+                                        $refueling_tax = 0;
+                                    }
+
+                                    //Calcular taxa de Motorista
+                                    if (isset($_POST['driver_tax'])) {
+                                        $driver_tax = 25650;
+                                    } else {
+                                        $driver_tax = 0;
+                                    }
+
+
                                     $dias = $days;
                                     $caussao = $vehicle->caussion;
                                     $dias_provincia = $data['dias_province'] ?? 0;
                                 @endphp
 
                                 @php
-                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $taxaAbastecimento + $taxaMotorista + $damageTax;
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $refueling_tax + $driver_tax + $damageTax;
                                 @endphp
 
                                 <input type="number" hidden name="vehicle_id" value="{{$vehicle->vehicle_id}}">
@@ -668,7 +685,7 @@
                                     }
 
                                     if($local == 0){
-                                        $taxa_entrega = 10000;
+                                        $taxa_entrega = 11400;
                                     }
                                     $dias = $days;
                                     $caussao = $vehicle->caussion;
@@ -709,14 +726,14 @@
                                     <h6 class="fs-6">Taxa de Abastecimento</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">{{ number_format($taxaAbastecimento, 0, ',', '.') }} kz</h6>
+                                <h6 class="fs-6">{{ number_format($refueling_tax, 0, ',', '.') }} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa de Motorista</h6>
+                                    <h6 class="fs-6">Taxa de Motorista/{{$dias}} dias</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">{{number_format($taxaMotorista, '0', ',', '.')}} kz</h6>
+                                <h6 class="fs-6">{{number_format($driver_tax * $dias, '0', ',', '.')}} kz</h6>
                             </div>
                             <hr class="color-primary mb-12">
                             {{-- <div class="justify-content-between d-flex mb-32">
@@ -730,7 +747,7 @@
                                     <h6>Total</h6>
                                 </div>
                                 @php
-                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $taxaAbastecimento + $taxaMotorista + $damageTax;
+                                    $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $refueling_tax + $driver_tax + $damageTax;
                                 @endphp
                                 <h6>{{number_format($total, '0', ',', '.')}} kz</h6>
                             </div>

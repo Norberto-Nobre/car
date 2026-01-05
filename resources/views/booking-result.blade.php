@@ -22,7 +22,7 @@
                 </div>
             @endif
 
-            <div class="ride my-80">
+            {{-- <div class="ride my-80">
                 <div class="container">
                     <div class="heads mb-48 d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-center">
                         <div class="Search-field border">
@@ -33,22 +33,57 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+
+            <div class="container">
+            <div class="heads mb-48">
+                <div class="file">
+                    <h4 class="mb-12">Resultado da Pesquisa</h4>
+                    
+                </div>
             </div>
+        </div>
 
-             @if(session('error'))
-    <div id="alert-error" class="alert alert-danger" style="position: relative;">
-        {{ session('error') }}
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="" style="background-color: #041A71">
+                        <tr class="text-white">
+                            <th>Cliente</th>
+                            <th>Veículo</th>
+                            <th>Valor total</th>
+                            <th>codigo da reserva</th>
+                            <th>Data da reserva</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{$booking->customer->name}}</td>
+                            <td>{{$booking->vehicle->vehicleModel->brand->name}} {{$booking->vehicle->vehicleModel->name}}</td>
+                            <td>{{number_format($booking->total_amount, 0, ',', '.') }} Kz</td>
+                            <td>{{$booking->booking_code}}</td>
+                            <td>{{ \Carbon\Carbon::parse($booking->created_at)->format('d/m/Y') }} </td>
+                            <td>
+                                @php
+                                    $status = strtolower($booking->status);
 
-        <button
-            type="button"
-            onclick="document.getElementById('alert-error').remove()"
-            style="position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 18px; cursor: pointer;"
-        >
-            &times;
-        </button>
-    </div>
-@endif
+                                    $statusClass = match ($status) {
+                                        'aprovado'  => 'bg-success',
+                                        'pendente'  => 'bg-warning text-dark',
+                                        'cancelado' => 'bg-danger',
+                                        'expirado'  => 'bg-secondary',
+                                        default     => 'bg-light text-dark',
+                                    };
+                                @endphp
 
+                                <span class="badge {{ $statusClass }}">
+                                    {{ ucfirst($status) }}
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
     </section>

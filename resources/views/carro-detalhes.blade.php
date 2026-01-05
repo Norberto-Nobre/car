@@ -335,6 +335,7 @@
                         <input type="date" name="dropoff_date" class="mb-12" id="dropoff_date" required>
                         <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
                     </div>
+                    {{--  --}}
 
                     <div class="province-check-container mb-12">
                         <label class="checkbox-container">
@@ -342,6 +343,22 @@
                             <span class="checkbox-text">Taxa de Danos Próprio <strong>(kz {{number_format($vehicle->damage_tax,'0',',','.')}})</strong></span>
                         </label>
                     </div>
+
+
+                        <label class="checkbox-container mb-12">
+                            <input type="checkbox" id="refueling_tax" name="refueling_tax" value="1">
+                            <span class="checkbox-text">
+                                Taxa de abastecimento <strong>(kz 25.650)</strong>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-container mb-12">
+                            <input type="checkbox" id="driver_tax" name="driver_tax" value="1">
+                            <span class="checkbox-text">
+                                Taxa de Motorista <strong>(kz 25.650/dia)</strong>
+                            </span>
+                        </label>
+
 
                     @if ($vehicle->vehicleModel->category->provincial == 1)
                     <div class="province-check-container mb-12">
@@ -366,7 +383,7 @@
                             <input type="number" name="dias_province" id="dias_province" min="1" value="1">
                         </div>
 
-                        <p class="mb-8 fw-600 dark-gray">Outras taxas</p>
+                        {{-- <p class="mb-8 fw-600 dark-gray">Outras taxas</p>
                         <div class="province-check-container ms-2 mb-12">
                         <label class="checkbox-container">
                             <input type="checkbox" id="refueling_tax" name="refueling_tax" value="1" checked required>
@@ -381,7 +398,7 @@
                                 Taxa de Motorista <strong id="taxa_motorista">(kz 0)</strong>
                             </span>
                         </label>
-                    </div>
+                        </div> --}}
                     </div>
 
                     <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">

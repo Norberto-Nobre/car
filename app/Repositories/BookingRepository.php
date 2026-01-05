@@ -20,9 +20,9 @@ class BookingRepository implements BookingRepositoryInterface
     public function findById(int $id): ?Booking
     {
         return $this->model->with([
-            'customer', 
-            'vehicle.vehicleModel.brand', 
-            'pickupOffice', 
+            'customer',
+            'vehicle.vehicleModel.brand',
+            'pickupOffice',
             'returnOffice',
             'province',
             'bookingContract'
@@ -32,11 +32,11 @@ class BookingRepository implements BookingRepositoryInterface
     public function findByCode(string $code): ?Booking
     {
         return $this->model->with([
-            'customer', 
-            'vehicle.vehicleModel.brand', 
-            'pickupOffice', 
+            'customer',
+            'vehicle.vehicleModel.brand',
+            'pickupOffice',
             'returnOffice'
-        ])->where('code', $code)->first();
+        ])->where('booking_code', $code)->first();
     }
 
     public function findByCustomerId(int $customerId): Collection
@@ -108,11 +108,11 @@ class BookingRepository implements BookingRepositoryInterface
     public function getTotalRevenue(?string $startDate = null, ?string $endDate = null): float
     {
         $query = $this->model->whereIn('status', ['confirmed', 'completed']);
-        
+
         if ($startDate && $endDate) {
             $query->whereBetween('start_date', [$startDate, $endDate]);
         }
-        
+
         return $query->sum('total_amount');
     }
 

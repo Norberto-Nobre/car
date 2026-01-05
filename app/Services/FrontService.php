@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\Vehicle;
 use App\Contracts\VehicleModelRepositoryInterface;
 use App\Contracts\VehicleRepositoryInterface;
+use App\Repositories\BookingRepository;
 use App\Repositories\BrandRepository;
 use App\Repositories\CategoryRepository;
 
@@ -14,17 +15,20 @@ class FrontService{
     protected $vehicleRepository;
     protected $brandRepository;
     protected $categoryRepository;
+    protected $BookingRepository;
 
     public function __construct(
         VehicleRepositoryInterface $vehicleRepository,
         VehicleModelRepositoryInterface $vehicleModelRepository,
         BrandRepository $brandRepository,
-        CategoryRepository $categoryRepository){
+        CategoryRepository $categoryRepository,
+        BookingRepository $BookingRepository){
 
         $this->vehicleModelRepository = $vehicleModelRepository;
         $this->vehicleRepository = $vehicleRepository;
         $this->brandRepository = $brandRepository;
         $this->categoryRepository = $categoryRepository;
+        $this->BookingRepository = $BookingRepository;
 
 
     }
@@ -39,6 +43,10 @@ class FrontService{
 
     public function searchVehicleModel(string $term){
         return $this->vehicleModelRepository->search($term);
+    }
+
+    public function findByCode(string $code){
+        return $this->BookingRepository->findByCode($code);
     }
 
     public function getFrontPageData(){

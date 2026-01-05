@@ -25,7 +25,7 @@
                     <p class="dark-gray">Navegue por nossa frota e encontre o veículo ideal para sua viagem. <br> Temos opções para todos os estilos, ocasiões e orçamentos.</p>
                 </div>
                 <div class="Search-field">
-                    <form action="{{ route('front.frotas.search') }}" method="GET">
+                    <form action="{{ route('front.booking.result') }}" method="POST">
                         <input type="text" class="search-bar" placeholder="O que está procurando?" name="term">
                     </form>
                 </div>
