@@ -472,8 +472,8 @@
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">{{ __('index.banner.banner3.h2') }}</h2>
-                            <p class="card-text">{{ __('index.banner.banner3.p') }}</p>
+                            <h2 class="card-title">{{ __('index.banner.banner2.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner2.p') }}</p>
                             <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
@@ -491,8 +491,8 @@
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">Viaje com conforto e chegue sempre a tempo!</h2>
-                            <p class="card-text">Pontualidade, segurança e conveniência em cada percurso.</p>
+                            <h2 class="card-title">{{ __('index.banner.banner3.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner3.p') }}</p>
                             <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
@@ -504,8 +504,8 @@
 
                         <div class="card-overlay"></div>
                         <div class="card-content">
-                            <h2 class="card-title">{{ __('index.banner.banner2.h2') }}</h2>
-                            <p class="card-text">{{ __('index.banner.banner2.p') }}</p>
+                            <h2 class="card-title">{{ __('index.banner.banner4.h2') }}</h2>
+                            <p class="card-text">{{ __('index.banner.banner4.p') }}</p>
                             <a href="{{route('front.frotas')}}" class="btn btn-solicitar pulse-animation">{{ __('index.banner.banner1.a') }}</a>
                         </div>
                     </div>
@@ -532,8 +532,8 @@
                                         <span class="fs-4"><i class="bi bi-cash-coin custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Transparência nos preços</h5>
-                                        <p class="mb-0">Excelentes preços. Explicação de Facturas. Poupança em todas as Marcas.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.bg-img.item1.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.bg-img.item1.p') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -544,8 +544,8 @@
                                         <span class="fs-4"><i class="bi bi-car-front-fill custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">{{ __('index.benefits.col-1.h5') }}</h5>
-                                        <p class="mb-0">{{ __('index.benefits.col-1.p') }}</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.bg-img.item2.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.bg-img.item2.p') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -555,8 +555,8 @@
                                         <span class="fs-4"><i class="bi bi-shield-check custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Viaturas Seguras</h5>
-                                        <p class="mb-0">A sua segurança começa com um aluguer de confiança.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.bg-img.item3.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.bg-img.item3.p') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -567,8 +567,8 @@
                                         <span class="fs-4"><i class="bi bi-droplet custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6">Certificado de limpeza</h5>
-                                        <p class="mb-0">Viaturas certificadamente limpas, seguindo um rigoroso protocolo de limpeza e segurança.</p>
+                                        <h5 class="mb-3 fs-6">{{ __('index.bg-img.item4.h5') }}</h5>
+                                        <p class="mb-0">{{ __('index.bg-img.item4.p') }}</p>
                                     </div>
                                 </div>
                             </div>

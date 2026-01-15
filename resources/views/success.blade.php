@@ -29,21 +29,21 @@
                         <p class="mt-24">Snow Chains - $ 150</p>
                     </div> --}}
                     <div class="banner-2">
-                        <h6 class="fs-6">Detalhes do Pedido</h6>
+                        <h6 class="fs-6">{{ __('sucess.session1.h6') }}</h6>
                         <hr class="my-24">
                         <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-between">
                             <div class=" d-flex flex-column gap-24 ">
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <i class="bi bi-hash text-info"></i>
-                                    <P class="fw-bolder">Código da reserva:</P>
+                                    <P class="fw-bolder">{{ __('sucess.session1.p1') }}</P>
                                 </div>
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <i class="bi bi-car-front-fill text-info"></i>
-                                    <p class="fw-bolder">Veículo da reserva:</p>
+                                    <p class="fw-bolder">{{ __('sucess.session1.p2') }}</p>
                                 </div>
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <i class="bi bi-hourglass-split text-info"></i>
-                                    <P class="fw-bolder">Status da reserva:</P>
+                                    <P class="fw-bolder">{{ __('sucess.session1.p3') }}</P>
                                 </div>
                             </div>
 
@@ -64,7 +64,7 @@
                          <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-between ">
                             <div class=" d-flex flex-column gap-24 ">
                                 <div class="flex-shrink-0 d-flex gap-12">
-                                    <P class="fw-bolder">Total a pagar </P>
+                                    <P class="fw-bolder">{{ __('sucess.session1.p4') }}</P>
                                 </div>
                             </div>
 

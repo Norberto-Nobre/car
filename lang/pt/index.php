@@ -49,8 +49,8 @@ return [
             'p' => 'Carros modernos, prontos para acompanhar o seu ritmo.',
         ],
         'banner3' => [
-            'h2' => 'Confiança - Segurança consigo, sempre',
-            'p' => 'Priorizamos a sua tranquilidade a Cada viagem.',
+            'h2' => 'Viaje com conforto e chegue sempre a tempo!',
+            'p' => 'Pontualidade, segurança e conveniência em cada percurso.',
         ],
         'banner4' => [
             'h2' => 'Confiança - Segurança consigo, sempre',
@@ -72,6 +72,30 @@ return [
     'bg-img' => [
         'h1' => 'Por Que Escolher Nossa Empresa?',
         'p' => 'Nosso diferêncial',
+        'item1' => [
+            'h5' => 'Transparência nos preços',
+            'p' => 'Excelentes preços. Explicação de Facturas. Poupança em todas as Marcas.',
+        ],
+        'item2' => [
+            'h5' => 'Variedade de Veículos',
+            'p' => 'Escolha entre diferentes modelos para cada necessidade.',
+        ],
+        'item3' => [
+            'h5' => 'Viaturas Seguras',
+            'p' => 'A sua segurança começa com um aluguer de confiança.',
+        ],
+        'item4' => [
+            'h5' => 'Certificado de limpeza',
+            'p' => 'Viaturas certificadamente limpas, seguindo um rigoroso protocolo de limpeza e segurança.',
+        ],
+        'item5' => [
+            'h5' => 'Rapidez e facilidade',
+            'p' => 'Sem esperas. Opções de compra de serviços extra. Tecnologia que o mantém em movimento.',
+        ],
+        'item6' => [
+            'h5' => 'Soluções de negócios',
+            'p' => 'Toda a flexibilidade para o seu negócio, oferecendo melhores soluções de mobilidade.',
+        ],
     ],
 
     'benefits' => [

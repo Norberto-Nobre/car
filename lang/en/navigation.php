@@ -22,6 +22,7 @@ return [
     'register' => 'Register',
     'company' => 'Institutional',
     'team' => 'Our Team',
+    'who_we_are' => 'Who we are',
     'search_booking' => 'Search Booking',
     'history' => 'Our History',
 

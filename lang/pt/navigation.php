@@ -22,6 +22,7 @@ return [
     'register' => 'Registrar',
     'company' => 'Institucional',
     'team' => 'Nossa Equipa',
+    'who_we_are' => 'Quem Somos',
     'search_booking' => 'Pesquisar Reserva',
     'history' => 'Nossa História',
 ];

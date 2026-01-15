@@ -258,9 +258,9 @@
                                 </svg>
                                 <h5>4.8</h5>
                             </div> --}}
-                            <h6 class="fs-6 mb-4">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">ou similares</small></h6>
-                            <h6 class="fs-6 mb-16">kz {{number_format($vehicle->vehicleModel->price_per_day,'0',',','.')}} /Dia</h6>
-                             <h6 class="fs-6">Caução: <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
+                            <h6 class="fs-6 mb-4">{{$vehicle->vehicleModel->brand->name}} {{$vehicle->vehicleModel->name}} <small class="fw-light" style="font-size: 14px">{{ __('detalhes.session1.h61') }}</small></h6>
+                            <h6 class="fs-6 mb-16">kz {{number_format($vehicle->vehicleModel->price_per_day,'0',',','.')}} {{ __('detalhes.session1.h62') }}</h6>
+                             <h6 class="fs-6">{{ __('detalhes.session1.h63') }} <small class="fw-light" style="font-size: 14px">Kz {{number_format($vehicle->vehicleModel->caussion, '0', ',', '.')}}</small></h6>
                             <div class="d-flex gap-8">
                                 <div class="d-flex gap-8">
                                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -287,36 +287,36 @@
                     <!--<form action="{{ route('front.reserva-detalhes', $vehicle->slug) }}" method="get" class="form"> -->
                 <form action="{{ route('front.bookingdata') }}" method="post" class="form" onsubmit="return validarDiasProvincia()">
                     @csrf
-                    <h6 class="fs-6 mb-24">Preecha o formulário</h6>
-                    <p class="mb-8 fw-600 dark-gray">Local de retirada da viatura</p>
+                    <h6 class="fs-6 mb-24">{{ __('detalhes.session1.form.h6') }}</h6>
+                    <p class="mb-8 fw-600 dark-gray">{{ __('detalhes.session1.form.p1') }}</p>
                     <div class="pickup-location-container">
                         <div class="location-input-wrapper">
                             <select id="pickup_location_select" class="mb-12">
-                                <option value="">Selecione um escritório</option>
+                                <option value="">{{ __('detalhes.session1.form.option1') }}</option>
                                 @foreach($offices as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
                             </select>
                             <button type="button" class="add-location-btn" id="addLocationBtn">
-                                + Adicionar Endereço de entrega
+                                {{ __('detalhes.session1.form.btn1') }}
                             </button>
                         </div>
 
                         <div class="custom-location-input" id="customLocationDiv">
                             <input type="text" id="custom_pickup_location" placeholder="Digite sua localização personalizada...">
                             <button type="button" class="remove-custom-btn" id="removeCustomBtn">
-                                ✕ Remover
+                                {{ __('detalhes.session1.form.btn2') }}
                             </button>
                         </div>
 
                         <input type="hidden" name="pickup_location" id="pickup_location_final" required>
                     </div>
 
-                    <p class="mb-8 fw-600 dark-gray">Local de devolução da viatura</p>
+                    <p class="mb-8 fw-600 dark-gray">{{ __('detalhes.session1.form.p2') }}</p>
                     <div class="pickup-location-container">
                         <div class="location-input-wrapper">
                             <select id="" name="dropoff_location" required class="mb-12">
-                                <option value="">Selecione um escritório</option>
+                                <option value="">{{ __('detalhes.session1.form.option2') }}</option>
                                 @foreach($offices as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -324,13 +324,13 @@
                         </div>
                     </div>
 
-                    <p class="fw-600 mb-8 dark-gray">Data de retirada</p>
+                    <p class="fw-600 mb-8 dark-gray">{{ __('detalhes.session1.form.p3') }}</p>
                     <div class="d-flex gap-24">
                         <input type="date" name="pickup_date" class="mb-12" id="pickup_date" required>
                         <input type="time" name="pickup_time" class="mb-12" id="pickup_time" value="08:00" required>
                     </div>
 
-                    <p class="fw-600 mb-8 dark-gray">Data de entrega</p>
+                    <p class="fw-600 mb-8 dark-gray">{{ __('detalhes.session1.form.p4') }}</p>
                     <div class="d-flex gap-24">
                         <input type="date" name="dropoff_date" class="mb-12" id="dropoff_date" required>
                         <input type="time" name="dropoff_time" class="mb-12" id="dropoff_time" value="08:00" required>
@@ -339,8 +339,8 @@
 
                     <div class="province-check-container mb-12">
                         <label class="checkbox-container">
-                            <input type="checkbox" id="danos_proprio" name="danos_proprio">
-                            <span class="checkbox-text">Taxa de Danos Próprio <strong>(kz {{number_format($vehicle->damage_tax,'0',',','.')}})</strong></span>
+                            <input type="checkbox" id="danos_proprio" name="danos_proprio" checked required>
+                            <span class="checkbox-text">{{ __('detalhes.session1.form.span1') }} <strong>(kz {{number_format($vehicle->damage_tax,'0',',','.')}})</strong></span>
                         </label>
                     </div>
 
@@ -348,14 +348,14 @@
                         <label class="checkbox-container mb-12">
                             <input type="checkbox" id="refueling_tax" name="refueling_tax" value="1">
                             <span class="checkbox-text">
-                                Taxa de abastecimento <strong>(kz 25.650)</strong>
+                                {{ __('detalhes.session1.form.span2') }} <strong>(kz 25.650)</strong>
                             </span>
                         </label>
 
                         <label class="checkbox-container mb-12">
                             <input type="checkbox" id="driver_tax" name="driver_tax" value="1">
                             <span class="checkbox-text">
-                                Taxa de Motorista <strong>(kz 25.650/dia)</strong>
+                                {{ __('detalhes.session1.form.span3') }} <strong>{{ __('detalhes.session1.form.strong') }}</strong>
                             </span>
                         </label>
 
@@ -364,21 +364,21 @@
                     <div class="province-check-container mb-12">
                         <label class="checkbox-container">
                             <input type="checkbox" id="province_check" name="out_of_province" onchange="toggleProvinceSelect()">
-                            <span class="checkbox-text">Vou sair da província</span>
+                            <span class="checkbox-text">{{ __('detalhes.session1.form.span4') }}</span>
                         </label>
                     </div>
                     @endif
 
                     <div class="province-select-container" id="provinceSelectContainer" style="display: none;">
-                        <p class="mb-8 fw-600 dark-gray">Selecione a província de destino</p>
+                        <p class="mb-8 fw-600 dark-gray">{{ __('detalhes.session1.form.p5') }}</p>
                         <select name="destination_province" id="destination_province" class="mb-12">
-                            <option value="">Selecione uma província</option>
+                            <option value="">{{ __('detalhes.session1.form.option3') }}</option>
                             @foreach($provinces as $item)
                                 <option value="{{$item->id}}">{{$item->name}}</option>
                             @endforeach
                         </select>
 
-                        <p class="mb-8 fw-600 dark-gray">Número de dias fora da província</p>
+                        <p class="mb-8 fw-600 dark-gray">{{ __('detalhes.session1.form.p6') }}</p>
                         <div class="province-check-container mb-12">
                             <input type="number" name="dias_province" id="dias_province" min="1" value="1">
                         </div>
@@ -404,8 +404,8 @@
                     <input type="hidden" name="vehicle_slug" id="vehicle_slug" value="{{$vehicle->slug}}">
 
                     <button type="submit" class="cus-btn">
-                        <span class="btn-text">Continuar</span>
-                        <span>continuar</span>
+                        <span class="btn-text">{{ __('detalhes.session1.form.btn3') }}</span>
+                        <span>{{ __('detalhes.session1.form.btn3') }}</span>
                     </button>
                 </form>
                     </div>
@@ -481,7 +481,7 @@
                         <p class="mt-24">Snow Chains - $ 150</p>
                     </div> -->
                     <div class="banner-2">
-                        <h6 class="fs-6">Especificação</h6>
+                        <h6 class="fs-6">{{ __('detalhes.session2.h61') }}</h6>
                         <hr class="my-24">
                         <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap justify-content-between ">
                             <div class=" d-flex flex-column gap-24 ">
@@ -501,7 +501,7 @@
                                             d="M18.5737 13.9982C18.5737 15.1399 19.5025 16.0687 20.6442 16.0687H22.0852C22.2967 16.0687 22.4682 15.8972 22.4682 15.6857C22.4682 15.4742 22.2967 15.3027 22.0852 15.3027H20.6442C19.9249 15.3027 19.3397 14.7176 19.3397 13.9982C19.3397 13.2789 19.9249 12.6937 20.6442 12.6937H21.8024C22.014 12.6937 22.1854 12.5222 22.1854 12.3107C22.1854 12.0992 22.014 11.9277 21.8024 11.9277H20.6442C19.5025 11.9277 18.5737 12.8565 18.5737 13.9982Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Categoria : {{$vehicle->vehicleModel->category->name}} </p>
+                                    <p>{{ __('detalhes.session2.p1') }} {{$vehicle->vehicleModel->category->name}} </p>
                                 </div>
                                 <!-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -542,7 +542,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <p>Assentos : {{$vehicle->vehicleModel->seats}} </p>
+                                    <p>{{ __('detalhes.session2.p2') }} {{$vehicle->vehicleModel->seats}} </p>
                                 </div>
                                 <!-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -572,7 +572,7 @@
                                             d="M23.5312 16.2554C23.7901 16.2554 24 16.0455 24 15.7866C24 15.5277 23.7901 15.3179 23.5312 15.3179C23.2724 15.3179 23.0625 15.5277 23.0625 15.7866C23.0625 16.0455 23.2724 16.2554 23.5312 16.2554Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Tipo de Combustivel : {{$vehicle->vehicleModel->fuel_type}}</p>
+                                    <p>{{ __('detalhes.session2.p3') }} {{$vehicle->vehicleModel->fuel_type}}</p>
                                 </div>
                                 <!-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -603,7 +603,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <p>Transmissão : {{$vehicle->vehicleModel->transmission}} </p>
+                                    <p>{{ __('detalhes.session2.p4') }} {{$vehicle->vehicleModel->transmission}} </p>
                                 </div>
                                 <!-- <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -679,13 +679,13 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <P>Número de portas : {{$vehicle->vehicleModel->doors}}</P>
+                                    <P>{{ __('detalhes.session2.p5') }} {{$vehicle->vehicleModel->doors}}</P>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="banner-3 my-24">
-                        <h6 class="fs-6">Benefícios do Aluguer</h6>
+                        <h6 class="fs-6">{{ __('detalhes.session2.h62') }}</h6>
                         <hr class="my-24">
                         <div class="d-flex  gap-24 flex-sm-noWrap flex-wrap  justify-content-between ">
                             <div class=" d-flex flex-column gap-24 ">
@@ -696,7 +696,7 @@
                                             d="M14.72 8.79L10.43 13.09L8.78 11.44C8.69036 11.3353 8.58004 11.2503 8.45597 11.1903C8.33191 11.1303 8.19678 11.0965 8.05906 11.0912C7.92134 11.0859 7.78401 11.1091 7.65568 11.1594C7.52736 11.2096 7.41081 11.2859 7.31335 11.3833C7.2159 11.4808 7.13964 11.5974 7.08937 11.7257C7.03909 11.854 7.01589 11.9913 7.02121 12.1291C7.02653 12.2668 7.06026 12.4019 7.12028 12.526C7.1803 12.65 7.26532 12.7604 7.37 12.85L9.72 15.21C9.81344 15.3027 9.92426 15.376 10.0461 15.4258C10.1679 15.4755 10.2984 15.5008 10.43 15.5C10.6923 15.4989 10.9437 15.3947 11.13 15.21L16.13 10.21C16.2237 10.117 16.2981 10.0064 16.3489 9.88458C16.3997 9.76272 16.4258 9.63201 16.4258 9.5C16.4258 9.36799 16.3997 9.23728 16.3489 9.11542C16.2981 8.99356 16.2237 8.88296 16.13 8.79C15.9426 8.60375 15.6892 8.49921 15.425 8.49921C15.1608 8.49921 14.9074 8.60375 14.72 8.79ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Controle de Cruzeiro Adaptativo</p>
+                                    <p>{{ __('detalhes.session2.p6') }}</p>
                                 </div>
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -705,7 +705,7 @@
                                             d="M14.72 8.79L10.43 13.09L8.78 11.44C8.69036 11.3353 8.58004 11.2503 8.45597 11.1903C8.33191 11.1303 8.19678 11.0965 8.05906 11.0912C7.92134 11.0859 7.78401 11.1091 7.65568 11.1594C7.52736 11.2096 7.41081 11.2859 7.31335 11.3833C7.2159 11.4808 7.13964 11.5974 7.08937 11.7257C7.03909 11.854 7.01589 11.9913 7.02121 12.1291C7.02653 12.2668 7.06026 12.4019 7.12028 12.526C7.1803 12.65 7.26532 12.7604 7.37 12.85L9.72 15.21C9.81344 15.3027 9.92426 15.376 10.0461 15.4258C10.1679 15.4755 10.2984 15.5008 10.43 15.5C10.6923 15.4989 10.9437 15.3947 11.13 15.21L16.13 10.21C16.2237 10.117 16.2981 10.0064 16.3489 9.88458C16.3997 9.76272 16.4258 9.63201 16.4258 9.5C16.4258 9.36799 16.3997 9.23728 16.3489 9.11542C16.2981 8.99356 16.2237 8.88296 16.13 8.79C15.9426 8.60375 15.6892 8.49921 15.425 8.49921C15.1608 8.49921 14.9074 8.60375 14.72 8.79ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <P>Bancos Aquecidos</P>
+                                    <P>{{ __('detalhes.session2.p7') }}</P>
                                 </div>
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -714,7 +714,7 @@
                                             d="M14.72 8.79L10.43 13.09L8.78 11.44C8.69036 11.3353 8.58004 11.2503 8.45597 11.1903C8.33191 11.1303 8.19678 11.0965 8.05906 11.0912C7.92134 11.0859 7.78401 11.1091 7.65568 11.1594C7.52736 11.2096 7.41081 11.2859 7.31335 11.3833C7.2159 11.4808 7.13964 11.5974 7.08937 11.7257C7.03909 11.854 7.01589 11.9913 7.02121 12.1291C7.02653 12.2668 7.06026 12.4019 7.12028 12.526C7.1803 12.65 7.26532 12.7604 7.37 12.85L9.72 15.21C9.81344 15.3027 9.92426 15.376 10.0461 15.4258C10.1679 15.4755 10.2984 15.5008 10.43 15.5C10.6923 15.4989 10.9437 15.3947 11.13 15.21L16.13 10.21C16.2237 10.117 16.2981 10.0064 16.3489 9.88458C16.3997 9.76272 16.4258 9.63201 16.4258 9.5C16.4258 9.36799 16.3997 9.23728 16.3489 9.11542C16.2981 8.99356 16.2237 8.88296 16.13 8.79C15.9426 8.60375 15.6892 8.49921 15.425 8.49921C15.1608 8.49921 14.9074 8.60375 14.72 8.79ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Multimídia</p>
+                                    <p>{{ __('detalhes.session2.p8') }}</p>
                                 </div>
                             </div>
                             <div class=" d-flex flex-column gap-24 ">
@@ -725,7 +725,7 @@
                                             d="M14.72 8.79L10.43 13.09L8.78 11.44C8.69036 11.3353 8.58004 11.2503 8.45597 11.1903C8.33191 11.1303 8.19678 11.0965 8.05906 11.0912C7.92134 11.0859 7.78401 11.1091 7.65568 11.1594C7.52736 11.2096 7.41081 11.2859 7.31335 11.3833C7.2159 11.4808 7.13964 11.5974 7.08937 11.7257C7.03909 11.854 7.01589 11.9913 7.02121 12.1291C7.02653 12.2668 7.06026 12.4019 7.12028 12.526C7.1803 12.65 7.26532 12.7604 7.37 12.85L9.72 15.21C9.81344 15.3027 9.92426 15.376 10.0461 15.4258C10.1679 15.4755 10.2984 15.5008 10.43 15.5C10.6923 15.4989 10.9437 15.3947 11.13 15.21L16.13 10.21C16.2237 10.117 16.2981 10.0064 16.3489 9.88458C16.3997 9.76272 16.4258 9.63201 16.4258 9.5C16.4258 9.36799 16.3997 9.23728 16.3489 9.11542C16.2981 8.99356 16.2237 8.88296 16.13 8.79C15.9426 8.60375 15.6892 8.49921 15.425 8.49921C15.1608 8.49921 14.9074 8.60375 14.72 8.79ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Tração nas Quatro Rodas</p>
+                                    <p>{{ __('detalhes.session2.p9') }}</p>
                                 </div>
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -734,7 +734,7 @@
                                             d="M14.72 8.79L10.43 13.09L8.78 11.44C8.69036 11.3353 8.58004 11.2503 8.45597 11.1903C8.33191 11.1303 8.19678 11.0965 8.05906 11.0912C7.92134 11.0859 7.78401 11.1091 7.65568 11.1594C7.52736 11.2096 7.41081 11.2859 7.31335 11.3833C7.2159 11.4808 7.13964 11.5974 7.08937 11.7257C7.03909 11.854 7.01589 11.9913 7.02121 12.1291C7.02653 12.2668 7.06026 12.4019 7.12028 12.526C7.1803 12.65 7.26532 12.7604 7.37 12.85L9.72 15.21C9.81344 15.3027 9.92426 15.376 10.0461 15.4258C10.1679 15.4755 10.2984 15.5008 10.43 15.5C10.6923 15.4989 10.9437 15.3947 11.13 15.21L16.13 10.21C16.2237 10.117 16.2981 10.0064 16.3489 9.88458C16.3997 9.76272 16.4258 9.63201 16.4258 9.5C16.4258 9.36799 16.3997 9.23728 16.3489 9.11542C16.2981 8.99356 16.2237 8.88296 16.13 8.79C15.9426 8.60375 15.6892 8.49921 15.425 8.49921C15.1608 8.49921 14.9074 8.60375 14.72 8.79ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <P>Apoio Lombar</P>
+                                    <P>{{ __('detalhes.session2.p10') }}</P>
                                 </div>
                                 <div class="flex-shrink-0 d-flex gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -743,7 +743,7 @@
                                             d="M14.72 8.79L10.43 13.09L8.78 11.44C8.69036 11.3353 8.58004 11.2503 8.45597 11.1903C8.33191 11.1303 8.19678 11.0965 8.05906 11.0912C7.92134 11.0859 7.78401 11.1091 7.65568 11.1594C7.52736 11.2096 7.41081 11.2859 7.31335 11.3833C7.2159 11.4808 7.13964 11.5974 7.08937 11.7257C7.03909 11.854 7.01589 11.9913 7.02121 12.1291C7.02653 12.2668 7.06026 12.4019 7.12028 12.526C7.1803 12.65 7.26532 12.7604 7.37 12.85L9.72 15.21C9.81344 15.3027 9.92426 15.376 10.0461 15.4258C10.1679 15.4755 10.2984 15.5008 10.43 15.5C10.6923 15.4989 10.9437 15.3947 11.13 15.21L16.13 10.21C16.2237 10.117 16.2981 10.0064 16.3489 9.88458C16.3997 9.76272 16.4258 9.63201 16.4258 9.5C16.4258 9.36799 16.3997 9.23728 16.3489 9.11542C16.2981 8.99356 16.2237 8.88296 16.13 8.79C15.9426 8.60375 15.6892 8.49921 15.425 8.49921C15.1608 8.49921 14.9074 8.60375 14.72 8.79ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
                                             fill="#2D74BA" />
                                     </svg>
-                                    <p>Sistema de Música</p>
+                                    <p>{{ __('detalhes.session2.p11') }}</p>
                                 </div>
                             </div>
                             {{-- <div class=" d-flex flex-column gap-24 ">
@@ -780,13 +780,13 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="sid-bar">
-                        <h6 class="fs-6 mb-24">Comentários</h6>
+                        <h6 class="fs-6 mb-24">{{ __('detalhes.session2.h63') }}</h6>
                         <div class="d-flex align-items-center gap-12">
                             <img src="{{asset('assets/media/teams/user2.jpeg')}}" class="flex-shrink-0" alt="car" style="width: 50px;">
                             <div class=" d-flex align-items-center justify-content-between w-100">
                                 <div class="d-flex flex-column gap-24 ">
                                     <h6 class="fs-6">Gefferson Daciano</h6>
-                                    <p>12 de Maio, 2025</p>
+                                    <p>{{ __('detalhes.session2.p12') }}</p>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
                                     <i class="fs-6 fa-light fa-star"></i>
@@ -794,14 +794,13 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-24">Serviço excelente! A Chana Rent Car me surpreendeu com carros novos, limpos e confortáveis.
-                            O processo de reserva foi rápido e fácil, e o atendimento, impecável. Recomendo a todos que precisam de um transporte seguro e confiável.</p>
+                        <p class="mt-24">{{ __('detalhes.session2.p13') }}</p>
                         <div class="d-flex align-items-center gap-12 mt-24">
                             <img src="{{asset('assets/media/teams/user1.png')}}" class="flex-shrink-0" alt="car" style="width: 50px;">
                             <div class=" d-flex align-items-center justify-content-between w-100">
                                 <div class="d-flex flex-column gap-24 ">
                                     <h6 class="fs-6">Benilda avelino</h6>
-                                    <p>13 de Junho, 2025</p>
+                                    <p>{{ __('detalhes.session2.p14') }}</p>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
                                     <i class="fs-6 fa-light fa-star"></i>
@@ -809,8 +808,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-24">Aluguei um carro na Chana Rent Car e foi a melhor experiência que já tive com locadoras.
-                            Ótimos preços, veículos bem cuidados e equipe super atenciosa. Com certeza vou alugar novamente!</p>
+                        <p class="mt-24">{{ __('detalhes.session2.p15') }}</p>
 
                     </div>
                 </div>

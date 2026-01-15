@@ -1,0 +1,50 @@
+<?php
+
+return [
+    'session1' => [
+        'h61' => 'ou similares',
+        'h62' => '/Dia',
+        'h63' => 'Caução:',
+        'form' => [
+        'h6' => 'Preecha o formulário',
+        'p1' => 'Local de retirada da viatura',
+        'option1' => 'Selecione um escritório',
+        'btn1' => '+ Adicionar Endereço de entrega',
+        'btn2' => '✕ Remover',
+        'p2' => 'Local de devolução da viatura',
+        'option2' => 'Selecione um escritório',
+        'p3' => 'Data de retirada',
+        'p4' => 'Data de entrega',
+        'span1' => 'Taxa de Danos Próprio',
+        'span2' => 'Taxa de abastecimento',
+        'span3' => 'Taxa de Motorista',
+        'strong' => '(kz 25.650/dia)',
+        'span4' => 'Vou sair da província',
+        'p5' => 'Selecione a província de destino',
+        'option3' => 'Selecione uma província',
+        'p6' => 'Número de dias fora da província',
+        'btn3' => 'Continuar',
+
+        ]
+    ],
+    'session2' => [
+        'h61' => 'Especificação',
+        'p1' => 'Categoria: ',
+        'p2' => 'Assentos: ',
+        'p3' => 'Tipo de Combustivel: ',
+        'p4' => 'Transmissão: ',
+        'p5' => 'Número de portas: ',
+        'h62' => 'Benefícios do Aluguer',
+        'p6' => 'Controle de Cruzeiro Adaptativo',
+        'p7' => 'Bancos Aquecidos',
+        'p8' => 'Multimídia',
+        'p9' => 'Tração nas Quatro Rodas',
+        'p10' => 'Apoio Lombar',
+        'p11' => 'Sistema de Música',
+        'h63' => 'Comentários',
+        'p12' => '12 de Maio, 2025',
+        'p13' => 'Serviço excelente! A Chana Rent Car me surpreendeu com carros novos, limpos e confortáveis. O processo de reserva foi rápido e fácil, e o atendimento, impecável. Recomendo a todos que precisam de um transporte seguro e confiável.',
+        'p14' => '13 de Junho, 2025',
+        'p15' => 'Aluguei um carro na Chana Rent Car e foi a melhor experiência que já tive com locadoras. Ótimos preços, veículos bem cuidados e equipe super atenciosa. Com certeza vou alugar novamente!',
+    ],
+];

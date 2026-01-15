@@ -138,11 +138,11 @@
     <!-- About-area start -->
     <section class="container-fluid bg-breadcrumb-4">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">Nossa Equipa</h4>
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ __('team.session1.h4') }}</h4>
             <div class="txt-block text-center white">
-                <a href="{{route('front.index')}}">Home </a>
+                <a href="{{route('front.index')}}">{{ __('team.session1.a1') }} </a>
                 <i class="fa-solid fs-6 fa-greater-than"></i>
-                <a href="{{route('front.equipa')}}"> Nossa equipa</a>
+                <a href="{{route('front.equipa')}}">{{ __('team.session1.a2') }}</a>
             </div>
         </div>
     </section>
@@ -155,8 +155,8 @@
     <section class="section pt-5 pb-0">
                 <div class="container">
                      <div class="descript mb-5">
-                        <h4 class="mb-12 text-center">Nossa Equipa</h4>
-                        <p class="mb-12 text-center">Contamos com uma equipa dedicada e experiente, sempre pronta para oferecer o melhor atendimento.</p>
+                        <h4 class="mb-12 text-center">{{ __('team.session2.h4') }}</h4>
+                        <p class="mb-12 text-center">{{ __('team.session2.p') }}</p>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-2 ftco-animate pointer">
@@ -166,8 +166,8 @@
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
                                     <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="">
-                                        <h3>João Miguel </h3>
-								    <span class="position mb-2">Director Geral</span>
+                                        <h3>{{ __('team.person1.name') }}</h3>
+								    <span class="position mb-2">{{ __('team.person1.role') }}</span>
 								    <div class="faded">
 									    <p></p>
 									    {{-- <ul class="ftco-social text-center">
@@ -184,7 +184,7 @@
                 </div>
     </section>
 
-     <section class="section mt-0 pt-0">
+    <section class="section mt-0 pt-0">
                 <div class="container">
 
                     <div class="row justify-content-center">
@@ -194,8 +194,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Manuel Pacheco</h3>
-								    <span class="position mb-2">Gestor Comercial</span>
+								    <h3>{{ __('team.person2.name') }}</h3>
+								    <span class="position mb-2">{{ __('team.person2.role') }}</span>
 								    <div class="faded">
 									    <p></p>
 									    {{-- <ul class="ftco-social text-center">
@@ -214,8 +214,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Regina Ernestro</h3>
-								    <span class="position mb-2">Gestora Adm/Finanças</span>
+								    <h3>{{ __('team.person3.name') }}</h3>
+								    <span class="position mb-2">{{ __('team.person3.role') }}</span>
 								    <div class="faded">
 									    <p></p>
 									    {{-- <ul class="ftco-social text-center">
@@ -234,8 +234,8 @@
 								    <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Josemar Francisco</h3>
-								    <span class="position mb-2">Gestor Operacional</span>
+								    <h3>{{ __('team.person4.name') }}</h3>
+								    <span class="position mb-2">{{ __('team.person4.role') }}</span>
 								    <div class="faded">
 									    <p></p>
 									    {{-- <ul class="ftco-social text-center">
@@ -252,7 +252,7 @@
                 </div>
     </section>
 
-     <section class="section mt-0 pt-0">
+    <section class="section mt-0 pt-0">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-2 ftco-animate pointer">
@@ -261,8 +261,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Elisandra Mercedes</h3>
-								    <span class="position mb-2">Gestora de C.Corporativos</span>
+								    <h3>{{ __('team.person5.name') }}</h3>
+								    <span class="position mb-2">{{ __('team.person5.role') }}</span>
 								    <div class="faded">
 									    <p></p>
 									    {{-- <ul class="ftco-social text-center">
@@ -281,9 +281,8 @@
 								     <div class="img align-self-stretch" style="background-image: url('assets/media/user/client-profile.jpg');"></div>
 							    </div>
 							    <div class="text pt-3 px-3 pb-4 text-center">
-								    <h3>Eduarda Alves
-                                    </h3>
-								    <span class="position mb-2">Gestora de Sinistros</span>
+								    <h3>{{ __('team.person6.name') }}</h3>
+								    <span class="position mb-2">{{ __('team.person6.role') }}</span>
 								    <div class="faded">
 									    <p></p>
 									    {{-- <ul class="ftco-social text-center">
@@ -303,13 +302,23 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <div>
-                                    <h5 class="modal-title" id="exampleModalLabel">João Miguel</h5>
-                                    <span class="position mb-2">Director Geral</span>
+                                    <h5 class="modal-title" id="exampleModalLabel">{{ __('team.modal.h5') }}</h5>
+                                    <span class="position mb-2">{{ __('team.modal.span') }}</span>
                                 </div>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Biografia do diretor Geral aqui
+                                <strong>{{ __('team.modal.strong1') }}</strong><br>
+                                <p class="mt-1">
+                                    {{ __('team.modal.p1') }}
+                                </p>
+                                <p class="mt-1"> <strong>{{ __('team.modal.strong2') }}</strong> {{ __('team.modal.p2') }}</p>
+                                <p class="mt-1"><strong>{{ __('team.modal.strong3') }}</strong></p>
+                                <ul>
+                                    <li>{{ __('team.modal.li1') }}</li>
+                                    <li>{{ __('team.modal.li2') }}</li>
+                                    <li>{{ __('team.modal.li3') }}</li>
+                                </ul>
                             </div>
                             {{-- <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

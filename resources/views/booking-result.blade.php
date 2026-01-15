@@ -39,7 +39,7 @@
             <div class="heads mb-48">
                 <div class="file">
                     <h4 class="mb-12">Resultado da Pesquisa</h4>
-                    
+
                 </div>
             </div>
         </div>
@@ -94,29 +94,30 @@
                 <div class="col-xl-3 col-lg-6  col-md-6 col-sm-6">
                     <div class="banner">
                         <i class="fa-solid fa-phone-volume mb-24"></i>
-                        <h5 class="mb-16">Contactos</h5>
-                        <P>923482877 / 946320021</P>
+                        <h5 class="mb-16">{{__('search.session1.contact.h5')}}</h5>
+                        <P>{{__('search.session1.contact.p')}}</P>
                     </div>
                 </div>
                 <div class="col-xl-3  col-lg-6 col-md-6 col-sm-6">
                     <div class="banner">
                         <i class="fa-thin fa-envelope mb-24"></i>
-                        <h5 class="mb-16">Email</h5>
-                        <P>rent@orgchana.com</P>
+                        <h5 class="mb-16">{{__('search.session1.email.h5')}}</h5>
+                        <P>{{__('search.session1.email.p')}}</P>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="banner">
                         <i class="fa-light fa-location-dot mb-24"></i>
-                        <h5 class="mb-16">Location</h5>
-                        <P>Estrada principal do Lar do Patriota - Luanda</P>
+                        <h5 class="mb-16">{{__('search.session1.location.h5')}}</h5>
+                        <P>{{__('search.session1.location.p')}}</P>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="banner">
                         <i class="fa-regular fa-clock mb-24"></i>
-                        <h5 class="mb-16">Horário de funcionamento</h5>
-                        <p>Mon-Sat (08H:30 - 16H:30)<p>
+                        <h5 class="mb-16">{{__('search.session1.time.h5')}}</h5>
+                        <p>{{__('search.session1.time.p1')}}<p>
+                        <p>{{__('search.session1.time.p2')}}<p>
                     </div>
                 </div>
             </div>

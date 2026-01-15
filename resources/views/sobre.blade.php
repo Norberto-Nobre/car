@@ -130,11 +130,11 @@
 
     <section class="container-fluid bg-breadcrumb">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">Sobre nós</h4>
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ __('about.session1.h4') }}</h4>
             <div class="txt-block text-center white">
-                <a href="{{route('front.index')}}">Home </a>
+                <a href="{{route('front.index')}}">{{ __('about.session1.a1') }}</a>
                 <i class="fa-solid fs-6 fa-greater-than"></i>
-                <a href="{{route('front.sobre')}}"> Sobre nós</a>
+                <a href="{{route('front.sobre')}}">{{ __('about.session1.a2') }}</a>
             </div>
         </div>
     </section>
@@ -160,12 +160,11 @@
                     </div>
                     <div class="col-lg-7">
                         <div class="txt-block">
-                            <h4 class="mb-24">Chana RENT-A-CAR</h4>
-                            <p class="mb-24">Somos uma empresa do grupo Organizações Chana que, desde 2014 prestamos serviço de aluguer de viaturas multimarcas, a longo e curto prazo.</p>
-                            <p class="mb-24">Ao longo destes anos, procuramos apresentar ao mercado os melhores preços e serviço de qualidade, ajustando-se às reais necessidades dos nossos clientes.</p>
-                            <p class="mb-24">Os nossos alugueres feitos para particulares, empresariais, provinciais e para eventos são atendidas pelas 172 viaturas que temos em frota.</p>
-                            <p class="mb-24">Contamos consigo como parceiro, porque acreditamos em si e na qualidade do  serviço que queremos lhe oferecer.</p>
-                            <p class="mb-24">Qualidade aos melhores preços. Temos para si uma frota Multimarca, com Assistência técnica e Qualidade na Entrega</p>
+                            <h4 class="mb-24">{{ __('about.session2.h4') }}</h4>
+                            <p class="mb-24">{{ __('about.session2.p1') }}</p>
+                            <p class="mb-24">{{ __('about.session2.p2') }}</p>
+                            <p class="mb-24">{{ __('about.session2.p3') }}</p>
+                            <p class="mb-24">{{ __('about.session2.p4') }}</p>
                         </div>
                     </div>
                 </div>
@@ -182,9 +181,9 @@
 
                     <div class="col-xl-7">
                         <div class="txt-block">
-                            <h4 class="mb-24">Como Funciona o Processo de Aluguer</h4>
-                            <p class="mb-24">Descubra como é simples e rápido alugar a sua viatura com a Chana RENT-A-CAR — em poucos passos, você tem o carro certo pronto para o seu percurso.</p>
-                            <p class="mb-24">Uma explicação simples em passos:</p>
+                            <h4 class="mb-24">{{ __('about.session3.h4') }}</h4>
+                            <p class="mb-24">{{ __('about.session3.p1') }}</p>
+                            <p class="mb-24">{{ __('about.session3.p2') }}</p>
                         </div>
                         <div class="row gy-4 gx-0">
                             <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInUp border pt-4 pb-3 rounded shadow me-4" data-wow-delay="0.1s" data-aos="fade-up" style="background: linear-gradient(135deg, #345af5, #041A71);">
@@ -193,7 +192,7 @@
                                         <span class="fs-4"><i class="bi bi-1-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6 text-white">Escolha a viatura</h5>
+                                        <h5 class="mb-3 fs-6 text-white">{{ __('about.session3.step1') }}</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
@@ -205,7 +204,7 @@
                                         <span class="fs-4"><i class="bi bi-2-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6 text-white">Envie os seus dados</h5>
+                                        <h5 class="mb-3 fs-6 text-white">{{ __('about.session3.step2') }}</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
@@ -216,7 +215,7 @@
                                         <span class="fs-4"><i class="bi bi-3-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6 text-white">Receba a confirmação</h5>
+                                        <h5 class="mb-3 fs-6 text-white">{{ __('about.session3.step3') }}</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
@@ -228,7 +227,7 @@
                                         <span class="fs-4"><i class="bi bi-4-square custom"></i></span>
                                     </div>
                                     <div class="ms-4 mt-2">
-                                        <h5 class="mb-3 fs-6 text-white">Retire o carro ou solicite entrega</h5>
+                                        <h5 class="mb-3 fs-6 text-white">{{ __('about.session3.step4') }}</h5>
                                         <p class="mb-0"></p>
                                     </div>
                                 </div>
@@ -301,28 +300,28 @@
             <div class="txt">
                 <div class="row justify-content-center">
                     <div class="col-xl-8">
-                        <h4 class="text-center black-2 mb-48 text-white">Confiança - Segurança <br><span> consigo, sempre</span></h4>
-                        <h6 class="mb-24 text-white">O que oferecemos</h6>
+                        <h4 class="text-center black-2 mb-48 text-white">{{ __('about.session4.h4') }} <br><span>{{ __('about.session4.span') }}</span></h4>
+                        <h6 class="mb-24 text-white">{{ __('about.session4.h6') }}</h6>
                         <ul class="offers">
                             <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p class="text-white">Viagens confortáveis</p>
+                                <p class="text-white">{{ __('about.session4.p1') }}</p>
                             </li>
                             <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p class="text-white">Carros de primeira linha</p>
+                                <p class="text-white">{{ __('about.session4.p2') }}</p>
                             </li>
                             <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p class="text-white">Opções de pagamento seguras</p>
+                                <p class="text-white">{{ __('about.session4.p3') }}</p>
                             </li>
                             <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p class="text-white">Variedade de opções para escolher</p>
+                                <p class="text-white">{{ __('about.session4.p4') }}</p>
                             </li>
                             <li>
                                 <img src="assets/media/icons/uil-check-circle.png" alt="circle">
-                                <p class="text-white">Variedade de opções para escolher</p>
+                                <p class="text-white">{{ __('about.session4.p5') }}</p>
                             </li>
                         </ul>
                     </div>
@@ -342,17 +341,17 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="txt-block">
-                            <h4 class="mb-12">Seu Portal para Aventuras Perfeitas<br class="d-xl-block  d-none"></h4>
-                            <p class="mb-32">Explore novos destinos com segurança, conforto e estilo. Nossa frota está pronta para transformar cada viagem em uma experiência inesquecível.</p>
+                            <h4 class="mb-12">{{ __('about.session5.h4') }}<br class="d-xl-block  d-none"></h4>
+                            <p class="mb-32">{{ __('about.session5.p1') }}</p>
                             <p class="mb-32">
-                                Seja para uma viagem a trabalho, férias em família ou uma escapada de fim de semana, oferecemos opções que se adaptam a cada tipo de necessidade. Com atendimento de excelência e preços acessíveis, garantimos que sua aventura comece do jeito certo.</p>
+                                {{ __('about.session5.p2') }}</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="pic">
                                         <img src="assets/media/icons/vector.png" alt="plane">
                                         <div class="text">
-                                            <h6>Recepção em Aeroportos</h6>
-                                            <p class="mb-24">Comece sua viagem com comodidade. Te buscamos no aeroporto com pontualidade e conforto.</p>
+                                            <h6>{{ __('about.session5.item1.h6') }}</h6>
+                                            <p class="mb-24">{{ __('about.session5.item1.p') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -360,8 +359,8 @@
                                     <div class="icon">
                                         <img src="assets/media/icons/vector2.png" alt="earth">
                                         <div class="text">
-                                            <h6>Presença em Diversas Regiões</h6>
-                                            <p class="mb-24">Conte com uma rede de atendimento preparada para te servir onde você estiver.</p>
+                                            <h6>{{ __('about.session5.item2.h6') }}</h6>
+                                            <p class="mb-24">{{ __('about.session5.item2.p') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -369,8 +368,8 @@
                                     <div class="pic">
                                         <img src="assets/media/icons/Vector3.png" alt="people">
                                         <div class="text">
-                                            <h6>Pagamento Seguro</h6>
-                                            <p>Transações protegidas com tecnologia de ponta. Sua segurança é prioridade.</p>
+                                            <h6>{{ __('about.session5.item3.h6') }}</h6>
+                                            <p>{{ __('about.session5.item3.p') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -378,8 +377,8 @@
                                     <div class="icon">
                                         <img src="assets/media/icons/Vector4.png" alt="car">
                                         <div class="text">
-                                            <h6> Carros Higienizados e Prontos</h6>
-                                            <p class="mb-8">Veículos limpos e desinfetados com rigor para garantir sua saúde e bem-estar.</p>
+                                            <h6>{{ __('about.session5.item4.h6') }}</h6>
+                                            <p class="mb-8">{{ __('about.session5.item4.p') }}</p>
                                         </div>
                                     </div>
                                 </div>

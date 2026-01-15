@@ -24,11 +24,11 @@
     <!-- About-area start -->
      <section class="container-fluid bg-breadcrumb-4">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">Nossa História</h4>
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{__('historia.session1.h4')}}</h4>
             <div class="txt-block text-center white">
-                <a href="{{route('front.index')}}">Home </a>
+                <a href="{{route('front.index')}}">{{__('historia.session1.a1')}}</a>
                 <i class="fa-solid fs-6 fa-greater-than"></i>
-                <a href="{{route('front.historia')}}"> Nossa história</a>
+                <a href="{{route('front.historia')}}">{{__('historia.session1.a2')}}</a>
             </div>
         </div>
     </section>
@@ -39,8 +39,8 @@
     <section class="cards py-80">
         <div class="container">
             <div class="descript">
-                    <h4 class="mb-12">Nossa História</h4>
-                    <p>Nossa história é feita de movimento, conquistas e paixão pelo que fazemos.</p>
+                    <h4 class="mb-12">{{__('historia.session2.h4')}}</h4>
+                    <p>{{__('historia.session2.p')}}</p>
             </div>
         </div>
 
@@ -112,8 +112,8 @@
                     </svg>
                 </div>
                 <div class="info ms-3">
-                    <h6 class="fs-4 trust-title">Confiança para explorar Angola à sua maneira</h6>
-                <p class="trust-subtitle">Milhares de pessoas confiam na CHANA RENT-A-CAR para viajar por Angola.</p>
+                    <h6 class="fs-4 trust-title">{{__('historia.session3.h6')}}</h6>
+                <p class="trust-subtitle">{{__('historia.session3.p')}}</p>
                 </div>
             </div>
             <div class="rating-container">

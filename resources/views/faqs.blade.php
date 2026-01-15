@@ -107,11 +107,11 @@
     <!-- About-area start -->
     <section class="container-fluid bg-breadcrumb-2">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">FAQ</h4>
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{__('faqs.session1.h4')}}</h4>
             <div class="txt-block text-center white">
-                <a href="{{route('front.index')}}">Home </a>
+                <a href="{{route('front.index')}}">{{__('faqs.session1.a1')}}</a>
                 <i class="fa-solid fs-6 fa-greater-than"></i>
-                <a href="{{route('front.faqs')}}"> Faq</a>
+                <a href="{{route('front.faqs')}}">{{__('faqs.session1.a2')}}</a>
             </div>
         </div>
     </section>
@@ -120,8 +120,8 @@
     <section class="faq-section">
         <div class="container">
              <div class="descript">
-                    <h4 class="mb-12">Perguntas Frequantes</h4>
-                    <p class="" style="color:#777">Reunimos aqui as principais dúvidas dos nossos clientes para tornar <br>sua experiência de Aluguer ainda mais simples e transparente. </p>
+                    <h4 class="mb-12">{{__('faqs.session2.h4')}}</h4>
+                    <p class="" style="color:#777">{{__('faqs.session2.p')}} <br>{{__('faqs.session2.br')}} </p>
                 </div>
 
             <div class="row justify-content-center">
@@ -132,7 +132,7 @@
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <span>Como começar a alugar um carro?</span>
+                                    <span>{{__('faqs.session3.q1')}}</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -140,7 +140,7 @@
                             </h3>
                             <div id="collapseOne" class="accordion-collapse show collapse faq-collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    Para começar com o Aluguer de carros, você precisa ter pelo menos 21 anos, uma carteira de motorista válida e um cartão de crédito. Visite nosso site, escolha suas datas e local, selecione o veículo desejado e complete a reserva online. É simples e rápido!
+                                     {{__('faqs.session3.a1')}}
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <span>O que é um depósito de segurança para Aluguer de carros?</span>
+                                    <span>{{__('faqs.session3.q2')}}</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -157,7 +157,7 @@
                             </h3>
                             <div id="collapseTwo" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    O depósito de segurança é um valor temporariamente bloqueado no seu cartão de crédito como garantia. Este valor cobre possíveis danos, combustível ou taxas adicionais. O depósito é liberado após a devolução do veículo em boas condições, geralmente em 3-7 dias úteis.
+                                    {{__('faqs.session3.a2')}}
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <span>Posso alugar um carro com cartão de débito?</span>
+                                    <span>{{__('faqs.session3.q3')}}</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -174,7 +174,7 @@
                             </h3>
                             <div id="collapseThree" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    Embora seja possível alugar um carro com cartão de débito em algumas locadoras, geralmente é necessário cartão de crédito para o depósito de segurança. Com cartão de débito, podem ser exigidos documentos adicionais e comprovação de renda. Recomendamos verificar as políticas específicas antes da reserva.
+                                    {{__('faqs.session3.a3')}}
                                 </div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <span>Posso cancelar ou alterar minha reserva?</span>
+                                    <span>{{__('faqs.session3.q4')}}</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -191,7 +191,7 @@
                             </h3>
                             <div id="collapseFour" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    Sim, você pode cancelar ou modificar sua reserva. Cancelamentos gratuitos são geralmente permitidos até 24-48 horas antes da retirada. Para modificações, acesse sua reserva online ou entre em contato conosco. Algumas tarifas promocionais podem ter restrições específicas.
+                                    {{__('faqs.session3.a4')}}
                                 </div>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <span>Que tipo de Aluguer de carro eu preciso?</span>
+                                    <span>{{__('faqs.session3.q5')}}</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -208,7 +208,7 @@
                             </h3>
                             <div id="collapseFive" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    A escolha do tipo de carro depende de suas necessidades: carros econômicos para cidade e economia de combustível, SUVs para famílias ou terrenos difíceis, carros de luxo para ocasiões especiais, ou utilitários para mudanças. Considere o número de passageiros, bagagem e tipo de viagem.
+                                    {{__('faqs.session3.a5')}}
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                         <div class="accordion-item faq-item">
                             <h3 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    <span>É possível estender meu período de Aluguer?</span>
+                                    <span>{{__('faqs.session3.q6')}}</span>
                                     <div class="faq-icon">
                                         <i class="bi bi-plus"></i>
                                     </div>
@@ -225,10 +225,101 @@
                             </h3>
                             <div id="collapseSix" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body faq-body">
-                                    Sim, é possível estender seu período de Aluguer, sujeito à disponibilidade do veículo. Recomendamos entrar em contato conosco com pelo menos 24 horas de antecedência. A extensão será cobrada conforme as tarifas vigentes e você precisará autorizar os custos adicionais no mesmo cartão de crédito.
+                                    {{__('faqs.session3.a6')}}
                                 </div>
                             </div>
                         </div>
+
+                        <!-- FAQ Item 7 -->
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <span>{{__('faqs.session3.q7')}}</span>
+                                    <div class="faq-icon">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </button>
+                            </h3>
+                            <div id="collapseSeven" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body faq-body">
+                                    {{__('faqs.session3.a7')}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 8 -->
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="headinghEight">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <span>{{__('faqs.session3.q8')}}</span>
+                                    <div class="faq-icon">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </button>
+                            </h3>
+                            <div id="collapseEight" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body faq-body">
+                                    {{__('faqs.session3.a8')}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 9 -->
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="headingnine">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    <span>{{__('faqs.session3.q9')}}</span>
+                                    <div class="faq-icon">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </button>
+                            </h3>
+                            <div id="collapseNine" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body faq-body">
+                                    {{__('faqs.session3.a9')}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 10 -->
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="headingten">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    <span>{{__('faqs.session3.q10')}}</span>
+                                    <div class="faq-icon">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </button>
+                            </h3>
+                            <div id="collapseTen" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body faq-body">
+                                    {{__('faqs.session3.a10')}}
+                                    <ul>
+                                        <li>{{__('faqs.session3.li1')}}</li>
+                                        <li>{{__('faqs.session3.li2')}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 11 -->
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="headingeleven">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    <span>{{__('faqs.session3.q11')}}</span>
+                                    <div class="faq-icon">
+                                        <i class="bi bi-plus"></i>
+                                    </div>
+                                </button>
+                            </h3>
+                            <div id="collapseEleven" class="accordion-collapse collapse faq-collapse" aria-labelledby="headingEleven" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body faq-body">
+                                    {{__('faqs.session3.a11')}}
+                                </div>
+                            </div>
+                        </div>
+
+
 
                     </div>
                 </div>

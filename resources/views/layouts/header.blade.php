@@ -120,7 +120,7 @@
                         <li class="dropdown">
                             <a href="javascript:void(0);">{{ __('navigation.company') }}</a>
                             <ul>
-                                <li><a href="{{route('front.sobre')}}">Quem somos</a></li>
+                                <li><a href="{{route('front.sobre')}}">{{ __('navigation.who_we_are') }}</a></li>
                                 <li><a href="{{route('front.equipa')}}">{{ __('navigation.team') }}</a></li>
                                 <li><a href="{{route('front.historia')}}">{{ __('navigation.history') }}</a></li>
                                 {{-- <li><a href="vehicle-details.html">Vehicle details</a></li> --}}

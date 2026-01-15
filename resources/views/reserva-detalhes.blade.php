@@ -5,11 +5,11 @@
      <!-- About-area start -->
     <section class="title-banner-2">
         <div class="txt">
-            <h2 class="white text-center">Detalhes da Reserva</h2>
+            <h2 class="white text-center">{{ __('reserva.session1.h2') }}</h2>
             <div class="txt-block text-center white">
-                <a href="index.html">Home</a>
+                <a href="index.html">{{ __('reserva.session1.a1') }}</a>
                 <i class="fa-solid fa-greater-than"></i>
-                <a href="about.html">Detalhes</a>
+                <a href="about.html">{{ __('reserva.session1.a2') }}</a>
             </div>
         </div>
     </section>
@@ -20,7 +20,7 @@
                 <div class="col-lg-8">
                     <div class="stepone">
                         <div class="booking-card-2">
-                            <h6 class="fs-6 mb-32">Insira seus dados</h6>
+                            <h6 class="fs-6 mb-32">{{ __('reserva.session2.h61') }}</h6>
                             <div class="form">
                                 <form action="{{ route('custumer.store') }}" method="POST">
                                     @csrf
@@ -46,38 +46,38 @@
 
                                             <div class="pickup-location-container">
                                                 <div class="location-input-wrapper">
-                                                    <label for="">Genero</label>
+                                                    <label for="">{{ __('reserva.session2.label1') }}</label>
                                                     <select name="gender" class="wrapper-dropdown mb-12 border-0">
-                                                        <option value="femenino">Mulher</option>
-                                                        <option value="masculino">Homem</option>
+                                                        <option value="femenino">{{ __('reserva.session2.option2') }}</option>
+                                                        <option value="masculino">{{ __('reserva.session2.option1') }}</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
-                                            <label for="">Nome completo</label>
-                                            <input type="text" id="name" placeholder="Digite o seu nome" name="name">
+                                            <label for="">{{ __('reserva.session2.label2') }}</label>
+                                            <input type="text" id="name" placeholder="{{ __('reserva.session2.placeholder1') }}" name="name">
                                         </div>
                                         <div class="col-lg-5">
-                                            <label for="">E-mail</label>
-                                            <input type="email" id="email" placeholder="Digite o seu email" name="email">
+                                            <label for="">{{ __('reserva.session2.label3') }}</label>
+                                            <input type="email" id="email" placeholder="{{ __('reserva.session2.placeholder2') }}" name="email">
                                         </div>
                                         <div class="col-lg-2">
-                                            <label for="country_code">País</label>
+                                            <label for="country_code">{{ __('reserva.session2.label4') }}</label>
                                             <select id="country_code" name="country_code" class="wrapper-dropdown mb-12 border-0">
-                                                <option class="fs-5" value="">País</option>
+                                                <option class="fs-5" value="">{{ __('reserva.session2.option3') }}</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-6">
-                                            <label for="">Contacto</label>
-                                            <input type="tel" id="contacto" placeholder="Digite o seu contacto" name="phone">
+                                            <label for="">{{ __('reserva.session2.label5') }}</label>
+                                            <input type="tel" id="contacto" placeholder="{{ __('reserva.session2.placeholder3') }}" name="phone">
                                         </div>
                                         <div class="col-lg-6">
-                                            <label for="">Endereço</label>
-                                            <input type="text" id="endereco" placeholder="Digite o seu endereço" name="address">
+                                            <label for="">{{ __('reserva.session2.label6') }}</label>
+                                            <input type="text" id="endereco" placeholder="{{ __('reserva.session2.placeholder4') }}" name="address">
                                         </div>
                                         <div class="col-lg-6">
-                                            <label for="">Data de Nascimento</label>
+                                            <label for="">{{ __('reserva.session2.label7') }}</label>
                                             <input type="date" id="data_nascimento" placeholder="" name="date_of_birth">
                                         </div>
 
@@ -86,10 +86,10 @@
                                     <div class="text-end mb-12">
                                         <button type="submit" class="cus-btn mt-24 bookingProcced">
                                             <span class="btn-text">
-                                                Alugar
+                                                {{ __('reserva.session2.btn') }}
                                             </span>
                                             <span>
-                                                Alugar
+                                                {{ __('reserva.session2.btn') }}
                                             </span>
                                         </button>
                                     </div>
@@ -149,7 +149,7 @@
                            <div class="vehicle-details-2 bg-ter mt-5">
                             <div class="faq-block mb-24">
                                 <a href="#" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1"
-                                    aria-expanded="true" aria-controls="faq1">Detalhes da reserva
+                                    aria-expanded="true" aria-controls="faq1">{{ __('reserva.session3.a') }}
                                 </a>
                                 <div class="d-flex justify-content-between">
                                 <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1"
@@ -199,7 +199,7 @@
                                             </svg>
                                         </div>
                                         <div class="block">
-                                            <p>Data de retirada:</p>
+                                            <p>{{ __('reserva.session3.p1') }}</p>
                                             <p class="mb-32">{{ \Carbon\Carbon::parse($data['pickup_date'])->format('d/m/Y') }}</p>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                             </svg>
                                         </div>
                                         <div class="block">
-                                            <p>Local de retirada da viatura:</p>
+                                            <p>{{ __('reserva.session3.p2') }}</p>
                                             <p class="light-gray mb-32">{{ $pickupLocation }}</p>
                                         </div>
                                     </div>
@@ -248,7 +248,7 @@
                                     <div class="d-flex gap-8">
                                         <i class="bi-pin-map fs-3" style="color: #2d74ba"></i>
                                         <div class="block">
-                                            <p>Província:</p>
+                                            <p>{{ __('reserva.session3.p3') }}</p>
                                             <p class="light-gray">{{ $province->name }}</p>
                                         </div>
                                     </div>
@@ -302,7 +302,7 @@
                                             </svg>
                                         </div>
                                         <div class="block">
-                                            <p>Data de entrega:</p>
+                                            <p>{{ __('reserva.session3.p4') }}</p>
                                             <p class="mb-32">{{ \Carbon\Carbon::parse($data['dropoff_date'])->format('d/m/Y') }}</p>
                                         </div>
                                     </div>
@@ -319,7 +319,7 @@
                                             </svg>
                                         </div>
                                         <div class="block">
-                                            <p>Local de devolução da viatura:</p>
+                                            <p>{{ __('reserva.session3.p5') }}</p>
                                             <p class="light-gray mb-32">{{ $dropoffLocation }}</p>
                                         </div>
                                     </div>
@@ -391,7 +391,7 @@
                         </div> -->
 
                     </div>
-                    <div class="steptwo">
+                    {{-- <div class="steptwo">
 
                         <div class="booking-card-4 mt-32 bg-ter">
                             <h5 class="mb-24">When would you like to pay?</h5>
@@ -503,12 +503,12 @@
                             </div>
                             <div id="message" class="alert-msg"></div>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-lg-4">
                     <div class="side-bar">
                         <div class="vehicle-details bg-quant">
-                            <h6 class="fs-6">Informações do carro</h6>
+                            <h6 class="fs-6">{{ __('reserva.session4.h6') }}</h6>
                         </div>
                         <div class="vehicle-details-2 bg-ter">
                             <h6 class="fs-6">{{$vehicle->brand_name}} {{$vehicle->model_name}} <small class="fw-light" style="font-size: 14px"> {{ __('index.vehicles.similar') }}</small></h6>
@@ -660,19 +660,19 @@
                     </div>
                     <div class="side-bar mt-32">
                         <div class="vehicle-details bg-quant">
-                            <h6 class="fs-6">Resumo de preços</h6>
+                            <h6 class="fs-6">{{ __('reserva.session4.h61') }}</h6>
                         </div>
                         <div class="vehicle-details-2 bg-ter">
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Preço</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h62') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
-                                <h6 class="fs-6">{{number_format($vehicle->price_per_day, '0', ',', '.')}} kz /Dia</h6>
+                                <h6 class="fs-6">{{number_format($vehicle->price_per_day, '0', ',', '.')}} {{ __('reserva.session4.h63') }}</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Quantidade de dias</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h64') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
                                 @php
@@ -694,7 +694,7 @@
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Caução</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h65') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
 
@@ -702,35 +702,35 @@
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa de Danos Próprios</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h66') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
                                 <h6 class="fs-6">{{number_format($damageTax, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa de Entrega</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h67') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
                                 <h6 class="fs-6">{{number_format($taxa_entrega, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa provincial/{{$data['dias_province'] ?? 0}} dias</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h68') }}{{$data['dias_province'] ?? 0}} {{ __('reserva.session4.day') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
                                 <h6 class="fs-6">{{number_format($taxa_provincial * $dias_provincia, '0', ',', '.')}} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa de Abastecimento</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h69') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
                                 <h6 class="fs-6">{{ number_format($refueling_tax, 0, ',', '.') }} kz</h6>
                             </div>
                             <div class="justify-content-between d-flex mb-24">
                                 <div>
-                                    <h6 class="fs-6">Taxa de Motorista/{{$dias}} dias</h6>
+                                    <h6 class="fs-6">{{ __('reserva.session4.h610') }}{{$dias}} {{ __('reserva.session4.day') }}</h6>
                                     {{-- <p class="dark-gray">Lorem ipsum dolor sit amet consectetur.</p> --}}
                                 </div>
                                 <h6 class="fs-6">{{number_format($driver_tax * $dias, '0', ',', '.')}} kz</h6>
@@ -744,7 +744,7 @@
                             </div> --}}
                             <div class="justify-content-between d-flex">
                                 <div>
-                                    <h6>Total</h6>
+                                    <h6>{{ __('reserva.session4.h611') }}</h6>
                                 </div>
                                 @php
                                     $total = ($vehicle->price_per_day * $dias) + $taxa_entrega + ($taxa_provincial * $dias_provincia) + $caussao + $refueling_tax + $driver_tax + $damageTax;
@@ -753,7 +753,7 @@
                             </div>
                             <div class="justify-content-between d-flex mt-4">
                                 <div>
-                                    <p class="text-danger"><i class="bi bi-info-circle"></i>  O valor total é com IVA incluido</p>
+                                    <p class="text-danger"><i class="bi bi-info-circle"></i>  {{ __('reserva.session4.p') }}</p>
                                 </div>
 
                             </div>

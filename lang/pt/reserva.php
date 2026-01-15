@@ -1,0 +1,51 @@
+<?php
+
+return [
+    'session1' => [
+        'h2' => 'Detalhes da Reserva',
+        'a1' => 'Inicio',
+        'a2' => 'Detalhes',
+    ],
+    'session2' => [
+        'h61'    => 'Insira seus dados',
+        'label1' => 'Genero',
+        'option1' => 'Homem',
+        'option2' => 'Mulher',
+        'label2' => 'Nome completo',
+        'label3' => 'E-mail',
+        'label4' => 'País',
+        'option3' => 'País',
+        'label5' => 'Contacto',
+        'label6' => 'Endereço',
+        'label7' => 'Data de Nascimento',
+        'btn'    => ' Alugar',
+        'placeholder1' => 'Digite o seu nome',
+        'placeholder2' => 'Digite o seu email',
+        'placeholder3' => 'Digite o seu contacto',
+        'placeholder4' => 'Digite o seu endereço',
+    ],
+    'session3' => [
+        'a' => 'Detalhes da reserva',
+        'p1' => 'Data de retirada:',
+        'p2' => 'Local de retirada da viatura:',
+        'p3' => 'Província:',
+        'p4' => 'Data de entrega:',
+        'p5' => 'Local de devolução da viatura:',
+    ],
+    'session4' => [
+        'h6' => 'Informações do carro',
+        'h61' => 'Resumo de preços',
+        'h62' => 'Preço',
+        'h63' => 'kz /Dia',
+        'h64' => 'Quantidade de dias',
+        'h65' => 'Caução',
+        'h66' => 'Taxa de Danos Próprios',
+        'h67' => 'Taxa de Entrega',
+        'h68' => 'Taxa provincial/',
+        'day' => 'dias',
+        'h69' => 'Taxa de Abastecimento',
+        'h610' => 'Taxa de Motorista/',
+        'h611' => 'Total',
+        'p' => 'O valor total é com IVA incluido',
+    ]
+];

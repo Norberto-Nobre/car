@@ -6,11 +6,11 @@
 
    <section class="container-fluid bg-breadcrumb-1">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">Nossa Frota</h4>
+            <h4 class="text-white display-6 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{__('frota.session1.h4')}}</h4>
             <div class="txt-block text-center white">
-                <a href="{{route('front.index')}}">Home </a>
+                <a href="{{route('front.index')}}">{{__('frota.session1.a1')}}</a>
                 <i class="fa-solid fs-6 fa-greater-than"></i>
-                <a href="{{route('front.frotas')}}"> Nossa frota</a>
+                <a href="{{route('front.frotas')}}">{{__('frota.session1.a2')}}</a>
             </div>
         </div>
     </section>
@@ -21,12 +21,12 @@
         <div class="container">
             <div class="heads mb-48">
                 <div class="file">
-                    <h4 class="mb-12">Escolha um Carro</h4>
-                    <p class="dark-gray">Navegue por nossa frota e encontre o veículo ideal para sua viagem. <br> Temos opções para todos os estilos, ocasiões e orçamentos.</p>
+                    <h4 class="mb-12">{{__('frota.session2.h4')}}</h4>
+                    <p class="dark-gray">{{__('frota.session2.p')}}<br>{{__('frota.session2.br')}}</p>
                 </div>
                 <div class="Search-field">
                     <form action="{{ route('front.booking.result') }}" method="POST">
-                        <input type="text" class="search-bar" placeholder="O que está procurando?" name="term">
+                        <input type="text" class="search-bar" placeholder="{{__('frota.session2.placeholder')}}" name="term">
                     </form>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                             </div>
                        </form> --}}
                         <div class="bg-quant sidebar-block-2 mt-24">
-                            <h6 class="mb-12 text-center">Filtrar por</h6>
+                            <h6 class="mb-12 text-center">{{__('frota.session3.h61')}}</h6>
                             <div class="checkbox">
 
                                 <div class="widget-content-block">
@@ -145,10 +145,10 @@
                                     {{-- Categorias --}}
                                     <div class="checkbox">
                                          <div class="widget-title-row mb-16">
-                                    <h6 class="fs-6"><i class="bi bi-arrow-left"></i> <a class="underlined" href="{{ route('front.frotas') }}"> Todos os Veículos</a></h6>
+                                    <h6 class="fs-6"><i class="bi bi-arrow-left"></i> <a class="underlined" href="{{ route('front.frotas') }}">{{__('frota.session3.h62')}}</a></h6>
                                 </div>
                                         <div class="widget-title-row mb-16">
-                                            <h6 class="fs-6">Categoria</h6>
+                                            <h6 class="fs-6">{{__('frota.session3.h63')}}</h6>
                                         </div>
                                         <div class="widget-content-block">
                                             <ul class="filter-list unstyled">
@@ -208,7 +208,7 @@
                                         </div>
                                     </div>--}}
 
-                                    <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+                                    <button type="submit" class="btn btn-primary mt-3">{{__('frota.session3.btn')}}</button>
                                 </form>
 
                                 {{--  --}}
